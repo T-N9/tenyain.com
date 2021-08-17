@@ -1,6 +1,7 @@
 const desktopMenuBtn= document.getElementById('menu-toggleBtn-desktop');
 const mobileMenuBtn= document.getElementById('menu-toggleBtn-mobile');
 
+const body=document.querySelector('body');
 const navOverlay= document.querySelector('.nav-overlay');
 // Desktop Icons
 const maximize=document.querySelector('.maximize-icon');
@@ -30,7 +31,7 @@ function max_to_sn(){
             mi[i].style.display = "none";
         }
         maximize.classList.add('side-nav-on');
-    }, 500);
+    }, 300);
 
     desktopMenuBtn.classList.remove('toggle-max');
     desktopMenuBtn.classList.add('toggle-sn');
@@ -54,7 +55,7 @@ function sn_to_max(){
             sni[i].style.display = "none";
         }
         maximize.classList.add('maximize-on');
-    }, 500);
+    }, 300);
 
     desktopMenuBtn.classList.remove('toggle-sn');
     desktopMenuBtn.classList.add('toggle-max');
@@ -73,12 +74,14 @@ desktopMenuBtn.onclick=function(){
 mobileMenuBtn.onclick=function(){
     nav.classList.toggle('x-full-scale');
     navOverlay.classList.toggle('open-overlay');
+    body.classList.toggle('no-overflow');
 }
 
 navOverlay.onclick=function(){
     if(nav.classList.contains('x-full-scale')){
         nav.classList.remove('x-full-scale');
         this.classList.remove('open-overlay');
+        body.classList.toggle('no-overflow');
     }
 }
 

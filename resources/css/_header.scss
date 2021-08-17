@@ -1,5 +1,6 @@
 .header{
-    background-color: $dark-color;
+    background-color: $dark-color-000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
     &__nav{
         width: 100%;
@@ -31,6 +32,10 @@
                 .mi-2{
                     border-bottom:2px solid $cyan-color-004 ;
                     border-right:2px solid $cyan-color-004 ;
+                }
+
+                .sni{
+                    background-color: $cyan-color-004;
                 }
             }
 
@@ -116,6 +121,13 @@
 
     &__logo{
         transform: scale(1.2);
+
+        .main-path{
+            fill: $light-color;
+        }
+        .eye-path{
+            fill: $cyan-color-300;
+        }
     }
 
     &__mail{
@@ -126,5 +138,12 @@
         &:hover{
             color: $cyan-color-004;
         }
+    }
+
+    @include m-breakpoint-down(medium){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 }

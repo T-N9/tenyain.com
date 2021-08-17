@@ -64,6 +64,10 @@ a, a:visited, a:hover{
     transform: scaleX(1) !important;
 }
 
+.no-overflow{
+    overflow: hidden;
+}
+
 .nav-off{
     transform: scaleX(0) !important;
 }

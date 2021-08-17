@@ -2,13 +2,16 @@
     position: relative;
     width: 100%;
     height: 200vh;
-    transition: padding-left 500ms ease-in-out;
+    transition: padding-left 300ms ease-in-out;
     padding-left: 15.3125rem;
+
+    height: 500vh;
 
     background-color: #2e2f33;
     background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
 
     @include m-breakpoint-down(medium){
         padding-left: 0;
+        padding-top: 52.05px;
     }
 }
