@@ -13,5 +13,10 @@
     @include m-breakpoint-down(medium){
         padding-left: 0;
         padding-top: 52.05px;
+        background-size: 40%;
+    }
+
+    @include m-breakpoint-down(small){
+        background-size: 80%;
     }
 }

@@ -1,0 +1,25 @@
+.hero{
+    
+
+    &__cover{
+        width: 100%;
+        min-height: 17.1875rem;
+
+        background-image: url(../img/landing-cover.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+        @include m-breakpoint-down(small){
+            min-height: 10.188rem;
+        }
+    }
+
+    &__content{
+        h1{
+            color: $cyan-color-100;
+        }
+    }
+}

@@ -12,8 +12,7 @@ body{
     margin: 0;
     padding: 0;
 
-    // background-color: $dark-color-000;
-
+    color: $light-color-100;
     font-family: $font-primary;
     font-size: $font-md;
     font-weight: 300;
@@ -22,7 +21,7 @@ body{
 
 h1, h2, h3{
     margin-top: 0;
-
+    line-height: 1;
     font-family: $font-heading;
     font-weight: 700;
 }
@@ -30,6 +29,11 @@ h1, h2, h3{
 h1{
     margin-bottom: 0.9375rem;
     font-size: $font-xl;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 // Classes to be used globally
@@ -43,6 +47,19 @@ h1{
 .hide-for-desktop{
     @include m-breakpoint-up(large){
         display: none !important;
+    }
+}
+
+.container{
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &--pall{
+        padding: 1.4375rem 2rem;
+
+        @include m-breakpoint-up(large){
+            padding: 2.4375rem 4rem;
+        }
     }
 }
 

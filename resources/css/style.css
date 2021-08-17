@@ -13,6 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: #E8EDFF;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.125rem;
   font-weight: 300;
@@ -21,6 +22,7 @@ body {
 
 h1, h2, h3 {
   margin-top: 0;
+  line-height: 1;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
@@ -28,6 +30,11 @@ h1, h2, h3 {
 h1 {
   margin-bottom: 0.9375rem;
   font-size: 2.74688rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 63.9375em) {
@@ -39,6 +46,21 @@ h1 {
 @media (min-width: 64em) {
   .hide-for-desktop {
     display: none !important;
+  }
+}
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.container--pall {
+  padding: 1.4375rem 2rem;
+}
+
+@media (min-width: 64em) {
+  .container--pall {
+    padding: 2.4375rem 4rem;
   }
 }
 
@@ -213,6 +235,13 @@ a, a:visited, a:hover {
   .main {
     padding-left: 0;
     padding-top: 52.05px;
+    background-size: 40%;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .main {
+    background-size: 80%;
   }
 }
 
@@ -375,14 +404,19 @@ a, a:visited, a:hover {
 .header__logo {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__logo .main-path {
   fill: #D1D6E5;
-}
-
-.header__logo .eye-path {
-  fill: #E6FFFC;
 }
 
 .header__mail {
@@ -403,5 +437,26 @@ a, a:visited, a:hover {
     left: 0;
     width: 100%;
   }
+}
+
+.hero__cover {
+  width: 100%;
+  min-height: 17.1875rem;
+  background-image: url(../img/landing-cover.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+@media (max-width: 39.9375em) {
+  .hero__cover {
+    min-height: 10.188rem;
+  }
+}
+
+.hero__content h1 {
+  color: #00FAD9;
 }
 /*# sourceMappingURL=style.css.map */
