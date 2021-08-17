@@ -1,0 +1,130 @@
+.header{
+    background-color: $dark-color;
+
+    &__nav{
+        width: 100%;
+        padding: 0.625rem 0.9375rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    &__toggle{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .maximize-icon{
+            width: 1.25rem;
+            height: 1.25rem;
+            position: relative;
+            display: none;
+            transition: all 200ms ease-in-out;
+            &:hover{
+                .mi-1{
+                    border-top:2px solid $cyan-color-004 ;
+                    border-left:2px solid $cyan-color-004 ;
+                }
+                .mi-2{
+                    border-bottom:2px solid $cyan-color-004 ;
+                    border-right:2px solid $cyan-color-004 ;
+                }
+            }
+
+            // Maximize Icon
+            .mi{
+                transition: all 200ms ease-in-out;
+            }
+            .mi-1{
+                display: inline-block;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-radius: 2px;
+                border-top:2px solid $light-color ;
+                border-left:2px solid $light-color ;
+            }
+            .mi-2{
+                align-self: flex-end;
+                display: inline-block;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-radius: 2px;
+                border-bottom:2px solid $light-color ;
+                border-right:2px solid $light-color ;
+            }
+
+            // Side Nav Icon
+            .sni{
+                display: inline-block;
+                height: 2px;
+                background-color: $light-color-200;
+
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: all 200ms ease-in-out;
+
+                display: none;
+            }
+
+            .sni-1{
+                width: 1.25rem; 
+                margin-bottom: 3px;
+            }
+            .sni-2{
+                width: 0.625rem;
+                margin-bottom: 3px;
+                transition-delay: 100ms;
+            }
+            .sni-3{
+                width: 15px;
+                transition-delay: 200ms;
+            }
+
+            
+            @include m-breakpoint-up(large){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        .side-nav-icon{
+            display: flex;
+            flex-direction: column;
+            >span{
+                display: inline-block;
+                height: 2px;
+                background-color: $light-color-200;
+            }
+            >span:nth-child(1){
+                width: 1.25rem; 
+            }
+            >span:nth-child(2){
+                width: 0.625rem;
+            }
+            >span:nth-child(3){
+                width: 15px;
+            }
+            >span:not(:last-child){
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    &__logo{
+        transform: scale(1.2);
+    }
+
+    &__mail{
+        color: $light-color;
+        font-size: 1.5rem;
+        transition: color 200ms ease-in-out;
+
+        &:hover{
+            color: $cyan-color-004;
+        }
+    }
+}

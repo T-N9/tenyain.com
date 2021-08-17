@@ -1,0 +1,48 @@
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+
+    width: 15.3125rem;
+    height: 100vh;
+    background-color: $dark-color-000;
+
+    transition: transform 500ms ease-in-out;
+    transform-origin: left;
+    transform: scaleX(1);
+
+    &__wrapper{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        width: 16.75rem;
+        height: 90%;
+
+        background-image: radial-gradient(rgba(0,237,206,.3137254901960784),#35363a 90%);
+        box-shadow: rgba($light-color-200, 0.5) 1px 0px 1px 0px;
+        border-top-right-radius: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+    }
+
+    @include m-breakpoint-down(medium){
+        transform: scaleX(0);
+    }
+}
+
+.nav-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2500;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-in-out;
+    
+    background-color: rgba($dark-color, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+}
