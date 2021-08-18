@@ -63,9 +63,9 @@ a, a:visited, a:hover{
     margin: 0 auto;
 
     &--pall{
-        padding: 1.4375rem 1rem;
+        padding: 1.4375rem 1.25rem;
 
-        @include m-breakpoint-up(large){
+        @include m-breakpoint-up(medium){
             padding: 2.4375rem 4rem;
         }
     }
