@@ -13,6 +13,7 @@
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
+        background-attachment: fixed;
 
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
@@ -46,8 +47,42 @@
     }
 
     &__content{
+        display: flex;
+
+        @include m-breakpoint-down(small){
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__text{
+        flex: 2;
         h1{
             color: $cyan-color-100;
+        }
+    }
+    
+    &__img{
+        
+        flex: 1;
+        margin-bottom: 0.5rem;
+        .tn-img{
+            display: inline-flex;
+            width: 160px;
+            height: 160px;
+
+            background-image: url(../img/tn-pic.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+
+            border: 3px solid $dark-color-000;
+            border-radius: 0.25rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        
+        @include m-breakpoint-up(medium){
+            margin-bottom: 0;
+            @include flex-center;
         }
     }
 }
