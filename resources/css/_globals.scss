@@ -25,10 +25,11 @@ h1, h2, h3{
     line-height: 1;
     font-family: $font-heading;
     font-weight: 700;
+
+    margin-bottom: 0.9375rem;
 }
 
 h1{
-    margin-bottom: 0.9375rem;
     font-size: $font-lg;
 
     @include m-breakpoint-up(large){
@@ -41,9 +42,6 @@ p{
     margin-bottom: 0.5rem;
 }
 
-a, a:visited, a:hover{
-    text-decoration: none;
-}
 // Classes to be used globally
 
 .hide-for-mobile{
@@ -144,6 +142,65 @@ a, a:visited, a:hover{
 .side-nav-off{
     .sni{
         transform: scaleX(0) !important;
+    }
+}
+
+// Components
+
+.button{
+    display: inline-block;
+    position: relative;
+
+    font-family: $font-secondary;
+    font-size: $font-sm;
+    margin: 1rem 0;
+    padding: 0.625rem 0.9375rem;
+    letter-spacing: 0.125rem;
+
+    transition: color 200ms ease-in-out;
+
+    border: 1px solid $cyan-color-100;
+    cursor: pointer;
+
+    > span{
+        position: relative;
+        z-index: 5;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $dark-color-100;
+
+        transition: all 300ms ease-in-out;
+        transform: scaleX(0);
+        transform-origin: center;
+
+    }
+    &:hover{
+        color: $cyan-color-100;
+    }
+    &:hover::before{
+        transform: scaleX(1);
+    }
+
+}
+
+.upwork-icon{
+    display: inline-flex;
+    width: 35px;
+    
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem 0;
+
+    svg{
+        width: 90%;
     }
 }
 

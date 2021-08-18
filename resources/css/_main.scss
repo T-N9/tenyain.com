@@ -10,6 +10,16 @@
     background-color: #2e2f33;
     background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
 
+    a, a:visited{
+        font-family: $font-secondary;
+        text-decoration: none;
+        transition: color 200ms ease-in-out;
+
+        &:hover{
+            color: $cyan-color-004;
+        }
+    }
+
     @include m-breakpoint-down(medium){
         padding-left: 0;
         padding-top: 52.05px;

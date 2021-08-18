@@ -1,5 +1,7 @@
 .hero{
-    
+    a, a:visited, a:hover{
+        color: $cyan-color-100;
+    }
 
     &__cover{
         width: 100%;
@@ -28,7 +30,7 @@
         padding: 0.625rem;
 
         font-size: $font-sm;
-        font-family: $font-seconday;
+        font-family: $font-secondary;
         text-align: center;
         color: $light-color-200;
         background-color: rgba($dark-color, 0.8);
@@ -48,7 +50,7 @@
         }
     }
 
-    &__content{
+    &__landing{
         display: flex;
 
         @include m-breakpoint-down(small){
@@ -56,7 +58,7 @@
         }
     }
 
-    &__text{
+    &__intro{
         flex: 2;
         h1{
             color: $cyan-color-100;
@@ -90,6 +92,31 @@
         @include m-breakpoint-up(medium){
             margin-bottom: 0;
             @include flex-center;
+        }
+    }
+
+    &__service{
+        display: flex;
+
+        @include m-breakpoint-down(medium){
+            flex-direction: column;
+        }
+    }
+
+    &__ill{
+        flex: 1;
+        @include flex-center;
+    }
+    &__description{
+        flex: 1;
+        margin-top: 2rem;
+
+        h2{
+            color: $cyan-color-100;
+        }
+
+        @include m-breakpoint-up(large){
+            margin-top: 0;
         }
     }
 }
