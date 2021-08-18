@@ -5,6 +5,10 @@
         width: 100%;
         min-height: 17.1875rem;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         background-image: url(../img/landing-cover.jpg);
         background-size: cover;
         background-position: center top;
@@ -14,6 +18,30 @@
 
         @include m-breakpoint-down(small){
             min-height: 10.188rem;
+        }
+    }
+
+    &__quote{
+        padding: 0.625rem;
+
+        font-size: $font-sm;
+        font-family: $font-seconday;
+        text-align: center;
+        color: $light-color-200;
+        background-color: rgba($dark-color, 0.8);
+
+        .text-line{
+            border-bottom: 1px solid $cyan-color;
+        }
+
+        .verse{
+            display: block;
+            margin: 0.25rem 0;
+            font-weight: bold;
+        }
+
+        @include m-breakpoint-up(medium){
+            font-size: $font-md;
         }
     }
 
