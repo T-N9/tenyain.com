@@ -453,7 +453,7 @@ a, a:visited, a:hover {
 
 .hero__cover {
   width: 100%;
-  min-height: 17.1875rem;
+  min-height: 18.188rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,14 +467,19 @@ a, a:visited, a:hover {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-@media (max-width: 39.9375em) {
+@media (min-width: 40em) {
   .hero__cover {
-    min-height: 10.188rem;
+    min-height: 29.1875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__cover {
+    min-height: 17.1875rem;
   }
 }
 
