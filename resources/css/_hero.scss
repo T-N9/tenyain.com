@@ -77,7 +77,7 @@
 
             background-image: url(../img/tn-pic.jpg);
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: cover;
             background-position: center center;
 
             border: 3px solid $dark-color-000;
@@ -104,8 +104,17 @@
     }
 
     &__ill{
+
         flex: 1;
         @include flex-center;
+        
+        .dark-ill{
+            display: block;
+        }
+
+        .light-ill{
+            display: none;
+        }
     }
     &__description{
         flex: 1;

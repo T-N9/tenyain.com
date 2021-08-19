@@ -8,6 +8,8 @@ html {
 *, *::before, *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  -webkit-transition: color background-color 200ms ease-in-out;
+  transition: color background-color 200ms ease-in-out;
 }
 
 body {
@@ -194,7 +196,7 @@ p {
   position: relative;
   font-family: "Space Mono", monospace;
   font-size: 1rem;
-  margin: 1rem 0;
+  margin: 1.625rem 0;
   padding: 0.625rem 0.9375rem;
   letter-spacing: 0.125rem;
   -webkit-transition: color 200ms ease-in-out;
@@ -347,7 +349,7 @@ p {
 @media (max-width: 63.9375em) {
   .main {
     padding-left: 0;
-    padding-top: 52.05px;
+    padding-top: 3.190625rem;
     background-size: 40%;
   }
 }
@@ -501,7 +503,7 @@ p {
 .header__toggle .side-nav-icon > span {
   display: inline-block;
   height: 2px;
-  background-color: #F5F7FE;
+  background-color: #D1D6E5;
 }
 
 .header__toggle .side-nav-icon > span:nth-child(1) {
@@ -661,7 +663,7 @@ p {
   margin-top: -3rem;
   background-image: url(../img/tn-pic.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center center;
   border: 3px solid #2E2F33;
   border-radius: 0.25rem;
@@ -720,6 +722,14 @@ p {
           align-items: center;
 }
 
+.hero__ill .dark-ill {
+  display: block;
+}
+
+.hero__ill .light-ill {
+  display: none;
+}
+
 .hero__description {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -735,5 +745,141 @@ p {
   .hero__description {
     margin-top: 0;
   }
+}
+
+.light-theme {
+  color: #414247;
+}
+
+.light-theme .nav {
+  background-color: #E8EDFF;
+}
+
+.light-theme .nav__wrapper {
+  background-image: radial-gradient(rgba(0, 237, 206, 0.313725), #D1D6E5 90%);
+}
+
+.light-theme .header {
+  background-color: #E8EDFF;
+}
+
+.light-theme .header__toggle .maximize-icon:hover .mi-1 {
+  border-top: 2px solid #00AD96;
+  border-left: 2px solid #00AD96;
+}
+
+.light-theme .header__toggle .maximize-icon:hover .mi-2 {
+  border-bottom: 2px solid #00AD96;
+  border-right: 2px solid #00AD96;
+}
+
+.light-theme .header__toggle .maximize-icon:hover .sni {
+  background-color: #00AD96;
+}
+
+.light-theme .header__toggle .maximize-icon .mi-1 {
+  border-top: 2px solid #414247;
+  border-left: 2px solid #414247;
+}
+
+.light-theme .header__toggle .maximize-icon .mi-2 {
+  border-bottom: 2px solid #414247;
+  border-right: 2px solid #414247;
+}
+
+.light-theme .header__toggle .maximize-icon .sni {
+  background-color: #414247;
+}
+
+.light-theme .header__toggle .side-nav-icon > span {
+  background-color: #414247;
+}
+
+.light-theme .header__logo .main-path {
+  fill: #7B7D87;
+}
+
+.light-theme .header__mail {
+  color: #414247 !important;
+}
+
+.light-theme .header__mail:hover {
+  color: #00AD96 !important;
+}
+
+.light-theme .button {
+  border: 1px solid #00AD96;
+}
+
+.light-theme .button::before {
+  background-color: #414247;
+}
+
+.light-theme .button:hover {
+  color: #00FAD9;
+  border-color: #00D4B7;
+}
+
+.light-theme .button:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.light-theme .upwork-icon .upwork-path {
+  fill: #00AD96;
+  -webkit-transition: fill 200ms ease-in-out;
+  transition: fill 200ms ease-in-out;
+}
+
+.light-theme .upwork-icon svg {
+  width: 90%;
+}
+
+.light-theme .upwork-icon:hover .upwork-path {
+  fill: #00FAD9;
+}
+
+.light-theme .main {
+  background-color: #f5f7fe;
+  background-image: url("https://www.transparenttextures.com/theme/images/transparent.png");
+}
+
+.light-theme .main a, .light-theme .main a:visited {
+  color: #00AD96;
+}
+
+.light-theme .main a:hover, .light-theme .main a:visited:hover {
+  color: #00FAD9;
+}
+
+.light-theme .hero__quote {
+  color: #414247;
+  background-color: rgba(245, 247, 254, 0.8);
+}
+
+.light-theme .hero__quote .text-line {
+  border-bottom: 1px solid #00AD96;
+}
+
+.light-theme .hero__intro h1 {
+  color: #00AD96;
+}
+
+.light-theme .hero__img .tn-img {
+  border: 3px solid #E8EDFF;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.light-theme .hero__ill .dark-ill {
+  display: none;
+}
+
+.light-theme .hero__ill .light-ill {
+  display: block;
+}
+
+.light-theme .hero__description h2 {
+  color: #00AD96;
 }
 /*# sourceMappingURL=style.css.map */

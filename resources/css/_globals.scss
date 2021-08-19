@@ -6,6 +6,7 @@ html{
 
 *, *::before, *::after{
     box-sizing: inherit;
+    transition: color background-color 200ms ease-in-out;
 }
 
 body{
@@ -165,7 +166,7 @@ p{
 
     font-family: $font-secondary;
     font-size: $font-sm;
-    margin: 1rem 0;
+    margin: 1.625rem 0;
     padding: 0.625rem 0.9375rem;
     letter-spacing: 0.125rem;
 

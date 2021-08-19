@@ -12,6 +12,10 @@ const nav=document.querySelector('.nav');
 const sni=document.querySelectorAll('.sni');
 const mi=document.querySelectorAll('.mi');
 
+
+function changeTheme(){
+    body.classList.toggle('light-theme');   
+}
 // Maximize to Side Nav
 function max_to_sn(){
     var i;

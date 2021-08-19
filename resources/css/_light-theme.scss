@@ -1,0 +1,153 @@
+.light-theme{
+    color: $dark-color-100;
+
+    .nav{
+        background-color: $light-color-100;
+
+        &__wrapper{
+            background-image: radial-gradient(rgba(0,237,206,.3137254901960784),$light-color 90%);
+        }
+    }
+
+    .header{
+        background-color: $light-color-100;
+        &__toggle{
+    
+            .maximize-icon{
+                &:hover{
+                    .mi-1{
+                        border-top:2px solid $cyan-color-003 ;
+                        border-left:2px solid $cyan-color-003 ;
+                    }
+                    .mi-2{
+                        border-bottom:2px solid $cyan-color-003 ;
+                        border-right:2px solid $cyan-color-003 ;
+                    }
+    
+                    .sni{
+                        background-color: $cyan-color-003;
+                    }
+                }
+    
+                // Maximize Icon
+                .mi-1{
+                    border-top:2px solid $dark-color-100 ;
+                    border-left:2px solid $dark-color-100 ;
+                }
+                .mi-2{
+                    border-bottom:2px solid $dark-color-100 ;
+                    border-right:2px solid $dark-color-100 ;
+                }
+    
+                // Side Nav Icon
+                .sni{
+                    background-color: $dark-color-100;
+                }
+            }
+    
+            .side-nav-icon{
+                >span{
+                    background-color: $dark-color-100;
+                }
+            }
+        }
+
+        &__logo{
+            .main-path{
+                fill: $dark-color-200;
+            }
+        }
+
+        &__mail{
+            color: $dark-color-100 !important;
+    
+            &:hover{
+                color: $cyan-color-003 !important;
+            }
+        }
+    }
+
+    .button{
+        border: 1px solid $cyan-color-003;
+    
+        &::before{
+            background-color: $dark-color-100;
+        }
+        &:hover{
+            color: $cyan-color-100;
+            border-color: $cyan-color-004;
+        }
+        &:hover::before{
+            transform: scaleX(1);
+        }
+    
+    }
+    
+    .upwork-icon{
+        .upwork-path{
+            fill: $cyan-color-003;
+            transition: fill 200ms ease-in-out;
+        }
+        svg{
+            width: 90%;
+        }
+    
+        &:hover{
+            .upwork-path{
+                fill: $cyan-color-100;
+            }
+        }
+    }
+
+    .main{
+        background-color: #f5f7fe;
+        background-image: url("https://www.transparenttextures.com/theme/images/transparent.png");
+
+        a, a:visited{
+            color: $cyan-color-003;
+            &:hover{
+                color: $cyan-color-100;
+            }
+        }
+    }
+
+    .hero{
+        &__quote{
+            color: $dark-color-100;
+            background-color: rgba($light-color-200, 0.8);
+    
+            .text-line{
+                border-bottom: 1px solid $cyan-color-003;
+            }
+        }
+        &__intro{
+            h1{
+                color: $cyan-color-003;
+            }
+        }
+
+        &__img{
+            .tn-img{
+                border: 3px solid $light-color-100;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            }
+        }
+
+        &__ill{
+            
+            
+            .dark-ill{
+                display: none;
+            }
+            .light-ill{
+                display: block;
+            }
+        }
+
+        &__description{
+            h2{
+                color: $cyan-color-003;
+            }
+        }
+    }
+}
