@@ -2,7 +2,8 @@
     color: $dark-color-100;
 
     .nav{
-        background-color: $light-color-100;
+        background-color: $light-color-200;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
         &__wrapper{
             background-image: radial-gradient(rgba(0,237,206,.3137254901960784),$light-color 90%);
@@ -10,7 +11,7 @@
     }
 
     .header{
-        background-color: $light-color-100;
+        background-color: $light-color-200;
         &__toggle{
     
             .maximize-icon{
