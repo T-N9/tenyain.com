@@ -103,6 +103,7 @@
     .main{
         background-color: #f5f7fe;
         background-image: url("https://www.transparenttextures.com/theme/images/transparent.png");
+        // background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
 
         a, a:visited{
             color: $cyan-color-003;
@@ -110,6 +111,18 @@
                 color: $cyan-color-100;
             }
         }
+
+        // @include m-breakpoint-down(medium){
+        //     background-size: 25%;
+        // }
+    
+        // @include m-breakpoint-down(small){
+        //     background-size: 45%;
+        // }
+    
+        // @include m-breakpoint-up(xlarge){
+        //     background-size: 8%;
+        // }
     }
 
     .hero{
