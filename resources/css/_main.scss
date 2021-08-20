@@ -28,16 +28,4 @@
         padding-top: 0rem;
         padding-left: 15.3125rem;
     }
-    @include m-breakpoint-down(medium){
-        
-        background-size: 40%;
-    }
-
-    @include m-breakpoint-down(small){
-        background-size: 80%;
-    }
-
-    @include m-breakpoint-up(xlarge){
-        background-size: 15%;
-    }
 }

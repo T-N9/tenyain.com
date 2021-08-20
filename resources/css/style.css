@@ -385,24 +385,6 @@ p {
   }
 }
 
-@media (max-width: 63.9375em) {
-  .main {
-    background-size: 40%;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .main {
-    background-size: 80%;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .main {
-    background-size: 15%;
-  }
-}
-
 .header {
   background-color: #2E2F33;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -880,11 +862,11 @@ p {
 }
 
 .light-theme .button::before {
-  background-color: #414247;
+  background-color: rgba(65, 66, 71, 0.5);
 }
 
 .light-theme .button:hover {
-  color: #00FAD9;
+  color: #E6FFFC;
   border-color: #00D4B7;
 }
 
@@ -908,8 +890,8 @@ p {
 }
 
 .light-theme .main {
-  background-color: #f5f7fe;
-  background-image: url("https://www.transparenttextures.com/theme/images/transparent.png");
+  background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 }
 
 .light-theme .main a, .light-theme .main a:visited {

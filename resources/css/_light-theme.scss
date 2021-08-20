@@ -87,10 +87,10 @@
         border: 1px solid $cyan-color-003;
     
         &::before{
-            background-color: $dark-color-100;
+            background-color: rgba($dark-color-100, 0.5);
         }
         &:hover{
-            color: $cyan-color-100;
+            color: $cyan-color-300;
             border-color: $cyan-color-004;
         }
         &:hover::before{
@@ -116,9 +116,8 @@
     }
 
     .main{
-        background-color: #f5f7fe;
-        background-image: url("https://www.transparenttextures.com/theme/images/transparent.png");
-        // background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
+        background-color: white;
+        background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 
         a, a:visited{
             color: $cyan-color-003;
