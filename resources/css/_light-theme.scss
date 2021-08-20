@@ -71,7 +71,7 @@
 
         &__logo{
             .main-path{
-                fill: $dark-color-200;
+                fill: $dark-color-100;
             }
         }
 
@@ -117,7 +117,7 @@
     }
 
     .main{
-        background-color: white;
+        background-color: $light-color-200;
         background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 
         a, a:visited{
@@ -129,9 +129,13 @@
     }
 
     .hero{
+
+        a{
+            color: $cyan-color-003 !important;
+        }
         &__quote{
             color: $dark-color-100;
-            background-color: rgba($light-color-200, 0.8);
+            background-color: rgba($cyan-color-300, 0.8);
     
             .text-line{
                 border-bottom: 1px solid $cyan-color-003;

@@ -27,16 +27,16 @@
             transition: all 200ms ease-in-out;
             &:hover{
                 .mi-1{
-                    border-top:2px solid $cyan-color-004 ;
-                    border-left:2px solid $cyan-color-004 ;
+                    border-top:2px solid $cyan-color-100 ;
+                    border-left:2px solid $cyan-color-100 ;
                 }
                 .mi-2{
-                    border-bottom:2px solid $cyan-color-004 ;
-                    border-right:2px solid $cyan-color-004 ;
+                    border-bottom:2px solid $cyan-color-100 ;
+                    border-right:2px solid $cyan-color-100 ;
                 }
 
                 .sni{
-                    background-color: $cyan-color-004;
+                    background-color: $cyan-color-100;
                 }
             }
 
@@ -66,7 +66,7 @@
             .sni{
                 display: inline-block;
                 height: 2px;
-                background-color: $light-color-200;
+                background-color: $light-color;
 
                 transform: scaleX(0);
                 transform-origin: left;

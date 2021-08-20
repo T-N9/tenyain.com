@@ -1,6 +1,6 @@
 .hero{
-    a, a:visited, a:hover{
-        color: $cyan-color-100;
+    a{
+        color: $cyan-color-004 !important;
     }
 
     &__cover{
@@ -33,7 +33,7 @@
         font-family: $font-secondary;
         text-align: center;
         color: $light-color-200;
-        background-color: rgba($dark-color, 0.8);
+        background-color: rgba($cyan-color-000, 0.8);
 
         .text-line{
             border-bottom: 1px solid $cyan-color;

@@ -254,20 +254,22 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   margin: 1rem 1rem;
-}
-
-.upwork-icon .upwork-path {
-  -webkit-transition: fill 200ms ease-in-out;
-  transition: fill 200ms ease-in-out;
 }
 
 .upwork-icon svg {
   width: 90%;
 }
 
-.upwork-icon:hover .upwork-path {
-  fill: #00D4B7;
+.upwork-icon:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .heading {
@@ -362,7 +364,7 @@ p {
   padding-left: 0;
   padding-top: 3.190625rem;
   height: 500vh;
-  background-color: #2e2f33;
+  background-color: #2E2F33;
   background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
 }
 
@@ -426,17 +428,17 @@ p {
 }
 
 .header__toggle .maximize-icon:hover .mi-1 {
-  border-top: 2px solid #00D4B7;
-  border-left: 2px solid #00D4B7;
+  border-top: 2px solid #00FAD9;
+  border-left: 2px solid #00FAD9;
 }
 
 .header__toggle .maximize-icon:hover .mi-2 {
-  border-bottom: 2px solid #00D4B7;
-  border-right: 2px solid #00D4B7;
+  border-bottom: 2px solid #00FAD9;
+  border-right: 2px solid #00FAD9;
 }
 
 .header__toggle .maximize-icon:hover .sni {
-  background-color: #00D4B7;
+  background-color: #00FAD9;
 }
 
 .header__toggle .maximize-icon .mi {
@@ -467,7 +469,7 @@ p {
 .header__toggle .maximize-icon .sni {
   display: inline-block;
   height: 2px;
-  background-color: #F5F7FE;
+  background-color: #D1D6E5;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: left;
@@ -581,8 +583,8 @@ p {
   }
 }
 
-.hero a, .hero a:visited, .hero a:hover {
-  color: #00FAD9;
+.hero a {
+  color: #00D4B7 !important;
 }
 
 .hero__cover {
@@ -623,7 +625,7 @@ p {
   font-family: "Space Mono", monospace;
   text-align: center;
   color: #F5F7FE;
-  background-color: rgba(53, 54, 58, 0.8);
+  background-color: rgba(0, 36, 31, 0.8);
 }
 
 .hero__quote .text-line {
@@ -862,7 +864,7 @@ p {
 }
 
 .light-theme .header__logo .main-path {
-  fill: #7B7D87;
+  fill: #414247;
 }
 
 .light-theme .header__mail {
@@ -906,7 +908,7 @@ p {
 }
 
 .light-theme .main {
-  background-color: white;
+  background-color: #F5F7FE;
   background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 }
 
@@ -918,9 +920,13 @@ p {
   color: #00FAD9;
 }
 
+.light-theme .hero a {
+  color: #00AD96 !important;
+}
+
 .light-theme .hero__quote {
   color: #414247;
-  background-color: rgba(245, 247, 254, 0.8);
+  background-color: rgba(230, 255, 252, 0.8);
 }
 
 .light-theme .hero__quote .text-line {

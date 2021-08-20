@@ -213,20 +213,23 @@ p{
     
     justify-content: center;
     align-items: center;
-
+    transition: transform 500ms ease-in-out;
+    transform: scale(1);
     margin: 1rem 1rem;
 
-    .upwork-path{
-        transition: fill 200ms ease-in-out;
-    }
+    // .upwork-path{
+    //     transition: all 200ms ease-in-out;
+    // }
     svg{
         width: 90%;
     }
 
     &:hover{
-        .upwork-path{
-            fill: $cyan-color-004;
-        }
+        transform: scale(1.15);
+        // .upwork-path{
+        //     fill: $cyan-color-004;
+            
+        // }
     }
 }
 
