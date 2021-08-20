@@ -2,8 +2,7 @@
     color: $dark-color-100;
 
     .heading{
-        background-color: $light-color;
-        
+        background-color: $light-color-200;
     
         &__text{
             background-color: $light-color-200;
@@ -21,12 +20,14 @@
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
         &__wrapper{
-            background-image: radial-gradient(rgba(0,237,206,.3137254901960784),$light-color 90%);
+            background-image: radial-gradient(rgba(0,237,206,.3137254901960784),$light-color-100 90%);
+            box-shadow: rgba($dark-color-300, 0.5) 1px 0px 1px 0px;
         }
     }
 
     .header{
-        background-color: $light-color-200;
+        background-color: rgba($light-color-200, 0.5);
+        backdrop-filter: saturate(180%) blur(20px);
         &__toggle{
     
             .maximize-icon{
@@ -168,5 +169,18 @@
                 color: $cyan-color-003;
             }
         }
+    }
+
+    .aboutme{    
+        &__header{
+            background-color: $cyan-color-300;
+            background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+        }
+    
+        &__wrapper{
+            background-color: $cyan-color-300;
+            background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+        }
+
     }
 }
