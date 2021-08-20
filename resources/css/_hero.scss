@@ -60,6 +60,10 @@
 
     &__intro{
         flex: 2;
+
+        h4{
+            color: $cyan-color-300;
+        }
         h1{
             color: $cyan-color-100;
         }
