@@ -2,6 +2,17 @@
     padding-top: 3.190625rem;
     margin-top: 5rem;
 
+    &__header{
+        background-color: $cyan-color-000;
+        background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+    }
+
+    &__wrapper{
+        background-color: $cyan-color-000;
+        height: 100vh;
+        background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+    }
+
     @include m-breakpoint-up(large){
         padding-top: 0;
         

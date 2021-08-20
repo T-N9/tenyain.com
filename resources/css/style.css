@@ -271,7 +271,7 @@ p {
 }
 
 .heading {
-  background-color: #414247;
+  background-color: #2E2F33;
   -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -282,7 +282,6 @@ p {
   width: -moz-max-content;
   width: max-content;
   margin-left: auto;
-  background-color: #2E2F33;
   border-left: 5px solid #00D4B7;
 }
 
@@ -773,6 +772,17 @@ p {
 .aboutme {
   padding-top: 3.190625rem;
   margin-top: 5rem;
+}
+
+.aboutme__header {
+  background-color: #00241F;
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+}
+
+.aboutme__wrapper {
+  background-color: #00241F;
+  height: 100vh;
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
 }
 
 @media (min-width: 64em) {
