@@ -1,6 +1,21 @@
 .light-theme{
     color: $dark-color-100;
 
+    .heading{
+        background-color: $light-color;
+        
+    
+        &__text{
+            background-color: $light-color-200;
+
+            border-left: 5px solid $cyan-color-003;
+        }
+        h1{
+            -webkit-text-stroke: $cyan-color-003;
+            -webkit-text-stroke-width: 2px;
+        }
+    }
+
     .nav{
         background-color: $light-color-200;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;

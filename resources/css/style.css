@@ -272,6 +272,8 @@ p {
 
 .heading {
   background-color: #414247;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .heading__text {
@@ -281,7 +283,7 @@ p {
   width: max-content;
   margin-left: auto;
   background-color: #2E2F33;
-  border: 1px solid #00EDCE;
+  border-left: 5px solid #00D4B7;
 }
 
 .heading h1 {
@@ -291,8 +293,9 @@ p {
   font-weight: 900;
   font-style: italic;
   line-height: 0.875;
-  color: #2E2F33;
-  text-shadow: -1px 1px 0 #00EDCE, 1px 1px 0 #00EDCE, 1px -1px 0 #00EDCE, -1px -1px 0 #00EDCE;
+  -webkit-text-stroke: #00FAD9;
+  -webkit-text-stroke-width: 2px;
+  color: rgba(0, 0, 0, 0);
 }
 
 .nav {
@@ -798,6 +801,20 @@ p {
 
 .light-theme {
   color: #414247;
+}
+
+.light-theme .heading {
+  background-color: #D1D6E5;
+}
+
+.light-theme .heading__text {
+  background-color: #F5F7FE;
+  border-left: 5px solid #00AD96;
+}
+
+.light-theme .heading h1 {
+  -webkit-text-stroke: #00AD96;
+  -webkit-text-stroke-width: 2px;
 }
 
 .light-theme .nav {
