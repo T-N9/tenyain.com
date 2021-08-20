@@ -10,7 +10,7 @@
 
     transition: transform 300ms ease-in-out;
     transform-origin: left;
-    transform: scaleX(1);
+    transform: scaleX(0);
 
     &__wrapper{
         position: absolute;
@@ -20,15 +20,17 @@
 
         width: 16.75rem;
         height: 90%;
+        // min-height: 690px;
 
         background-image: radial-gradient(rgba(0,237,206,.3137254901960784),#35363a 90%);
         box-shadow: rgba($light-color-200, 0.5) 1px 0px 1px 0px;
         border-top-right-radius: 1.25rem;
         border-bottom-right-radius: 1.25rem;
+
     }
 
-    @include m-breakpoint-down(medium){
-        transform: scaleX(0);
+    @include m-breakpoint-up(large){
+        transform: scaleX(1);
     }
 }
 

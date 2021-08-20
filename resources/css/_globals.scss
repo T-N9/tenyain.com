@@ -188,11 +188,11 @@ p{
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $dark-color-100;
+        background-color: rgba($dark-color-100, 0.8);
 
         transition: all 300ms ease-in-out;
         transform: scaleX(0);
-        transform-origin: center;
+        transform-origin: left;
 
     }
     &:hover{
