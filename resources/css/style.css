@@ -790,12 +790,12 @@ p {
 
 .aboutme {
   padding-top: 3.190625rem;
+  margin-top: 5rem;
 }
 
 @media (min-width: 64em) {
   .aboutme {
     padding-top: 0;
-    margin-top: 5rem;
   }
 }
 
