@@ -9,6 +9,16 @@ html{
     transition: color background-color 200ms ease-in-out;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: $cyan-color-000;
+  }
+  
+::selection {
+    color: white;
+    background: $cyan-color-000;
+}
+
 body{
     margin: 0;
     padding: 0;

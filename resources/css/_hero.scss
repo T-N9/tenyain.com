@@ -115,6 +115,14 @@
 
         flex: 1;
         @include flex-center;
+
+        img{
+            width: 100%;
+
+            @include m-breakpoint-up(medium){
+                width: unset;
+            }
+        }
         
         .dark-ill{
             display: block;

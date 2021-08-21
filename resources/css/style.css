@@ -12,6 +12,17 @@ html {
   transition: color background-color 200ms ease-in-out;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #00241F;
+}
+
+::selection {
+  color: white;
+  background: #00241F;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -763,6 +774,16 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.hero__ill img {
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .hero__ill img {
+    width: unset;
+  }
 }
 
 .hero__ill .dark-ill {
