@@ -58,11 +58,18 @@
     &__intro{
         flex: 2;
 
+        .h-text{
+            font-size: 1.525rem;
+            color: $cyan-color-100;
+        }
+
         h4{
             color: $cyan-color-300;
+            display: inline-block;
         }
         h1{
             color: $cyan-color-100;
+            display: inline-block;
         }
     }
     

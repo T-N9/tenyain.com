@@ -159,6 +159,9 @@
             }
         }
         &__intro{
+            .h-text{
+                color: $cyan-color-003;
+            }
             h4{
                 color: $dark-color-100;
             }

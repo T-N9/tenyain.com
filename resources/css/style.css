@@ -75,6 +75,10 @@ p {
   }
 }
 
+.mt-lg {
+  margin-top: 5rem;
+}
+
 .d-none {
   display: none !important;
 }
@@ -671,12 +675,19 @@ p {
           flex: 2;
 }
 
+.hero__intro .h-text {
+  font-size: 1.525rem;
+  color: #00FAD9;
+}
+
 .hero__intro h4 {
   color: #E6FFFC;
+  display: inline-block;
 }
 
 .hero__intro h1 {
   color: #00FAD9;
+  display: inline-block;
 }
 
 .hero__img {
@@ -936,6 +947,10 @@ p {
 
 .light-theme .hero__quote .text-line {
   border-bottom: 1px solid #00AD96;
+}
+
+.light-theme .hero__intro .h-text {
+  color: #00AD96;
 }
 
 .light-theme .hero__intro h4 {
