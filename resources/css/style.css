@@ -194,6 +194,45 @@ p {
           transform: scaleX(0) !important;
 }
 
+.content-section a {
+  color: #00D4B7 !important;
+}
+
+.content-section .seperator {
+  background-color: #2E2F33;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.content-section .seperator h1 {
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 2.74688rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.875;
+  -webkit-text-stroke: #00FAD9;
+  -webkit-text-stroke-width: 2px;
+  color: rgba(0, 0, 0, 0);
+}
+
+.alt-section-1__header {
+  padding: 0.625rem 2.625rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  border-left: 5px solid #00D4B7;
+  background-color: #00241F;
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+}
+
+.alt-section-1__wrapper {
+  height: 100vh;
+  background-color: #00241F;
+  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+}
+
 .button {
   display: inline-block;
   position: relative;
@@ -204,8 +243,9 @@ p {
   letter-spacing: 0.125rem;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
+  color: #00FAD9;
   border: 1px solid #00FAD9;
-  cursor: pointer;
+  cursor: crosshair;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -235,7 +275,6 @@ p {
 
 .button:hover {
   color: #00FAD9;
-  border-color: #00D4B7;
 }
 
 .button:hover::before {
@@ -254,10 +293,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out !important;
+  transition: all 200ms ease-in-out !important;
   -webkit-transform: scale(1);
           transform: scale(1);
   margin: 1rem 1rem;
@@ -270,33 +307,6 @@ p {
 .upwork-icon:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-}
-
-.heading {
-  background-color: #2E2F33;
-  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-}
-
-.heading__text {
-  padding: 0.625rem 2.625rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin-left: auto;
-  border-left: 5px solid #00D4B7;
-}
-
-.heading h1 {
-  margin-bottom: 0;
-  text-align: right;
-  font-size: 2.74688rem;
-  font-weight: 900;
-  font-style: italic;
-  line-height: 0.875;
-  -webkit-text-stroke: #00FAD9;
-  -webkit-text-stroke-width: 2px;
-  color: rgba(0, 0, 0, 0);
 }
 
 .nav {
@@ -583,13 +593,9 @@ p {
   }
 }
 
-.hero a {
-  color: #00D4B7 !important;
-}
-
 .hero__cover {
   width: 100%;
-  min-height: 18.188rem;
+  min-height: 11.188rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -609,7 +615,7 @@ p {
 
 @media (min-width: 40em) {
   .hero__cover {
-    min-height: 29.1875rem;
+    min-height: 16.1875rem;
   }
 }
 
@@ -778,17 +784,6 @@ p {
   margin-top: 5rem;
 }
 
-.aboutme__header {
-  background-color: #00241F;
-  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
-}
-
-.aboutme__wrapper {
-  background-color: #00241F;
-  height: 100vh;
-  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
-}
-
 @media (min-width: 64em) {
   .aboutme {
     padding-top: 0;
@@ -811,6 +806,32 @@ p {
 .light-theme .heading h1 {
   -webkit-text-stroke: #00AD96;
   -webkit-text-stroke-width: 2px;
+}
+
+.light-theme .content-section a {
+  color: #00AD96 !important;
+}
+
+.light-theme .content-section .seperator {
+  background-color: #F5F7FE;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.light-theme .content-section .seperator h1 {
+  -webkit-text-stroke: #00AD96;
+  -webkit-text-stroke-width: 2px;
+}
+
+.light-theme .alt-section-1__header {
+  border-left: 5px solid #00AD96;
+  background-color: #E6FFFC;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+}
+
+.light-theme .alt-section-1__wrapper {
+  background-color: #E6FFFC;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 }
 
 .light-theme .nav {
@@ -876,16 +897,12 @@ p {
 }
 
 .light-theme .button {
+  color: #00AD96;
   border: 1px solid #00AD96;
 }
 
 .light-theme .button::before {
-  background-color: rgba(65, 66, 71, 0.5);
-}
-
-.light-theme .button:hover {
-  color: #E6FFFC;
-  border-color: #00D4B7;
+  background-color: rgba(209, 214, 229, 0.5);
 }
 
 .light-theme .button:hover::before {
@@ -899,14 +916,6 @@ p {
   transition: fill 200ms ease-in-out;
 }
 
-.light-theme .upwork-icon svg {
-  width: 90%;
-}
-
-.light-theme .upwork-icon:hover .upwork-path {
-  fill: #00FAD9;
-}
-
 .light-theme .main {
   background-color: #F5F7FE;
   background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
@@ -918,10 +927,6 @@ p {
 
 .light-theme .main a:hover, .light-theme .main a:visited:hover {
   color: #00FAD9;
-}
-
-.light-theme .hero a {
-  color: #00AD96 !important;
 }
 
 .light-theme .hero__quote {
@@ -957,15 +962,5 @@ p {
 
 .light-theme .hero__description h2 {
   color: #00AD96;
-}
-
-.light-theme .aboutme__header {
-  background-color: #E6FFFC;
-  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
-}
-
-.light-theme .aboutme__wrapper {
-  background-color: #E6FFFC;
-  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 }
 /*# sourceMappingURL=style.css.map */
