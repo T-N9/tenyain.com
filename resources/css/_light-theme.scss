@@ -53,6 +53,15 @@
             background-image: radial-gradient(rgba(0,237,206,.3137254901960784),$light-color-100 90%);
             box-shadow: rgba($dark-color-300, 0.5) 1px 0px 1px 0px;
         }
+
+        &__header{
+            .nav-path{
+                fill: $cyan-color-002;
+            }
+            .nav-stroke-path{
+                stroke: $cyan-color-002;
+            }
+        }
     }
 
     .header{

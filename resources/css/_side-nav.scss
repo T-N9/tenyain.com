@@ -12,6 +12,8 @@
     transform-origin: left;
     transform: scaleX(0);
 
+    
+
     &__wrapper{
         position: absolute;
         top: 50%;
@@ -20,7 +22,11 @@
 
         width: 16.75rem;
         height: 90%;
-        // min-height: 690px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
 
         background-image: radial-gradient(rgba(0,237,206,.3137254901960784),#35363a 90%);
         box-shadow: rgba($light-color-200, 0.5) 1px 0px 1px 0px;
@@ -29,6 +35,14 @@
 
     }
 
+    &__header{
+        .nav-path{
+            fill: $light-color;
+        }
+        .nav-stroke-path{
+            stroke: $light-color;
+        }
+    }
     @include m-breakpoint-up(large){
         transform: scaleX(1);
     }
