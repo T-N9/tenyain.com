@@ -2,6 +2,31 @@
     padding-top: 3.190625rem;
     margin-top: 5rem;
 
+    &__grid{
+        @include m-breakpoint-up(medium){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item{
+        padding: 2.9375rem 0;
+
+        @include m-breakpoint-up(medium){
+            flex: 0 0 50%;
+            padding: 0.9375rem;
+
+        }
+
+        @include m-breakpoint-up(large){
+            padding: 2.9375rem;
+        }
+    }
+
+    &__icon{
+        margin-left: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
 
     @include m-breakpoint-up(large){
         padding-top: 0;

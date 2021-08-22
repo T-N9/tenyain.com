@@ -203,5 +203,11 @@
     }
 
     .aboutme{    
+
+        &__icon{
+            .am-path{
+                stroke: $cyan-color-003;
+            }
+        }
     }
 }
