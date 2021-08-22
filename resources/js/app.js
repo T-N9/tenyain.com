@@ -5,7 +5,6 @@ const body=document.querySelector('body');
 const navOverlay= document.querySelector('.nav-overlay');
 // Desktop Icons
 const maximize=document.querySelector('.maximize-icon');
-const lg_menuNav=document.querySelector('.lg-side-nav-icon');
 
 const mainSection=document.querySelector('.main');
 const nav=document.querySelector('.nav');
