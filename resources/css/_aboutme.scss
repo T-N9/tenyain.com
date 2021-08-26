@@ -28,6 +28,12 @@
         margin-bottom: 1.25rem;
     }
 
+    &__title{
+        h2{
+            font-size: 1.17em;
+        }
+    }
+
     @include m-breakpoint-up(large){
         padding-top: 0;
         
