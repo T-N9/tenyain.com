@@ -3,6 +3,7 @@
     &__cover{
         width: 100%;
         min-height: 11.188rem;
+        position: relative;
 
         display: flex;
         justify-content: center;
@@ -20,6 +21,17 @@
         }
         @include m-breakpoint-up(large){
             min-height: 15.1875rem;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, #ffffff00, #006E5F90);
+
         }
     }
 

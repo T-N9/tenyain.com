@@ -19,6 +19,24 @@ html{
     background: $cyan-color-000;
 }
 
+// Scroll Bar
+::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+    }
+    ::-webkit-scrollbar-thumb{
+    background: #00AD96;
+    border-radius: 30px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+    background: #00EDCE;
+    }
+    ::-webkit-scrollbar-track{
+    background: #2E2F33;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -32,11 +50,11 @@ body{
 }
 
 // Typography
-
 h1, h2, h3, h4, h5, h6{
     margin-top: 0;
     margin-bottom: 0.9375rem;
 }
+
 h1, h2, h3{
     line-height: 1;
     font-family: $font-heading;
@@ -57,7 +75,6 @@ p{
 }
 
 // Classes to be used globally
-
 .hide-for-mobile{
     @include m-breakpoint-down(medium){
         display: none !important;
@@ -90,6 +107,13 @@ p{
 .d-none{
     display: none !important;
 }
+
+@include m-breakpoint-down(medium){
+    .d-md-none{
+        display: none;
+    }
+}
+
 .d-flex{
     display: flex !important;
 }
@@ -110,6 +134,12 @@ p{
 
 .x-full-scale{
     transform: scaleX(1) !important;
+}
+
+@include m-breakpoint-down(medium){
+    .x-no-scale{
+        transform: scaleX(0) !important;
+    }
 }
 
 .no-overflow{
