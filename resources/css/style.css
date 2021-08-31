@@ -748,6 +748,7 @@ p {
 }
 
 .hero__img .tn-img {
+  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
