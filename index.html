@@ -451,6 +451,7 @@
         timeEl.innerText = current
         if (current == end) {
           loadingEl.classList.add('hide')
+          document.querySelector('.nav').classList.remove('d-md-none')
           clearInterval(timer)
         }
       }, stepTime)

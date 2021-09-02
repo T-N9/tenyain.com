@@ -6,7 +6,7 @@
     width: 100%;
     height: 100vh;
     z-index: 5500;
-    transition: opacity 1.5s $slow-ease;
+    transition: opacity 250ms ease-in-out;
     
 
     display: flex;
