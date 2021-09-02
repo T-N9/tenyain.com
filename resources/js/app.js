@@ -3,6 +3,7 @@ const mobileMenuBtn= document.getElementById('menu-toggleBtn-mobile');
 
 const body=document.querySelector('body');
 const navOverlay= document.querySelector('.nav-overlay');
+const percentage= document.getElementById('progress');
 // Desktop Icons
 const maximize=document.querySelector('.maximize-icon');
 
@@ -17,7 +18,23 @@ window.addEventListener('load', (event) => {
         nav.classList.remove('d-md-none');
         console.log('Nav is loaded');
     }, 300);
-  });
+});
+
+// function loader(){
+//     var i=0;
+//     while (i<=100) {
+//         percentage.innerHTML=i;
+//     }
+// }
+// loader();
+
+
+
+
+
+
+
+
 
 function changeTheme(){
     body.classList.toggle('light-theme');   

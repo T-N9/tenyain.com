@@ -1,0 +1,44 @@
+.loading{
+    position: fixed;
+    background-color: $dark-color-000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5500;
+    transition: opacity 1.5s $slow-ease;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content{
+        h1{
+            font-family: $font-secondary !important;
+        }
+        .title-1{
+            color: $cyan-color-003;
+            font-size: 2.465rem;
+            font-weight: 400;
+            margin-left: -50px;
+        }
+        .percent{
+            color: $cyan-color-100;
+            font-size: 3rem;
+            font-weight: 400;
+            text-align: right;
+        }
+        .title-2{
+            font-size: 3.465rem;
+            color: $cyan-color-004;
+            margin-right: -50px;
+        }
+    }
+
+    &.hide{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+}
