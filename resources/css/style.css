@@ -395,7 +395,7 @@ p {
 }
 
 .loading__content .percent {
-  color: rgba(0, 212, 183, 0.3);
+  color: rgba(0, 212, 183, 0.05);
   font-size: 8rem;
   font-weight: 400;
   text-align: center;
