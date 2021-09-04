@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="resources/css/style.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="global/all.css">
+
+  <script>sessionStorage.fontsLoaded&&document.documentElement.classList.add("wf-active");</script>
 </head>
 
 <body id="main-body">
@@ -445,7 +447,7 @@
   <script>
     WebFont.load({
       google: {
-        families: ['Space Grotesk:300,400,700', 'Space Mono:400,700,400i,700i', 'Raleway:600,700,800,900,600i,700i,800i,900i']
+        families: ['Space Grotesk:300,400,700&display=swap', 'Space Mono:400,700,400i,700i&display=swap', 'Raleway:600,700,800,900,600i,700i,800i,900i&display=swap']
       },
       active: function () {
         sessionStorage.fonts = true;
