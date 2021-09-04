@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Te Nyain Moe Lwin</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -32,18 +33,13 @@
   <meta property="twitter:image" content="meta.png">
   <!-- Main CSS File -->
   <link rel="stylesheet" href="resources/css/style.css">
-  <!-- Google Font CDN -->
-  <link href="https://fonts.googleapis.com">
-  <link href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  
+
 </head>
+
 <body id="main-body">
   <!-- Side Navigation -->
   <nav class="nav x-no-scale d-md-none">
@@ -185,7 +181,8 @@
         </a>
 
         <!-- Mail to TeNyain -->
-        <a class="header__mail" type="mailto" href="mailto:tenyainmoelwin@gmail.com" aria-label="Mail to TeNyain"><span class="d-none">Mail to
+        <a class="header__mail" type="mailto" href="mailto:tenyainmoelwin@gmail.com" aria-label="Mail to TeNyain"><span
+            class="d-none">Mail to
             TeNyain</span><i class="far fa-envelope"></i></a>
       </nav>
     </header>
@@ -445,7 +442,27 @@
 
 
   </script>
-  <script src="resources/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"
+    integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Space Grotesk:300,400,700', 'Space Mono:400,700,400i,700i', 'Raleway:600,700,800,900,600i,700i,800i,900i']
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      }
+    }); WebFont.load({
+      // typekit: {
+      //   id: 'xxxxxxxx'
+      // },
+      active: function () {
+        sessionStorage.fonts = true;
+      }
+    });
+  </script>
+  <script src="resources/js/app.js" defer></script>
 </body>
 
 </html>

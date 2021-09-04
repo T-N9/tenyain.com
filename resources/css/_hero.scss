@@ -109,7 +109,8 @@
             width: 100%;
 
             @include m-breakpoint-up(medium){
-                width: unset;
+                width: 343.5px;
+                height: 251.66px;
             }
         }
         

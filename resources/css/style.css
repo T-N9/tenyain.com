@@ -884,7 +884,8 @@ p {
 
 @media (min-width: 40em) {
   .hero__ill img {
-    width: unset;
+    width: 343.5px;
+    height: 251.66px;
   }
 }
 
