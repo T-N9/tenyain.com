@@ -107,7 +107,8 @@
 
         img{
             width: 100%;
-
+            height: auto;
+            
             @include m-breakpoint-up(medium){
                 width: 343.5px;
                 height: 251.66px;
