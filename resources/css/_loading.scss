@@ -14,25 +14,31 @@
     align-items: center;
 
     &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         h1{
             font-family: $font-secondary !important;
+            margin-bottom: 0;
         }
         .title-1{
-            position: absolute;
-            top: 52%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color: $cyan-color-100;
             font-size: 1.525rem;
             font-weight: 600;
             text-decoration: underline;
-            // margin-left: -50px;
         }
         .percent{
-            color: rgba( #00D4B7, 0.05);
-            font-size: 8rem;
-            font-weight: 400;
+            color: $cyan-color-001;
+            width: 60px;
+            height: 60px;
+            font-size: 1.25rem;
+            font-weight: 600;
             text-align: center;
+            background-color: $cyan-color-004;
+            padding: 20px;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-bottom: 10px;
         }
     }
 

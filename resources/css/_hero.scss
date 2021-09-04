@@ -35,30 +35,6 @@
         }
     }
 
-    // &__quote{
-    //     padding: 0.625rem;
-
-    //     font-size: $font-sm;
-    //     font-family: $font-secondary;
-    //     text-align: center;
-    //     color: $light-color-200;
-    //     background-color: rgba($cyan-color-000, 0.8);
-
-    //     .text-line{
-    //         border-bottom: 1px solid $cyan-color;
-    //     }
-
-    //     .verse{
-    //         display: block;
-    //         margin: 0.25rem 0;
-    //         font-weight: bold;
-    //     }
-
-    //     @include m-breakpoint-up(medium){
-    //         font-size: $font-md;
-    //     }
-    // }
-
     &__landing{
         display: flex;
 
@@ -96,7 +72,7 @@
             height: 160px;
             margin-top: -3rem;
 
-            background-image: url(../img/tn-pic.webp);
+            // background-image: url(../img/tn-pic.webp);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;

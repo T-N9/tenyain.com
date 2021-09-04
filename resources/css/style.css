@@ -378,16 +378,24 @@ p {
           align-items: center;
 }
 
+.loading__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .loading__content h1 {
   font-family: "Space Mono", monospace !important;
+  margin-bottom: 0;
 }
 
 .loading__content .title-1 {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   color: #00FAD9;
   font-size: 1.525rem;
   font-weight: 600;
@@ -395,10 +403,17 @@ p {
 }
 
 .loading__content .percent {
-  color: rgba(0, 212, 183, 0.05);
-  font-size: 8rem;
-  font-weight: 400;
+  color: #003B33;
+  width: 60px;
+  height: 60px;
+  font-size: 1.25rem;
+  font-weight: 600;
   text-align: center;
+  background-color: #00D4B7;
+  padding: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .loading.hide {
@@ -803,7 +818,6 @@ p {
   width: 160px;
   height: 160px;
   margin-top: -3rem;
-  background-image: url(../img/tn-pic.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

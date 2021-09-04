@@ -20,22 +20,6 @@ window.addEventListener('load', (event) => {
     }, 300);
 });
 
-// function loader(){
-//     var i=0;
-//     while (i<=100) {
-//         percentage.innerHTML=i;
-//     }
-// }
-// loader();
-
-
-
-
-
-
-
-
-
 function changeTheme(){
     body.classList.toggle('light-theme');   
 }
