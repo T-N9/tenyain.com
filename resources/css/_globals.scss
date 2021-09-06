@@ -146,6 +146,14 @@ p{
     overflow: hidden;
 }
 
+.br-sm-none{
+    display: none;
+
+    @include m-breakpoint-up(medium){
+        display: block;
+    }
+}
+
 // UI Interaction Classes
 .nav-off{
     transform: scaleX(0) !important;

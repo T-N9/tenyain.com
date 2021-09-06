@@ -1,27 +1,11 @@
 .hero{
-
-    &__cover{
-        width: 100%;
-        min-height: 11.188rem;
-        position: relative;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        // background-image: url(../img/landing-cover.webp);
-        background-size: cover;
-        background-position: center top;
+    &__landing{
+        padding: 260px 15px;
+        background-image: url(../img/landing-cover.webp);
+        background-position: center center;
         background-repeat: no-repeat;
-
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-
-        @include m-breakpoint-up(medium){
-            min-height: 16.1875rem;
-        }
-        @include m-breakpoint-up(large){
-            min-height: 15.1875rem;
-        }
+        background-size: cover;
+        position: relative;
 
         &::before{
             content: "";
@@ -30,68 +14,54 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(to bottom, #ffffff00, #006E5F90);
+            // background-image: linear-gradient(to top, #006E5F10, #006E5F90);
+            background-color: $dark-color-000;
+            opacity: 0.85;
 
         }
-    }
-
-    &__landing{
-        display: flex;
-
-        @include m-breakpoint-down(small){
-            flex-direction: column-reverse;
+        @include m-breakpoint-up(large){
+            padding: 170px 140px;
         }
     }
 
     &__intro{
-        flex: 2;
+        position: relative;
+        text-align: left;
+        z-index: 50;
+        
 
         .h-text{
             font-size: 1.525rem;
             color: $cyan-color-100;
+
+            @include m-breakpoint-up(medium){
+                font-size: 2rem;
+            }
         }
 
         h4{
             color: $cyan-color-300;
             display: inline-block;
+            font-weight: 400;
         }
         h1{
             color: $cyan-color-100;
             display: inline-block;
         }
-    }
-    
-    &__img{
-        
-        flex: 1;
-        margin-bottom: 1.5rem;
-        .tn-img{
-            position: relative;
-            display: inline-flex;
-            width: 160px;
-            height: 160px;
-            margin-top: -3rem;
-
-            // background-image: url(../img/tn-pic.webp);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-
-            border: 3px solid $dark-color-000;
-            border-radius: 0.25rem;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        p{
+            
+            color: $light-color-100;
 
             @include m-breakpoint-up(medium){
-                margin-top: 0;
+                font-size: 1.865rem;
             }
         }
-        
         @include m-breakpoint-up(medium){
-            margin-bottom: 0;
-            @include flex-center;
+            text-align: center;
         }
     }
 
+    
     &__service{
         display: flex;
 

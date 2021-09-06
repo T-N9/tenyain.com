@@ -1,0 +1,149 @@
+
+<!-- Google Font CDN -->
+<!-- <link href="https://fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet"> -->
+<!-- <link
+  href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  rel="stylesheet"> -->
+
+  <div class="hero__cover">
+  <div class="hero__quote">
+    Do not be <span class="text-line">overcome by evil</span>,<br>
+    but <span class="text-line">overcome evil with good</span>.<br>
+    <span class="verse">Romans 21:21</span>
+  </div>
+</div>
+
+<div class="hero__intro">
+          <h4>Hello, I am</h4>
+          <h1>Te Nyain</h1>
+          <p>
+            A freelance <span class="h-text">web designer / developer</span> based in Yangon, Myanmar.
+            I <span class="h-text">craft web designs</span> and turn <span class="h-text">designs into code</span>.
+            Enjoy every day with music and
+            spend time with amazing people.
+          </p>
+        </div>
+        <div class="hero__img">
+          <div class="tn-img"></div>
+        </div>
+
+
+        &__cover{
+          width: 100%;
+          min-height: 11.188rem;
+          position: relative;
+  
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          // background-image: url(../img/landing-cover.webp);
+          background-size: cover;
+          background-position: center top;
+          background-repeat: no-repeat;
+  
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  
+          @include m-breakpoint-up(medium){
+              min-height: 16.1875rem;
+          }
+          @include m-breakpoint-up(large){
+              min-height: 15.1875rem;
+          }
+  
+          &::before{
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: linear-gradient(to bottom, #ffffff00, #006E5F90);
+  
+          }
+      }
+
+
+      &__intro{
+        flex: 2;
+
+        .h-text{
+            font-size: 1.525rem;
+            color: $cyan-color-100;
+        }
+
+        h4{
+            color: $cyan-color-300;
+            display: inline-block;
+        }
+        h1{
+            color: $cyan-color-100;
+            display: inline-block;
+        }
+    }
+    
+    &__img{
+        
+        flex: 1;
+        margin-bottom: 1.5rem;
+        .tn-img{
+            position: relative;
+            display: inline-flex;
+            width: 160px;
+            height: 160px;
+            margin-top: -3rem;
+
+            // background-image: url(../img/tn-pic.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            border: 3px solid $dark-color-000;
+            border-radius: 0.25rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+            @include m-breakpoint-up(medium){
+                margin-top: 0;
+            }
+        }
+        
+        @include m-breakpoint-up(medium){
+            margin-bottom: 0;
+            @include flex-center;
+        }
+    }
+
+    &__landing{
+      display: flex;
+
+      @include m-breakpoint-down(small){
+          flex-direction: column-reverse;
+      }
+  }
+
+/* hero.scss */
+/* // &__quote{
+    //     padding: 0.625rem;
+
+    //     font-size: $font-sm;
+    //     font-family: $font-secondary;
+    //     text-align: center;
+    //     color: $light-color-200;
+    //     background-color: rgba($cyan-color-000, 0.8);
+
+    //     .text-line{
+    //         border-bottom: 1px solid $cyan-color;
+    //     }
+
+    //     .verse{
+    //         display: block;
+    //         margin: 0.25rem 0;
+    //         font-weight: bold;
+    //     }
+
+    //     @include m-breakpoint-up(medium){
+    //         font-size: $font-md;
+    //     }
+    // } */
