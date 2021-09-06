@@ -167,6 +167,11 @@ p {
   }
 }
 
+.is-ready::after {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 .no-overflow {
   overflow: hidden;
 }
@@ -734,12 +739,10 @@ p {
 }
 
 .hero__landing {
-  padding: 260px 15px;
-  background-image: url(../img/landing-cover.webp);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 215px 15px;
   position: relative;
+  -webkit-box-shadow: 0px -10px 20px white;
+          box-shadow: 0px -10px 20px white;
 }
 
 .hero__landing::before {
@@ -751,6 +754,24 @@ p {
   height: 100%;
   background-color: #2e2f33;
   opacity: 0.85;
+  z-index: 10;
+}
+
+.hero__landing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/landing-cover.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 2.5s ease-in-out 0.5s;
+  transition: all 2.5s ease-in-out 0.5s;
 }
 
 @media (min-width: 64em) {

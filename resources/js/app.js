@@ -15,8 +15,7 @@ const mi=document.querySelectorAll('.mi');
 window.addEventListener('load', (event) => {
     console.log('Window is loaded');
     setTimeout(() => {
-        nav.classList.remove('d-md-none');
-        console.log('Nav is loaded');
+        document.querySelector('.hero__landing').classList.add('is-ready');
     }, 300);
 });
 

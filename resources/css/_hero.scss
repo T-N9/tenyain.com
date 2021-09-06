@@ -1,11 +1,12 @@
 .hero{
     &__landing{
-        padding: 260px 15px;
-        background-image: url(../img/landing-cover.webp);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        padding: 215px 15px;
+        // background-image: url(../img/landing-cover.webp);
+        // background-position: center center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
         position: relative;
+        box-shadow: 0px -10px 20px white;
 
         &::before{
             content: "";
@@ -14,10 +15,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            // background-image: linear-gradient(to top, #006E5F10, #006E5F90);
             background-color: $dark-color-000;
             opacity: 0.85;
+            z-index: 10;
 
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/landing-cover.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 2.5s ease-in-out 0.5s;
         }
         @include m-breakpoint-up(large){
             padding: 170px 140px;

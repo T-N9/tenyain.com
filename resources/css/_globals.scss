@@ -142,6 +142,13 @@ p{
     }
 }
 
+.is-ready{
+    &::after{
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
 .no-overflow{
     overflow: hidden;
 }
