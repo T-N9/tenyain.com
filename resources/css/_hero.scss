@@ -2,7 +2,7 @@
     &__landing{
         padding: 245px 15px;
         position: relative;
-        box-shadow: rgba(white , 0.25) 0px 2px 5px -1px, rgba(white , 0.3) 0px 1px 3px -1px;
+        // box-shadow: rgba(white , 0.25) 0px 2px 5px -1px, rgba(white , 0.3) 0px 1px 3px -1px;
 
         &::before{
             content: "";
@@ -11,7 +11,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: $cyan-color-000;
+            background-color: $dark-color-000;
             opacity: 0.6;
             z-index: 10;
         }
@@ -27,6 +27,7 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            filter: grayscale(50%);
             opacity: 0;
             visibility: hidden;
             transition: all 2.5s ease-in-out 0.5s;
