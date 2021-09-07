@@ -741,8 +741,8 @@ p {
 .hero__landing {
   padding: 215px 15px;
   position: relative;
-  -webkit-box-shadow: 0px -10px 20px white;
-          box-shadow: 0px -10px 20px white;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
 }
 
 .hero__landing::before {
@@ -753,7 +753,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: #2e2f33;
-  opacity: 0.85;
+  opacity: 0.6;
   z-index: 10;
 }
 
