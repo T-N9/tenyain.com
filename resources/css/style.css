@@ -374,7 +374,7 @@ p {
 
 .loading {
   position: fixed;
-  background-color: #2e2f33;
+  background-color: #00241F;
   top: 0;
   left: 0;
   width: 100%;
@@ -738,7 +738,7 @@ p {
 }
 
 .hero__landing {
-  padding: 215px 15px;
+  padding: 245px 15px;
   position: relative;
   -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
           box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
@@ -823,10 +823,20 @@ p {
   }
 }
 
+.hero__down {
+  position: absolute;
+  bottom: 3.125rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
+  z-index: 100;
+  padding: 0 0.625rem;
+}
+
 .hero__service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 100px;
 }
 
 @media (max-width: 63.9375em) {

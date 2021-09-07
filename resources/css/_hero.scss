@@ -1,6 +1,6 @@
 .hero{
     &__landing{
-        padding: 215px 15px;
+        padding: 245px 15px;
         position: relative;
         box-shadow: rgba(white , 0.25) 0px 2px 5px -1px, rgba(white , 0.3) 0px 1px 3px -1px;
 
@@ -73,9 +73,19 @@
         }
     }
 
+    &__down{
+        position: absolute;
+        bottom: 3.125rem;
+        right: 1.25rem;
+        font-size: 1.5rem;
+        z-index: 100;
+        padding: 0 0.625rem;
+    }
+
     
     &__service{
         display: flex;
+        padding-top: 100px;
 
         @include m-breakpoint-down(medium){
             flex-direction: column;
