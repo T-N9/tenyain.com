@@ -18,9 +18,7 @@
             color: $cyan-color-004;
         }
     }
-
-
-    @include m-breakpoint-up(large){
+    @include m-breakpoint-up(xlarge){
         padding-top: 0rem;
         padding-left: 15.3125rem;
     }

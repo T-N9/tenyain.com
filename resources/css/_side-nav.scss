@@ -43,7 +43,7 @@
             stroke: $light-color;
         }
     }
-    @include m-breakpoint-up(large){
+    @include m-breakpoint-up(xlarge){
         transform: scaleX(1);
     }
 }

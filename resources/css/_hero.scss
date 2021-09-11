@@ -1,8 +1,7 @@
 .hero{
     &__landing{
-        padding: 245px 15px;
+        padding: 285px 15px;
         position: relative;
-        // box-shadow: rgba(white , 0.25) 0px 2px 5px -1px, rgba(white , 0.3) 0px 1px 3px -1px;
 
         &::before{
             content: "";
@@ -33,7 +32,7 @@
             transition: all 2.5s ease-in-out 0.5s;
         }
         @include m-breakpoint-up(large){
-            padding: 170px 140px;
+            padding: 200px 140px;
         }
     }
 
@@ -46,31 +45,33 @@
         .h-text{
             // font-size: 1.525rem;
             color: $cyan-color-100;
+            font-weight: 600;
 
             @include m-breakpoint-up(medium){
-                font-size: 2rem;
+                // font-size: 2rem;
             }
         }
 
         h4{
-            color: $cyan-color-300;
+            color: $light-color;
             display: inline-block;
             font-weight: 400;
         }
         h1{
+            font-size: clamp(35px, 8vw, 45px) !important;
             color: $cyan-color-100;
             display: inline-block;
         }
         p{
-            
-            color: $light-color-100;
-
+            color: $light-color-200;
             @include m-breakpoint-up(medium){
-                font-size: 1.865rem;
+                // font-size: 1.865rem;
+                font-size: 1.365rem;
             }
         }
-        @include m-breakpoint-up(medium){
+        @include m-breakpoint-up(lmedium){
             text-align: center;
+            padding: 0 150px;
         }
     }
 
@@ -88,7 +89,7 @@
         display: flex;
         padding-top: 100px;
 
-        @include m-breakpoint-down(medium){
+        @include m-breakpoint-down(lmedium){
             flex-direction: column;
         }
     }

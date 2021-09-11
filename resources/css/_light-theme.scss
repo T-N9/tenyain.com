@@ -159,14 +159,12 @@
     }
 
     .hero{
-        // &__quote{
-        //     color: $dark-color-100;
-        //     background-color: rgba($cyan-color-300, 0.8);
-    
-        //     .text-line{
-        //         border-bottom: 1px solid $cyan-color-003;
-        //     }
-        // }
+        &__landing{
+            &::before{
+                background-color: $light-color-200;
+            }
+        }
+
         &__intro{
             .h-text{
                 color: $cyan-color-003;
@@ -176,6 +174,9 @@
             }
             h1{
                 color: $cyan-color-003;
+            }
+            p{
+                color: $dark-color-000;
             }
         }
 

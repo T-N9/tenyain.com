@@ -1,235 +1,252 @@
-html{
+html {
     font-size: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: inherit;
     transition: color background-color 200ms ease-in-out;
 }
 
-::-moz-selection { /* Code for Firefox */
+// User Text Selection
+::-moz-selection {
+    /* Code for Firefox */
     color: white;
     background: $cyan-color-000;
-  }
-  
+}
 ::selection {
     color: white;
     background: $cyan-color-000;
 }
 
 // Scroll Bar
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 4px;
     height: 4px;
-    }
-    ::-webkit-scrollbar-thumb{
+}
+::-webkit-scrollbar-thumb {
     background: #00AD96;
     border-radius: 30px;
-    }
-    ::-webkit-scrollbar-thumb:hover{
+}
+::-webkit-scrollbar-thumb:hover {
     background: #00EDCE;
-    }
-    ::-webkit-scrollbar-track{
+}
+::-webkit-scrollbar-track {
     background: #2E2F33;
     border-radius: 0px;
     box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 }
-
-body{
+// General
+body {
     margin: 0;
     padding: 0;
-
     color: $light-color;
     font-family: $font-primary;
     font-size: $font-md;
     font-weight: 300;
     line-height: 1.3;
-
 }
-
 // Typography
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
     margin-bottom: 0.9375rem;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     line-height: 1;
     font-family: $font-heading;
     font-weight: 700;
 }
 
-h1{
+h1 {
     font-size: $font-lg;
-
-    @include m-breakpoint-up(large){
+    @include m-breakpoint-up(large) {
         font-size: $font-xl;
     }
 }
 
-p{
+p {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
 // Classes to be used globally
-.hide-for-mobile{
-    @include m-breakpoint-down(medium){
+
+// Display Classes
+.hide-for-mobile {
+    @include m-breakpoint-down(large) {
         display: none !important;
     }
 }
 
-.hide-for-desktop{
-    @include m-breakpoint-up(large){
+.hide-for-desktop {
+    @include m-breakpoint-up(xlarge) {
         display: none !important;
     }
 }
 
-.container{
+.d-none {
+    display: none !important;
+}
+
+@include m-breakpoint-down(lmedium) {
+    .d-md-none {
+        display: none;
+    }
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+
+    &.align-center {
+        align-items: center;
+    }
+}
+
+.container {
     max-width: 69.375rem;
     margin: 0 auto;
 
-    &--pall{
+    &--pall {
         padding: 1.4375rem 1.25rem;
 
-        @include m-breakpoint-up(medium){
+        @include m-breakpoint-up(medium) {
             padding: 2.4375rem 4rem;
         }
     }
 }
 
-.mt-lg{
+.mt-lg {
     margin-top: 5rem;
 }
 
-.d-none{
-    display: none !important;
-}
-
-@include m-breakpoint-down(medium){
-    .d-md-none{
-        display: none;
-    }
-}
-
-.d-flex{
-    display: flex !important;
-}
-.d-inline-block{
-    display: inline-block !important;
-}
-
-.d-inline-flex{
-    display: inline-flex;
-
-    &.align-center{
-        align-items: center;
-    }
-}
-.flex-center{
+.flex-center {
     @include flex-center;
 }
 
-.x-full-scale{
+.x-full-scale {
     transform: scaleX(1) !important;
 }
 
-@include m-breakpoint-down(medium){
-    .x-no-scale{
+@include m-breakpoint-down(medium) {
+    .x-no-scale {
         transform: scaleX(0) !important;
     }
 }
 
-.is-ready{
-    &::after{
+.is-ready {
+    &::after {
         opacity: 1 !important;
         visibility: visible !important;
     }
 }
 
-.no-overflow{
+.no-overflow {
     overflow: hidden;
 }
 
-.br-sm-none{
+.br-sm-none {
     display: none;
 
-    @include m-breakpoint-up(medium){
+    @include m-breakpoint-up(medium) {
         display: block;
     }
 }
 
 // UI Interaction Classes
-.nav-off{
+.nav-off {
     transform: scaleX(0) !important;
 }
 
-.full-main{
+.full-main {
     padding-left: 0 !important;
 }
 
-.open-overlay{
+.open-overlay {
     opacity: 1 !important;
     visibility: visible !important;
 }
 
-.maximize-off{
+.maximize-off {
     width: 0;
     height: 0;
-    .mi{
+
+    .mi {
         opacity: 0;
         visibility: hidden;
     }
-    .mi-1{
-        transform: translate(-5px,-5px);
+
+    .mi-1 {
+        transform: translate(-5px, -5px);
     }
-    .mi-2{
-        transform: translate(5px,5px);
+
+    .mi-2 {
+        transform: translate(5px, 5px);
     }
 }
 
-.maximize-on{
+.maximize-on {
     width: 20px;
     height: 20px;
-    .mi{
+
+    .mi {
         opacity: 1;
         visibility: visible;
     }
-    .mi-1{
-        transform: translate(0,0);
+
+    .mi-1 {
+        transform: translate(0, 0);
     }
-    .mi-2{
-        transform: translate(0,0);
+
+    .mi-2 {
+        transform: translate(0, 0);
     }
 }
 
-.side-nav-on{
+.side-nav-on {
     display: flex;
     transform: scaleX(1) !important;
-    .sni{
+
+    .sni {
         transform: scaleX(1) !important;
     }
 }
 
-.side-nav-off{
-    .sni{
+.side-nav-off {
+    .sni {
         transform: scaleX(0) !important;
     }
 }
 
 // Components
-.content-section{
-    a{
+.content-section {
+    a {
         color: $cyan-color-004 !important;
     }
 
-    .seperator{
+    .seperator {
         background-color: $dark-color-000;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        
-        h1{
+
+        h1 {
             margin-bottom: 0;
             text-align: right;
             font-size: $font-xl;
@@ -238,36 +255,36 @@ p{
             line-height: 0.875;
             -webkit-text-stroke: $cyan-color-100;
             -webkit-text-stroke-width: 2px;
-            color: rgba(0,0,0,0);
+            color: rgba(0, 0, 0, 0);
         }
     }
 }
 
-.alt-section-1{
-    &__header{
+.alt-section-1 {
+    &__header {
         padding: 0.625rem 2.625rem;
         width: max-content;
         margin-left: auto;
-
         border-left: 5px solid $cyan-color-004;
-
         background-color: $cyan-color-000;
         background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
     }
 
-    &__wrapper{
+    &__wrapper {
         background-color: $cyan-color-000;
         background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
     }
 }
 
-.button{
+.button {
+    outline: none;
     display: inline-block;
     position: relative;
 
     font-family: $font-secondary;
     font-size: $font-sm;
     margin: 1.625rem 0;
+    // margin-top: 1.625rem;
     padding: 0.625rem 0.9375rem;
     letter-spacing: 0.125rem;
 
@@ -275,15 +292,16 @@ p{
 
     color: $cyan-color-100;
     border: 1px solid $cyan-color-100;
+    background-color: transparent;
     cursor: crosshair;
     user-select: none;
 
-    > span{
+    >span {
         position: relative;
         z-index: 5;
     }
 
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -295,35 +313,32 @@ p{
         transition: all 300ms ease-in-out;
         transform: scaleX(0);
         transform-origin: left;
-
     }
-    &:hover{
+
+    &:hover {
         color: $cyan-color-100;
     }
-    &:hover::before{
+
+    &:hover::before {
         transform: scaleX(1);
     }
-
 }
 
-.upwork-icon{
+.upwork-icon {
     display: inline-flex;
     width: 35px;
-    
+
     justify-content: center;
     align-items: center;
     transition: all 200ms ease-in-out !important;
     transform: scale(1);
     margin: 1rem 1rem;
 
-    svg{
+    svg {
         width: 90%;
     }
 
-    &:hover{
+    &:hover {
         transform: scale(1.15);
     }
 }
-
-
-
