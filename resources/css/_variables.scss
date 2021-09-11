@@ -1,3 +1,7 @@
+@function calUni($e) {
+    @return ($e / 16px)+rem;
+}
+
 // Animation
 $slow-ease: cubic-bezier(0.5, 0.5, 0.5, 1);
 

@@ -1,6 +1,6 @@
 .hero{
     &__landing{
-        padding: 285px 15px;
+        padding: calUni(260px) 15px;
         position: relative;
 
         &::before{

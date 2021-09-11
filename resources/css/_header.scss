@@ -5,7 +5,8 @@
 
     &__nav{
         width: 100%;
-        padding: 0.625rem 0.9375rem;
+        // padding: 0.625rem 0.9375rem;
+        padding: calUni(5px);
 
         display: flex;
         justify-content: space-between;
@@ -16,6 +17,8 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        padding: calUni(15px);
+        border: 1px dashed transparent;
 
         .maximize-icon{
             width: 1.25rem;
@@ -23,20 +26,7 @@
             position: relative;
             display: none;
             transition: all 200ms ease-in-out;
-            &:hover{
-                .mi-1{
-                    border-top:2px solid $cyan-color-100 ;
-                    border-left:2px solid $cyan-color-100 ;
-                }
-                .mi-2{
-                    border-bottom:2px solid $cyan-color-100 ;
-                    border-right:2px solid $cyan-color-100 ;
-                }
-
-                .sni{
-                    background-color: $cyan-color-100;
-                }
-            }
+            
 
             // Maximize Icon
             .mi{
@@ -115,6 +105,33 @@
             >span:not(:last-child){
                 margin-bottom: 3px;
             }
+
+            @include m-breakpoint-down(large){
+                transform: scale(1.2);
+            }
+        }
+
+        &:hover{
+            .maximize-icon{
+                .mi-1{
+                    border-top:2px solid $cyan-color-100 ;
+                    border-left:2px solid $cyan-color-100 ;
+                }
+                .mi-2{
+                    border-bottom:2px solid $cyan-color-100 ;
+                    border-right:2px solid $cyan-color-100 ;
+                }
+
+                .sni{
+                    background-color: $cyan-color-100;
+                }
+            }
+        }
+
+        @include m-breakpoint-down(large){
+            &:hover{
+                border: 1px dashed $cyan-color-004;
+            }
         }
     }
 
@@ -132,10 +149,17 @@
     &__mail{
         color: $light-color;
         font-size: 1.5rem;
-        transition: color 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+        padding: calUni(5px) calUni(15px);
+        border: 1px dotted transparent;
 
         &:hover{
             color: $cyan-color-004;
+        }
+        @include m-breakpoint-down(large){
+            &:hover{
+                border: 1px dashed $cyan-color-004;
+            }
         }
     }
 
