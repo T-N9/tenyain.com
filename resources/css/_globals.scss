@@ -129,6 +129,9 @@ p {
         padding: 1.4375rem 1.25rem;
 
         @include m-breakpoint-up(medium) {
+            padding: 2.4375rem 1.12rem;
+        }
+        @include m-breakpoint-up(xlarge) {
             padding: 2.4375rem 4rem;
         }
     }
@@ -240,6 +243,9 @@ p {
 .content-section {
     a {
         color: $cyan-color-004 !important;
+        &:hover{
+            color: $cyan-color !important;
+        }
     }
 
     .seperator {

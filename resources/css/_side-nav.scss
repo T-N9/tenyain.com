@@ -43,6 +43,40 @@
             stroke: $light-color;
         }
     }
+
+    &__links{
+        ul{
+            list-style-type: none;
+            padding: 0; 
+            li{
+                font-family: $font-secondary;
+                padding: 4px 20px;
+                border: 1px solid transparent;
+                border-radius: 5px;
+                transition: all 200ms ease-out;
+
+                &:hover{
+                    background-color: $cyan-color-000;
+                }
+            }
+
+            .active{
+                background-color: $cyan-color-000;
+                border: 1px solid $cyan-color-100;
+            }
+        }
+
+        a{
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+        a:not(:last-child){
+            margin-bottom: calUni(10px);
+        }
+    }
+
     @include m-breakpoint-up(xlarge){
         transform: scaleX(1);
     }
