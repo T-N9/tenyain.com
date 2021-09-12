@@ -807,7 +807,21 @@ p {
   transition: all 2.5s ease-in-out 0.5s;
 }
 
+@media (min-width: 48em) {
+  .hero__landing {
+    padding-top: 20.25rem;
+    padding-bottom: 20.25rem;
+  }
+}
+
 @media (min-width: 64em) {
+  .hero__landing {
+    padding-top: 15.25rem;
+    padding-bottom: 15.25rem;
+  }
+}
+
+@media (min-width: 85.375em) {
   .hero__landing {
     padding: 200px 140px;
   }
@@ -843,13 +857,27 @@ p {
 @media (min-width: 36em) {
   .hero__intro p {
     font-size: 1.365rem;
+    max-width: 31.875rem;
   }
 }
 
 @media (min-width: 48em) {
   .hero__intro {
-    text-align: center;
     padding: 0 150px;
+    padding-left: 3.125rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__intro {
+    padding-right: 27rem;
+  }
+}
+
+@media (min-width: 85.375em) {
+  .hero__intro {
+    padding-right: 20rem;
+    padding-left: 0;
   }
 }
 

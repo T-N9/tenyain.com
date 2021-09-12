@@ -31,7 +31,20 @@
             visibility: hidden;
             transition: all 2.5s ease-in-out 0.5s;
         }
+        
+
+        
+
+        @include m-breakpoint-up(lmedium){
+            padding-top:20.25rem;
+            padding-bottom:20.25rem;
+        }
+
         @include m-breakpoint-up(large){
+            padding-top:15.25rem;
+            padding-bottom:15.25rem;
+        }
+        @include m-breakpoint-up(xlarge){
             padding: 200px 140px;
         }
     }
@@ -67,11 +80,19 @@
             @include m-breakpoint-up(medium){
                 // font-size: 1.865rem;
                 font-size: 1.365rem;
+                max-width: calUni(510px);
             }
         }
         @include m-breakpoint-up(lmedium){
-            text-align: center;
             padding: 0 150px;
+            padding-left: calUni(50px);
+        }
+        @include m-breakpoint-up(large){
+            padding-right: 27rem;
+        }
+        @include m-breakpoint-up(xlarge){
+            padding-right: calUni(320px);
+            padding-left: 0;
         }
     }
 
