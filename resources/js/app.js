@@ -109,7 +109,7 @@ function navScroll(){
             console.log(currentId);
             navActive(currentId);
         }
-    },{offset:'0px'});
+    },{offset:'10px'});
     currentSec.waypoint(function(direction){
         if(direction=="up"){
             let currentId=$(this.element).attr('id');
