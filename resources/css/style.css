@@ -527,7 +527,7 @@ p {
   background-color: #00241F;
 }
 
-.nav__links ul .active {
+.nav__links ul .nav-active li {
   background-color: #00241F;
   border: 1px solid #00FAD9;
 }
@@ -568,11 +568,9 @@ p {
 .main {
   position: relative;
   width: 100%;
-  height: 200vh;
   -webkit-transition: padding-left 300ms ease-in-out;
   transition: padding-left 300ms ease-in-out;
   padding-left: 0;
-  height: 500vh;
   background-color: #242429;
 }
 

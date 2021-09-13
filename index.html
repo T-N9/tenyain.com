@@ -94,37 +94,37 @@
       </a>
       <div class="nav__links">
         <ul>
-          <a href="#aboutme">
-            <li class="">
+          <a href="#tn_aboutme" class="nav__item">
+            <li>
               <i class="far fa-address-card"></i>
               About
             </li>
           </a>
-          <a href="">
+          <a href="#tn_projects" class="nav__item">
             <li>
               <i class="fas fa-briefcase"></i>
               Projects
             </li>
           </a>
-          <a href="">
+          <a href="#tn_skills"  class="nav__item">
             <li>
               <i class="fas fa-project-diagram"></i>
               Skills
             </li>
           </a>
-          <a href="">
+          <a href="#tn_services"  class="nav__item">
             <li>
               <i class="fas fa-tasks"></i>
               Services
             </li>
           </a>
-          <a href="">
+          <a href="#tn_contact"  class="nav__item">
             <li>
               <i class="far fa-paper-plane"></i>
               Contact
             </li>
           </a>
-          <a href="">
+          <a href="#tn_blog"  class="nav__item">
             <li>
               <i class="fas fa-quote-left"></i>
               Blog
@@ -226,7 +226,7 @@
     </header>
 
     <!-- Hero Section starts -->
-    <section id="hero" class="hero content-section">
+    <section id="tn_hero" class="hero content-section">
       <div class="hero__landing container container--pall">
         <div class="hero__intro">
           <h4>Hi there, my name is</h4>
@@ -281,7 +281,7 @@
       </div>
     </section>
 
-    <section id="aboutme" class="aboutme content-section alt-section-1">
+    <section id="tn_aboutme" class="aboutme content-section alt-section-1">
       <div class="seperator">
         <div class="alt-section-1__header">
           <h1>About<br> Me</h1>
@@ -426,6 +426,12 @@
 
       </div>
     </section>
+
+    <section id="tn_projects" style="height: 50vh;border: 1px solid cyan;"></section>
+    <section id="tn_skills" style="height: 50vh;border: 1px solid cyan;"></section>
+    <section id="tn_services" style="height: 50vh;border: 1px solid cyan;"></section>
+    <section id="tn_contact" style="height: 50vh;border: 1px solid cyan;"></section>
+    <section id="tn_blog" style="height: 50vh;border: 1px solid cyan;"></section>
   </main>
 
   <div class="loading">
@@ -472,8 +478,6 @@
         }
       }, stepTime)
     }
-
-
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"
     integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w=="
@@ -496,6 +500,8 @@
     });
   </script>
   <script src="https://kit.fontawesome.com/06cc6607c1.js" crossorigin="anonymous" defer></script>
+  <script src="global/jquery-3.6.0.min.js"></script>
+  <script src="global/waypoint.js"></script>
   <script src="resources/js/app.js" defer></script>
 </body>
 

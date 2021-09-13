@@ -60,9 +60,12 @@
                 }
             }
 
-            .active{
-                background-color: $cyan-color-000;
-                border: 1px solid $cyan-color-100;
+            .nav-active{
+                li{
+                    background-color: $cyan-color-000;
+                    border: 1px solid $cyan-color-100;
+                }
+                
             }
         }
 

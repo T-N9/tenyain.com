@@ -1,16 +1,16 @@
-const desktopMenuBtn= document.getElementById('menu-toggleBtn-desktop');
-const mobileMenuBtn= document.getElementById('menu-toggleBtn-mobile');
+var desktopMenuBtn= document.getElementById('menu-toggleBtn-desktop');
+var mobileMenuBtn= document.getElementById('menu-toggleBtn-mobile');
 
-const body=document.querySelector('body');
-const navOverlay= document.querySelector('.nav-overlay');
-const percentage= document.getElementById('progress');
+var body=document.querySelector('body');
+var navOverlay= document.querySelector('.nav-overlay');
+var percentage= document.getElementById('progress');
 // Desktop Icons
-const maximize=document.querySelector('.maximize-icon');
+var maximize=document.querySelector('.maximize-icon');
 
-const mainSection=document.querySelector('.main');
-const nav=document.querySelector('.nav');
-const sni=document.querySelectorAll('.sni');
-const mi=document.querySelectorAll('.mi');
+var mainSection=document.querySelector('.main');
+var nav=document.querySelector('.nav');
+var sni=document.querySelectorAll('.sni');
+var mi=document.querySelectorAll('.mi');
 
 window.addEventListener('load', (event) => {
     console.log('Window is loaded');
@@ -72,7 +72,6 @@ function sn_to_max(){
 }
 
 desktopMenuBtn.onclick=function(){
-
     if(this.classList.contains('toggle-max')){
         max_to_sn();
     }
@@ -96,6 +95,34 @@ navOverlay.onclick=function(){
         body.classList.toggle('no-overflow');
     }
 }
+
+
+function navActive(current){
+    $(`.nav__item`).removeClass("nav-active");
+    $(`.nav__item[href='#${current}']`).addClass("nav-active");
+}
+function navScroll(){
+    let currentSec=$("section[id]");
+    currentSec.waypoint(function(direction){
+        if(direction=="down"){
+            let currentId=$(this.element).attr('id');
+            console.log(currentId);
+            navActive(currentId);
+        }
+    },{offset:'0px'});
+    currentSec.waypoint(function(direction){
+        if(direction=="up"){
+            let currentId=$(this.element).attr('id');
+            console.log(currentId);
+            navActive(currentId);
+        }
+    },{offset:'-10px'});
+}
+
+navScroll();
+
+
+
 
 
 
