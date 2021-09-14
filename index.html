@@ -96,42 +96,42 @@
       </a>
       <div class="nav__links">
         <ul>
-          <a href="#tn_aboutme" class="nav__item">
-            <li>
+          <li>
+            <a href="#tn_aboutme" class="nav__item">
               <i class="far fa-address-card"></i>
               About
-            </li>
-          </a>
-          <a href="#tn_projects" class="nav__item">
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#tn_projects" class="nav__item">
               <i class="fas fa-briefcase"></i>
               Projects
-            </li>
-          </a>
-          <a href="#tn_skills"  class="nav__item">
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#tn_skills"  class="nav__item">
               <i class="fas fa-project-diagram"></i>
               Skills
-            </li>
-          </a>
-          <a href="#tn_services"  class="nav__item">
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#tn_services"  class="nav__item">
               <i class="fas fa-tasks"></i>
               Services
-            </li>
-          </a>
-          <a href="#tn_contact"  class="nav__item">
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#tn_contact"  class="nav__item">
               <i class="far fa-paper-plane"></i>
               Contact
-            </li>
-          </a>
-          <a href="#tn_blog"  class="nav__item">
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#tn_blog"  class="nav__item">
               <i class="fas fa-quote-left"></i>
               Blog
-            </li>
-          </a>
+            </a>
+          </li>
         </ul>
       </div>
       <div>
@@ -447,18 +447,13 @@
     </div>
   </div>
   <script defer type="text/javascript">
-
     let perfData = window.performance.timing,
       EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
       time = parseInt((EstimatedTime / 1000) % 100) * 100
-
     const timeOrigin = window.performance.timeOrigin,
       durataion = Math.max(1000, parseInt((timeOrigin / 1000) % 100) * 100 || 100)
-
     const start = 0, end = 100
-
     console.log(time, durataion)
-
     animateValue(start, end, durataion)
 
     function animateValue(start, end, duration) {
