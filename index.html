@@ -432,7 +432,7 @@
     <section id="tn_blog" style="height: 50vh;border: 1px solid cyan;"></section>
   </main>
 
-  <!-- <div class="loading">
+  <div class="loading">
     <div class="loading__content">
       <h1 class="title-1">
         Loading
@@ -441,37 +441,37 @@
         <span class="progress">0</span>%
       </h1>
     </div>
-  </div> -->
+  </div>
   <script defer type="text/javascript">
     document.querySelector('head').innerHTML+=`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />`;
-    // let perfData = window.performance.timing,
-    //   EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-    //   time = parseInt((EstimatedTime / 1000) % 100) * 100
-    // const timeOrigin = window.performance.timeOrigin,
-    //   durataion = Math.max(1000, parseInt((timeOrigin / 1000) % 100) * 100 || 100)
-    // const start = 0, end = 100
-    // console.log(time, durataion)
-    // animateValue(start, end, durataion)
+    let perfData = window.performance.timing,
+      EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+      time = parseInt((EstimatedTime / 1000) % 100) * 100
+    const timeOrigin = window.performance.timeOrigin,
+      durataion = Math.max(1000, parseInt((timeOrigin / 1000) % 100) * 100 || 100)
+    const start = 0, end = 100
+    console.log(time, durataion)
+    animateValue(start, end, durataion)
 
-    // function animateValue(start, end, duration) {
-    //   let range = end - start,
-    //     current = start,
-    //     increment = end > start ? 1 : -1,
-    //     stepTime = Math.abs(Math.floor(duration / range)),
-    //     loadingEl = document.querySelector('.loading'),
-    //     timeEl = document.querySelector('.progress')
+    function animateValue(start, end, duration) {
+      let range = end - start,
+        current = start,
+        increment = end > start ? 1 : -1,
+        stepTime = Math.abs(Math.floor(duration / range)),
+        loadingEl = document.querySelector('.loading'),
+        timeEl = document.querySelector('.progress')
 
-    //   let timer = setInterval(function () {
-    //     window.scrollTo(0, 0)
-    //     current += increment
-    //     timeEl.innerText = current
-    //     if (current == end) {
-    //       loadingEl.classList.add('hide')
-    //       document.querySelector('.nav').classList.remove('d-md-none')
-    //       clearInterval(timer)
-    //     }
-    //   }, stepTime)
-    // }
+      let timer = setInterval(function () {
+        window.scrollTo(0, 0)
+        current += increment
+        timeEl.innerText = current
+        if (current == end) {
+          loadingEl.classList.add('hide')
+          document.querySelector('.nav').classList.remove('d-md-none')
+          clearInterval(timer)
+        }
+      }, stepTime)
+    }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"
     integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w=="
