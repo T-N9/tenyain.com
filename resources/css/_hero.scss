@@ -105,6 +105,40 @@
         padding: 0 0.625rem;
     }
 
+    &__social{
+        position: absolute;
+        z-index: 100;
+        right: -9.25rem;
+        bottom: 15.125rem;
+        transform: rotate(90deg);
+        font-family: $font-secondary;
+        font-size: $font-sm;
+        color: $light-color;
+        letter-spacing: 2px;
+       
+        @include flex-center;
+
+        .line{
+            display: inline-block;
+            width: calUni(30px);
+            height: 1px;
+            background-color: $cyan-color-100;
+            margin-right: calUni(20px);
+        }
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            font-size: calUni(25px);
+            margin: 0;
+
+            li{
+                transform: rotate(-90deg);
+                margin-right: calUni(15px);
+            }
+        }
+    }
+
     
     &__service{
         display: flex;
