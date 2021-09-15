@@ -307,12 +307,10 @@ p {
   margin-left: auto;
   border-left: 5px solid #00D4B7;
   background-color: #00241F;
-  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
 }
 
 .alt-section-1__wrapper {
   background-color: #00241F;
-  background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
 }
 
 .button {
@@ -538,9 +536,61 @@ p {
   background-color: #00241F;
 }
 
+.nav__item::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  right: -50px;
+  top: 50%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: translateY(-50%) scaleX(0);
+          transform: translateY(-50%) scaleX(0);
+  z-index: 5;
+  background: #00FAD9;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.nav__item::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+  border-radius: 50%;
+  background-color: #00FAD9;
+  z-index: 5;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.nav__item .icon {
+  display: inline-block;
+  width: 25px;
+  height: auto;
+}
+
 .nav .nav-active {
   background-color: #00241F;
   border: 1px solid #00FAD9;
+  position: relative;
+}
+
+.nav .nav-active::before {
+  -webkit-transform: translateY(-50%) scaleX(1);
+          transform: translateY(-50%) scaleX(1);
+}
+
+.nav .nav-active::after {
+  -webkit-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
 }
 
 @media (min-width: 85.375em) {
@@ -803,7 +853,7 @@ p {
   }
 }
 
-@media (max-width: 47.9375em) {
+@media (max-width: 85.3125em) {
   .header {
     position: fixed;
     top: 0;

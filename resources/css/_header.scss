@@ -163,7 +163,7 @@
         }
     }
 
-    @include m-breakpoint-down(medium){
+    @include m-breakpoint-down(large){
         position: fixed;
         top: 0;
         left: 0;
