@@ -65,12 +65,13 @@
             }
         }
 
-        h4{
+        .hello{
             color: $light-color;
             display: inline-block;
             font-weight: 400;
+            font-size: 1.125rem;
         }
-        h1{
+        .name{
             font-size: clamp(35px, 8vw, 45px) !important;
             color: $cyan-color-100;
             display: inline-block;

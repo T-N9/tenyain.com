@@ -937,13 +937,14 @@ p {
   font-weight: 600;
 }
 
-.hero__intro h4 {
+.hero__intro .hello {
   color: #D1D6E5;
   display: inline-block;
   font-weight: 400;
+  font-size: 1.125rem;
 }
 
-.hero__intro h1 {
+.hero__intro .name {
   font-size: clamp(35px, 8vw, 45px) !important;
   color: #00FAD9;
   display: inline-block;
