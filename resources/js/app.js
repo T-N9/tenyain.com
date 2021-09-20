@@ -6,7 +6,6 @@ var navOverlay= document.querySelector('.nav-overlay');
 var percentage= document.getElementById('progress');
 // Desktop Icons
 var maximize=document.querySelector('.maximize-icon');
-
 var mainSection=document.querySelector('.main');
 var nav=document.querySelector('.nav');
 var sni=document.querySelectorAll('.sni');

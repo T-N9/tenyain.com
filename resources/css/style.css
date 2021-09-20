@@ -595,6 +595,11 @@ p {
           transform: translateY(-50%) scale(1);
 }
 
+.nav__cNa {
+  font-size: 0.865rem;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 85.375em) {
   .nav {
     -webkit-transform: scaleX(1);

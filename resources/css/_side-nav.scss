@@ -119,6 +119,11 @@
         }
     }
 
+    &__cNa{
+        font-size: 0.865rem;
+        margin-bottom: 20px;
+    }
+
     @include m-breakpoint-up(xlarge){
         transform: scaleX(1);
     }
