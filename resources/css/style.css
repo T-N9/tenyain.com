@@ -299,18 +299,31 @@ p {
   color: rgba(0, 0, 0, 0);
 }
 
-.alt-section-1__header {
+.alt-section__header {
   padding: 0.625rem 2.625rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   margin-left: auto;
+}
+
+.alt-section.dark-green .alt-section__header {
   border-left: 5px solid #00D4B7;
   background-color: #00241F;
 }
 
-.alt-section-1__wrapper {
+.alt-section.dark-green .alt-section__wrapper {
   background-color: #00241F;
+}
+
+.alt-section.dark-blue .alt-section__header {
+  border-left: 5px solid #00D4B7;
+  background-color: #0a1625;
+}
+
+.alt-section.dark-blue .alt-section__wrapper {
+  background-color: #0a1625;
+  height: 50vh;
 }
 
 .button {
@@ -1156,5 +1169,9 @@ p {
   .aboutme {
     padding-top: 0;
   }
+}
+
+.project {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

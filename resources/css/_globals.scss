@@ -266,19 +266,40 @@ p {
     }
 }
 
-.alt-section-1 {
+.alt-section {
     &__header {
         padding: 0.625rem 2.625rem;
         width: max-content;
         margin-left: auto;
-        border-left: 5px solid $cyan-color-004;
-        background-color: $cyan-color-000;
-        // background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+        
     }
 
-    &__wrapper {
+    // &__wrapper {
+    //     background-color: $cyan-color-000;
+
+    // }
+}
+
+.alt-section.dark-green{
+    .alt-section__header{
+        border-left: 5px solid $cyan-color-004;
         background-color: $cyan-color-000;
-        // background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+    }
+
+    .alt-section__wrapper{
+        background-color: $cyan-color-000;
+    }
+}
+
+.alt-section.dark-blue{
+    .alt-section__header{
+        border-left: 5px solid $cyan-color-004;
+        background-color: $blue-color-000;
+    }
+
+    .alt-section__wrapper{
+        background-color: $blue-color-000;
+        height: 50vh;
     }
 }
 
