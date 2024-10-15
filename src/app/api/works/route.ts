@@ -7,6 +7,6 @@ export async function GET() {
     const works = await getWorks();
     return NextResponse.json(works, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ message: 'Error fetching works' }, { status: 500 });
+    return NextResponse.json({ message: `Error fetching works : ${error}` }, { status: 500 });
   }
 }

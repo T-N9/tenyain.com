@@ -1,7 +1,6 @@
 'use client'
 import ProjectCard from "@/components/common/cards/ProjectCardHome";
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
-import { getWorks } from "@/lib/fetchers/works";
 import { Button } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
