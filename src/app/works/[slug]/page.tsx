@@ -1,5 +1,5 @@
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
-import { getAllWorksSlug, getWorkBySlug, getWorks } from '@/lib/fetchers/works'
+import { getAllWorksSlug, getWorkBySlug } from '@/lib/fetchers/works'
 import React from 'react'
 
 export async function generateStaticParams() {
