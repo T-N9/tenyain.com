@@ -1,5 +1,7 @@
 import { Button } from 'flowbite-react';
 import React from 'react';
+import { technologyLogoMap } from '../logos';
+import Link from 'next/link';
 
 interface ProjectCardProps {
   logoSrc: string;
@@ -8,6 +10,8 @@ interface ProjectCardProps {
   livePreviewLink: string;
   description: string;
   onViewCaseStudy?: () => void;
+  technologies: string[];
+  slug: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,12 +21,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   livePreviewLink,
   description,
   onViewCaseStudy,
+  technologies,
+  slug
 }) => {
   return (
     <div className="flex flex-col gap-5">
-      <img src={logoSrc} width={200} alt={logoAlt} />
+      <img src={logoSrc} width={200} className=' w-[300px] h-[200px] object-contain' alt={logoAlt} />
       <div>
-        <h1 className="mb-2 font-sans text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl dark:text-white">
+        <h1 className="mb-2 font-sans text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white">
           {title}
         </h1>
         <div className="text-primary-600 flex gap-4 items-center">
@@ -52,9 +58,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       <p className="text-gray-600 text-xl">{description}</p>
 
-      <Button className="hover:!text-primary-600" color="gray" size="lg" onClick={onViewCaseStudy}>
-        View case study
-      </Button>
+      <div className='flex gap-4'>
+        {technologies.map((tech, index) => {
+          return (
+
+            <React.Fragment key={index}> {technologyLogoMap[tech]}</React.Fragment>
+
+          )
+        })}
+      </div>
+
+      <Link href={`/works/${slug}`}>
+        <Button className="hover:!text-primary-600" color="gray" size="lg" onClick={onViewCaseStudy}>
+          View case study
+        </Button>
+      </Link>
     </div>
   );
 };

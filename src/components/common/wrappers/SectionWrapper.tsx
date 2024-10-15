@@ -8,8 +8,8 @@ const SectionWrapper = ({
     className ?: string;
   }>) => {
   return (
-    <section className={`bg-white dark:bg-gray-900 ${className}`}>
-      <div className="max-w-screen-xl px-4 py-16 mx-auto lg:px-6">
+    <section className={`bg-white dark:bg-secondary ${className}`}>
+      <div className="max-w-screen-xl px-4 py-16 mx-auto lg:px-0">
         {children}
       </div>
     </section>
