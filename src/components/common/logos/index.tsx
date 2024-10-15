@@ -9,7 +9,9 @@ import {
   SiFigma,
   SiFigmaHex,
   SiPhp,
-  SiPhpHex
+  SiPhpHex,
+  SiReact,
+  SiReactHex
 } from "@icons-pack/react-simple-icons";
 import { Tooltip } from "flowbite-react";
 
@@ -40,8 +42,13 @@ export const technologyLogoMap: { [key: string]: JSX.Element } = {
     </Tooltip>
   ),
   PHP:(
-    <Tooltip content="Figma">
+    <Tooltip content="PHP">
       <SiPhp size={50} color={SiPhpHex} />
+    </Tooltip>
+  ),
+  ReactJS:(
+    <Tooltip content="React.JS">
+      <SiReact size={50} color={SiReactHex} />
     </Tooltip>
   )
 };

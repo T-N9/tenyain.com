@@ -1,0 +1,81 @@
+---
+title: "Gui-Transpo"
+description: " Gui-Transpo is a place to generate or customize guitar chords and lyrics with storing the data so that you can access it and sing along with it."
+type: "Personal"
+status: "Production"
+role: "Front-end Developer"
+period: "Jan 2023 - March 2023"
+url: "https://guitranspo.tenyain.com/"
+logo: "/assets/works/gui-transpo.svg"
+colors : ["#BF895A,Twine", "#524439,Taupe", "#F2BF80,Tacao", "#2B2A2A,Mine Shaft"]
+technologies : ["ReactJS","TailwindCSS", "Firebase"]
+---
+
+# Introduction
+
+Are you a newbie guitarist or a composer? Sometimes we have to manage a song to customize matching our vocal range or find a perfect version of a song to play with a guitar. Gui-Transpo is a place to generate or customize guitar chords and lyrics with storing the data so that you can access it and sing along with it.
+
+
+
+# Development
+
+This project is aimed at amateur guitar players who find it tricky in transposing chords. If you are a songwriter and want to present your songs to others, Gui-Transpo also has a feature to generate a lyric board.
+
+When we are going to sing a song properly, we have to consider if we can sing with the original key or if we have to adjust to a point that matches our vocal range. Your performance will be smooth and ready if you always keep in touch with music theory. But if a person like me can play only C D G Em round chords, there will be some issues in presenting a song.
+
+🔸Transposer
+Transposing guitar chords up to 12 levels. It extracts only guitar chords of user-inputted lyric+chord+song parts. When all the chords are separated into an array, I prepared the chord data for transposing and implemented the transposing logic.
+
+🔸Lyric Board
+Generating a tidy lyric board with song parts (Intro, Verse, Chorus,...), chords, and lyrics. It also has a conversion of Flat chords and sharp chords. Flat chord conversion is the default setting.
+
+🔸Auto-Scroll
+When you have to perform a song and you have to look at the lyrics, this will be a useful feature. You can adjust at different scrolling speeds before singing a song.
+
+🔸Chord Chart
+A user can check every chord chart on a lyric board. You can toggle a floating chord board while auto-scrolling is performed.
+The chord board is also draggable so you can place it at your convenience. Each of the chord charts is clickable and provides all chart data for a chord. I use [ChordDB](https://github.com/tombatossals/chords-db) to generate chord data which is used in displaying chord charts.
+
+🔸Printing
+You can print your customized lyric board with browser built-in functions in PDF format. This feature depends on which browser you are currently using.
+
+🔸UX
+The overall user experience of this application has some minor issues. In the current version, Gui-Transpo is fully usable on large-screen devices. But on mobile devices, you will probably find it a little handier when writing a lyric input.
+
+In this beta version, it can proceed only with common chords like major, minor, 7, and major 7.
+
+Only a registered user can save lyric boards. If you are not registered, you can only proceed with demo data.
+
+If you are a guitarist, feel free to suggest to me what kind of features I should implement in this project. Please leave your thoughts on my project.
+
+For more info in my GitHub repo.
+
+**GitHub Repo -** [`https://github.com/tenyain/gui-transposer-2022`](https://github.com/tenyain/gui-transposer-2022)
+
+
+
+![](https://cdn.sanity.io/images/dm3kiwds/production/4f0ca40cecbe27c634ff36774ee6c612ca12d274-1647x991.png?w=1920&q=100&fit=clip&auto=format)
+
+# Preparation
+
+### Researching concepts
+
+I am just an amateur campfire guitarist while implementing this project. Guitar chords theory can sometimes be tricky for beginners. I have to research many other applications to understand their user flows, concepts, and how they manage the inputted possibilities to reduce the rate of logical error occurrence. My first challenge is making a formula of a regular expression to detect all the common guitar chords among the inputted text. When all the chords are separated into an array, I prepared the chord data for transposing and implemented the transposing logic.
+
+### Chord data from Chord Database
+
+I use ChordDB to generate chord data which is used in displaying chord charts. In current beta version, only (major, minor, 7 and minor7) chord data are generated.
+
+
+
+# Designing
+
+I learned from other online chord transposers and generators while designing the UI. There must be a convenient experience using the program and getting the expected output in an appropriate amount of time. I tried my best for the UI and planning to improve the UX of this project flow. As mentioned above, the project is targeted to large screen users for more productivity at typing the lyric and outputting the result.
+
+![](https://cdn.sanity.io/images/dm3kiwds/production/eed28a2cf609be883ee6202810051b51fab51645-2732x1536.png?w=3840&q=100&fit=clip&auto=format)
+
+
+
+# Conclusion
+
+This project brought me opportunities for my education and career as I promoted it online. There are uncompleted things to be implemented with this project in the future. So, There will be new challenges and I will work for them.
