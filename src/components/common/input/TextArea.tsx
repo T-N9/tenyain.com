@@ -15,13 +15,13 @@ const TextAreaField: React.FC<TextAreaFieldProps> = ({ name, label, placeholder,
 
   return (
     <div className="mb-4 sm:col-span-2">
-      <label htmlFor={name} className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+      <label htmlFor={name} className="block mb-2 text-lg font-medium text-primary-900 dark:text-gray-400">
         {label}
       </label>
       <textarea
         id={name}
         rows={rows}
-        className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border ${errors[name] ? 'border-red-500' : 'border-gray-300'} focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500`}
+        className={`block p-2.5 w-full text-2xl text-gray-900 bg-gray-50 rounded-lg shadow-sm border ${errors[name] ? 'border-red-500' : 'border-gray-300'} focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-300 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500`}
         placeholder={placeholder}
         {...register(name, { required: `${label} is required` })}
       ></textarea>

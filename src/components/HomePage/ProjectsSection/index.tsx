@@ -1,4 +1,5 @@
 'use client'
+import LoadingProjectCardHome from "@/components/common/cards/LoadingProjectCardHome";
 import ProjectCard from "@/components/common/cards/ProjectCardHome";
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import { Button } from "flowbite-react";
@@ -37,6 +38,7 @@ const ProjectsSection = () => {
     };
 
     const [works, setWorks] = useState<Work[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true)
 
     useEffect(() => {
         const fetchWorks = async () => {
@@ -44,6 +46,7 @@ const ProjectsSection = () => {
             const data: Work[] = await response.json();
             setWorks(data.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
             setWorks(data);
+            setIsLoading(false);
         };
 
         fetchWorks();
@@ -62,7 +65,13 @@ const ProjectsSection = () => {
             </div>
 
             <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-5">
-                {
+                {isLoading ?
+                    <>
+                        <LoadingProjectCardHome />
+                        <LoadingProjectCardHome />
+                        <LoadingProjectCardHome />
+                    </>
+                    :
                     works.map(({ frontmatter, slug }) => (
                         <ProjectCard
                             key={slug}
@@ -77,29 +86,30 @@ const ProjectsSection = () => {
                         />
                     ))
                 }
-
-
-
             </div>
 
             <div className="lg:hidden slider-container">
-                <Slider {...settings}>
-                    {
-                        works.map(({ frontmatter, slug }) => (
-                            <ProjectCard
-                                key={slug}
-                                logoSrc={frontmatter.logo}
-                                logoAlt="Project Logo"
-                                title={frontmatter.title}
-                                livePreviewLink={frontmatter.url}
-                                description={frontmatter.description}
-                                technologies={frontmatter.technologies}
-                                slug={slug}
-                            // onViewCaseStudy={handleViewCaseStudy}
-                            />
-                        ))
-                    }
-                </Slider>
+                {
+                    isLoading ? <LoadingProjectCardHome /> :
+                        <Slider {...settings}>
+                            {
+                                works.map(({ frontmatter, slug }) => (
+                                    <ProjectCard
+                                        key={slug}
+                                        logoSrc={frontmatter.logo}
+                                        logoAlt="Project Logo"
+                                        title={frontmatter.title}
+                                        livePreviewLink={frontmatter.url}
+                                        description={frontmatter.description}
+                                        technologies={frontmatter.technologies}
+                                        slug={slug}
+                                    // onViewCaseStudy={handleViewCaseStudy}
+                                    />
+                                ))
+                            }
+                        </Slider>
+                }
+
             </div>
 
         </SectionWrapper>

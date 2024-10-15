@@ -25,10 +25,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   slug
 }) => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 mb-5">
       <img src={logoSrc} width={200} className=' w-[200px] h-[200px] object-contain' alt={logoAlt} />
       <div>
-        <h1 className="mb-2 font-sans text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white">
+        <h1 className="mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white">
           {title}
         </h1>
         <div className="text-primary-600 flex gap-4 items-center">

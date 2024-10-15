@@ -31,6 +31,7 @@ const ContactSection = () => {
                         <Button
                             type="submit"
                             className='bg-primary-600 hover:bg-primary-600/40'
+                            size='lg'
                         >
                             Submit
                         </Button>

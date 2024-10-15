@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, role, profileImage }) => {
   return (
-    <figure className="max-w-screen-md mx-auto text-center">
+    <figure className="max-w-screen-md mx-auto text-center mb-6">
       <svg
         className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
         viewBox="0 0 24 27"

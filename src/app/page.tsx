@@ -11,8 +11,11 @@ export default function Home() {
     <main>
       <HeroSection/>
       <ProjectsSection/>
+      <hr className="my-6"/>
       <TestimonialSection/>
+      <hr className="my-6"/>
       <SkillSection/>
+      <hr className="my-6"/>
       <MottoSection/>
       <ContactSection/>
     </main>
