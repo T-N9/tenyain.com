@@ -1,6 +1,5 @@
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import {
-    Button,
     Timeline,
     TimelineBody,
     TimelineContent,
@@ -9,7 +8,6 @@ import {
     TimelineTime,
     TimelineTitle,
 } from "flowbite-react";
-import { HiArrowNarrowRight } from "react-icons/hi";
 
 export function TimelineSection() {
     return (
