@@ -7,11 +7,21 @@ const TestimonialSection = () => {
     const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: true
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+        responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            },
+           
+          ]
     };
     return (
 
