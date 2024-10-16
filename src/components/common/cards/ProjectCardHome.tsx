@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             Live Preview
           </a>
           <svg
-            className="w-6 h-6 text-gray-800 dark:text-white"
+            className="w-6 h-6 text-secondary dark:text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-      <p className="text-gray-600 text-xl">{description}</p>
+      <p className="text-secondary text-xl">{description}</p>
 
       <div className='flex gap-4'>
         {technologies.map((tech, index) => {

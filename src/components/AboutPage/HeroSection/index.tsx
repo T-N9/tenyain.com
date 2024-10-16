@@ -24,15 +24,15 @@ const HeroSection = () => {
                     <h1 className='mb-4 text-4xl lg:text-6xl tracking-tight font-bold text-secondary dark:text-white'>
                         Turn your <span className=' text-primary-600'>idea</span> into life.
                     </h1>
-                    <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Since 2020, I have enjoyed learning digital design, web development, and content creation to deliver implicit and reachable information.</p>
+                    <p className="mb-6 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">Since 2020, I have enjoyed learning digital design, web development, and content creation to deliver implicit and reachable information.</p>
 
-                    <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">I am a <a className="font-bold bg-slate-300" href="https://en.wikipedia.org/wiki/Karen_people"><span className='text-red-600'>Kaw</span><span className='text-white'>thoo</span><span className='text-blue-600'>lese</span></a>, a computer science student from Myanmar, recently relocated to Chiang Mai, Thailand. I am currently specializing in front-end web development and creating web applications from my own idea.</p>
+                    <p className="mb-6 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">I am a <a className="font-bold bg-slate-300" href="https://en.wikipedia.org/wiki/Karen_people"><span className='text-red-600'>Kaw</span><span className='text-white'>thoo</span><span className='text-blue-600'>lese</span></a>, a computer science student from Myanmar, recently relocated to Chiang Mai, Thailand. I am currently specializing in front-end web development and creating web applications from my own idea.</p>
 
                     <p className='mb-4 text-2xl tracking-tight font-normal text-secondary dark:text-white'>
                         “My goal is to deliver a front-end stack from scratch to well-performed websites.”
                     </p>
 
-                    <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">I love to create UI designs and prototypes before implementations. Collaborations make me improve in both my technical skills and communication. I play and compose music during my spare time.</p>
+                    <p className="mb-6 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">I love to create UI designs and prototypes before implementations. Collaborations make me improve in both my technical skills and communication. I play and compose music during my spare time.</p>
 
                     <p className='mb-4 text-2xl tracking-tight font-bold text-secondary dark:text-white'>
                     “I care about your business values and targeted customers to meet your golden goals for tomorrow.”

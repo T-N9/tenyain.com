@@ -9,14 +9,14 @@ const CTASection = () => {
                 <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-6xl dark:text-white">
                     Your goal is my mission.
                 </h1>
-                <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+                <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
                     As a front-end web developer, I make sure that my website has good
                     design qualities, from colors, and typography to clean coding and
                     performance. Nowadays, there are so many ways to create web content
                     but to attract users at the very first seconds of your webpage, the
                     content has to be clear and interactive to various devices.
                 </p>
-                <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+                <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
                     My design is simple, minimal, and reachable to users. I build and
                     learn newer technologies to deliver fast and reliable websites.
                 </p>

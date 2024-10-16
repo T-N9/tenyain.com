@@ -9,7 +9,7 @@ const CTASection = () => {
                 <h1 className="mb-4 text-4xl text-center font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-6xl dark:text-white">
                     Open to work
                 </h1>
-                <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+                <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
                 I am currently on the lookout for exciting job opportunities and experiences that will allow me to grow and thrive in the world of web development. Whether it`&apos;s freelance / part-time web design work, or junior-level positions, I am open to them all. Feel free to get in touch with me - I would absolutely love the chance to work with you and your amazing team!
                 </p>
                 

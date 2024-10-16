@@ -13,7 +13,7 @@ const HeroSection = () => {
           </a>
           <p className="text-2xl text-secondary">Hello there, I am <span className="font-bold text-primary-600">Te Nyain</span></p>
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white">A Front-end Developer</h1>
-          <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">A developer who delivers fast and reliable websites. I care about your business values and targeted customers to meet your golden goals for tomorrow.</p>
+          <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">A developer who delivers fast and reliable websites. I care about your business values and targeted customers to meet your golden goals for tomorrow.</p>
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-4">
             <Button className='bg-primary-600 hover:!bg-primary-500' size='xl' >
               Hire Me

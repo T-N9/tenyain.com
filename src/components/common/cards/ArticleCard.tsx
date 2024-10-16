@@ -23,7 +23,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
         <Link href={`/writing/${href}`}>
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-secondary dark:text-white">{title}</h5>
         </Link>
-        <p className="mb-3 font-normal text-secondary dark:text-gray-400">{description}</p>
+        <p className="mb-3 font-normal text-secondary dark:text-secondary">{description}</p>
         <div className='flex justify-between items-center'>
             <div className=" flex flex-wrap gap-2">
               {tags?.map((tag) => (
@@ -32,7 +32,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
                 </span>
               ))}
             </div>
-            <p className="text-sm text-gray-500 dark:text-gray-400">{moment(createdAt).format('MMMM Do, YYYY')}</p>
+            <p className="text-sm text-secondary dark:text-secondary">{moment(createdAt).format('MMMM Do, YYYY')}</p>
         </div>
         <Link href={`/writing/${href}`} >
           <Button className="mt-4 flex items-center" color='gray' pill size='lg'>

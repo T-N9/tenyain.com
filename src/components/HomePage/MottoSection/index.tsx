@@ -9,7 +9,7 @@ export function MottoSection() {
         <SectionWrapper>
             <Blockquote className='text-center text-secondary/40  text-3xl'>
                 <svg
-                    className="mb-4 mx-auto h-8 w-8 fill-primary-600  dark:text-gray-600"
+                    className="mb-4 mx-auto h-8 w-8 fill-primary-600  dark:text-secondary"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
