@@ -34,7 +34,7 @@ const AllWorksSection = () => {
                     </>
                     :
                     works.map(({ frontmatter, slug }) => (
-                        <div>
+                        <div key={slug}>
                             <ProjectCard
                                 key={slug}
                                 logoSrc={frontmatter.logo}
