@@ -34,7 +34,7 @@ const AllWorksSection = () => {
                     </>
                     :
                     works.map(({ frontmatter, slug }) => (
-                        <>
+                        <div>
                             <ProjectCard
                                 key={slug}
                                 logoSrc={frontmatter.logo}
@@ -45,8 +45,8 @@ const AllWorksSection = () => {
                                 technologies={frontmatter.technologies}
                                 slug={slug}
                             />
-                            <hr className='my-5'/>
-                        </>
+                            <hr className='my-5 lg:hidden'/>
+                        </div>
                     ))
                 }
             </div>

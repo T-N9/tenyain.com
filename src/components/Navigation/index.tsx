@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState } from 'react';
 import TNLogo from '../common/logos/TNLogo';
 import Link from 'next/link';
@@ -7,10 +8,28 @@ import { usePathname } from 'next/navigation';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname(); // To detect current path
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Navigation links with label and href
+  const navItems = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Works', href: '/works' },
+    { label: 'Writing', href: '/writing' },
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' },
+  ];
+
+  // Function to determine if the current route is active (including sub-routes)
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
   };
 
   return (
@@ -39,36 +58,21 @@ const NavBar = () => {
         </div>
         <div className={`items-center justify-between ${isOpen ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-secondary dark:border-gray-700">
-            <li>
-              <Link href="/" className={`block py-2 px-3 rounded ${pathname === '/' ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600' : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'}`}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className={`block py-2 px-3 rounded ${pathname === '/about' ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600' : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'}`}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/works" className={`block py-2 px-3 rounded ${pathname === '/works' ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600' : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'}`}>
-                Works
-              </Link>
-            </li>
-            <li>
-              <Link href="/writing" className={`block py-2 px-3 rounded ${pathname === '/writing' ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600' : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'}`}>
-                Writing
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className={`block py-2 px-3 rounded ${pathname === '/services' ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600' : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'}`}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className={`block py-2 px-3 rounded ${pathname === '/contact' ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600' : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'}`}>
-                Contact
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>
+                  <p
+                    className={`block py-2 px-3 rounded ${
+                      isActive(item.href)
+                        ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600'
+                        : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
+                    }`}
+                  >
+                    {item.label}
+                  </p>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
