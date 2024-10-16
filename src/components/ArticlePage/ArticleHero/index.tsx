@@ -1,6 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
+import { Breadcrumb } from 'flowbite-react';
+import Link from 'next/link';
 
 interface ArticleHeroProps {
   title: string;
@@ -23,6 +25,13 @@ const ArticleHero: React.FC<ArticleHeroProps> = ({ title, createdAt, tags, image
           ))}
         </div>
       </div>
+      <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-50 px-5 py-3 dark:bg-gray-800">
+        <Breadcrumb.Item>
+          <Link href={'/'}>Home</Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Item><Link href={'/writing'}>Writing</Link></Breadcrumb.Item>
+        <Breadcrumb.Item>{title}</Breadcrumb.Item>
+      </Breadcrumb>
       <Image className='w-full shadow' src={image} width={840} height={473} alt={title} />
     </div>
   );
