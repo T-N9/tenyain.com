@@ -12,6 +12,7 @@
     "@icons-pack/react-simple-icons": "^10.0.0",
     "@types/react-slick": "^0.23.13",
     "flowbite-react": "^0.10.2",
+    "moment": "^2.30.1",
     "next": "14.2.15",
     "next-mdx-remote": "^5.0.0",
     "react": "^18",
