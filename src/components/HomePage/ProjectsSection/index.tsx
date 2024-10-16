@@ -6,7 +6,7 @@ import { Button } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
-type Frontmatter = {
+export type Frontmatter = {
     title: string;
     description: string;
     type: string;
@@ -19,7 +19,7 @@ type Frontmatter = {
     technologies: string[]
 };
 
-type Work = {
+export type Work = {
     frontmatter: Frontmatter;
     slug: string;
 };
