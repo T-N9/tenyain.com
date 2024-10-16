@@ -10,7 +10,7 @@ const CTASection = () => {
                     Open to work
                 </h1>
                 <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-                I am currently on the lookout for exciting job opportunities and experiences that will allow me to grow and thrive in the world of web development. Whether it's freelance / part-time web design work, or junior-level positions, I am open to them all. Feel free to get in touch with me - I would absolutely love the chance to work with you and your amazing team!
+                I am currently on the lookout for exciting job opportunities and experiences that will allow me to grow and thrive in the world of web development. Whether it`&apos;s freelance / part-time web design work, or junior-level positions, I am open to them all. Feel free to get in touch with me - I would absolutely love the chance to work with you and your amazing team!
                 </p>
                 
                 <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
