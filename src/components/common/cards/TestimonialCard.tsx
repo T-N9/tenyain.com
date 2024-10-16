@@ -4,10 +4,9 @@ interface TestimonialCardProps {
   testimonial: string;
   name: string;
   role: string;
-  profileImage: string;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, role, profileImage }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, role }) => {
   return (
     <figure className="max-w-screen-md mx-auto text-center mb-6">
       <svg
@@ -27,7 +26,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, ro
         </p>
       </blockquote>
       <figcaption className="flex items-center justify-center mt-6 space-x-3">
-        <img className="w-6 h-6 rounded-full" src={profileImage} alt={`${name}'s profile picture`} />
+        
         <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
           <div className="pr-3 font-medium text-secondary dark:text-white">{name}</div>
           <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">{role}</div>

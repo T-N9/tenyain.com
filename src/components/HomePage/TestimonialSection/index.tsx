@@ -33,24 +33,21 @@ const TestimonialSection = () => {
                 <Slider {...settings}>
 
                     <TestimonialCard
-                        testimonial="I am thrilled with the website created by the talented website developer TeNyain. The design is visually stunning, the functionality is seamless, and it perfectly represents my business."
-                        name="Micheal Gough"
-                        role="CEO at Google"
-                        profileImage="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                        testimonial="I am thrilled with the website created by the talented website developer TeNyain. The design is visually stunning, the functionality is seamless, and it perfectly represents my business. Working with TeNyain was a pleasure, and I highly recommend his services to anyone in need of a remarkable website."
+                        name="Szu Ho Chen"
+                        role="at Bride To Be Bridal , USA"
                     />
 
                     <TestimonialCard
-                        testimonial="I am thrilled with the website created by the talented website developer TeNyain. The design is visually stunning, the functionality is seamless, and it perfectly represents my business."
-                        name="Micheal Gough"
-                        role="CEO at Google"
-                        profileImage="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                        testimonial="Te Nyain is a well-trained student who took the 'Special Web Design' course from us. He is specialized in Front-end development and delivering trustworthy interactive websites to his consumers."
+                        name="Hein Htet Zan"
+                        role="at MMSIT , Myanmar"
                     />
 
                     <TestimonialCard
-                        testimonial="I am thrilled with the website created by the talented website developer TeNyain. The design is visually stunning, the functionality is seamless, and it perfectly represents my business."
-                        name="Micheal Gough"
-                        role="CEO at Google"
-                        profileImage="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                        testimonial="Te Nyain is a cooperative and collaborative student. He is open to learning and receptive to improving his studies. He follows directions perfectly and shows respect for peers and teachers. I'm impressed by his passion for discussion and collaboration. It's an honor to be his teacher."
+                        name="Tr. Thant"
+                        role="at BS Camp , Myanmar"
                     />
 
 
