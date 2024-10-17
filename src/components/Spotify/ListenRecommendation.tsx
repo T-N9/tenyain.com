@@ -1,11 +1,12 @@
 import React from 'react'
 import SectionWrapper from '../common/wrappers/SectionWrapper';
+import Heading from '../common/headings/Heading';
 
 const ListenRecommendation = () => {
 
     return (
         <SectionWrapper>
-            <h2 className="text-4xl tracking-tight font-extrabold text-primary-600 dark:text-white mb-5">My Playlist</h2>
+            <Heading align='left' title='My Playlist'/>
 
             <iframe
                 title="Spotify Embed: Recommendation Playlist "

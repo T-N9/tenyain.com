@@ -4,7 +4,7 @@ const LoadingProjectCardHome = () => {
     return (
         <div className="flex flex-col gap-2 mb-5 animate-pulse">
             {/* Logo skeleton */}
-            <div className="w-[200px] h-[200px] bg-gray-300 dark:bg-secondary rounded-lg mb-6" />
+            <div className="w-[200px] h-[100px] bg-gray-300 dark:bg-secondary rounded-lg mb-6" />
 
             <div>
                 {/* Title skeleton */}

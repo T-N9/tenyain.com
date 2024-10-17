@@ -1,5 +1,6 @@
 'use client'
 import TestimonialCard from "@/components/common/cards/TestimonialCard";
+import Heading from "@/components/common/headings/Heading";
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import Slider from "react-slick";
 
@@ -27,7 +28,7 @@ const TestimonialSection = () => {
 
         <SectionWrapper className="text-center">
             <div className="mx-auto max-w-screen-sm">
-                <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-primary-600 dark:text-white">Testimonials</h2>
+                <Heading title="Testimonials"/>
             </div>
             <div className="slider-container">
                 <Slider {...settings}>

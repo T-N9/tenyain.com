@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   slug
 }) => {
   return (
-    <div className="flex flex-col gap-5 mb-5">
+    <div className="flex flex-col gap-5 mb-5 lg:mb-0">
 
       <img src={logoSrc} width={200} className='border-l-4 border-l-primary-200 pl-4 w-[200px] h-[100px] object-contain' alt={logoAlt} />
       <div>

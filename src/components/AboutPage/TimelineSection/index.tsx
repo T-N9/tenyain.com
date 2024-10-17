@@ -1,3 +1,4 @@
+import Heading from "@/components/common/headings/Heading";
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import {
     Timeline,
@@ -12,7 +13,7 @@ import {
 export function TimelineSection() {
     return (
         <SectionWrapper>
-            <h2 className="text-4xl tracking-tight font-extrabold text-primary-600 dark:text-white">Timeline</h2>
+            <Heading title="Timeline" align="left" />
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-10">
                 <Timeline>
                     <TimelineItem>

@@ -1,4 +1,5 @@
 'use client'
+import Heading from '@/components/common/headings/Heading';
 import InputField from '@/components/common/input';
 import TextAreaField from '@/components/common/input/TextArea';
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
@@ -21,7 +22,7 @@ const ContactSection = () => {
 
     return (
         <SectionWrapper>
-            <h2 className="text-4xl mb-10 tracking-tight text-center font-extrabold text-primary-600 dark:text-white">Keep In Touch</h2>
+           <Heading title='Keep In Touch'/>
             <div className=' mx-auto max-w-screen-md'>
                 <FormProvider {...methods}>
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

@@ -1,8 +1,10 @@
 'use client'
 import LoadingProjectCardHome from "@/components/common/cards/LoadingProjectCardHome";
 import ProjectCard from "@/components/common/cards/ProjectCardHome";
+import Heading from "@/components/common/headings/Heading";
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import { Button } from "flowbite-react";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
@@ -42,26 +44,27 @@ const ProjectsSection = () => {
 
     useEffect(() => {
         const fetchWorks = async () => {
-            const response = await fetch("/api/works");
-            const data: Work[] = await response.json();
-            setWorks(data.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
-            setWorks(data);
+            const response = await fetch("/api/worksPage?pageNo=1&count=3");
+            const data = await response.json();
+            const worksArray: Work[] = data.works;
+            setWorks(worksArray.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
             setIsLoading(false);
         };
 
         fetchWorks();
     }, []);
 
-    // console.log({ works })
     return (
 
         <SectionWrapper className="mt-20 lg:mt-0">
-            <div className="flex justify-between items-center mb-10">
-                <h2 className="text-4xl tracking-tight font-extrabold text-primary-600 dark:text-white">Projects</h2>
+            <div className="flex justify-between items-center mb-14">
+                <Heading title="Projects" className="!mb-0" />
 
-                <Button size="sm" color="gray">
-                    View All
-                </Button>
+                <Link href={'/works'}>
+                    <Button size="sm" color="gray">
+                        View All
+                    </Button>
+                </Link>
             </div>
 
             <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-5">

@@ -47,6 +47,29 @@ export async function getWorks() {
   return works;
 }
 
+export async function getWorksPage(pageNo: number, count: number) {
+
+  const files = fs.readdirSync(contentDir);
+  const works = await Promise.all(
+    files.map(async (file) => await getWorkBySlug(path.parse(file).name))
+  );
+
+  const startIndex = (pageNo - 1) * count; 
+  const endIndex = startIndex + count;     
+
+  const paginatedWorks = works.slice(startIndex, endIndex);
+
+  const totalWorks = works.length;
+  const totalPages = Math.ceil(totalWorks / count);
+
+  return {
+    works: paginatedWorks,
+    currentPage: pageNo,
+    totalPages,
+    totalWorks,
+  };
+}
+
 export function getAllWorksSlug() {
   const files = fs.readdirSync(contentDir);
   const slugs = files.map((file) => ({ slug: path.parse(file).name }));

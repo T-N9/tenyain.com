@@ -36,10 +36,33 @@ export async function getArticleBySlug(slug: string) {
 
 export async function getArticles() {
   const files = fs.readdirSync(contentDir);
-  const works = await Promise.all(
+  const articles = await Promise.all(
     files.map(async (file) => await getArticleBySlug(path.parse(file).name))
   );
-  return works;
+  return articles;
+}
+
+export async function getArticlesPage(pageNo: number, count: number) {
+
+  const files = fs.readdirSync(contentDir);
+  const articles = await Promise.all(
+    files.map(async (file) => await getArticleBySlug(path.parse(file).name))
+  );
+
+  const startIndex = (pageNo - 1) * count; 
+  const endIndex = startIndex + count;     
+
+  const paginatedArticles = articles.slice(startIndex, endIndex);
+
+  const totalArticles = articles.length;
+  const totalPages = Math.ceil(totalArticles / count);
+
+  return {
+    articles: paginatedArticles,
+    currentPage: pageNo,
+    totalPages,
+    totalArticles,
+  };
 }
 
 export function getAllArticlesSlug() {

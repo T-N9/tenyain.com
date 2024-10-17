@@ -4,6 +4,7 @@ import SectionWrapper from '../common/wrappers/SectionWrapper'
 import { Work } from '../HomePage/ProjectsSection';
 import ProjectCard from '../common/cards/ProjectCardHome';
 import LoadingProjectCardHome from '../common/cards/LoadingProjectCardHome';
+import Heading from '../common/headings/Heading';
 
 const AllWorksSection = () => {
     const [works, setWorks] = useState<Work[]>([]);
@@ -23,9 +24,9 @@ const AllWorksSection = () => {
 
     return (
         <SectionWrapper>
-            <h2 className="text-4xl tracking-tight font-extrabold text-center text-primary-600 dark:text-white">Recent Works</h2>
+            <Heading title='Recent Works'/>
 
-            <div className="lg:grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
+            <div className="lg:grid grid-cols-1 lg:grid-cols-3 gap-5">
                 {isLoading ?
                     <>
                         <LoadingProjectCardHome />
@@ -45,7 +46,7 @@ const AllWorksSection = () => {
                                 technologies={frontmatter.technologies}
                                 slug={slug}
                             />
-                            <hr className='my-5 lg:hidden'/>
+                            <hr className='my-10 lg:hidden'/>
                         </div>
                     ))
                 }

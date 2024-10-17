@@ -1,3 +1,5 @@
+import Divider from "@/components/common/divider/Divider";
+import ArticleSection from "@/components/HomePage/ArticleSection";
 import ContactSection from "@/components/HomePage/ContactSection";
 import HeroSection from "@/components/HomePage/HeroSection";
 import { MottoSection } from "@/components/HomePage/MottoSection";
@@ -11,12 +13,15 @@ export default function Home() {
     <main>
       <HeroSection/>
       <ProjectsSection/>
-      <hr className="my-6"/>
+      <Divider/>
       <TestimonialSection/>
-      <hr className="my-6"/>
+      <Divider/>
       <SkillSection/>
-      <hr className="my-6"/>
+      <Divider/>
       <MottoSection/>
+      <Divider/>
+      <ArticleSection/>
+      <Divider/>
       <ContactSection/>
     </main>
   );

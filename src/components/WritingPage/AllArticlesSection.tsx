@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import SectionWrapper from '../common/wrappers/SectionWrapper'
 import ArticleCard from '../common/cards/ArticleCard';
 import LoadingArticleCard from '../common/cards/LoadingArticleCard';
+import Heading from '../common/headings/Heading';
 
 export type Frontmatter = {
     title: string;
@@ -35,7 +36,7 @@ const AllArticlesSection = () => {
     }, []);
     return (
         <SectionWrapper>
-            <h2 className="text-4xl tracking-tight text-center font-extrabold text-primary-600 dark:text-white">Articles</h2>
+            <Heading title='My Thoughts'/>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4'>
                 {
                     isLoading ?
