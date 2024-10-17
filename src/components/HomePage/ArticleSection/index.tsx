@@ -3,9 +3,8 @@ import ArticleCard from '@/components/common/cards/ArticleCard';
 import LoadingArticleCard from '@/components/common/cards/LoadingArticleCard';
 import Heading from '@/components/common/headings/Heading'
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
-import { Article } from '@/components/WritingPage/AllArticlesSection';
 import { useGeneralContext } from '@/context/GeneralContext';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Slider from 'react-slick';
 
 const ArticleSection = () => {

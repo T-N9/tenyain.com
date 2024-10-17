@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import SectionWrapper from '../common/wrappers/SectionWrapper'
 import ArticleCard from '../common/cards/ArticleCard';
 import LoadingArticleCard from '../common/cards/LoadingArticleCard';
