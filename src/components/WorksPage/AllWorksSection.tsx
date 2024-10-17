@@ -1,26 +1,20 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import SectionWrapper from '../common/wrappers/SectionWrapper'
-import { Work } from '../HomePage/ProjectsSection';
 import ProjectCard from '../common/cards/ProjectCardHome';
 import LoadingProjectCardHome from '../common/cards/LoadingProjectCardHome';
 import Heading from '../common/headings/Heading';
+import { useGeneralContext } from '@/context/GeneralContext';
 
 const AllWorksSection = () => {
-    const [works, setWorks] = useState<Work[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true)
+
+    const { works, isLoading, fetchWorks } = useGeneralContext();
 
     useEffect(() => {
-        const fetchWorks = async () => {
-            const response = await fetch("/api/works");
-            const data: Work[] = await response.json();
-            setWorks(data.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
-            setWorks(data);
-            setIsLoading(false);
-        };
-
-        fetchWorks();
-    }, []);
+        if (works.length === 0) {
+            fetchWorks(1, 6);
+        }
+    }, [fetchWorks, works.length]);
 
     return (
         <SectionWrapper>

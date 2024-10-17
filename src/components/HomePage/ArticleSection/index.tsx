@@ -4,6 +4,7 @@ import LoadingArticleCard from '@/components/common/cards/LoadingArticleCard';
 import Heading from '@/components/common/headings/Heading'
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { Article } from '@/components/WritingPage/AllArticlesSection';
+import { useGeneralContext } from '@/context/GeneralContext';
 import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick';
 
@@ -19,20 +20,13 @@ const ArticleSection = () => {
         pauseOnHover: true
     };
 
-    const [articles, setArticles] = useState<Article[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true)
+    const { articles, isLoading, fetchArticles } = useGeneralContext();
 
     useEffect(() => {
-        const fetchArticles = async () => {
-            const response = await fetch("/api/articlesPage?pageNo=1&count=3");
-            const data = await response.json();
-            const articleArray: Article[] = data.articles;
-            setArticles(articleArray.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
-            setIsLoading(false);
-        };
-
-        fetchArticles();
-    }, []);
+        if (articles.length === 0) {
+            fetchArticles(1, 3);
+        }
+    }, [fetchArticles, articles.length]);
 
     return (
         <SectionWrapper>

@@ -2,6 +2,7 @@ import { Button } from 'flowbite-react';
 import React from 'react';
 import { technologyLogoMap } from '../logos';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   logoSrc: string;
@@ -27,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="flex flex-col gap-5 mb-5 lg:mb-0">
 
-      <img src={logoSrc} width={200} className='border-l-4 border-l-primary-200 pl-4 w-[200px] h-[100px] object-contain' alt={logoAlt} />
+      <Image src={logoSrc} width={200} height={100} className='border-l-4 border-l-primary-200 pl-4 w-[200px] h-[100px] object-contain' alt={logoAlt} />
       <div>
         <h1 className="mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white">
           {title}

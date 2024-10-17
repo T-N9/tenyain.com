@@ -4,6 +4,7 @@ import SectionWrapper from '../common/wrappers/SectionWrapper'
 import ArticleCard from '../common/cards/ArticleCard';
 import LoadingArticleCard from '../common/cards/LoadingArticleCard';
 import Heading from '../common/headings/Heading';
+import { useGeneralContext } from '@/context/GeneralContext';
 
 export type Frontmatter = {
     title: string;
@@ -19,21 +20,15 @@ export type Article = {
 };
 
 const AllArticlesSection = () => {
-
-    const [articles, setArticles] = useState<Article[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true)
+    const { articles, isLoading, fetchArticles } = useGeneralContext();
 
     useEffect(() => {
-        const fetchWorks = async () => {
-            const response = await fetch("/api/writing");
-            const data: Article[] = await response.json();
-            setArticles(data.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
-            setArticles(data);
-            setIsLoading(false);
-        };
+        if (articles.length === 0) {
+            fetchArticles(1, 6);
+        }
+    }, [fetchArticles, articles.length]);
 
-        fetchWorks();
-    }, []);
+
     return (
         <SectionWrapper>
             <Heading title='My Thoughts'/>

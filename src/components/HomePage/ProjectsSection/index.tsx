@@ -3,9 +3,10 @@ import LoadingProjectCardHome from "@/components/common/cards/LoadingProjectCard
 import ProjectCard from "@/components/common/cards/ProjectCardHome";
 import Heading from "@/components/common/headings/Heading";
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
+import { useGeneralContext } from "@/context/GeneralContext";
 import { Button } from "flowbite-react";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 
 export type Frontmatter = {
@@ -39,20 +40,14 @@ const ProjectsSection = () => {
         pauseOnHover: true
     };
 
-    const [works, setWorks] = useState<Work[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true)
+    const { works, isLoading, fetchWorks } = useGeneralContext();
 
     useEffect(() => {
-        const fetchWorks = async () => {
-            const response = await fetch("/api/worksPage?pageNo=1&count=3");
-            const data = await response.json();
-            const worksArray: Work[] = data.works;
-            setWorks(worksArray.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
-            setIsLoading(false);
-        };
+        if (works.length === 0) {
+            fetchWorks(1, 3);
+        }
+    }, [fetchWorks, works.length]);
 
-        fetchWorks();
-    }, []);
 
     return (
 
