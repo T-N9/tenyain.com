@@ -9,7 +9,7 @@ const HeroSection = () => {
                 <div className='h-full relative'>
                    <div className='sticky top-20'>
                     <div className='relative'>
-                      <Image className=' rounded-sm relative z-10' src={'/assets/profile.webp'} width={360} height={437} alt='My Picture' />
+                      <Image className='rounded-lg lg:rounded-sm relative z-10' src={'/assets/profile.webp'} width={360} height={437} alt='My Picture' />
                      
                       <div className='absolute hidden lg:flex justify-center items-center left-[20%] top-0 z-0 w-[437px] h-[437px] rounded-full bg-primary-100'>
                           <div className=' w-[200px] h-[200px] rounded-full bg-primary-600'>

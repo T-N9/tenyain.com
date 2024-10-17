@@ -21,7 +21,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, ro
         />
       </svg>
       <blockquote>
-        <p className="text-2xl font-medium text-secondary dark:text-white">
+        <p className="text-lg lg:text-2xl font-medium text-secondary dark:text-white">
         &quot;{testimonial}&quot;
         </p>
       </blockquote>

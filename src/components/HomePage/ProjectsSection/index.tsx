@@ -55,7 +55,7 @@ const ProjectsSection = () => {
     // console.log({ works })
     return (
 
-        <SectionWrapper className="mt-10 lg:mt-0">
+        <SectionWrapper className="mt-20 lg:mt-0">
             <div className="flex justify-between items-center mb-10">
                 <h2 className="text-4xl tracking-tight font-extrabold text-primary-600 dark:text-white">Projects</h2>
 
