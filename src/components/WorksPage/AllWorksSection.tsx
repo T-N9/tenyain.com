@@ -12,7 +12,7 @@ const AllWorksSection = () => {
 
     useEffect(() => {
         if (works.length === 0) {
-            fetchWorks(1, 6);
+            fetchWorks(1, 6,false);
         }
     }, [fetchWorks, works.length]);
 

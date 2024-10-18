@@ -4,6 +4,8 @@ import LoadingArticleCard from '@/components/common/cards/LoadingArticleCard';
 import Heading from '@/components/common/headings/Heading'
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { useGeneralContext } from '@/context/GeneralContext';
+import { Button } from 'flowbite-react';
+import Link from 'next/link';
 import React, { useEffect } from 'react'
 import Slider from 'react-slick';
 
@@ -19,17 +21,25 @@ const ArticleSection = () => {
         pauseOnHover: true
     };
 
-    const { articles, isLoading, fetchArticles } = useGeneralContext();
+    const { demoArticles, isLoading, fetchArticles } = useGeneralContext();
 
     useEffect(() => {
-        if (articles.length === 0) {
-            fetchArticles(1, 3);
+        if (demoArticles.length === 0) {
+            fetchArticles(1, 3, true);
         }
-    }, [fetchArticles, articles.length]);
+    }, [fetchArticles, demoArticles.length]);
 
     return (
         <SectionWrapper>
-            <Heading title='Latest Articles' />
+            <div className="flex justify-between items-center mb-14">
+                <Heading title="Latest Articles" className="!mb-0" />
+
+                <Link href={'/writing'}>
+                    <Button size="sm" color="gray">
+                        View All
+                    </Button>
+                </Link>
+            </div>
 
             <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-5">
                 {isLoading ?
@@ -39,7 +49,7 @@ const ArticleSection = () => {
                         <LoadingArticleCard />
                     </>
                     :
-                    articles.map(({ frontmatter, slug }) => (
+                    demoArticles.map(({ frontmatter, slug }) => (
                         <ArticleCard
                             key={slug}
                             title={frontmatter.title}
@@ -57,7 +67,7 @@ const ArticleSection = () => {
                     isLoading ? <LoadingArticleCard /> :
                         <Slider {...settings}>
                             {
-                                articles.map(({ frontmatter, slug }) => (
+                                demoArticles.map(({ frontmatter, slug }) => (
                                     <ArticleCard
                                         key={slug}
                                         title={frontmatter.title}

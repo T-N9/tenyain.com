@@ -24,14 +24,14 @@ const AllArticlesSection = () => {
 
     useEffect(() => {
         if (articles.length === 0) {
-            fetchArticles(1, 6);
+            fetchArticles(1, 6, false);
         }
     }, [fetchArticles, articles.length]);
 
 
     return (
         <SectionWrapper>
-            <Heading title='My Thoughts'/>
+            <Heading title='My Thoughts' />
             <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 mt-4'>
                 {
                     isLoading ?

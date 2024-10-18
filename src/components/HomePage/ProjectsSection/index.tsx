@@ -42,13 +42,13 @@ const ProjectsSection = () => {
         pauseOnHover: true
     };
 
-    const { works, isLoading, fetchWorks } = useGeneralContext();
+    const { demoWorks, isLoading, fetchWorks } = useGeneralContext();
 
     useEffect(() => {
-        if (works.length === 0) {
-            fetchWorks(1, 3);
+        if (demoWorks.length === 0) {
+            fetchWorks(1, 3, true);
         }
-    }, [fetchWorks, works.length]);
+    }, [fetchWorks, demoWorks.length]);
 
 
     return (
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                         <LoadingProjectCardHome />
                     </>
                     :
-                    works.map(({ frontmatter, slug }) => (
+                    demoWorks.map(({ frontmatter, slug }) => (
                         <ProjectCard
                             key={slug}
                             logoSrc={frontmatter.logo}
@@ -93,7 +93,7 @@ const ProjectsSection = () => {
                     isLoading ? <LoadingProjectCardHome /> :
                         <Slider {...settings}>
                             {
-                                works.map(({ frontmatter, slug }) => (
+                                demoWorks.map(({ frontmatter, slug }) => (
                                     <ProjectCard
                                         key={slug}
                                         logoSrc={frontmatter.logo}
