@@ -1,6 +1,8 @@
 import Divider from "@/components/common/divider/Divider";
 import { technologyLogoMap } from "@/components/common/logos";
+import { Breadcrumb } from "flowbite-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface HeroSectionProps {
@@ -68,7 +70,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="relative w-full overflow-hidden">
           <Image src={image} alt={title} width={1030} height={590} />
         </div>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           <div className="text-base lg:text-lg">
             <p>
               <strong className="text-gray-500 dark:text-slate-200">View live:</strong>
@@ -86,7 +88,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           <div className="text-base lg:text-lg">
-            <p>
+            <p className="mb-3">
               <strong className="text-gray-500 dark:text-slate-200">Technologies:</strong>
               <br />
             </p>
@@ -102,6 +104,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
         </div>
+
+        <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-100 rounded-md px-5 py-3 dark:bg-gray-800">
+          <Breadcrumb.Item>
+            <Link href={'/'}>Home</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item><Link href={'/works'}>Works</Link></Breadcrumb.Item>
+          <Breadcrumb.Item className="opacity-50">{title}</Breadcrumb.Item>
+        </Breadcrumb>
         <Divider />
       </div>
     </header>
