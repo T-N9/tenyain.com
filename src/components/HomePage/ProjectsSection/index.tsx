@@ -19,7 +19,9 @@ export type Frontmatter = {
     url: string;
     logo: string;
     colors: string[];
-    technologies: string[]
+    technologies: string[],
+    image: string;
+    tagline: string
 };
 
 export type Work = {

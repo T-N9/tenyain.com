@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
-import { Breadcrumb } from 'flowbite-react';
+import { Badge, Breadcrumb } from 'flowbite-react';
 import Link from 'next/link';
 
 interface ArticleHeroProps {
@@ -14,14 +14,15 @@ interface ArticleHeroProps {
 const ArticleHero: React.FC<ArticleHeroProps> = ({ title, createdAt, tags, image }) => {
   return (
     <div className='flex flex-col gap-3'>
-      <h1 className='text-5xl leading-relaxed text-center font-bold text-primary-600'>{title}</h1>
+      <h1 className='text-5xl leading-normal font-bold text-primary-600'>{title}</h1>
       <div className='flex justify-between'>
-        <p>{moment(createdAt).format('MMMM Do, YYYY')}</p>
-        <div>
+        <p className='text-gray-500'>{moment(createdAt).format('MMMM Do, YYYY')}</p>
+        <div className='flex gap-2'>
           {tags.map((tag) => (
-            <span key={tag} className='inline-block px-2 py-1 text-xs font-semibold bg-primary-100 text-primary-600 rounded-full'>
+            <Badge key={tag} size="sm" className='bg-primary-100 text-lg' href="#">
               {tag}
-            </span>
+            </Badge>
+
           ))}
         </div>
       </div>

@@ -43,14 +43,20 @@ export async function getArticles() {
 }
 
 export async function getArticlesPage(pageNo: number, count: number) {
-
   const files = fs.readdirSync(contentDir);
   const articles = await Promise.all(
     files.map(async (file) => await getArticleBySlug(path.parse(file).name))
   );
 
-  const startIndex = (pageNo - 1) * count; 
-  const endIndex = startIndex + count;     
+  articles.sort((a, b) => {
+    return (
+      new Date(b.frontmatter.createdAt).getTime() -
+      new Date(a.frontmatter.createdAt).getTime()
+    );
+  });
+
+  const startIndex = (pageNo - 1) * count;
+  const endIndex = startIndex + count;
 
   const paginatedArticles = articles.slice(startIndex, endIndex);
 

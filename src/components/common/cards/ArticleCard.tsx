@@ -21,9 +21,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
       </Link>
       <div className="p-5">
         <Link href={`/writing/${href}`}>
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-secondary dark:text-white">{title}</h5>
+          <h5 className="mb-2 text-2xl line-clamp-2 font-bold tracking-tight text-secondary dark:text-white">{title}</h5>
         </Link>
-        <p className="mb-3 font-normal text-secondary dark:text-secondary">{description}</p>
+        <p className="mb-3 font-normal line-clamp-3 text-secondary dark:text-secondary">{description}</p>
         <div className='flex justify-between items-center'>
             <div className=" flex flex-wrap gap-2">
               {tags?.map((tag) => (

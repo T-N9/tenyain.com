@@ -21,7 +21,9 @@ export async function getWorkBySlug(slug: string) {
     url: string;
     logo: string;
     colors: string[];
-    technologies: string[]
+    technologies: string[],
+    image : string,
+    tagline: string
   }>({
     source: fileContent,
     options: {
