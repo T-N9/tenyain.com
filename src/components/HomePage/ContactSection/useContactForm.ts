@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
+import { Resolver, useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import { toast } from "sonner";
@@ -24,7 +24,7 @@ const useContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const form = useForm<IFormValues>({
-    resolver: yupResolver(schema) as any,
+    resolver: yupResolver(schema) as Resolver<IFormValues>,
   });
 
   const {
@@ -54,7 +54,7 @@ const useContactForm = () => {
   };
 
   const onSubmit = async (data: IFormValues) => {
-    console.log('Form Submit Success')
+    console.log("Form Submit Success");
     const res = await postContactMessage(data);
     if (res?.status === 200) {
       toast.success("Successfully sent email to TeNyain");
@@ -64,7 +64,7 @@ const useContactForm = () => {
     }
   };
 
-  return { handleSubmit, register, errors , isLoading, onSubmit };
+  return { handleSubmit, register, errors, isLoading, onSubmit };
 };
 
 export default useContactForm;
