@@ -13,8 +13,10 @@ const CharacterHead: React.FC = () => {
             pupils.forEach((pupil) => {
                 const rect = pupil.getBoundingClientRect();
                 const x = (e.pageX - rect.left) / 150 + "px";
-                const y = (e.pageY - rect.top) / 150 + "px";
+                const actual_y = (e.pageY - rect.top) / 150 + "px";
+                const y = (parseInt(actual_y) > 5) ? '5' : actual_y; 
                 pupil.style.transform = `translate3d(${x}, ${y}, 0px)`;
+                console.log()
             });
 
             eyebrows.forEach((eyebrow, index) => {
