@@ -30,7 +30,7 @@ const ContactSection = () => {
                     </div>
                     <div className="mb-4">
                         <label htmlFor={'email'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
-                            Name
+                            Email
                         </label>
                         <input
                             type={'email'}
@@ -45,7 +45,7 @@ const ContactSection = () => {
                         {errors.email && <span className="mt-1 text-sm text-red-600">{errors.email.message}</span>}
                     </div>
                     <div className="mb-4 sm:col-span-2">
-                        <label htmlFor={'message'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-secondary">
+                        <label htmlFor={'message'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
                             Message
                         </label>
                         <textarea

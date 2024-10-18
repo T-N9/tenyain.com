@@ -14,7 +14,7 @@ interface ArticleHeroProps {
 const ArticleHero: React.FC<ArticleHeroProps> = ({ title, createdAt, tags, image }) => {
   return (
     <div className='flex flex-col gap-3'>
-      <h1 className='text-5xl leading-normal font-bold text-primary-600 dark:text-accent-600'>{title}</h1>
+      <h1 className='text-3xl lg:text-5xl leading-normal font-bold text-primary-600 dark:text-accent-600'>{title}</h1>
       <div className='flex justify-between'>
         <p className='text-gray-500'>{moment(createdAt).format('MMMM Do, YYYY')}</p>
         <div className='flex gap-2'>

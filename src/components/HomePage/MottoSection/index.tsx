@@ -7,7 +7,7 @@ import SectionWrapper from '@/components/common/wrappers/SectionWrapper';
 export function MottoSection() {
     return (
         <SectionWrapper className='my-14'>
-            <Blockquote className='text-center text-secondary/40  text-3xl'>
+            <Blockquote className='text-center text-secondary/40 dark:text-slate-500  text-3xl'>
                 <svg
                     className="mb-4 mx-auto h-8 w-8 fill-primary-600 dark:fill-accent-600  dark:text-secondary"
                     aria-hidden="true"
