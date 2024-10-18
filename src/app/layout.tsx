@@ -5,6 +5,7 @@ import NavBar from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Ubuntu } from 'next/font/google'
 import { ContextProvider } from "@/context/GeneralContext";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
@@ -57,12 +58,14 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ubuntu.className} antialiased`}
+        className={`${ubuntu.className} antialiased bg-white dark:bg-secondary`}
       >
-        <NavBar />
-        <div className="mb-20"></div>
-        <ContextProvider>{children}</ContextProvider>
-        <Footer />
+        <ThemeProvider attribute="class">
+          <NavBar />
+          <div className="mb-20"></div>
+          <ContextProvider>{children}</ContextProvider>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

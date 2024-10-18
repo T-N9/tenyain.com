@@ -28,8 +28,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, ro
       <figcaption className="flex items-center justify-center mt-6 space-x-3">
         
         <div className="flex items-center divide-x-2 divide-secondary dark:divide-gray-700">
-          <div className="pr-3 font-medium text-secondary dark:text-white">{name}</div>
-          <div className="pl-3 text-sm font-light text-secondary dark:text-secondary">{role}</div>
+          <div className="pr-3 font-medium text-primary-600 dark:text-accent-600">{name}</div>
+          <div className="pl-3 text-sm font-light text-secondary dark:text-slate-200">{role}</div>
         </div>
       </figcaption>
     </figure>

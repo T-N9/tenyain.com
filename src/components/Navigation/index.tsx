@@ -5,6 +5,7 @@ import TNLogo from '../common/logos/TNLogo';
 import Link from 'next/link';
 import { Button } from 'flowbite-react';
 import { usePathname } from 'next/navigation';
+import ThemeToggler from '../ThemeToggler';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,15 +34,16 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-secondary fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-secondary">
+    <nav className="bg-white shadow dark:bg-secondary fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-secondary">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <TNLogo />
         </Link>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Button className='bg-primary-600 hover:!bg-primary-500' size='sm'>
+        <div className="flex items-center gap-4 md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <Button className='bg-primary-600 hover:!bg-primary-500 dark:bg-accent-600 dark:!bg-accent-500 dark:text-secondary dark:bg-accent-600 dark:hover:!bg-accent-500' size='sm'>
             EN
           </Button>
+          <ThemeToggler/>
           <button
             onClick={toggleMenu}
             data-collapse-toggle="navbar-sticky"
@@ -52,7 +54,7 @@ const NavBar = () => {
           >
             <span className="sr-only">Open main menu</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+              <path className='stroke-slate-700 dark:stroke-slate-200' stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
             </svg>
           </button>
         </div>
@@ -61,15 +63,14 @@ const NavBar = () => {
             {navItems.map((item) => (
               <li onClick={() => setIsOpen(false)} key={item.href}>
                 <Link href={item.href}>
-                  <p
-                    className={`block py-2 px-3 rounded ${
-                      isActive(item.href)
-                        ? 'text-white bg-primary-600 md:bg-transparent md:text-primary-600'
-                        : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
-                    }`}
+                  <span
+                    className={`block py-2 px-3 rounded ${isActive(item.href)
+                        ? 'text-white bg-primary-600 dark:bg-accent-600 dark:md:bg-transparent md:bg-transparent md:text-primary-600 dark:md:text-accent-600'
+                        : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:md:hover:text-accent-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
+                      }`}
                   >
                     {item.label}
-                  </p>
+                  </span>
                 </Link>
               </li>
             ))}

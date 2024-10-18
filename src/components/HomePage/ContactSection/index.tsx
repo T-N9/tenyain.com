@@ -31,7 +31,7 @@ const ContactSection = () => {
                         <TextAreaField name="message" label="Your Message" placeholder="Leave a message..." />
                         <Button
                             type="submit"
-                            className='bg-primary-600 hover:bg-primary-600/40'
+                            className='bg-primary-600 hover:bg-primary-600/40 dark:bg-accent-600 dark:text-secondary'
                             size='lg'
                         >
                             Submit

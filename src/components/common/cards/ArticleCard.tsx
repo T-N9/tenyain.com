@@ -27,7 +27,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
         <div className='flex justify-between items-center'>
             <div className=" flex flex-wrap gap-2">
               {tags?.map((tag) => (
-                <span key={tag} className="inline-block px-2 py-1 text-xs font-semibold bg-primary-100 text-primary-600 rounded-full">
+                <span key={tag} className="inline-block px-2 py-1 text-xs font-semibold bg-primary-100 text-primary-600 dark:bg-accent-100 dark:text-accent-800 rounded-full">
                   {tag}
                 </span>
               ))}

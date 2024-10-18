@@ -43,8 +43,8 @@ const CharacterHead: React.FC = () => {
 
     return (
         <div className="relative flex justify-center items-center">
-            <div className="p-10 z-0 absolute bg-primary-200 rounded-full">
-                <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full bg-primary-600">
+            <div className="p-10 z-0 absolute bg-primary-200 dark:bg-accent-800 rounded-full">
+                <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full bg-primary-600 dark:bg-accent-600">
 
                 </div>
             </div>
