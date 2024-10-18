@@ -1,7 +1,5 @@
 'use client'
 import Heading from '@/components/common/headings/Heading';
-import InputField from '@/components/common/input';
-import TextAreaField from '@/components/common/input/TextArea';
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper';
 import { Button } from 'flowbite-react';
 import useContactForm from './useContactForm';
