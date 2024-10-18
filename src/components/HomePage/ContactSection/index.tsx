@@ -2,45 +2,75 @@
 import Heading from '@/components/common/headings/Heading';
 import InputField from '@/components/common/input';
 import TextAreaField from '@/components/common/input/TextArea';
-import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
+import SectionWrapper from '@/components/common/wrappers/SectionWrapper';
 import { Button } from 'flowbite-react';
-import React from 'react'
-import { FormProvider, useForm } from 'react-hook-form';
-interface FormValues {
-    name: string;
-    email: string;
-}
-const ContactSection = () => {
-    const methods = useForm<FormValues>({
-        mode: 'onBlur', // validate on blur
-    });
-    const { handleSubmit } = methods;
+import useContactForm from './useContactForm';
 
-    const onSubmit = (data: FormValues) => {
-        console.log(data); // Handle form submission
-    };
+const ContactSection = () => {
+    const { handleSubmit, errors, isLoading, register, onSubmit } = useContactForm();
 
     return (
         <SectionWrapper>
-           <Heading title='Keep In Touch'/>
-            <div className=' mx-auto max-w-screen-md'>
-                <FormProvider {...methods}>
-                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                        <InputField name="name" label="Name" type="text" placeholder="John Doe" />
-                        <InputField name="email" label="Email" type="email" placeholder="name@flowbite.com" />
-                        <TextAreaField name="message" label="Your Message" placeholder="Leave a message..." />
-                        <Button
-                            type="submit"
-                            className='bg-primary-600 hover:bg-primary-600/40 dark:bg-accent-600 dark:text-secondary'
-                            size='lg'
-                        >
-                            Submit
-                        </Button>
-                    </form>
-                </FormProvider>
+            <Heading title='Keep In Touch' />
+            <div className='mx-auto max-w-screen-md'>
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="mb-4">
+                        <label htmlFor={'name'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
+                            Name
+                        </label>
+                        <input
+                            type={'text'}
+                            id={'name'}
+                            className={`bg-gray-50 border ${errors.name ? '!border-red-500' : 'border-gray-300'} text-secondary text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-300 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            placeholder={
+                                'Enter your name'
+                            }
+                            {...register("name")}
+                        />
+                        {/* Only render the error message if it exists and is a string */}
+                        {errors.name && <span className="mt-1 text-sm text-red-600">{errors.name.message}</span>}
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor={'email'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
+                            Name
+                        </label>
+                        <input
+                            type={'email'}
+                            id={'email'}
+                            className={`bg-gray-50 border ${errors.name ? '!border-red-500' : 'border-gray-300'} text-secondary text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-300 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            placeholder={
+                                'Enter your mail'
+                            }
+                            {...register("email")}
+                        />
+                        {/* Only render the error message if it exists and is a string */}
+                        {errors.email && <span className="mt-1 text-sm text-red-600">{errors.email.message}</span>}
+                    </div>
+                    <div className="mb-4 sm:col-span-2">
+                        <label htmlFor={'message'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-secondary">
+                            Message
+                        </label>
+                        <textarea
+                            id={'message'}
+                            rows={6}
+                            className={`block p-2.5 w-full text-2xl text-secondary bg-gray-50 rounded-lg shadow-sm border ${errors.name ? '!border-red-500' : 'border-gray-300'} focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-300 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            placeholder={'Leave a message...'}
+                            {...register("message")}
+                        ></textarea>
+                        {errors.message && <span className="mt-1 text-sm text-red-600">{errors.message.message}</span>}
+                    </div>
+                    <Button
+                        type="submit"
+                        className='bg-primary-600 hover:bg-primary-600/40 dark:bg-accent-600 dark:text-secondary'
+                        size='lg'
+                        disabled={isLoading}
+                    >
+                        {isLoading ? "Sending..." : "Submit"}
+                    </Button>
+                </form>
             </div>
         </SectionWrapper>
     );
 }
 
-export default ContactSection
+export default ContactSection;

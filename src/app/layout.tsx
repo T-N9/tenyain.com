@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Ubuntu } from 'next/font/google'
 import { ContextProvider } from "@/context/GeneralContext";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
@@ -65,6 +66,7 @@ export default function RootLayout({
           <div className="mb-20"></div>
           <ContextProvider>{children}</ContextProvider>
           <Footer />
+          <Toaster richColors closeButton position="bottom-center" />
         </ThemeProvider>
       </body>
     </html>
