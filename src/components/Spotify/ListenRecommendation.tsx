@@ -6,7 +6,7 @@ const ListenRecommendation = () => {
 
     return (
         <SectionWrapper>
-            <Heading align='left' title='My Playlist'/>
+            <Heading align='left' title='My Playlist' />
 
             <iframe
                 title="Spotify Embed: Recommendation Playlist "

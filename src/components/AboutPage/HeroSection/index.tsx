@@ -11,8 +11,8 @@ const HeroSection = () => {
                     <div className='relative'>
                       <Image className='rounded-lg lg:rounded-sm relative z-10' src={'/assets/profile.webp'} width={360} height={437} alt='My Picture' />
                      
-                      <div className='absolute hidden lg:flex justify-center items-center left-[20%] top-0 z-0 w-[437px] h-[437px] rounded-full bg-primary-100'>
-                          <div className=' w-[200px] h-[200px] rounded-full bg-primary-600'>
+                      <div className='absolute hidden lg:flex justify-center items-center left-[20%] top-0 z-0 w-[437px] h-[437px] rounded-full bg-primary-100 dark:bg-accent-800'>
+                          <div className=' w-[200px] h-[200px] rounded-full bg-primary-600 dark:bg-accent-600'>
                      
                           </div>
                       </div>
@@ -20,9 +20,9 @@ const HeroSection = () => {
                    </div>
                 </div>
                 <div className="mt-4 md:mt-0">
-                    <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight font-normal text-secondary dark:text-white">I am <span className='font-bold text-primary-600'>Te Nyain Moe Lwin</span>, a creative front-end web developer with 2+ years experience. I am here to help</h2>
+                    <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight font-normal text-secondary dark:text-white">I am <span className='font-bold text-primary-600 dark:text-accent-600'>Te Nyain Moe Lwin</span>, a creative front-end web developer with 2+ years experience. I am here to help</h2>
                     <h1 className='mb-4 text-4xl lg:text-6xl tracking-tight font-bold text-secondary dark:text-white'>
-                        Turn your <span className=' text-primary-600'>idea</span> into life.
+                        Turn your <span className=' text-primary-600 dark:text-accent-600'>idea</span> into life.
                     </h1>
                     <p className="mb-6 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">Since 2020, I have enjoyed learning digital design, web development, and content creation to deliver implicit and reachable information.</p>
 

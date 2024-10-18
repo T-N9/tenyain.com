@@ -14,19 +14,19 @@ interface ArticleHeroProps {
 const ArticleHero: React.FC<ArticleHeroProps> = ({ title, createdAt, tags, image }) => {
   return (
     <div className='flex flex-col gap-3'>
-      <h1 className='text-5xl leading-normal font-bold text-primary-600'>{title}</h1>
+      <h1 className='text-5xl leading-normal font-bold text-primary-600 dark:text-accent-600'>{title}</h1>
       <div className='flex justify-between'>
         <p className='text-gray-500'>{moment(createdAt).format('MMMM Do, YYYY')}</p>
         <div className='flex gap-2'>
           {tags.map((tag) => (
-            <Badge key={tag} size="sm" className='bg-primary-100 text-lg' href="#">
+            <Badge key={tag} size="sm" className='bg-primary-100 dark:bg-accent-100 text-lg' href="#">
               {tag}
             </Badge>
 
           ))}
         </div>
       </div>
-      <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-50 px-5 py-3 dark:bg-gray-800">
+      <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-100 rounded-md px-5 py-3 dark:bg-gray-800">
         <Breadcrumb.Item>
           <Link href={'/'}>Home</Link>
         </Breadcrumb.Item>

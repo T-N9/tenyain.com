@@ -29,36 +29,36 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <header className="relative bg-gradient-to-r ">
       <div className="flex flex-col gap-4 ">
-        <h1 className="text-4xl lg:text-5xl font-bold text-primary-600">
+        <h1 className="text-4xl lg:text-5xl font-bold text-primary-600 dark:text-accent-600">
           {title}
         </h1>
         <p className="text-lg lg:text-xl font-light text-gray-500">{tagline}</p>
 
         <div className="container mx-auto flex flex-wrap gap-4">
-          <div className="status--card bg-gray-100 rounded-lg p-4 flex-1">
-            <p className="name text-sm font-semibold text-primary-600 uppercase">
+          <div className="status--card bg-gray-100 dark:bg-slate-600 rounded-lg p-4 flex-1">
+            <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Status
-            </p>
+            </span>
             <p className="status_t text-xl font-bold text-secondary">
               {status}
             </p>
           </div>
-          <div className="status--card bg-gray-100 rounded-lg p-4 flex-1">
-            <p className="name text-sm font-semibold text-primary-600 uppercase">
+          <div className="status--card bg-gray-100 dark:bg-slate-600 rounded-lg p-4 flex-1">
+            <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Type
-            </p>
+            </span>
             <p className="status_t text-xl font-bold text-secondary">{type}</p>
           </div>
-          <div className="status--card bg-gray-100 rounded-lg p-4 flex-1">
-            <p className="name text-sm font-semibold text-primary-600 uppercase">
+          <div className="status--card bg-gray-100 dark:bg-slate-600 rounded-lg p-4 flex-1">
+            <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Role
-            </p>
+            </span>
             <p className="status_t text-xl font-bold text-secondary">{role}</p>
           </div>
-          <div className="status--card bg-gray-100 rounded-lg p-4 flex-1">
-            <p className="name text-sm font-semibold text-primary-600 uppercase">
+          <div className="status--card bg-gray-100 dark:bg-slate-600 rounded-lg p-4 flex-1">
+            <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Period
-            </p>
+            </span>
             <p className="status_t text-xl font-bold text-secondary">
               {period}
             </p>
@@ -71,13 +71,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="flex gap-5">
           <div className="text-base lg:text-lg">
             <p>
-              <strong className="text-gray-500">View live:</strong>
+              <strong className="text-gray-500 dark:text-slate-200">View live:</strong>
               <br />
               <a
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-600 underline"
+                className="text-primary-600 dark:text-accent-600 underline"
               >
                 {" "}
                 {url}
@@ -87,7 +87,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
           <div className="text-base lg:text-lg">
             <p>
-              <strong className="text-gray-500">Technologies:</strong>
+              <strong className="text-gray-500 dark:text-slate-200">Technologies:</strong>
               <br />
             </p>
             <div className="flex gap-3 flex-wrap">

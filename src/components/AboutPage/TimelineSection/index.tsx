@@ -20,14 +20,14 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2015-2016</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">Passed Matriculation Examination</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Passed Matriculation Examination</TimelineTitle>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2016-2017</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">Joined University of Computer Studies, Hinthada</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Joined University of Computer Studies, Hinthada</TimelineTitle>
                             <TimelineBody>
                                 UCSH Web Design Competition (HTML & CSS) - 1st Prize
                             </TimelineBody>
@@ -37,7 +37,7 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2017-2018</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">UCSH - CS 2nd year</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">UCSH - CS 2nd year</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
                                     <li>
@@ -45,7 +45,7 @@ export function TimelineSection() {
 
                                     </li>
                                     <li>
-                                        Designer at <a className="text-primary-600" href="https://www.facebook.com/BarCampHinthada">BarCamp Hinthada 2018</a>
+                                        Designer at <a className="text-primary-600 dark:text-accent-600" href="https://www.facebook.com/BarCampHinthada">BarCamp Hinthada 2018</a>
                                     </li>
                                 </ul>
                             </TimelineBody>
@@ -55,7 +55,7 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2018-2019</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">UCSH - CS 3rd year</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">UCSH - CS 3rd year</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
                                     <li>
@@ -76,11 +76,11 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2020</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">Stay @ Home</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Stay @ Home</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
                                     <li>
-                                        Started learning Web design & development <a className="font-bold text-primary-600" href="https://www.facebook.com/mmsoss">@MMSIT</a>
+                                        Started learning Web design & development <a className="font-bold text-primary-600 dark:text-accent-600" href="https://www.facebook.com/mmsoss">@MMSIT</a>
 
                                     </li>
                                     <li>
@@ -94,11 +94,11 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2021</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">Dark Times in Myanmar</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Dark Times in Myanmar</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
                                     <li>
-                                        <a className="text-primary-600 font-bold" href="https://twitter.com/hashtag/WhatsHappeningInMyanmar?src=hashtag_click">#WhatsHappeningInMyanmar</a>
+                                        <a className="text-primary-600 dark:text-accent-600 font-bold" href="https://twitter.com/hashtag/WhatsHappeningInMyanmar?src=hashtag_click">#WhatsHappeningInMyanmar</a>
 
                                     </li>
                                     <li>
@@ -113,7 +113,7 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2022</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">On Job Training</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">On Job Training</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
                                     <li>
@@ -131,7 +131,7 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2023</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">In Progress</TimelineTitle>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">In Progress</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
                                     <li>
@@ -147,7 +147,7 @@ export function TimelineSection() {
                         <TimelinePoint />
                         <TimelineContent>
                             <TimelineTime className="text-xl">2024</TimelineTime>
-                            <TimelineTitle className="text-primary-600 text-2xl">A New Chapter
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">A New Chapter
 
                             </TimelineTitle>
                             <TimelineBody>

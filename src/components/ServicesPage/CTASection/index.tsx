@@ -6,7 +6,7 @@ const CTASection = () => {
     return (
         <SectionWrapper className="bg-white dark:bg-secondary">
             <div className="flex flex-col justify-center">
-                <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-6xl dark:text-white">
+                <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-primary-600 dark:text-accent-600 md:text-5xl lg:text-6xl">
                     Your goal is my mission.
                 </h1>
                 <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">

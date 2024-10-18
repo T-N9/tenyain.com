@@ -19,6 +19,15 @@
     margin-top: 2rem;
     margin-bottom: 0.75rem;
   }
+
+  .dark .mdx-wrapper h1,
+  .dark .mdx-wrapper h2,
+  .dark .mdx-wrapper h3,
+  .dark .mdx-wrapper h4,
+  .dark .mdx-wrapper h5,
+  .dark .mdx-wrapper h6 {
+    color: #2fe0ac;
+  }
   
   .mdx-wrapper h1 {
     font-size: 2.25rem;
@@ -53,6 +62,10 @@
     text-decoration: underline;
     font-weight: 500;
   }
+
+  .dark .mdx-wrapper a {
+    color: #2fe0ac;
+  }
   
   .mdx-wrapper a:hover {
     color: #3b36a9;
@@ -77,6 +90,11 @@
     font-style: italic;
     background-color: #f9f9ff;
   }
+
+  .dark .mdx-wrapper blockquote {
+    border-left: 4px solid #2fe0ac;
+
+  }
   
   .mdx-wrapper code {
     background-color: #f3f3ff;
@@ -84,6 +102,10 @@
     padding: 0.2rem 0.4rem;
     border-radius: 0.3rem;
     font-size: 14px;
+  }
+
+  .dark .mdx-wrapper code {
+    color: #2fe0ac;
   }
   
   .mdx-wrapper pre {
@@ -122,6 +144,10 @@
     background-color: #f3f3ff;
     color: #1192d3;
     font-weight: bold;
+  }
+
+  .dark .mdx-wrapper th {
+    color: #2fe0ac;
   }
   
   .mdx-wrapper {
