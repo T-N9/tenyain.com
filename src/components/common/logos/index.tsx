@@ -145,3 +145,106 @@ export const technologyLogoMap: { [key: string]: JSX.Element } = {
     </Tooltip>
   ),
 };
+
+export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
+  HTML5: (
+    <Tooltip content="HTML5">
+      <SiHtml5 size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  CSS3: (
+    <Tooltip content="CSS3">
+      <SiCss3 size={50} className="fill-primary-700 dark:fill-accent-200"/>
+    </Tooltip>
+  ),
+  JavaScript: (
+    <Tooltip content="JavaScript">
+      <SiJavascript size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  TypeScript: (
+    <Tooltip content="TypeScript">
+      <SiTypescript size={50} className="fill-primary-700 dark:fill-accent-200"  />
+    </Tooltip>
+  ),
+  ReactJS: (
+    <Tooltip content="React.js">
+      <SiReact size={50} className="fill-primary-700 dark:fill-accent-200"/>
+    </Tooltip>
+  ),
+  Bootstrap: (
+    <Tooltip content="Bootstrap">
+      <SiBootstrap size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  TailwindCSS: (
+    <Tooltip content="Tailwind CSS">
+      <SiTailwindcss size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  Redux: (
+    <Tooltip content="Redux">
+      <SiRedux size={50} className="fill-primary-700 dark:fill-accent-200"  />
+    </Tooltip>
+  ),
+  NextJS: (
+    <Tooltip content="Next.js">
+      <SiNextdotjs size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  SCSS: (
+    <Tooltip content="SCSS">
+      <SiSass size={50} className="fill-primary-700 dark:fill-accent-200"/>
+    </Tooltip>
+  ),
+  Firebase: (
+    <Tooltip content="Firebase">
+      <SiFirebase size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  MySQL: (
+    <Tooltip content="MySQL">
+      <SiMysql size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  Framer: (
+    <Tooltip content="Framer">
+      <SiFramer size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  GitHub: (
+    <Tooltip content="GitHub">
+      <SiGithub size={50} className="fill-primary-700 dark:fill-accent-200"  />
+    </Tooltip>
+  ),
+  Figma: (
+    <Tooltip content="Figma">
+      <SiFigma size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  Netlify: (
+    <Tooltip content="Netlify">
+      <SiNetlify size={50} className="fill-primary-700 dark:fill-accent-200"  />
+    </Tooltip>
+  ),
+  Vercel: (
+    <Tooltip content="Vercel">
+      <SiVercel size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  Lighthouse: (
+    <Tooltip content="Lighthouse">
+      <SiLighthouse size={50} className="fill-primary-700 dark:fill-accent-200"  />
+    </Tooltip>
+  ),
+  ReactRouter: (
+    <Tooltip content="React Router">
+      <SiReactrouter size={50} className="fill-primary-700 dark:fill-accent-200" />
+    </Tooltip>
+  ),
+  Php: (
+    <Tooltip content="PHP">
+      <SiPhp size={50} className="fill-primary-700 dark:fill-accent-200"  />
+    </Tooltip>
+  ),
+};
