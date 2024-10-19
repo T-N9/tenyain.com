@@ -3,7 +3,7 @@ import React from "react";
 
 const Greetings = () => {
   const date = new Date();
-  let day = date.getDay();
+  const day = date.getDay();
   let titleText = "";
   let dayText = "";
 

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   }
 };
 
-const ubuntu = Ubuntu({ weight: ['400', '500', '700'], subsets: ['latin'] })
+const ubuntu = Ubuntu({ weight: ['400', '500', '700'], subsets: ['latin'], fallback : ["MyanmarSanpya"] })
 
 export default function RootLayout({
   children,
@@ -59,7 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`antialiased bg-white dark:bg-secondary`}
+        className={`${ubuntu.className} antialiased bg-white dark:bg-secondary`}
       >
         <ThemeProvider attribute="class">
           <NavBar />
