@@ -7,7 +7,7 @@ const SkillSection = () => {
   return (
     <SectionWrapper>
       <Heading title="Skills"/>
-      <div className="grid grid-cols-5 md:grid-cols-6 lg:grid-cols-9 gap-4"> {/* Using Tailwind CSS grid */}
+      <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-5"> {/* Using Tailwind CSS grid */}
         {Object.keys(technologyLogoMap).map((tech) => (
           <div key={tech} className="flex items-center justify-center">
             {technologyLogoMap[tech]} {/* Render the logo from the map */}
@@ -15,7 +15,7 @@ const SkillSection = () => {
         ))}
       </div>
 
-      <Button className='table mx-auto mt-10' size='lg' color='gray'>View Services</Button>
+      <Button className='table mx-auto secondary-btn mt-10' size='lg' color='gray'>View Services</Button>
     </SectionWrapper>
   )
 }

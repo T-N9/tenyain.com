@@ -35,7 +35,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
             <p className="text-sm text-secondary dark:text-secondary">{moment(createdAt).format('MMMM Do, YYYY')}</p>
         </div>
         <Link href={`/writing/${href}`} >
-          <Button className="mt-4 flex items-center" color='gray' pill size='lg'>
+          <Button className="secondary-btn mt-4" color='gray' pill size='lg'>
             Read more
            
           </Button>

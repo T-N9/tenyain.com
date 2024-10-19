@@ -58,7 +58,7 @@ const ProjectsSection = () => {
                 <Heading title="Projects" className="!mb-0" />
 
                 <Link href={'/works'}>
-                    <Button size="sm" color="gray">
+                    <Button className="secondary-btn" size="sm" color="gray">
                         View All
                     </Button>
                 </Link>

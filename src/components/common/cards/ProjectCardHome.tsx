@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       <Image src={logoSrc} width={200} height={100} className='border-l-4 border-l-primary-200 dark:border-l-accent-200 pl-4 w-[200px] h-[100px] object-contain' alt={logoAlt} />
       <div>
-        <h1 className="mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white">
+        <h1 className="mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-slate-200">
           {title}
         </h1>
         <div className="text-primary-600 dark:text-accent-600 flex gap-4 items-center">
@@ -71,8 +71,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       <Link href={`/works/${slug}`}>
-        <Button className="hover:!text-primary-600 dark:hover:!text-accent-600" color="gray" size="lg" onClick={onViewCaseStudy}>
-          View case study
+        <Button className="secondary-btn" color="gray" size="lg" onClick={onViewCaseStudy}>
+          View Detail
         </Button>
       </Link>
     </div>
