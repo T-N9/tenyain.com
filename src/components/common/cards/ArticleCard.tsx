@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from 'flowbite-react';
 
 interface ArticleCardProps {
   title: string;
@@ -35,12 +34,6 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
             </div>
             <p className="text-sm text-secondary dark:text-secondary">{moment(createdAt).format('MMMM Do, YYYY')}</p>
           </div>
-          <Link href={`/writing/${href}`} >
-            <Button className="secondary-btn mt-4" color='gray' pill size='lg'>
-              Read more
-
-            </Button>
-          </Link>
         </div>
       </div>
     </div>
