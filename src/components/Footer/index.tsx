@@ -1,6 +1,7 @@
 import React from 'react'
 import TNLogo from '../common/logos/TNLogo'
 import Link from 'next/link'
+import Greetings from '../Greetings'
 
 const Footer = () => {
   return (
@@ -8,9 +9,11 @@ const Footer = () => {
     <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-                <a href="https://flowbite.com" className="flex items-center">
+                <Link href="/" className="flex items-center">
                     <TNLogo/>
-                </a>
+                </Link>
+
+                <Greetings/>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
@@ -48,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-8" />
         <div className="text-center">
             <span className="text-sm text-secondary text-center dark:text-white">© 2022 - 2024 <a href="https://tenyain.com" className="hover:underline">tenyain.com</a>. All Rights Reserved.
             </span>

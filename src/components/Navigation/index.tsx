@@ -41,7 +41,7 @@ const NavBar = () => {
         </Link>
         <div className="flex items-center gap-2 md:gap-4 lg:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 
-          <Button className='bg-primary-600 hover:!bg-primary-500 dark:text-secondary dark:bg-accent-600 dark:hover:!bg-accent-500' size='sm'>
+          <Button className='bg-primary-600 hidden hover:!bg-primary-500 dark:text-secondary dark:bg-accent-600 dark:hover:!bg-accent-500' size='sm'>
             EN
           </Button>
           <ThemeToggler/>
