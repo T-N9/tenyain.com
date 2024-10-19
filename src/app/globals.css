@@ -16,6 +16,18 @@
   }
 }
 
+@font-face {
+  font-family: 'MyanmarSanpya';
+  src: url('/fonts/MyanmarSanpya.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+1000-109F; /* Unicode range for Myanmar */
+}
+
+html {
+  font-family: 'Ubuntu', 'MyanmarSanpya', sans-serif !important;
+}
+
 p {
   color: #3a4856;
 }

@@ -59,7 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ubuntu.className} antialiased bg-white dark:bg-secondary`}
+        className={`antialiased bg-white dark:bg-secondary`}
       >
         <ThemeProvider attribute="class">
           <NavBar />
