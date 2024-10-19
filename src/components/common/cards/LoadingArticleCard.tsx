@@ -1,6 +1,6 @@
 const LoadingArticleCard: React.FC = () => {
     return (
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-secondary animate-pulse">
+        <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-secondary animate-pulse">
             <div className="h-60 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
             <div className="p-5">
                 <div className="h-8 bg-gray-200 rounded dark:bg-gray-700 mb-4"></div>

@@ -15,7 +15,7 @@ const TestimonialSection = () => {
         pauseOnHover: true,
         responsive: [
             {
-              breakpoint: 600,
+              breakpoint: 780,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,

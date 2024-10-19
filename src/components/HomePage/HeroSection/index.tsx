@@ -5,7 +5,7 @@ import { Button } from 'flowbite-react'
 const HeroSection = () => {
   return (
     <section className="bg-white dark:bg-secondary">
-      <div className="flex flex-col gap-y-20 lg:flex-row py-8 px-4 mx-auto max-w-screen-xl text-left lg:py-16 lg:px-0">
+      <div className="flex flex-col gap-y-20 md:flex-row py-8 px-4 mx-auto max-w-screen-xl text-left xl:py-16 xl:px-0">
         <div className="flex-1 relative z-10">
           <a href="#" className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-secondary bg-gray-100 rounded-full dark:bg-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 duration-100 transition-all" role="alert">
             <span className="text-xs bg-primary-600 dark:bg-accent-600 rounded-full text-white dark:text-secondary px-4 py-1.5 mr-3">New</span> <span className="text-sm font-medium">Checkout my notes. See what&apos;s new</span>

@@ -32,7 +32,7 @@ const AllArticlesSection = () => {
     return (
         <SectionWrapper>
             <Heading title='My Thoughts' />
-            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 mt-4'>
+            <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4'>
                 {
                     isLoading ?
                         <>

@@ -35,11 +35,11 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white shadow dark:bg-secondary fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-secondary">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 lg:px-0">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 xl:px-0">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <TNLogo />
         </Link>
-        <div className="flex items-center gap-2 lg:gap-4 md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex items-center gap-2 md:gap-4 lg:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 
           <Button className='bg-primary-600 hover:!bg-primary-500 dark:text-secondary dark:bg-accent-600 dark:hover:!bg-accent-500' size='sm'>
             EN
@@ -49,7 +49,7 @@ const NavBar = () => {
             onClick={toggleMenu}
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-secondary rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-secondary dark:hover:bg-gray-700 dark:focus:ring-secondary"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-secondary rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-secondary dark:hover:bg-gray-700 dark:focus:ring-secondary"
             aria-controls="navbar-sticky"
             aria-expanded={isOpen}
           >
@@ -59,15 +59,15 @@ const NavBar = () => {
             </svg>
           </button>
         </div>
-        <div className={`items-center justify-between ${isOpen ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-secondary dark:border-gray-700">
+        <div className={`items-center justify-between ${isOpen ? 'block' : 'hidden'} w-full lg:flex lg:w-auto lg:order-1`} id="navbar-sticky">
+          <ul className="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-secondary dark:border-gray-700">
             {navItems.map((item) => (
               <li onClick={() => setIsOpen(false)} key={item.href}>
                 <Link href={item.href}>
                   <span
                     className={`block py-2 px-3 rounded ${isActive(item.href)
-                        ? 'text-white bg-primary-600 dark:bg-accent-600 dark:md:bg-transparent md:bg-transparent md:text-primary-600 dark:md:text-accent-600'
-                        : 'text-secondary hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 dark:md:hover:text-accent-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
+                        ? 'text-white bg-primary-600 dark:bg-accent-600 dark:lg:bg-transparent lg:bg-transparent lg:text-primary-600 dark:lg:text-accent-600'
+                        : 'text-secondary hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-primary-700 dark:lg:hover:text-accent-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
                       }`}
                   >
                     {item.label}

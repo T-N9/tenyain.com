@@ -35,11 +35,21 @@ const ProjectsSection = () => {
     const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        pauseOnHover: true
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+
+        ]
     };
 
     const { demoWorks, isLoading, fetchWorks } = useGeneralContext();

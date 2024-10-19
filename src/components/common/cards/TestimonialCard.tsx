@@ -8,7 +8,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, role }) => {
   return (
-    <figure className="max-w-screen-md mx-auto text-center mb-6">
+    <figure className="px-4 mx-auto mb-6">
       <svg
         className="h-12 mx-auto mb-3 text-secondary dark:text-slate-200"
         viewBox="0 0 24 27"
@@ -21,11 +21,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, ro
         />
       </svg>
       <blockquote>
-        <p className="text-lg lg:text-2xl font-medium text-secondary dark:text-white">
+        <p className="text-lg text-left lg:text-2xl font-medium text-secondary dark:text-white">
         &quot;{testimonial}&quot;
         </p>
       </blockquote>
-      <figcaption className="flex items-center justify-center mt-6 space-x-3">
+      <figcaption className="flex items-center justify-start mt-6 space-x-3">
         
         <div className="flex items-center divide-x-2 divide-secondary dark:divide-gray-700">
           <div className="pr-3 font-medium text-primary-600 dark:text-accent-600">{name}</div>

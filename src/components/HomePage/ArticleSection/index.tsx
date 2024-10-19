@@ -14,11 +14,21 @@ const ArticleSection = () => {
     const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        pauseOnHover: true
+        pauseOnHover: true,
+        responsive: [
+            {
+              breakpoint: 560,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            },
+           
+          ]
     };
 
     const { demoArticles, isLoading, fetchArticles } = useGeneralContext();
@@ -35,7 +45,7 @@ const ArticleSection = () => {
                 <Heading title="Latest Articles" className="!mb-0" />
 
                 <Link href={'/writing'}>
-                    <Button size="sm" color="gray">
+                    <Button className='secondary-btn' size="sm" color="gray">
                         View All
                     </Button>
                 </Link>
