@@ -24,7 +24,7 @@ const config: Config = {
           "900": "#0a4964",
           "950": "#05303e",
         },
-        secondary: '#3a4856',
+        secondary: '#1A1A1A',
         accent: {
           "50": "#e6fbf5",
           "100": "#bcf6e2",

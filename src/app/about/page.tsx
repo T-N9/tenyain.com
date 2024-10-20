@@ -1,5 +1,6 @@
 import HeroSection from '@/components/AboutPage/HeroSection'
 import { TimelineSection } from '@/components/AboutPage/TimelineSection'
+import Divider from '@/components/common/divider/Divider'
 import { MottoSection } from '@/components/HomePage/MottoSection'
 import TestimonialSection from '@/components/HomePage/TestimonialSection'
 import ListenRecommendation from '@/components/Spotify/ListenRecommendation'
@@ -38,11 +39,11 @@ const AboutPage = () => {
     <>
       <HeroSection />
       <TimelineSection />
-      <hr className="my-6" />
+      <Divider/>
       <TestimonialSection />
-      <hr className="my-6" />
+      <Divider/>
       <MottoSection />
-      <hr className="my-6" />
+      <Divider/>
       <ListenRecommendation/>
     </>
   )
