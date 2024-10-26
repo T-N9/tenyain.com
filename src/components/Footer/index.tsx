@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="p-4 pt-20 mt-20 bg-white dark:bg-gray-700">
     <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
-            <div className="mb-6 text-primary-600 dark:text-accent-600 md:mb-0">
+            <div className="mb-20 text-primary-600 dark:text-accent-600 md:mb-0">
                 <Link href="/" className="flex items-center">
                     <TNLogo/>
                 </Link>

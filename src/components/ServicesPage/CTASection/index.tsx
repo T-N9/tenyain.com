@@ -23,7 +23,7 @@ const CTASection = () => {
                 <p className='mb-4 text-2xl tracking-tight font-bold text-secondary dark:text-white'>
                     “I care about your business values and targeted customers to meet your golden goals for tomorrow.”
                 </p>
-                <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+                <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-y-0">
                     <a href="mailto:tenyainmoelwin@gmail.com?subject=Hiring%20Inquiry%20for%20Front-end%20Development%20Project">
                         <Button className='primary-btn' size='xl' >
                             Hire Me
