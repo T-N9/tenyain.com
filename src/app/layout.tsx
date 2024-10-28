@@ -3,10 +3,10 @@ import "./globals.css";
 import "../style/markdown.css"
 import NavBar from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Ubuntu } from 'next/font/google'
 import { ContextProvider } from "@/context/GeneralContext";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
+import {ubuntu} from "@/fonts/fonts";
 
 export const metadata: Metadata = {
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
@@ -36,7 +36,6 @@ export const metadata: Metadata = {
   }
 };
 
-const ubuntu = Ubuntu({ weight: ['400', '500', '700'], subsets: ['latin'], fallback : ["MyanmarSanpya"] })
 
 export default function RootLayout({
   children,

@@ -21,15 +21,15 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, ro
         />
       </svg>
       <blockquote>
-        <p className="text-lg text-left lg:text-2xl font-medium text-secondary dark:text-gray-500">
-        &quot;{testimonial}&quot;
+        <p className="text-lg text-left lg:text-2xl font-thin text-secondary dark:text-gray-500 first-letter:text-primary-600 first-letter:font-bold first-letter:text-3xl dark:first-letter:text-accent-600">
+        {testimonial}
         </p>
       </blockquote>
       <figcaption className="flex items-center justify-start mt-6 space-x-3">
         
         <div className="flex items-center divide-x-2 divide-secondary/20 dark:divide-gray-500">
           <div className="pr-3 font-medium text-primary-600 dark:text-accent-600">{name}</div>
-          <div className="pl-3 text-sm font-light text-secondary dark:text-slate-200">{role}</div>
+          <div className="pl-3 text-sm font-light text-secondary dark:text-slate-200 font-medium">{role}</div>
         </div>
       </figcaption>
     </figure>
