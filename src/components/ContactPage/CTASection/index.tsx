@@ -2,12 +2,13 @@ import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { Button } from 'flowbite-react'
 import Link from 'next/link'
 import React from 'react'
+import {unbound} from "@/fonts/fonts";
 
 const CTASection = () => {
     return (
         <SectionWrapper className="bg-white dark:bg-secondary pt-16">
             <div className="flex flex-col justify-center">
-                <h1 className="mb-14 text-4xl text-center font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-6xl dark:text-accent-600">
+                <h1 className={`${unbound.className} uppercase mb-14 text-4xl text-center font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-6xl dark:text-accent-600`}>
                     Open to Work
                 </h1>
                 <p className="mb-8 max-w-2xl mx-auto text-lg font-normal text-secondary lg:text-xl dark:text-secondary">

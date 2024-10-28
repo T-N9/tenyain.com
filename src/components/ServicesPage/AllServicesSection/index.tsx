@@ -7,7 +7,7 @@ const AllServicesSection = () => {
             <section className="bg-white dark:bg-secondary">
                 <div className="pt-8 mx-auto max-w-screen-xl sm:pt-16 ">
                     <div className="max-w-screen-md mb-8 lg:mb-16">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-secondary "><b className='text-primary-600 dark:text-accent-600 font-bold'>Designed</b> for business like yours</h2>
+                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-secondary dark:text-gray-200 "><b className='text-primary-600 dark:text-accent-600 font-bold'>Designed</b> for business like yours</h2>
                         <p className="text-secondary sm:text-xl dark:text-secondary">At <b className='text-primary-600 dark:text-accent-600 font-bold'>tenyain.com</b>, I focus on creating visually engaging and seamless web experiences that connect brands with your audience through innovative front-end development solutions.</p>
                     </div>
                     <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">

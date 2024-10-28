@@ -1,6 +1,7 @@
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import Image from 'next/image'
 import React from 'react'
+import {unbound} from "@/fonts/fonts";
 
 const HeroSection = () => {
     return (
@@ -21,7 +22,7 @@ const HeroSection = () => {
                 </div>
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight font-normal text-secondary dark:text-white">I am <span className='font-bold text-primary-600 dark:text-accent-600'>Te Nyain Moe Lwin</span>, a creative front-end web developer with 2+ years experience. I am here to help</h2>
-                    <h1 className='mb-4 text-4xl lg:text-6xl tracking-tight font-bold text-secondary dark:text-white'>
+                    <h1 className={`${unbound.className} uppercase mb-4 text-4xl lg:text-6xl tracking-tight font-bold text-secondary dark:text-white`}>
                         Turn your <span className=' text-primary-600 dark:text-accent-600'>idea</span> into life.
                     </h1>
                     <p className="mb-6 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">Since 2020, I have enjoyed learning digital design, web development, and content creation to deliver implicit and reachable information.</p>
