@@ -7,6 +7,7 @@ import { ContextProvider } from "@/context/GeneralContext";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import {ubuntu} from "@/fonts/fonts";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
@@ -45,6 +46,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-E4PF2Z2LTT"
+            strategy="afterInteractive"
+        />
+        <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-E4PF2Z2LTT');
+            `,
+            }}
+        />
         <link
           rel="stylesheet"
           type="text/css"
