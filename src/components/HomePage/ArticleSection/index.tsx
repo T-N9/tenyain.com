@@ -42,7 +42,7 @@ const ArticleSection = () => {
     return (
         <SectionWrapper>
             <div className="flex justify-between items-center mb-14">
-                <Heading title="Latest Articles" className="!mb-0" />
+                <Heading title="Latest Articles" align={'left'} className="!mb-0" />
 
                 <Link href={'/writing'}>
                     <Button className='secondary-btn' size="sm" color="gray">

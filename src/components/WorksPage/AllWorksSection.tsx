@@ -20,7 +20,7 @@ const AllWorksSection = () => {
         <SectionWrapper>
             <Heading title='Recent Works'/>
 
-            <div className="lg:grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="lg:grid grid-cols-1 lg:grid-cols-3 gap-x-5 gap-y-10">
                 {isLoading ?
                     <>
                         <LoadingProjectCardHome />

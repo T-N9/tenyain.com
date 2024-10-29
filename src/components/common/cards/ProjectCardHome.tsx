@@ -29,7 +29,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="flex flex-col gap-5 px-2 xl:px-0 mb-5 lg:mb-0">
 
-      <Image src={logoSrc} width={200} height={100} className='border-l-4 border-l-primary-200 dark:border-l-accent-200 pl-4 w-[200px] h-[100px] object-contain' alt={logoAlt} />
+      <div className='hidden flex justify-center rounded-tr-lg rounded-br-lg items-center bg-gradient-to-r from-slate-50 to-primary-50 dark:to-accent-50 border-l-4 border-l-primary-200 dark:border-l-accent-200 pl-4 w-full h-[150px] '>
+        <Image src={logoSrc} width={200} height={100} className=' w-[200px] h-[100px] object-contain' alt={logoAlt} />
+      </div>
+
       <div>
         <h1 className={`${unbound.className} uppercase mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-slate-200`}>
           {title}
