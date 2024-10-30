@@ -1,5 +1,5 @@
 import AllArticlesSection from '@/components/WritingPage/AllArticlesSection'
-import React from 'react'
+import React, {Suspense} from 'react'
 
 import { Metadata } from 'next';
 
@@ -61,7 +61,9 @@ export const metadata: Metadata = {
 const WritingPage = () => {
     return (
         <>
+          <Suspense fallback={<div>Loading...</div>}>
             <AllArticlesSection />
+          </Suspense>
         </>
     )
 }

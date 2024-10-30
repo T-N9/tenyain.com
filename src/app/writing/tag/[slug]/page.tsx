@@ -1,5 +1,5 @@
 import AllArticlesSection from '@/components/WritingPage/AllArticlesSection'
-import React from 'react'
+import React, {Suspense} from 'react'
 
 import { Metadata } from 'next';
 
@@ -66,7 +66,10 @@ const WritingPageByTag = ({
 
     return (
         <>
-            <AllArticlesSection tag={params.slug}/>
+            <Suspense fallback={<div>Loading...</div>}>
+                <AllArticlesSection tag={params.slug}/>
+            </Suspense>
+
         </>
     )
 }
