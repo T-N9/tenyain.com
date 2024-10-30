@@ -19,9 +19,12 @@ const ArticleHero: React.FC<ArticleHeroProps> = ({ title, createdAt, tags, image
         <p className='text-gray-500'>{moment(createdAt).format('MMMM Do, YYYY')}</p>
         <div className='flex gap-2'>
           {tags.map((tag) => (
-            <Badge key={tag} size="sm" className='bg-primary-100 dark:bg-accent-100 text-lg' href="#">
-              {tag}
-            </Badge>
+              <Link key={tag} href={`/writing/tag/${tag}`}>
+                  <Badge  key={tag} size="sm" className='bg-primary-100 dark:bg-accent-100 text-lg'>
+                      {tag}
+                  </Badge>
+              </Link>
+
 
           ))}
         </div>

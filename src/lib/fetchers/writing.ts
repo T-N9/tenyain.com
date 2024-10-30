@@ -71,6 +71,39 @@ export async function getArticlesPage(pageNo: number, count: number) {
   };
 }
 
+export async function getArticlesByTagPage(pageNo : number, count:number, tag:string) {
+  const files = fs.readdirSync(contentDir);
+  const articles = await Promise.all(
+      files.map(async (file) => await getArticleBySlug(path.parse(file).name))
+  );
+
+  const filteredArticles = tag
+      ? articles.filter((article) => article.frontmatter.tags.includes(tag))
+      : articles;
+
+  filteredArticles.sort((a, b) => {
+    return (
+        new Date(b.frontmatter.createdAt).getTime() -
+        new Date(a.frontmatter.createdAt).getTime()
+    );
+  });
+
+  const startIndex = (pageNo - 1) * count;
+  const endIndex = startIndex + count;
+  const paginatedArticles = filteredArticles.slice(startIndex, endIndex);
+
+  const totalArticles = filteredArticles.length;
+  const totalPages = Math.ceil(totalArticles / count);
+
+  return {
+    articles: paginatedArticles,
+    currentPage: pageNo,
+    totalPages,
+    totalArticles,
+  };
+}
+
+
 export function getAllArticlesSlug() {
   const files = fs.readdirSync(contentDir);
   const slugs = files.map((file) => ({ slug: path.parse(file).name }));

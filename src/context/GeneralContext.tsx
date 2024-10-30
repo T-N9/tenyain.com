@@ -11,6 +11,7 @@ interface GeneralContextProps {
   isLoading: boolean;
   fetchWorks: (pageNo: number, count: number, isDemo : boolean) => Promise<void>;
   fetchArticles: (pageNo: number, count: number, isDemo : boolean) => Promise<void>;
+  fetchArticlesByTag : (pageNo: number, count: number, tag : string) => Promise<void>;
 }
 
 const GeneralContext = createContext<GeneralContextProps | undefined>(undefined);
@@ -59,9 +60,23 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({ children })
     }
   };
 
+  const fetchArticlesByTag = async (pageNo: number, count: number, tag :string) => {
+    try {
+      setIsLoading(true);
+      const response = await fetch(`/api/articlesTagPage?pageNo=${pageNo}&count=${count}&tag=${tag}`);
+      const data = await response.json();
+      const articlesArray: Article[] = data.articles;
+      setArticles(articlesArray.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
+
+    } catch (error) {
+      console.error("Error fetching works:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
-    <GeneralContext.Provider value={{ works, articles, demoArticles, demoWorks, isLoading, fetchWorks, fetchArticles }}>
+    <GeneralContext.Provider value={{ works, articles, demoArticles, demoWorks, isLoading, fetchWorks, fetchArticles, fetchArticlesByTag }}>
       {children}
     </GeneralContext.Provider>
   );

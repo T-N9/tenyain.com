@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, {useEffect, useRef} from 'react'
 import SectionWrapper from '../common/wrappers/SectionWrapper'
 import ArticleCard from '../common/cards/ArticleCard';
 import LoadingArticleCard from '../common/cards/LoadingArticleCard';
@@ -19,19 +19,32 @@ export type Article = {
     slug: string;
 };
 
-const AllArticlesSection = () => {
-    const { articles, isLoading, fetchArticles } = useGeneralContext();
+const AllArticlesSection = ({tag = ''} :{tag ?:string}  ) => {
+    const { articles, isLoading, fetchArticles, fetchArticlesByTag } = useGeneralContext();
+    const fetchedTag = useRef<string | null>(null); // Track the last fetched tag
 
     useEffect(() => {
-        if (articles.length === 0) {
+        if (tag !== '' && tag !== fetchedTag.current) {
+
+            fetchArticlesByTag(1, 6, tag);
+            fetchedTag.current = tag;
+            console.log('Tag is fetching');
+        } else if (tag === '' && fetchedTag.current !== '') {
+
             fetchArticles(1, 6, false);
+            fetchedTag.current = '';
+            console.log('Non Tag is fetching');
         }
-    }, [fetchArticles, articles.length]);
+    }, [fetchArticlesByTag, fetchArticles, tag]);
 
 
     return (
         <SectionWrapper>
             <Heading title='My Thoughts' />
+
+            {
+                tag !== '' && <p className="text-center">Articles by <b className='text-primary-600 dark:text-accent-600'>#{tag}</b></p>
+            }
             <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4'>
                 {
                     isLoading ?
