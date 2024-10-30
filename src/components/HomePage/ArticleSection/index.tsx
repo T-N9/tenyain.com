@@ -75,7 +75,7 @@ const ArticleSection = () => {
             <div className="lg:hidden slider-container">
                 {
                     isLoading ? <LoadingArticleCard /> :
-                        <Slider {...settings}>
+                        <Slider className="space-x-4" {...settings}>
                             {
                                 demoArticles.map(({ frontmatter, slug }) => (
                                     <ArticleCard

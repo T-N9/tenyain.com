@@ -44,3 +44,12 @@ p {
 .dark .slick-dots .slick-active button::before{
   color: #2fe0ac !important;
 }
+
+.slick-list {
+  margin: 0 !important;
+}
+
+/*.slick-track {*/
+/*  display: flex !important;*/
+/*  gap: 1rem;*/
+/*}*/

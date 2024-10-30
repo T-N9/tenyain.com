@@ -14,7 +14,7 @@ interface ArticleCardProps {
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt, tags, image, href }) => {
   return (
-    <div className='px-2 xl:px-0'>
+    <div className=''>
       <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-secondary">
         <Link href={`/writing/${href}`}>
           <Image className="rounded-t-lg w-full object-cover" src={image} alt={title} width={400} height={300} />
