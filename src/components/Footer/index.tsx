@@ -32,12 +32,18 @@ const Footer = () => {
                 </div>
                 <div>
                     <h2 className="mb-6 text-primary-600 dark:text-accent-600 text-sm font-semibold  uppercase">Follow Me</h2>
-                    <ul className="text-secondary dark:text-white">
-                        <li className="mb-4">
-                            <a href="https://github.com/T-N9" className="hover:underline ">Github</a>
+                    <ul className="text-secondary dark:text-white space-y-4">
+                        <li className="">
+                            <a href="https://github.com/T-N9" target={"_blank"} rel={"noreferrer"} className="hover:underline ">Github</a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/te-nyain-moe-lwin-80b4a11a4/" className="hover:underline">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/te-nyain-moe-lwin-80b4a11a4/" target={"_blank"} rel={"noreferrer"} className="hover:underline">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/tenyain_moelwin" target={"_blank"} rel={"noreferrer"} className="hover:underline">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://burma.social/@tenyain" target={"_blank"} rel={"noreferrer"} className="hover:underline">Mastodon</a>
                         </li>
                     </ul>
                 </div>
