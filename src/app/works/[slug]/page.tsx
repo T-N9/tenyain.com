@@ -3,6 +3,8 @@ import HeroSection from "@/components/WorksPage/HeroSection";
 import { getAllWorksSlug, getWorkBySlug } from "@/lib/fetchers/works";
 import { Metadata } from "next";
 import React from "react";
+import {Breadcrumb} from "flowbite-react";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   return getAllWorksSlug();
@@ -60,6 +62,13 @@ const WorkPage = async ({ params }: { params: { slug: string } }) => {
           url={work.frontmatter.url}
         />
         <div className="mdx-wrapper">{work.content}</div>
+        <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-100 rounded-md px-5 py-3 dark:bg-gray-800">
+          <Breadcrumb.Item>
+            <Link href={'/'}>Home</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item><Link href={'/works'}>Works</Link></Breadcrumb.Item>
+          <Breadcrumb.Item className="opacity-50">{work.frontmatter.title}</Breadcrumb.Item>
+        </Breadcrumb>
       </div>
     </SectionWrapper>
   );

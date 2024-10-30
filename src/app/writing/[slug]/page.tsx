@@ -2,6 +2,9 @@ import ArticleHero from '@/components/ArticlePage/ArticleHero'
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { getAllArticlesSlug, getArticleBySlug } from '@/lib/fetchers/writing'
 import { Metadata } from 'next';
+import {Breadcrumb} from "flowbite-react";
+import Link from "next/link";
+import React from "react";
 
 export async function generateStaticParams() {
     return getAllArticlesSlug()
@@ -69,6 +72,13 @@ const ArticlePage = async ({
                     <div className='mdx-wrapper'>
                         {article.content}
                     </div>
+                    <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-100 rounded-md px-5 py-3 dark:bg-gray-800">
+                        <Breadcrumb.Item>
+                            <Link href={'/'}>Home</Link>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item><Link href={'/writing'}>Writing</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item className="opacity-70">{article.frontmatter.title}</Breadcrumb.Item>
+                    </Breadcrumb>
                 </div>
 
             </SectionWrapper>
