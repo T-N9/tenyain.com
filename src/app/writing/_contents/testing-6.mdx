@@ -1,0 +1,66 @@
+---
+title: "Test Article"
+description: "ကျွန်တော်တို့ Web development အပိုင်းတွင် ကိုယ်၊ ကိုယ့်ရဲ့ Projectနှင့် အသင့်တော်ဆုံး ဖြစ်မယ့် libraryတခု ရွေးချယ်နိုင်ခြင်းဟာ ကျွန်တော်တို့ရဲ့ productivityကို ကြီးကြီးမားမား သက်ရောက်နိုင်ပါတယ်။"
+createdAt : "2023/7/18"
+tags : ["reactjs", "design"]
+image : "/assets/writing/tailwind-vs-bootstrap.webp"
+---
+ကျွန်တော်တို့ Web development အပိုင်းတွင် ကိုယ်၊ ကိုယ့်ရဲ့ Projectနှင့် အသင့်တော်ဆုံး ဖြစ်မယ့် libraryတခု ရွေးချယ်နိုင်ခြင်းဟာ ကျွန်တော်တို့ရဲ့ productivityကို ကြီးကြီးမားမား သက်ရောက်နိုင်ပါတယ်။ Front-end project တစ်ခုမှာဆိုလျှင် project အစမှ maintenance လုပ်သည်အထိ ကျွန်တော်တို့အမြဲထိတွေ့ရမည့် CSS styling အပိုင်းမျာတွင်လည်း UI design များကို တည်ဆောက်ရာတွင် ကျွန်တော်တို့နဲ့ flexibleဖြစ်မယ့် library or framworkတစ်ခုခုကို ရွေးချယ်လေ့လာရမှာဖြစ်ပါတယ်။
+
+ယခု ၂၀၂၀ ခုနှစ်များတွင် လူသုံးများလာတဲ့ CSS library များစွာရှိနေကြပါတယ်။ JavaScript library များနဲ့ တွဲသုံးကြတဲ့ UI component libraryများကလည်း တဖက်မှာပေါ်ပေါက်လာကြပါတယ်။ ကျွန်တော်တို့ ဒီနေ့ခေတ်မှာ လူသုံးများတဲ့ CSS Styling and UI component library တချို့ကတော့ [Bootstrap](https://getbootstrap.com/), [Tailwind](https://tailwindcss.com/), [Bulma](https://bulma.io/), [Foundation](https://get.foundation/), [Material-UI](https://mui.com/), [Semantic UI](https://semantic-ui.com/) အစရှိသဖြင့် ရှိကြပါတယ်။ ဒီ article မှာတော့ လူသုံးအများဆုံးနဲ့ နာမည်အရှိဆုံး CSS styling tool ၂ခုဖြစ်တဲ့ Bootstrap နဲ့ Tailwind တို့ကို ယှဉ်တွဲဆွေးနွေးသွားမှာ ဖြစ်ပါတယ်။
+
+Bootstrap နဲ့ Tailwindတို့ဟာဆိုလျှင် developerတွေ ရဲ့ ပါးစပ်ဖျားထဲမှာ ရွေးချယ်မှုအများဆုံး libraryများဖြစ်ပြီး development process တလျှောက်မှာ လျင်မြန်လွယ်ကူစွာအသုံးပြုနိုင်တဲ့ libraryများလည်းဖြစ်ကြပါတယ်။ ၎င်းတို့ ၂ ခုကိုရွေးချယ်ကြတဲ့အခါ project requirementအရရော personal preference အရရော ဆုံးဖြတ်ပြီး ရွေးချယ်ကြရပါမှာဖြစ်ပါတယ်။ ဒါဆိုလျှင် ကျွန်တော်တို့ အဓိကအကြောင်းအရာကို သွားကြရအောင်...
+
+#### 
+
+### Approach
+
+Bootstrap ကတော့ ထွက်ရှိထားတာ တော်တော်ကြာမြင့်နေပြီး သန်းနှင့်ချီသော website တွေမှာ နေရာယူထားတဲ့ libraryတခုဖြစ်ပါတယ်။ ဒီlibraryက component-based conceptအပေါ်အခြေခံတာကြောင့် UI componentများကို အသင့်အသုံးပြုနိုင်ပါတယ်။ For eg: navigation bars, buttons, forms, and carousels. Predefined CSS classများလည်းပါရှိတာကြောင့် UI componentတွေကို တွဲဖက်အသုံးပြုကာ လှပသေသပ်တဲ့ UI တွေကို အချိန်တခဏအတွင်း ဖန်တီးနိုင်မှာဖြစ်ပါသည်။ 😉
+
+Tailwind ကိုကြည့်မယ်ဆိုလျှင် သူက Utility-first concept ကို အခြေခံထားတာပါတယ်။
+တနည်းအားဖြင့် flexibleဖြစ်တဲ့ styling utility class တွေ မြောက်များစွာပါဝင်တဲ့ library ဖြစ်ပါတယ်။ ကျွန်တော်တို့က Tailwindရဲ့ utility classလေးတွေကို ပေါင်းစပ်ပြီး ကိုယ့်စိတ်ကြိုက် custom componentတွေကို ဖန်တီးနိုင်မှာပါ။ သူ့ရဲ့ flexible အရမ်း ဖြစ်ပြီး rapidဖြစ်တဲ့ customizationတွေကြောင့် လူကြိုက်များလာကြပါတယ်။ Design elementတခုစီတိုင်းကို အသေးစိတ်ပြုပြင်တဲ့အခါ classအတွင်းမှာဘဲ ရေးသားပြုပြင်နိုင်တာကြောင့် လွယ်ကူစွာအသုံးပြုနိုင်တဲ့ CSS libraryတစ်ခုဖြစ်ပါတယ်။
+
+
+
+### Learning Curve
+
+ကျွန်တော်တို့ လေ့လာတဲ့အခါ Bootstrapက HTML CSS နဲ့ရင်းနှီးနေသူတွေအဖို့ လေ့လာရ လွယ်ကူပါတယ်။ ပြည်စုံတဲ့ Documentationနဲ့ strongဖြစ်တဲ့ community support တွေကြောင့် Bootstrapဟာဆိုလျှင် beginner friendly ဖြစ်တဲ့ libraryတစ်ခုဖြစ်ပါတယ်။ Ready-madeတွေကို အသုံးပြုချင်ကြသူတွေအဖို့ ကိုယ့်ဘက်ကပြုပြင်စရာမလိုဘဲ ခဏလေးအတွင်း UIကောင်းကောင်းလေးတစ်ခုဖန်တီးချင်တယ်ဆိုလျှင် Bootstrapက သင့်တော်တဲ့ ရွေးချယ်မှုဖြစ်မှာပါ။
+
+
+Utility classတွေ အလွန်များပြားတဲ့ Tailwindကို လေ့လာမယ်ဆိုလျှင် CSS မှာရှိတဲ့ propertiesတွေနဲ့ Tailwindရဲ့ classတွေကို တွဲဖက်လေ့လာရတာကြောင့် အစပိုင်းမှာ အနည်းငယ်အချိန် ပေးရမှာဖြစ်ပါတယ်။ လေ့လာရင်း Tailwindရဲ့ Utility class conceptနဲ့ class conbinationတွေကို သိသွားပြီဆိုလျှင် Uniqueဖြစ်ပြီး အရမ်း customizeဖြစ်တဲ့ ကျွန်တော့်တို့ စိတ်ကြိုက်designတွေကို လွယ်ကူမြန်ဆန်စွာ ရေးသားနိုင်မှာဖြစ်ပါတယ်။ အသ​ေးစိတ်ဖြစ်တဲ့ documentationတစ်ခုရှိပြီး အခြား paid or free third-party component resourceတွေလည်းများစွာရှိတာကြောင့် မြန်မြန်ဆန်ဆန် ရေးသားနိုင်ပြီး productive ဖြစ်စေမှာဖြစ်ပါတယ်။
+
+
+
+### Customization
+
+libraryရဲ့ UI default styleတွေကနေ အများကြီးသွေဖယ်ပြီး uniqueဖြစ်လွန်းတဲ့ designတွေကို ရေးသားမယ်ဆိုရင်တော့ အရမ်းကို challengingဖြစ်နိုင်ပါတယ်။ အချိန်လည်းပိုကုန်နိုင်ပါတယ်။ ဒါကြောင့် ကျွန်တော်တို့က Bootstrapကို အသုံးပြုတော့မယ်ဆိုရင် သူ့ရဲ့ အားသာချက်ဖြစ်တဲ့ web UI တစ်ခုကို ကြည့်ပျော်ရှုပျော်ဖြစ်စေပြီး standard design boundary တစ်ခုအတွင်း ပို့ဆောင်စေတယ်ဆိုတာ မမေ့သင့်ပါဘူး။ သူပေးထားတဲ့ design system တစ်ခုအတွင်းမှာသာလျှင် လျင်မြန်လွယ်ကူစွာ အသုံးပြုနိုင်စေရန်ဖြစ်ပါတယ်။
+
+Utility-first approach သုံးထားတဲ့ Tailwindကတော့ customizationအပိုင်းမှာ သူမတူအောင် လွတ်လပ်ပါတယ်။ ဒါကလည်း Tailwind ကို UI component တစ်ခုအဖြစ်မဖန်တီးခဲ့တဲ့ ရည်ရွယ်ချက် တစ်ခုလည်းဖြစ်ပါတယ်။ များပြားလွန်းပြီး extensiveဖြစ်တဲ့၊ combineလုပ်ရ အဆင်ပြေတဲ့ အချက်တွေကြောင့် အရမ်းcustomizeဖြစ်တဲ့ designတွေကိုလည်း Tailwindနဲ့ လွတ်လပ်စွာဖန်တီးနိုင်မှာပါ။ ဒါကြောင့်ဘဲ design systemတေ အသုံးမပြုဘဲ custom ဖန်တီးထားတဲ့ Figma, Xd designတွေကို ပြန်ပြီး implementလုပ်တဲ့အခါ Tailwind က အသင့်တော်ဆုံးဖြစ်နေမှာ ဖြစ်ပါတယ်။
+
+
+
+### Performance
+
+Bootstrapက featureများတဲ့ libraryတစ်ခုပါ။ UI interactionတွေကိုလည်း JavaScriptနဲ့ ထိန်းထားတာကြောင့် JavaScript fileတွေလည်းlibraryထဲမှာပါဝင်နေပါတယ်။ CSS နဲ့ JavaScriptနှစ်မျိုးပေါင်းလိုက်တဲ့ အခါ file size ကြီးကောင်းကြီးသွားနိုင်ပါတယ်။ အဲ့ဒီအချက်က performanceကို ထိကောင်းထိနိုင်ပြီး လိုင်းမကောင်းတဲ့ internet bandwidthတွေ (သို့) mobile deviceတွေမှာ နှေးနိုင်ပါတယ်။ သို့သော်လည်း ကျွန်တော်တို့အနေနဲ့ လိုအပ်တဲ့ componentတွေနဲ့သာ သက်ဆိုင်တဲ့ code fileတွေ code sectionတွေကိုသာ ခွဲထုတ်နိုင်ပြီး projectထဲ အသုံးပြုနိုင်မယ်ဆိုရင်တော့ codeတွေ optimizeဖြစ်ပြီး အချို့သော performance issueတွေကို ကာကွယ်နိုင်မှာဖြစ်ပါတယ်။
+
+Tailwind အနေဖြင့် CSS Utility class libraryဖြစ်တာကြောင့် CSS file sizeက Bootstrapနဲ့ယှဉ်လျှင် ပိုများနေပါတယ်။ သို့ပေမဲ့ အပေါ်က optimizationနည်းလိုဘဲ [PurgeCSS](https://purgecss.com/)ကဲ့သို့ မလိုအပ်တဲ့ CSSတွေကို ဖယ်ရှားတဲ့ development tool တစ်ခုခု အသုံးပြုလိုက်ပြီဆိုရင်တော့ file sizeသေးသွားမှာဖြစ်ပါတယ်။
+
+
+
+### Working with React
+
+React နဲ့ တွဲဖက်အသုံးပြုပြီဆိုရင်တော့ React component approach နဲ့ လုပ်ထားတဲ့ [React-Bootstrap](https://react-bootstrap.netlify.app/) ဆိုတဲ့ popularလည်းဖြစ်တဲ့ library တစ်ခုရှိနေပါတယ်။ ဒါ့ကြောင့် Bootstrap componentတွေကို React componentတွေနည်းတူ import လုပ် အသုံးပြုနိုင်ပြီး လွယ်ကူရိုးရှင်းစွာဘဲ အသုံးပြုနိုင်ပါတယ်။ JavaScript interactionအပိုင်းတွေကို React environmentနဲ့ ကိုက်ညီစွာ ရေးသားထားတာကြောင့် အသုံးပြုသူဘက်က လွယ်ကူစွာအသုံးပြုနိုင်မှာ ဖြစ်ပါတယ်။
+
+Tailwind ကို React project မှာ အသုံးပြုမယ်ဆိုလျှင် လွယ်ကူရိုးရှင်းတဲ့ configuration လုပ်ပြီးတာနဲ့ စတင်အသုံးပြုနိုင်မှာပါ။ Utility class တွေဖြစ်တာကြောင့် React componentထဲမှာတင် တိုက်ရိုက် classရေးသားပြီး ပုံမှန်အသုံးပြုနိုင်ပါပြီ။
+
+
+
+### Popularity
+
+Bootstrap အနေဖြင့် front-end developmentနယ်ပယ်ကို နှစ်ပေါင်းများစွား စိုးမိုးနိုင်ခဲ့ပါတယ်။ ကြီးမားတဲ့ community၊ ပြည့်စုံတဲ့ documentation နဲ့ ပေါများလှတဲ့ theme, template, pluginတွေဟာဆိုရင် developerတိုင်းကို ဆွဲဆောင်လို့နေပါတယ်။ ခေတ်စနစ် trendတွေနဲ့ အညီ အမြဲတမ်းပြောင်းလဲနေပြီး ဥပမာ jQuery dependency တွေကို ဖြုတ်ကာ ပိုပြီး modularဖြစ်တဲ့ နည်းလမ်းတွေကို အသုံးပြုလာတာ သတ်သေဘဲဖြစ်ပါတယ်။ အရင်ကတည်းက foundationကောင်းကောင်းဖြင့် developလုပ်ထားတဲ့ libraryဖြစ်တာကြောင့် လူကြိုက်အလွန်များပြီး contributionအားကောင်းနေဆဲဖြစ်ပါတယ်။
+
+Tailwind ကို ကြည့်လျှင် လွန်ခဲ့တဲ့ နှစ်တွေကမှ popularအရမ်းဖြစ်လာတဲ့ design library တစ်ခုဖြစ်ပါတယ်။ Modernဖြစ်တဲ့ documentation နဲ့ communityကလည်း သိသိသာသာကြီးမားလာတာကြောင့် extension, intellisense စသဖြင့် လိုလေသေးမရှိ အကုန်အဆင်ပြေနေပါတယ်။ CSS ကောင်းကောင်းရေးတတ်လျှင် လွယ်လွယ်ကူကူဘဲ လေ့လာနိုင်ပြီး adaptလုပ်ဖို့လည်း လွယ်ကူတဲ့ အရာဖြစ်ပါတယ်။ Utility-first concept က အရမ်းpopularဖြစ်လာတာနှင့် အညီ design systemတွေရဲ့ maintenanceအပိုင်းမှာ flexible ဖြစ်တာကြောင့် ဒီဖက်ခေတ်မှာ အလွန်ကို နေရာယူလာတဲ့ libraryတစ်ခုဖြစ်ပါတယ်။
+
+------
+
+အနှစ်ချုပ်အားဖြင့် ပြောရလျှင် ကျွန်တော်တို့ ရေးသားရမယ့် project requirement, design system, teamရဲ့ အားသာချက် များကို ကြည့်ပြီး ဘယ်တစ်ခု အသုံးပြုရမည်ကို ဆုံးဖြတ်ကြရမှာဖြစ်ပါတယ်။ Frameနှစ်ခုသည် မတူညီတဲ့ approach၊ configuration နှင့် ရေးသားနည်းများ ကွဲလွဲသည့်အတွက် လေ့လာသည့် အခါမှာလည်း အချိန်ပေးသင့်သလောက်ပေးရမှာဖြစ်ပါတယ်။ libraryနှစ်ခုစလုံးနှင့် ထိတွေ့ဖူးလျှင် အကောင်းဆုံးဖြစ်ပြီး မည်သည့် design libraryကိုမဆို လွယ်ကူစွာ migrateလုပ်နိုင်မှာဖြစ်တာကြောင့် နှစ်ခုစလုံးနှင့် ထိတွေ့ထားလျှင်လည်း မမှားကြောင်း ဆွေးနွေးရင်း ယခု articleလေးကို ဒီမှာဘဲ အဆုံးသတ်လိုက်ပါတယ်။

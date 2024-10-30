@@ -1,10 +1,11 @@
 'use client'
 import { Work } from '@/components/HomePage/ProjectsSection';
 import { Article } from '@/components/WritingPage/AllArticlesSection';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, {createContext, useContext, useState, ReactNode, Dispatch, SetStateAction} from 'react';
 
 interface GeneralContextProps {
   works: Work[];
+  totalPages: number;
   demoWorks : Work[];
   articles: Article[];
   demoArticles: Article[];
@@ -12,6 +13,7 @@ interface GeneralContextProps {
   fetchWorks: (pageNo: number, count: number, isDemo : boolean) => Promise<void>;
   fetchArticles: (pageNo: number, count: number, isDemo : boolean) => Promise<void>;
   fetchArticlesByTag : (pageNo: number, count: number, tag : string) => Promise<void>;
+  setTotalPages :  Dispatch<SetStateAction<number>>;
 }
 
 const GeneralContext = createContext<GeneralContextProps | undefined>(undefined);
@@ -22,6 +24,7 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({ children })
   const [articles, setArticles] = useState<Article[]>([]);
   const [demoArticles, setDemoArticles] = useState<Article[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [totalPages, setTotalPages] = useState<number>(1); /* pages for article pagination*/
 
   const fetchWorks = async (pageNo: number, count: number, isDemo : boolean) => {
     try {
@@ -52,6 +55,7 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({ children })
         setDemoArticles(articlesArray.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
       } else {
         setArticles(articlesArray.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
+        setTotalPages(data.totalPages)
       }
     } catch (error) {
       console.error("Error fetching works:", error);
@@ -67,7 +71,7 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({ children })
       const data = await response.json();
       const articlesArray: Article[] = data.articles;
       setArticles(articlesArray.map(({ frontmatter, slug }) => ({ frontmatter, slug })));
-
+      setTotalPages(data.totalPages)
     } catch (error) {
       console.error("Error fetching works:", error);
     } finally {
@@ -76,7 +80,7 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({ children })
   };
 
   return (
-    <GeneralContext.Provider value={{ works, articles, demoArticles, demoWorks, isLoading, fetchWorks, fetchArticles, fetchArticlesByTag }}>
+    <GeneralContext.Provider value={{ works, articles, demoArticles, demoWorks, isLoading, fetchWorks, fetchArticles, fetchArticlesByTag, totalPages, setTotalPages }}>
       {children}
     </GeneralContext.Provider>
   );
