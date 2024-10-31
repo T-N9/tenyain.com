@@ -69,24 +69,27 @@ const AllArticlesSection = ({tag = ''} :{tag ?:string}  ) => {
                             <LoadingArticleCard />
                         </>
                         :
-                        articles.map(({ frontmatter, slug }) => (
-                            <ArticleCard
-                                key={slug}
 
-                                title={frontmatter.title}
-                                createdAt={frontmatter.createdAt}
-                                description={frontmatter.description}
-                                image={frontmatter.image}
-                                tags={frontmatter.tags}
-                                href={slug}
-                            />
-                        ))
+                            articles.length === 0 ? <p className='text-center text-2xl'>No data for this request.</p>
+                                :
+                                articles.map(({ frontmatter, slug }) => (
+                                    <ArticleCard
+                                        key={slug}
+
+                                        title={frontmatter.title}
+                                        createdAt={frontmatter.createdAt}
+                                        description={frontmatter.description}
+                                        image={frontmatter.image}
+                                        tags={frontmatter.tags}
+                                        href={slug}
+                                    />
+                                ))
+
+
                 }
 
             </div>
-            {
-                articles.length === 0 && <p className='text-center text-2xl'>No data for this request.</p>
-            }
+
 
             {
                 page &&

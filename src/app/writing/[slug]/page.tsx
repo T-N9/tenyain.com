@@ -77,7 +77,7 @@ const ArticlePage = async ({
                             <Link href={'/'}>Home</Link>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item><Link href={'/writing'}>Writing</Link></Breadcrumb.Item>
-                        <Breadcrumb.Item className="opacity-70">{article.frontmatter.title}</Breadcrumb.Item>
+                        <Breadcrumb.Item className="opacity-70"><span className={'line-clamp-2'}>{article.frontmatter.title}</span></Breadcrumb.Item>
                     </Breadcrumb>
                 </div>
 

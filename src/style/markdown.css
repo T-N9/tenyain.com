@@ -150,9 +150,19 @@
     color: #2fe0ac;
   }
   
-  .mdx-wrapper {
+  .mdx-wrapper p{
     font-size: 20px;
   }
+
+  @media (max-width: 560px) {
+    .mdx-wrapper p{
+      font-size: 16px;
+    }
+  }
+
+.mdx-wrapper ol {
+  list-style-type: disc;
+}
   
   .mdx-wrapper rt{
     font-size: 10px;
