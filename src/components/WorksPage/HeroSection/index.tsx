@@ -112,7 +112,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <Breadcrumb.Item><Link href={'/works'}>Works</Link></Breadcrumb.Item>
           <Breadcrumb.Item className="opacity-50">{title}</Breadcrumb.Item>
         </Breadcrumb>
-        <Divider />
+        {/*<Divider />*/}
       </div>
     </header>
   );
