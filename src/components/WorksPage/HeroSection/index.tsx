@@ -1,4 +1,3 @@
-import Divider from "@/components/common/divider/Divider";
 import { technologyLogoMap } from "@/components/common/logos";
 import { Breadcrumb } from "flowbite-react";
 import Image from "next/image";
