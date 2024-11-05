@@ -65,14 +65,19 @@ export default function RootLayout({
       <head>
         {/* Google tag (gtag.js) */}
         <Script
-            id="google-tag-manager"
-            strategy="beforeInteractive"
+            src="https://www.googletagmanager.com/gtag/js?id=G-E4PF2Z2LTT"
+            strategy="afterInteractive"
+        />
+        <Script
+            id="google-analytics"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-5SSMC6Q6');`,
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-E4PF2Z2LTT');
+            `,
             }}
         />
         <link
@@ -88,22 +93,14 @@ export default function RootLayout({
         />
       </head>
       <body
-          className={`${ubuntu.className} antialiasing bg-white dark:bg-secondary`}
+        className={`${ubuntu.className} antialiasing bg-white dark:bg-secondary`}
       >
-      <noscript>
-        <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5SSMC6Q6"
-            height="0"
-            width="0"
-            style={{display: "none", visibility: "hidden"}}
-        ></iframe>
-      </noscript>
       <Providers>
         <NavBar/>
         <div className="mb-20"></div>
         {children}
-        <Footer/>
-        <Toaster richColors closeButton position="bottom-center"/>
+        <Footer />
+        <Toaster richColors closeButton position="bottom-center" />
       </Providers>
       </body>
     </html>
