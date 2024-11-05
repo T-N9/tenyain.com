@@ -1,7 +1,9 @@
-import Divider from '@/components/common/divider/Divider'
-import CTASection from '@/components/ContactPage/CTASection'
-import ContactSection from '@/components/HomePage/ContactSection'
-import { Metadata } from 'next';
+import {Metadata} from 'next';
+
+/* Components */
+import {Divider} from "@/components";
+import {ContactSection} from "@/components/HomePage";
+import {CTASection} from "@/components/ContactPage";
 
 export const metadata: Metadata = {
   title: 'TAILOR THE WEB with TN.dev',
@@ -26,7 +28,6 @@ export const metadata: Metadata = {
     'product branding',
     'creative',
   ],
-  themeColor: '#1192d3',
   icons: {
     icon: '/favicon.ico',
   },
@@ -52,12 +53,11 @@ export const metadata: Metadata = {
     images: ['meta-tn.png'],
   },
   robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
+
   verification: {
     google: 'nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI',
   },
 };
-
 
 const ContactPage = () => {
   return (

@@ -1,4 +1,4 @@
-import { Metadata, Viewport } from 'next'
+import { Metadata } from 'next'
 
 /* Components */
 import {Divider, ListenRecommendation} from "@/components";
@@ -31,10 +31,6 @@ export const metadata: Metadata = {
     google: "nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI"
   }
 };
-
-export const viewport: Viewport = {
-    themeColor: "#1192d3",
-}
 
 const AboutPage = () => {
   return (
