@@ -1,20 +1,26 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+
+/* CSS */
 import "./globals.css";
 import "../style/markdown.css"
-import NavBar from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { ContextProvider } from "@/context/GeneralContext";
-import { ThemeProvider } from "next-themes";
+
+/* Components */
+import { NavBar , Footer } from "@/components";
 import { Toaster } from "sonner";
+
+/* Google Fonts */
+
 import {ubuntu} from "@/fonts/fonts";
-import Script from "next/script";
+
+/* Various Providers */
+import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
   description: "Hello there, I am Te Nyain Moe Lwin, a front-end developer who delivers fast and reliable websites. I care about your business values and targeted customers to meet your golden goals for tomorrow.",
   keywords: "Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative",
   robots: "index, follow",
-  themeColor: "#1192d3",
   openGraph: {
     type: "website",
     locale: "en-US",
@@ -36,6 +42,10 @@ export const metadata: Metadata = {
     google: "nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI"
   }
 };
+
+export const viewport: Viewport = {
+  themeColor: "#1192d3",
+}
 
 
 export default function RootLayout({
@@ -76,15 +86,15 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ubuntu.className} antialiased bg-white dark:bg-secondary`}
+        className={`${ubuntu.className} antialiasing bg-white dark:bg-secondary`}
       >
-        <ThemeProvider attribute="class">
-          <NavBar />
-          <div className="mb-20"></div>
-          <ContextProvider>{children}</ContextProvider>
-          <Footer />
-          <Toaster richColors closeButton position="bottom-center" />
-        </ThemeProvider>
+      <Providers>
+        <NavBar/>
+        <div className="mb-20"></div>
+        {children}
+        <Footer />
+        <Toaster richColors closeButton position="bottom-center" />
+      </Providers>
       </body>
     </html>
   );

@@ -10,7 +10,7 @@ import {
     TimelineTitle,
 } from "flowbite-react";
 
-export function TimelineSection() {
+function TimelineSection() {
     return (
         <SectionWrapper>
             <Heading title="Timeline" align="left" />
@@ -165,3 +165,5 @@ export function TimelineSection() {
         </SectionWrapper>
     );
 }
+
+export default TimelineSection;

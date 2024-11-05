@@ -1,10 +1,7 @@
-import React from 'react'
-
-
 import { Blockquote } from "flowbite-react";
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper';
 
-export function MottoSection() {
+function MottoSection() {
     return (
         <SectionWrapper className='my-14'>
             <Blockquote className='text-center text-secondary/40 dark:text-slate-500  text-3xl'>
@@ -22,3 +19,7 @@ export function MottoSection() {
         </SectionWrapper>
     );
 }
+
+export default  MottoSection;
+
+
