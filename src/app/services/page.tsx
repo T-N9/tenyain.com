@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     'product branding',
     'creative',
   ],
-  themeColor: '#1192d3',
   icons: {
     icon: '/favicon.ico',
   },
@@ -54,7 +53,6 @@ export const metadata: Metadata = {
     images: ['meta-tn.png'],
   },
   robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
 };
 
 const ServicesPage = () => {

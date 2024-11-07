@@ -36,7 +36,7 @@ const NavBar = () => {
   return (
     <nav className="bg-white shadow dark:shadow-gray-800 dark:bg-secondary fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-secondary">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 xl:px-0">
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link aria-label="Back to Home page" href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <TNLogo />
         </Link>
         <div className="flex items-center gap-2 md:gap-4 lg:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

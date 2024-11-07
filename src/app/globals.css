@@ -8,11 +8,11 @@
   }
 
   .primary-btn {
-    @apply bg-primary-600 hover:!bg-primary-500 dark:hover:!bg-accent-500 w-full dark:!bg-accent-600 dark:text-secondary dark:focus:!ring-accent-800;
+    @apply bg-primary-600 !text-slate-900 hover:!bg-primary-500 dark:hover:!bg-accent-500 w-full dark:!bg-accent-600 dark:text-secondary dark:focus:!ring-accent-800;
   }
 
   .secondary-btn {
-    @apply hover:!text-primary-600 dark:hover:!text-accent-600 dark:!bg-slate-700 focus:ring-gray-200 dark:focus:ring-gray-700;
+    @apply hover:!text-primary-600 dark:!text-slate-100 dark:hover:!text-accent-600 dark:!bg-slate-800 focus:ring-gray-200 dark:focus:ring-gray-700;
   }
 }
 

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   description: "Explore the portfolio of a creative front-end developer, who specialized in building modern, responsive websites and web applications using the latest technologies such as React & Next JS. Discover a passion for intuitive design and ideas.",
   keywords: "Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative",
   robots: "index, follow",
-  themeColor: "#1192d3",
   openGraph: {
     type: "website",
     locale: "en-US",

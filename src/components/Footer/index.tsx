@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
             <div className="mb-20 text-primary-600 dark:text-accent-600 md:mb-0">
-                <Link href="/" className="flex items-center">
+                <Link aria-label="Back to Home" href="/" className="flex items-center">
                     <TNLogo/>
                 </Link>
 

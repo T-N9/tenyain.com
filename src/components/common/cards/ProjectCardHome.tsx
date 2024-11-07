@@ -38,12 +38,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {title}
         </h1>
         <div className="text-primary-600 dark:text-accent-600 flex gap-4 items-center">
-          <a href={livePreviewLink} target="_blank" rel="noopener noreferrer" className="text-xl">
+          <a aria-hidden="false" href={livePreviewLink} target="_blank" rel="noopener noreferrer" className="text-xl">
             Live Preview
           </a>
           <svg
             className="w-6 h-6 text-secondary dark:text-white"
-            aria-hidden="true"
+            // aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -75,7 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       <Link href={`/works/${slug}`}>
-        <Button className="secondary-btn" color="gray" size="lg" onClick={onViewCaseStudy}>
+        <Button aria-hidden="false" className="secondary-btn" color="gray" size="lg" onClick={onViewCaseStudy}>
           View Detail
         </Button>
       </Link>

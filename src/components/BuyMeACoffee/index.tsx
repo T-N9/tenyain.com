@@ -5,12 +5,14 @@ function BuyMeCoffee({ classname }: { classname?: string }) {
     return (
         <>
             <a
+                aria-label="Buy me a coffee"
                 href='https://buymeacoffee.com/tenyain'
                 target='_blank'
                 className={cn(
                     'border relative group w-36 mx-auto cursor-pointer h-32 grid place-content-center p-10 py-14 bg-white  rounded-md  overflow-hidden',
                     classname
                 )}
+                rel={'noopener noreferrer'}
             >
                 <svg
                     width='424'

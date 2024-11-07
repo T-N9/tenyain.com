@@ -49,9 +49,8 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#2fe0ac' },
   ],
   width :"device-width",
-  initialScale : 1,
-  maximumScale: 1,
-  userScalable: false,
+  initialScale : 2,
+  maximumScale: 5,
 }
 
 
@@ -93,14 +92,21 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ubuntu.className} antialiasing bg-white dark:bg-secondary`}
+          className={`${ubuntu.className} antialiasing bg-white dark:bg-secondary relative`}
       >
+      <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
+           height="100%">
+        <filter id="noise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noise)"></rect>
+      </svg>
       <Providers>
         <NavBar/>
         <div className="mb-20"></div>
         {children}
-        <Footer />
-        <Toaster richColors closeButton position="bottom-center" />
+        <Footer/>
+        <Toaster richColors closeButton position="bottom-center"/>
       </Providers>
       </body>
     </html>
