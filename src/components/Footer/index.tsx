@@ -2,6 +2,7 @@ import React from 'react'
 import TNLogo from '../common/logos/TNLogo'
 import Link from 'next/link'
 import Greetings from '../Greetings'
+import BuyMeACoffee from "@/components/BuyMeACoffee";
 
 const Footer = () => {
   return (
@@ -15,6 +16,7 @@ const Footer = () => {
 
                 <Greetings/>
             </div>
+            <BuyMeACoffee classname="mb-20 md:mb-0" />
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
                     <h2 className="mb-6 text-primary-600 dark:text-accent-600 text-sm font-semibold  uppercase ">Resources</h2>

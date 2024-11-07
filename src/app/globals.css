@@ -49,6 +49,14 @@ p {
   margin: 0 !important;
 }
 
+.fill-background {
+  fill: #0f79ac;
+}
+
+.dark .fill-background {
+  fill: #25b48a;
+}
+
 /*.slick-track {*/
 /*  display: flex !important;*/
 /*  gap: 1rem;*/
