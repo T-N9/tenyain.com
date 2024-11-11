@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
@@ -17,7 +18,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
     <div className=''>
       <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-secondary">
         <Link href={`/writing/${href}`}>
-          <Image className="rounded-t-lg w-full object-cover" src={image} alt={title} width={400} height={300} />
+          <Image className="rounded-t-lg w-full object-cover" src={image} alt={title} width={400} height={300} priority/>
         </Link>
         <div className="p-5">
           <Link href={`/writing/${href}`}>

@@ -15,6 +15,7 @@ import {ubuntu} from "@/fonts/fonts";
 
 /* Various Providers */
 import Providers from "@/app/Providers";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
@@ -60,8 +61,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <title>Te Nyain Moe Lwin | Creative Front-end developer</title>
         {/* Google tag (gtag.js) */}
         <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-E4PF2Z2LTT"
