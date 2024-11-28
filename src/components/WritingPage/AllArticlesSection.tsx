@@ -7,6 +7,7 @@ import Heading from '../common/headings/Heading';
 import { useGeneralContext } from '@/context/GeneralContext';
 import { useSearchParams} from "next/navigation";
 import Pagination from "@/components/common/pagination/Pagination";
+import NewsletterSection from "@/components/WritingPage/NewsletterSection/NewsletterForm";
 
 export type Frontmatter = {
     title: string;
@@ -95,6 +96,8 @@ const AllArticlesSection = ({tag = ''} :{tag ?:string}  ) => {
                 page &&
                 <Pagination totalPages={totalPages} currentPage={page} tag={tag}/>
             }
+
+            <NewsletterSection/>
 
         </SectionWrapper>
     )
