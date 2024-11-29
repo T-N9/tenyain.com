@@ -11,7 +11,7 @@ const NewsletterSection = () => {
     return (
         <SectionWrapper>
             <Heading title="Subscribe" />
-            <p className={'text-center mb-10 w-1/2 mx-auto'}>Subscribe to my newsletter and get notified whenever a new article is published at tenyain.com or <a className={'font-bold'}
+            <p className={'text-center mb-10 lg:w-1/2 mx-auto'}>Subscribe to my newsletter and get notified whenever a new article is published at tenyain.com or <a className={'font-bold'}
                 href="https://notes.tenyain.com/">notes.tenyain.com</a></p>
             <div className="mx-auto max-w-screen-md">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
