@@ -16,6 +16,8 @@ export const POST = async (request: NextRequest) => {
             audienceId: process.env.RESEND_AUDIENCE_ID!,
         });
 
+        console.log("Resend API response:", send);
+
         if (send.data) {
             return NextResponse.json(
                 { message: "Subscription successful" },
