@@ -69,9 +69,6 @@ function TimelineSection() {
                             </TimelineBody>
                         </TimelineContent>
                     </TimelineItem>
-                </Timeline>
-                <Timeline>
-
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
@@ -90,6 +87,11 @@ function TimelineSection() {
                             </TimelineBody>
                         </TimelineContent>
                     </TimelineItem>
+                </Timeline>
+
+                <Timeline>
+
+
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
@@ -156,6 +158,22 @@ function TimelineSection() {
                                         Relocated to Chiang Mai, Thailand
                                     </li>
 
+                                </ul>
+                            </TimelineBody>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelinePoint />
+                        <TimelineContent>
+                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2025</TimelineTime>
+                            <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">
+                                B.Sc Journey
+                            </TimelineTitle>
+                            <TimelineBody>
+                                <ul className="list-disc">
+                                    <li>
+                                        Started my Final Year B.Sc in Computing at University of Greenwich
+                                    </li>
                                 </ul>
                             </TimelineBody>
                         </TimelineContent>
