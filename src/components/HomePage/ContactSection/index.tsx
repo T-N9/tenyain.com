@@ -10,7 +10,7 @@ const ContactSection = () => {
     return (
         <SectionWrapper>
             <Heading title='Keep In Touch' />
-            <div className='mx-auto max-w-screen-md'>
+            <div className='mx-auto max-w-screen-md '>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="mb-4">
                         <label htmlFor={'name'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
@@ -19,7 +19,7 @@ const ContactSection = () => {
                         <input
                             type={'text'}
                             id={'name'}
-                            className={`bg-gray-50 border ${errors.name ? '!border-red-500' : 'border-gray-300'} text-secondary text-lg lg:text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={
                                 'Enter your name'
                             }
@@ -35,7 +35,7 @@ const ContactSection = () => {
                         <input
                             type={'email'}
                             id={'email'}
-                            className={`bg-gray-50 border ${errors.name ? '!border-red-500' : 'border-gray-300'} text-secondary text-lg lg:text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={
                                 'Enter your mail'
                             }
@@ -51,7 +51,7 @@ const ContactSection = () => {
                         <textarea
                             id={'message'}
                             rows={6}
-                            className={`block p-2.5 w-full text-lg lg:text-2xl text-secondary bg-gray-50 rounded-lg shadow-sm border ${errors.name ? '!border-red-500' : 'border-gray-300'} focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`block p-2.5 w-full text-lg lg:text-2xl text-secondary bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={'Leave a message...'}
                             {...register("message")}
                         ></textarea>

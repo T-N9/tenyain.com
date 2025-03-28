@@ -34,7 +34,7 @@ const ArticleHero: React.FC<ArticleHeroProps> = ({ title, createdAt, tags, image
           <Link href={'/'}>Home</Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item><Link href={'/writing'}>Writing</Link></Breadcrumb.Item>
-          <Breadcrumb.Item className="opacity-70"><span className={'line-clamp-2'}>{title}</span></Breadcrumb.Item>
+          <Breadcrumb.Item className="opacity-70"><span className={'line-clamp-1'}>{title}</span></Breadcrumb.Item>
       </Breadcrumb>
       <Image className='w-full shadow' src={image} width={840} height={473} alt={title} />
     </div>
