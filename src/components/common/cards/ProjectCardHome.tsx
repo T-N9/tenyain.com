@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { technologyLogoMap } from '../logos';
 import Link from 'next/link';
 import Image from 'next/image';
-import { chakra_petch } from "@/fonts/fonts";
+import { heading_font } from "@/fonts/fonts";
 import ScrambleHover from '@/components/animation/ScrableHover';
 import VerticalCutReveal, { VerticalCutRevealRef } from '@/components/animation/VerticalCutReveal';
 import { useInView } from 'framer-motion';
@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       <div>
-        <h1 className={`${chakra_petch.className} uppercase mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-slate-200`}>
+        <h1 className={`${heading_font.className} uppercase mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-slate-200`}>
         <div ref={ref}>
           <VerticalCutReveal
             splitBy="characters"

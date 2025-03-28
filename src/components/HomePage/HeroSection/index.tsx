@@ -1,7 +1,7 @@
 import React from 'react'
 import CharacterHead from './Character/CharacterHead'
 import { Button } from 'flowbite-react'
-import { chakra_petch } from "@/fonts/fonts";
+import { heading_font } from "@/fonts/fonts";
 import Typewriter from '@/components/animation/Typewriter';
 
 const HeroSection = () => {
@@ -14,7 +14,7 @@ const HeroSection = () => {
             <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
           </a>
           <p className="text-2xl text-secondary">Hello there, I am <span className="font-bold text-primary-600 dark:text-accent-600">Te Nyain</span></p>
-          <h1 className={`${chakra_petch.className} mb-4 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white uppercase`}>A <Typewriter
+          <h1 className={`${heading_font.className} mb-4 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white uppercase`}>A <Typewriter
             text={[
               "Developer",
               "Designer",
