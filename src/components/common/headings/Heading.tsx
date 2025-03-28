@@ -1,5 +1,5 @@
 import React from 'react'
-import {unbound} from "@/fonts/fonts";
+import {chakra_petch} from "@/fonts/fonts";
 
 interface HeadingProps {
     title: string;
@@ -9,7 +9,7 @@ interface HeadingProps {
 
 const Heading = ({ title, className, align = 'center' }: HeadingProps) => {
     return (
-        <h2 className={`${align === 'center' ? 'text-center' : 'text-left'} text-2xl mb-14 font-extrabold text-primary-600 dark:text-accent-600 tracking-tight lg:text-4xl ${className} ${unbound.className} uppercase`}>{title}</h2>
+        <h2 className={`${align === 'center' ? 'text-center' : 'text-left'} text-2xl mb-14 font-extrabold text-primary-600 dark:text-accent-600 tracking-tight lg:text-4xl ${className} ${chakra_petch.className} uppercase`}>{title}</h2>
     )
 }
 

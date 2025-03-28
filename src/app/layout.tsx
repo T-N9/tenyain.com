@@ -11,7 +11,7 @@ import { Toaster } from "sonner";
 
 /* Google Fonts */
 
-import { ubuntu } from "@/fonts/fonts";
+import { ubuntu_mono } from "@/fonts/fonts";
 
 /* Various Providers */
 import Providers from "@/app/Providers";
@@ -94,7 +94,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ubuntu.className} antialiasing bg-white dark:bg-secondary relative`}
+        className={`${ubuntu_mono.className} antialiasing bg-white dark:bg-secondary relative`}
       >
         <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
           height="100%">

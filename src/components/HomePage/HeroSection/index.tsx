@@ -1,7 +1,8 @@
 import React from 'react'
 import CharacterHead from './Character/CharacterHead'
 import { Button } from 'flowbite-react'
-import {unbound} from "@/fonts/fonts";
+import { chakra_petch } from "@/fonts/fonts";
+import Typewriter from '@/components/animation/Typewriter';
 
 const HeroSection = () => {
   return (
@@ -13,7 +14,19 @@ const HeroSection = () => {
             <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
           </a>
           <p className="text-2xl text-secondary">Hello there, I am <span className="font-bold text-primary-600 dark:text-accent-600">Te Nyain</span></p>
-          <h1 className={`${unbound.className} mb-4 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white uppercase`}>A Front-end Developer</h1>
+          <h1 className={`${chakra_petch.className} mb-4 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-white uppercase`}>A <Typewriter
+            text={[
+              "Developer",
+              "Designer",
+              "Composer",
+              "Writer"
+            ]}
+            speed={70}
+            className="text-primary-600 dark:text-accent-600"
+            waitTime={1500}
+            deleteSpeed={40}
+            cursorChar={"_"}
+          /></h1>
           <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">A developer who delivers fast and reliable websites. I care about your business values and targeted customers to meet your golden goals for tomorrow.</p>
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-4">
             <a href="mailto:tenyainmoelwin@gmail.com?subject=Hiring%20Inquiry%20for%20Front-end%20Development%20Project">

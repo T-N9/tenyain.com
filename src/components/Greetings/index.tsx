@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import {unbound} from "@/fonts/fonts";
+import {chakra_petch} from "@/fonts/fonts";
 
 const Greetings = () => {
   const date = new Date();
@@ -46,7 +46,7 @@ const Greetings = () => {
     <>
       <div className=" mt-5">
         <p className="">
-          <span className={`text-4xl font-bold ${unbound.className} uppercase`}>{titleText}</span><br/>
+          <span className={`text-4xl font-bold ${chakra_petch.className} uppercase`}>{titleText}</span><br/>
           <span className="text-2xl text-primary-600 dark:text-accent-600">{dayText}</span>
         </p>
       </div>
