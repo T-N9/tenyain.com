@@ -22,7 +22,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
         </Link>
         <div className="p-5">
           <Link href={`/writing/${href}`}>
-            <h1 className="mb-2 text-2xl line-clamp-2 font-bold tracking-tight text-secondary dark:text-white">{title}</h1>
+            <h1 className="mb-2 text-2xl line-clamp-2 font-bold tracking-tight text-primary-600 dark:text-accent-600">{title}</h1>
           </Link>
           <p className="mb-3 font-normal line-clamp-3 text-secondary dark:text-secondary">{description}</p>
           <div className='flex justify-between items-center'>

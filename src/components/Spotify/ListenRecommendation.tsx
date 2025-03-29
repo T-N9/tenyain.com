@@ -17,6 +17,7 @@ const ListenRecommendation = () => {
                 frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
+                className='rounded-2xl shadow-xl'
             />
         </SectionWrapper>
     )

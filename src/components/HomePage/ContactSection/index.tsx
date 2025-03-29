@@ -13,7 +13,7 @@ const ContactSection = () => {
             <div className='mx-auto max-w-screen-md '>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="mb-4">
-                        <label htmlFor={'name'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
+                        <label htmlFor={'name'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
                             Name
                         </label>
                         <input
@@ -29,7 +29,7 @@ const ContactSection = () => {
                         {errors.name && <span className="mt-1 text-sm text-red-600">{errors.name.message}</span>}
                     </div>
                     <div className="mb-4">
-                        <label htmlFor={'email'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
+                        <label htmlFor={'email'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
                             Email
                         </label>
                         <input
@@ -45,7 +45,7 @@ const ContactSection = () => {
                         {errors.email && <span className="mt-1 text-sm text-red-600">{errors.email.message}</span>}
                     </div>
                     <div className="mb-4 sm:col-span-2">
-                        <label htmlFor={'message'} className="block mb-2 text-lg font-medium text-primary-900 dark:text-white">
+                        <label htmlFor={'message'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
                             Message
                         </label>
                         <textarea

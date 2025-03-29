@@ -10,7 +10,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, ro
   return (
     <figure className="px-4 mx-auto mb-6">
       <svg
-        className="h-12 mx-auto mb-3 text-slate-200 dark:text-slate-600"
+        className="h-12 mx-auto mb-3 text-primary-600 dark:text-accent-600"
         viewBox="0 0 24 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, name, ro
         />
       </svg>
       <blockquote>
-        <p className="text-lg text-left lg:text-2xl font-thin text-secondary dark:text-gray-500 first-letter:text-primary-600 first-letter:font-bold first-letter:text-3xl dark:first-letter:text-accent-600">
+        <p className="text-lg text-left lg:text-xl font-thin text-secondary dark:text-gray-500 first-letter:text-primary-600 first-letter:font-bold first-letter:text-3xl dark:first-letter:text-accent-600">
         {testimonial}
         </p>
       </blockquote>

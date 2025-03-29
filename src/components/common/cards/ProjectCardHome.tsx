@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       <div>
-        <h1 className={`${heading_font.className} uppercase mb-2 text-4xl font-extrabold tracking-tight leading-none text-secondary md:text-5xl lg:text-5xl dark:text-slate-200`}>
+        <h1 className={`${heading_font.className} uppercase mb-2 text-4xl font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-5xl dark:text-accent-600`}>
         <div ref={ref}>
           <VerticalCutReveal
             splitBy="characters"
@@ -73,33 +73,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="text-primary-600 dark:text-accent-600 ">
           <a aria-hidden="false" href={livePreviewLink} target="_blank" rel="noopener noreferrer" className="text-xl flex gap-4 items-center">
             <ScrambleHover
-              text={"Live Preview"}
+              text={"> Live Preview"}
               scrambleSpeed={40}
               sequential={true}
               revealDirection="center"
               useOriginalCharsOnly={false}
               characters="abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;':\,./<>?"
             />
-
-
-          <svg
-            className="w-6 h-6 text-secondary dark:text-white"
-            // aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              className="stroke-primary-600 dark:stroke-accent-600"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"
-            />
-          </svg>
           </a>
         </div>
       </div>
