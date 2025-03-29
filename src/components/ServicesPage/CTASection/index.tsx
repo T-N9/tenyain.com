@@ -1,14 +1,41 @@
+'use client'
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import { Button } from "flowbite-react";
-import React from "react";
-import {heading_font} from "@/fonts/fonts";
+import React, { useEffect, useRef } from "react";
+import { heading_font } from "@/fonts/fonts";
+import VerticalCutReveal, { VerticalCutRevealRef } from "@/components/animation/VerticalCutReveal";
+import { useInView } from "framer-motion";
 
 const CTASection = () => {
+    const ref = useRef(null)
+    const textRef = useRef<VerticalCutRevealRef>(null)
+    const isInView = useInView(ref, { once: false })
+
+    useEffect(() => {
+        if (isInView) {
+            textRef.current?.startAnimation()
+        } else {
+            textRef.current?.reset()
+        }
+    }, [isInView])
     return (
         <SectionWrapper className="bg-white dark:bg-secondary">
             <div className="flex flex-col justify-center">
-                <h1 className={`${heading_font.className} uppercase mb-4 text-4xl font-extrabold tracking-tight leading-none text-primary-600 dark:text-accent-600 md:text-5xl lg:text-6xl`}>
-                    Your goal is my mission.
+                <h1 ref={ref} className={`${heading_font.className} uppercase mb-4 text-4xl font-extrabold tracking-tight leading-none text-primary-600 dark:text-accent-600 md:text-5xl lg:text-6xl`}>
+                    <VerticalCutReveal
+                        splitBy="characters"
+                        staggerDuration={0.002}
+                        staggerFrom="random"
+                        transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            damping: 35,
+                            delay: 0.4,
+                        }}
+                        ref={textRef}
+                        autoStart={false}
+                        containerClassName="text-[#00000] leading-snug">Your goal is my mission.</VerticalCutReveal>
+
                 </h1>
                 <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
                     As a front-end web developer, I make sure that my website has good
