@@ -6,8 +6,8 @@ import "./globals.css";
 import "../style/markdown.css"
 
 /* Components */
-import { NavBar, Footer } from "@/components";
-import { Toaster } from "sonner";
+// import { NavBar, Footer } from "@/components";
+// import { Toaster } from "sonner";
 
 /* Google Fonts */
 
@@ -56,7 +56,7 @@ export const viewport: Viewport = {
 
 
 export default function RootLayout({
-  children,
+  // children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
