@@ -6,8 +6,8 @@ import "./globals.css";
 import "../style/markdown.css"
 
 /* Components */
-// import { NavBar, Footer } from "@/components";
-// import { Toaster } from "sonner";
+import { NavBar, Footer } from "@/components";
+import { Toaster } from "sonner";
 
 /* Google Fonts */
 
@@ -56,7 +56,7 @@ export const viewport: Viewport = {
 
 
 export default function RootLayout({
-  // children,
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -94,7 +94,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${primary_font.className} h-screen flex justify-center items-center !bg-black tracking-tight antialiasing bg-white dark:bg-secondary relative`}
+        className={`${primary_font.className}  tracking-tight antialiasing bg-white dark:bg-secondary relative`}
       >
         <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
           height="100%">
@@ -104,12 +104,11 @@ export default function RootLayout({
           <rect width="100%" height="100%" filter="url(#noise)"></rect>
         </svg>
         <Providers>
-          {/* <NavBar />
+          <NavBar />
           <div className="mb-20"></div>
           <div className="bg-white dark:bg-secondary relative z-20 border-b-2 border-primary-600 dark:border-accent-600 pb-14 shadow-md">{children}</div>
           <Footer />
-          <Toaster richColors closeButton position="bottom-center" /> */}
-          <p>Te Nyain Moe Lwin was in this world.</p>
+          <Toaster richColors closeButton position="bottom-center" />
         </Providers>
       </body>
     </html>
