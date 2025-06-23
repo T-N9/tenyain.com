@@ -30,7 +30,6 @@ const CTASection = () => {
                             type: "spring",
                             stiffness: 200,
                             damping: 35,
-                            delay: 0.4,
                         }}
                         ref={textRef}
                         autoStart={false}
@@ -38,17 +37,13 @@ const CTASection = () => {
 
                 </h1>
                 <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
-                    As a front-end web developer, I make sure that my website has good
-                    design qualities, from colors, and typography to clean coding and
-                    performance. Nowadays, there are so many ways to create web content
-                    but to attract users at the very first seconds of your webpage, the
-                    content has to be clear and interactive to various devices.
+                    I’m a front-end developer who believes that design is more than just aesthetics — it's about clarity, performance, and experience. From color and typography to clean, scalable code, every detail matters.
+                    In today’s web landscape, users form impressions within seconds. That’s why I focus on clear content, responsive design, and engaging interactions — across all devices.
                 </p>
                 <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
-                    My design is simple, minimal, and reachable to users. I build and
-                    learn newer technologies to deliver fast and reliable websites.
+                    My approach is simple: minimalist, user-centered, and fast. I continuously explore modern technologies to build websites that are not only visually appealing but also reliable and lightning-fast.
                 </p>
-                <p className='mb-4 text-2xl tracking-tight font-bold text-secondary dark:text-white'>
+                <p className='mb-4 text-2xl tracking-tight font-bold text-primary-600 dark:!text-accent-600'>
                     “I care about your business values and targeted customers to meet your golden goals for tomorrow.”
                 </p>
                 <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-y-0">
