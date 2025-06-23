@@ -63,7 +63,7 @@ const ProjectsSection = () => {
 
     return (
 
-        <SectionWrapper className="mt-20 lg:mt-0">
+        <SectionWrapper className="lg:mt-0">
             <div className="flex justify-between items-center mb-14">
                 <Heading title="Projects" className="!mb-0" />
 

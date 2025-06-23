@@ -27,7 +27,7 @@ const HeroSection = () => {
             deleteSpeed={40}
             cursorChar={"_"}
           /></h1>
-          <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">who delivers fast and reliable websites.<br className='hidden lg:block'/> I care about your business values and targeted customers to meet your golden goals for tomorrow.</p>
+          <p className="mb-8 text-lg font-normal text-secondary lg:text-3xl dark:text-secondary">who delivers fast and reliable websites. I care about your business values and targeted customers to meet your golden goals for tomorrow.</p>
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-4">
             <a href="mailto:tenyainmoelwin@gmail.com?subject=Hiring%20Inquiry%20for%20Front-end%20Development%20Project">
               <Button className='primary-btn' size='xl' >
@@ -38,7 +38,7 @@ const HeroSection = () => {
 
           </div>
         </div>
-        <div className="flex-1 flex justify-center items-center">
+        <div className="flex-1 hidden lg:flex justify-center items-center">
           <CharacterHead />
         </div>
       </div>
