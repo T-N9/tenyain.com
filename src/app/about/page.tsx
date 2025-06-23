@@ -36,7 +36,7 @@ const AboutPage = () => {
   return (
     <>
       <HeroSection />
-      <TimelineSection />
+      {/* <TimelineSection /> */}
       <Divider/>
       <TestimonialSection />
       <Divider/>
