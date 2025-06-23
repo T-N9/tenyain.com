@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <div className='h-full relative'>
                     <div className='sticky top-20'>
                         <div className='relative'>
-                            <Image className='rounded-lg lg:rounded-sm relative z-10' src={'/assets/profile.webp'} width={360} height={437} alt='My Picture' />
+                            <Image className='rounded-lg border-4 border-primary-600 dark:border-accent-600 lg:border-none lg:rounded-sm relative z-10' src={'/assets/profile.webp'} width={360} height={437} alt='My Picture' />
 
                             <div className='absolute hidden lg:flex justify-center items-center left-[20%] top-0 z-0 w-[437px] h-[437px] rounded-full bg-primary-100 dark:bg-accent-800'>
                                 <div className=' w-[200px] h-[200px] rounded-full bg-primary-600 dark:bg-accent-600'>
@@ -30,7 +30,7 @@ const HeroSection = () => {
                     <p className="mb-6 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">I am a <a className="font-bold" href="https://en.wikipedia.org/wiki/Karen_people">Karen</a>, a computer science student from Myanmar. I am currently specializing in front-end web development and creating web applications from my own idea.</p>
 
                     <p className='mb-6 text-lg font-normal text-secondary lg:text-xl dark:text-secondary'>
-                        Currently, pursuing a Bachelor of Computing at the <a className="font-bold text-primary-600 dark:text-accent-600" href="https://www.gre.ac.uk/">University of Greenwich, UK</a>.
+                        Currently, pursuing Final year of a Bachelor of Computing at the <a className="font-bold text-primary-600 dark:text-accent-600" href="https://www.gre.ac.uk/">University of Greenwich, UK</a>.
                     </p>
 
                     <p className='mb-4 text-2xl tracking-tight font-normal text-secondary dark:text-white'>

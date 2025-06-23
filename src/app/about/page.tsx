@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 /* Components */
 import {Divider, ListenRecommendation} from "@/components";
-import {HeroSection, TimelineSection} from "@/components/AboutPage";
+import {HeroSection } from "@/components/AboutPage";
 import {MottoSection, TestimonialSection} from "@/components/HomePage";
 
 export const metadata: Metadata = {

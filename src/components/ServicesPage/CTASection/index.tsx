@@ -37,8 +37,8 @@ const CTASection = () => {
 
                 </h1>
                 <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
-                    I’m a front-end developer who believes that design is more than just aesthetics — it's about clarity, performance, and experience. From color and typography to clean, scalable code, every detail matters.
-                    In today’s web landscape, users form impressions within seconds. That’s why I focus on clear content, responsive design, and engaging interactions — across all devices.
+                    I&apos;m a front-end developer who believes that design is more than just aesthetics — it's about clarity, performance, and experience. From color and typography to clean, scalable code, every detail matters.
+                    In today&apos;s web landscape, users form impressions within seconds. That&apos;s why I focus on clear content, responsive design, and engaging interactions — across all devices.
                 </p>
                 <p className="mb-8 text-lg font-normal text-secondary lg:text-xl dark:text-secondary">
                     My approach is simple: minimalist, user-centered, and fast. I continuously explore modern technologies to build websites that are not only visually appealing but also reliable and lightning-fast.
