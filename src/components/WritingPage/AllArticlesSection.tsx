@@ -1,13 +1,14 @@
 'use client'
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
 import SectionWrapper from '../common/wrappers/SectionWrapper'
 import ArticleCard from '../common/cards/ArticleCard';
 import LoadingArticleCard from '../common/cards/LoadingArticleCard';
 import Heading from '../common/headings/Heading';
 import { useGeneralContext } from '@/context/GeneralContext';
-import { useSearchParams} from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Pagination from "@/components/common/pagination/Pagination";
 import NewsletterSection from "@/components/WritingPage/NewsletterSection/NewsletterForm";
+import Divider from '../common/divider/Divider';
 
 export type Frontmatter = {
     title: string;
@@ -22,8 +23,8 @@ export type Article = {
     slug: string;
 };
 
-const AllArticlesSection = ({tag = ''} :{tag ?:string}  ) => {
-    const { articles, isLoading, fetchArticles, fetchArticlesByTag, totalPages  } = useGeneralContext();
+const AllArticlesSection = ({ tag = '' }: { tag?: string }) => {
+    const { articles, isLoading, fetchArticles, fetchArticlesByTag, totalPages } = useGeneralContext();
     const fetchedTag = useRef<string | null>(null);
     const fetchedPage = useRef<number | null>(null);
     const searchParams = useSearchParams();
@@ -58,7 +59,7 @@ const AllArticlesSection = ({tag = ''} :{tag ?:string}  ) => {
             }
             {
                 page &&
-                <Pagination totalPages={totalPages} currentPage={page} tag={tag}/>
+                <Pagination totalPages={totalPages} currentPage={page} tag={tag} />
             }
 
             <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4'>
@@ -71,20 +72,20 @@ const AllArticlesSection = ({tag = ''} :{tag ?:string}  ) => {
                         </>
                         :
 
-                            articles.length === 0 ? <p className='text-center text-2xl'>No data for this request.</p>
-                                :
-                                articles.map(({ frontmatter, slug }) => (
-                                    <ArticleCard
-                                        key={slug}
+                        articles.length === 0 ? <p className='text-center text-2xl'>No data for this request.</p>
+                            :
+                            articles.map(({ frontmatter, slug }) => (
+                                <ArticleCard
+                                    key={slug}
 
-                                        title={frontmatter.title}
-                                        createdAt={frontmatter.createdAt}
-                                        description={frontmatter.description}
-                                        image={frontmatter.image}
-                                        tags={frontmatter.tags}
-                                        href={slug}
-                                    />
-                                ))
+                                    title={frontmatter.title}
+                                    createdAt={frontmatter.createdAt}
+                                    description={frontmatter.description}
+                                    image={frontmatter.image}
+                                    tags={frontmatter.tags}
+                                    href={slug}
+                                />
+                            ))
 
 
                 }
@@ -94,10 +95,12 @@ const AllArticlesSection = ({tag = ''} :{tag ?:string}  ) => {
 
             {
                 page &&
-                <Pagination totalPages={totalPages} currentPage={page} tag={tag}/>
+                <Pagination totalPages={totalPages} currentPage={page} tag={tag} />
             }
 
-            <NewsletterSection/>
+            <Divider />
+
+            <NewsletterSection />
 
         </SectionWrapper>
     )

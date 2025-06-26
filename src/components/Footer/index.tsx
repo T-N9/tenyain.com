@@ -28,7 +28,7 @@ const Footer = () => {
                             <a href="https://flowbite.com" className="hover:underline">Flowbite</a>
                         </li>
                         <li>
-                            <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                            <a href="https://tailwindcss.com/" className="hover:underline">Tailwind</a>
                         </li>
                     </ul>
                 </div>
@@ -46,14 +46,6 @@ const Footer = () => {
                         <li>
                             <a href="https://x.com/tenyain_moelwin" target={"_blank"} rel={"noreferrer"}
                                className="hover:underline">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="https://burma.social/@tenyain" target={"_blank"} rel={"noreferrer"}
-                               className="hover:underline">Mastodon</a>
-                        </li>
-                        <li>
-                            <a href="https://www.threads.net/@tenyain_moe_lwin" target={"_blank"} rel={"noreferrer"}
-                               className="hover:underline">Thread</a>
                         </li>
                     </ul>
                 </div>
