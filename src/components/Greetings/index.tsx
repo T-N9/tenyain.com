@@ -46,7 +46,7 @@ const Greetings = () => {
     <>
       <div className=" mt-5">
         <p className="">
-          <span className={`text-4xl font-bold ${heading_font.className} uppercase`}>{titleText}</span><br/>
+          <span className={`text-4xl font-extrabold uppercase`}>{titleText}</span><br/>
           <span className="text-2xl text-primary-600 dark:text-accent-600">{dayText}</span>
         </p>
       </div>
