@@ -15,7 +15,7 @@ function TimelineSection() {
         <SectionWrapper>
             <Heading title="Timeline" align="left" />
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-10">
-                {/* <Timeline>
+                <Timeline>
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
@@ -87,7 +87,7 @@ function TimelineSection() {
                             </TimelineBody>
                         </TimelineContent>
                     </TimelineItem>
-                </Timeline> */}
+                </Timeline>
 
                 <Timeline>
 

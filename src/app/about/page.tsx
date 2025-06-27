@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 
 /* Components */
-import {Divider, ListenRecommendation} from "@/components";
-import {HeroSection } from "@/components/AboutPage";
-import {MottoSection, TestimonialSection} from "@/components/HomePage";
+import { Divider, ListenRecommendation } from "@/components";
+import { HeroSection } from "@/components/AboutPage";
+import { MottoSection, SkillSection, TestimonialSection } from "@/components/HomePage";
+import ExperienceSection from '@/components/AboutPage/ExperienceSection';
 
 export const metadata: Metadata = {
   title: "About Te Nyain Moe Lwin | Who am I?",
@@ -37,12 +38,15 @@ const AboutPage = () => {
     <>
       <HeroSection />
       {/* <TimelineSection /> */}
-      <Divider/>
+      <Divider />
+      <ExperienceSection />
+      <SkillSection />
+      <Divider />
       <TestimonialSection />
-      <Divider/>
+      <Divider />
       <MottoSection />
-      <Divider/>
-      <ListenRecommendation/>
+      <Divider />
+      <ListenRecommendation />
     </>
   )
 }
