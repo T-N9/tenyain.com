@@ -34,8 +34,8 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white shadow dark:shadow-gray-800 dark:bg-secondary fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-secondary">
-      <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto py-4 px-4 xl:px-0">
+    <nav className=" fixed w-full z-50 top-0 start-0 ">
+      <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto py-2 px-4 xl:px-8 mt-5 bg-white/30 dark:bg-secondary/30 backdrop-blur-[10px] transition-colors border dark:border-gray-700 rounded-xl">
         <Link aria-label="Back to Home page" href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <TNLogo />
         </Link>
@@ -44,7 +44,7 @@ const NavBar = () => {
           <Button className='bg-primary-600 hidden hover:!bg-primary-500 dark:text-secondary dark:bg-accent-600 dark:hover:!bg-accent-500' size='sm'>
             EN
           </Button>
-          <ThemeToggler/>
+          <ThemeToggler />
           <button
             onClick={toggleMenu}
             data-collapse-toggle="navbar-sticky"
@@ -60,19 +60,26 @@ const NavBar = () => {
           </button>
         </div>
         <div className={`items-center justify-between ${isOpen ? 'block' : 'hidden'} w-full lg:flex lg:w-auto lg:order-1`} id="navbar-sticky">
-          <ul className="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-secondary dark:border-gray-700">
+          <ul className="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 dark:border-gray-700">
             {navItems.map((item) => (
-              <li onClick={() => setIsOpen(false)} key={item.href}>
+              <li onClick={() => setIsOpen(false)} key={item.href} className='relative'>
                 <Link href={item.href}>
                   <span
-                    className={`block py-2 px-3 rounded ${isActive(item.href)
-                        ? 'text-white bg-primary-600 dark:bg-accent-600 dark:lg:bg-transparent lg:bg-transparent lg:text-primary-600 dark:lg:text-accent-600'
-                        : 'text-secondary hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-primary-700 dark:lg:hover:text-accent-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
+                    className={`block py-2 px-3 rounded transition duration-300 ${isActive(item.href)
+                      ? 'text-white bg-primary-600 dark:bg-accent-600 dark:lg:bg-transparent lg:bg-transparent lg:text-primary-600 dark:lg:text-accent-600'
+                      : 'text-slate-400 hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-primary-600 dark:lg:hover:text-accent-600 dark:text-gray-400 dark:hover:text-white'
                       }`}
                   >
                     {item.label}
                   </span>
                 </Link>
+                {
+                  isActive(item.href) &&
+                  <>
+                    <div className="bg-nav-link-indicator absolute -bottom-2 left-1/2 h-px w-12 -translate-x-1/2"></div>
+                    <div className="absolute -bottom-2 left-1/2 size-2.5 -translate-x-1/2 rounded-[4px] bg-primary-600 blur-[8px] dark:bg-accent-600"></div>
+                  </>
+                }
               </li>
             ))}
           </ul>

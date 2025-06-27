@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --nav-link-indicator: radial-gradient(44.6% 825% at 50% 50%, #1192d3 0%, #ff486d00 100%);
+  --background-image-nav-link-indicator: var(--nav-link-indicator);
+}
+
+.dark {
+  --nav-link-indicator: radial-gradient(44.6% 825% at 50% 50%, #2fe0ac 0%, #ff486d00 100%);
+  --background-image-nav-link-indicator: var(--nav-link-indicator);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -55,6 +66,10 @@ p {
 
 .dark .fill-background {
   fill: #25b48a;
+}
+
+.bg-nav-link-indicator {
+    background-image: var(--background-image-nav-link-indicator);
 }
 
 /*.slick-track {*/
