@@ -4,7 +4,7 @@ import { Button } from 'flowbite-react'
 import { heading_font } from "@/fonts/fonts";
 import Typewriter from '@/components/animation/Typewriter';
 import Image from 'next/image';
-import { TNButton } from '@/components/buttons/TNButton';
+import { TNButton } from '@/components/common/buttons/TNButton';
 
 const HeroSection = () => {
   return (

@@ -16,6 +16,7 @@ import { primary_font } from "@/fonts/fonts";
 /* Various Providers */
 import Providers from "@/app/Providers";
 import React from "react";
+import GradientFollower from "@/components/common/wrappers/GradientFollower";
 
 export const metadata: Metadata = {
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
@@ -96,13 +97,14 @@ export default function RootLayout({
       <body
         className={`${primary_font.className}  tracking-tight antialiasing bg-white dark:bg-secondary relative`}
       >
-        <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
+        {/* <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
           height="100%">
           <filter id="noise">
             <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence>
           </filter>
           <rect width="100%" height="100%" filter="url(#noise)"></rect>
-        </svg>
+        </svg> */}
+        <GradientFollower/>
         <Providers>
           <NavBar />
           <div className="mb-20"></div>
