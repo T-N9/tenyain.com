@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
 const buttonStyles = cva(
-  'relative overflow-hidden group border-2 px-6 py-3 transition-colors duration-300 inline-flex items-center justify-center rounded-md',
+  'relative overflow-hidden group border-2 transition-colors duration-300 inline-flex items-center justify-center rounded-md',
   {
     variants: {
       color: {
@@ -13,6 +13,7 @@ const buttonStyles = cva(
         secondary: 'border-gray-700 text-gray-700 bg-white dark:bg-secondary dark:border-accent-600 dark:text-accent-600',
       },
       size: {
+        sm: 'text-base px-4 py-2',
         md: 'text-base px-5 py-2.5',
         xl: 'text-xl px-6 py-3',
       },
