@@ -1,32 +1,32 @@
 /* Section components */
 import {
-    Divider,
+  Divider,
 } from "@/components";
 import {
-    HeroSection,
-    ArticleSection,
-    ContactSection,
-    MottoSection,
-    ProjectsSection,
-    SkillSection,
-    TestimonialSection
+  HeroSection,
+  ArticleSection,
+  ContactSection,
+  MottoSection,
+  ProjectsSection,
+  SkillSection,
+  TestimonialSection
 } from "@/components/HomePage";
 
 export default function Home() {
   return (
     <main>
-      <HeroSection/>
-      <ProjectsSection/>
-      <Divider/>
-      <TestimonialSection/>
-      <Divider/>
-      <SkillSection/>
-      <Divider/>
-      <MottoSection/>
-      <Divider/>
-      <ArticleSection/>
-      <Divider/>
-      <ContactSection/>
+      <HeroSection />
+      <ProjectsSection />
+      <SkillSection />
+      <Divider />
+      <TestimonialSection />
+
+      <Divider />
+      <MottoSection />
+      <Divider />
+      <ArticleSection />
+      <Divider />
+      <ContactSection />
     </main>
   );
 }
