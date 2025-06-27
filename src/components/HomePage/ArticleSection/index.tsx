@@ -1,4 +1,5 @@
 'use client'
+import React, { useEffect } from 'react'
 import ArticleCard from '@/components/common/cards/ArticleCard';
 import LoadingArticleCard from '@/components/common/cards/LoadingArticleCard';
 import Heading from '@/components/common/headings/Heading'
@@ -6,8 +7,8 @@ import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { useGeneralContext } from '@/context/GeneralContext';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
-import React, { useEffect } from 'react'
-import Slider from 'react-slick';
+
+
 
 const ArticleSection = () => {
 

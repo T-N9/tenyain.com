@@ -1,6 +1,5 @@
 'use client'
 import React from "react";
-import {heading_font} from "@/fonts/fonts";
 
 const Greetings = () => {
   const date = new Date();

@@ -1,4 +1,5 @@
 'use client'
+import React, { useEffect } from "react";
 import LoadingProjectCardHome from "@/components/common/cards/LoadingProjectCardHome";
 import ProjectCard from "@/components/common/cards/ProjectCardHome";
 import Heading from "@/components/common/headings/Heading";
@@ -6,8 +7,7 @@ import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import { useGeneralContext } from "@/context/GeneralContext";
 import { Button } from "flowbite-react";
 import Link from "next/link";
-import React, { useEffect } from "react";
-import Slider from "react-slick";
+
 
 export type Frontmatter = {
     title: string;
@@ -31,26 +31,6 @@ export type Work = {
 
 
 const ProjectsSection = () => {
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 560,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-
-        ]
-    };
 
     const { demoWorks, isLoading, fetchWorks } = useGeneralContext();
 

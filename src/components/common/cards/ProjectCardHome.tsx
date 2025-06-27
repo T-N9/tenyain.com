@@ -7,7 +7,6 @@ import { heading_font } from "@/fonts/fonts";
 import ScrambleHover from '@/components/animation/ScrableHover';
 import VerticalCutReveal, { VerticalCutRevealRef } from '@/components/animation/VerticalCutReveal';
 import { useInView } from 'framer-motion';
-import { TNButton } from '../buttons/TNButton';
 
 interface ProjectCardProps {
   logoSrc: string;
