@@ -42,65 +42,73 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     }
   }, [isInView])
   return (
-    <div className="flex flex-col gap-5 px-2 xl:px-0 mb-5 lg:mb-0">
+    <div className="flex flex-col lg:flex-row lg:gap-5 px-2 xl:px-0 mb-5 lg:mb-0">
 
-      <div className='hidden flex justify-center rounded-tr-lg rounded-br-lg items-center bg-gradient-to-r from-slate-50 to-primary-50 dark:to-accent-50 border-l-4 border-l-primary-200 dark:border-l-accent-200 pl-4 w-full h-[150px] '>
-        <Image src={logoSrc} width={200} height={100} className=' w-[200px] h-[100px] object-contain' alt={logoAlt} />
+      <div className='flex-[3]'>
+        <Image
+          src={logoSrc}
+          alt={logoAlt}
+          width={200}
+          height={200}
+          className="w-2/3 lg:w-full"
+        />
       </div>
 
-      <div>
-        <h1 className={`${heading_font.className} uppercase mb-2 text-4xl font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-5xl dark:text-accent-600`}>
-        <div ref={ref}>
-          <VerticalCutReveal
-            splitBy="characters"
-            staggerDuration={0.02}
-            staggerFrom="first"
-            transition={{
-              type: "spring",
-              stiffness: 200,
-              damping: 35,
-              delay: 0.1,
-            }}
-            containerClassName="text-[#00000] leading-snug"
-            ref={textRef}
-            autoStart={false}
-          >
-            {title}
-          </VerticalCutReveal>
+      <div className='flex flex-[7] flex-col gap-4 px-2 xl:px-0'>
+        <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center'>
+          <h1 className={`${heading_font.className} uppercase mb-2 text-4xl font-extrabold tracking-tight leading-none text-primary-600 md:text-5xl lg:text-5xl dark:text-accent-600`}>
+            <div ref={ref}>
+              <VerticalCutReveal
+                splitBy="characters"
+                staggerDuration={0.02}
+                staggerFrom="first"
+                transition={{
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 35,
+                  delay: 0.1,
+                }}
+                containerClassName="text-[#00000] leading-snug"
+                ref={textRef}
+                autoStart={false}
+              >
+                {title}
+              </VerticalCutReveal>
+            </div>
+
+          </h1>
+          <div className="text-primary-600 dark:text-accent-600 ">
+            <a aria-hidden="false" href={livePreviewLink} target="_blank" rel="noopener noreferrer" className="text-base flex gap-4 items-center">
+              <ScrambleHover
+                text={"> Live Preview"}
+                scrambleSpeed={40}
+                sequential={true}
+                revealDirection="center"
+                useOriginalCharsOnly={false}
+                characters="abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;':\,./<>?"
+              />
+            </a>
+          </div>
         </div>
 
-        </h1>
-        <div className="text-primary-600 dark:text-accent-600 ">
-          <a aria-hidden="false" href={livePreviewLink} target="_blank" rel="noopener noreferrer" className="text-xl flex gap-4 items-center">
-            <ScrambleHover
-              text={"> Live Preview"}
-              scrambleSpeed={40}
-              sequential={true}
-              revealDirection="center"
-              useOriginalCharsOnly={false}
-              characters="abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;':\,./<>?"
-            />
-          </a>
+        <p className="text-slate-500 text-xl">{description}</p>
+
+        <div className='flex gap-4'>
+          {technologies.map((tech, index) => {
+            return (
+
+              <React.Fragment key={index}> {technologyLogoMap[tech]}</React.Fragment>
+
+            )
+          })}
         </div>
+
+        <Link href={`/works/${slug}`}>
+          <Button aria-hidden="false" className="secondary-btn" color="gray" size="lg" onClick={onViewCaseStudy}>
+            View Detail
+          </Button>
+        </Link>
       </div>
-
-      <p className="text-secondary text-xl">{description}</p>
-
-      <div className='flex gap-4'>
-        {technologies.map((tech, index) => {
-          return (
-
-            <React.Fragment key={index}> {technologyLogoMap[tech]}</React.Fragment>
-
-          )
-        })}
-      </div>
-
-      <Link href={`/works/${slug}`}>
-        <Button aria-hidden="false" className="secondary-btn" color="gray" size="lg" onClick={onViewCaseStudy}>
-          View Detail
-        </Button>
-      </Link>
     </div>
   );
 };

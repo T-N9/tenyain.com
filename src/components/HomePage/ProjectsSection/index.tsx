@@ -74,7 +74,7 @@ const ProjectsSection = () => {
                 </Link>
             </div>
 
-            <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="flex flex-col gap-10">
                 {isLoading ?
                     <>
                         <LoadingProjectCardHome />
@@ -85,7 +85,7 @@ const ProjectsSection = () => {
                     demoWorks.map(({ frontmatter, slug }) => (
                         <ProjectCard
                             key={slug}
-                            logoSrc={frontmatter.logo}
+                            logoSrc={frontmatter.image}
                             logoAlt="Project Logo"
                             title={frontmatter.title}
                             livePreviewLink={frontmatter.url}
@@ -96,30 +96,6 @@ const ProjectsSection = () => {
                         />
                     ))
                 }
-            </div>
-
-            <div className="lg:hidden slider-container">
-                {
-                    isLoading ? <LoadingProjectCardHome /> :
-                        <Slider {...settings}>
-                            {
-                                demoWorks.map(({ frontmatter, slug }) => (
-                                    <ProjectCard
-                                        key={slug}
-                                        logoSrc={frontmatter.logo}
-                                        logoAlt="Project Logo"
-                                        title={frontmatter.title}
-                                        livePreviewLink={frontmatter.url}
-                                        description={frontmatter.description}
-                                        technologies={frontmatter.technologies}
-                                        slug={slug}
-                                    // onViewCaseStudy={handleViewCaseStudy}
-                                    />
-                                ))
-                            }
-                        </Slider>
-                }
-
             </div>
 
         </SectionWrapper>
