@@ -13,7 +13,7 @@ const HeroSection = () => {
           </a> */}
 
           <div className='space-y-2'>
-            <h1 className='text-4xl lg:text-6xl font-bold tracking-tight text-slate-600 dark:text-slate-200'>
+            <h1 className='text-4xl lg:text-6xl font-extrabold tracking-tight text-slate-600 dark:text-slate-200'>
               Te Nyain Moe Lwin
             </h1>
 

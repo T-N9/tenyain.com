@@ -31,7 +31,7 @@ const educationData: EducationItem[] = [
 const SkillSection = () => {
   return (
     <SectionWrapper>
-      <div className='flex gap-10 lg:gap-5 flex-col lg:flex-row'>
+      <div className='flex gap-14 lg:gap-5 flex-col lg:flex-row'>
         <div className='flex-1'>
           <Heading title="Education" align='left' />
 
