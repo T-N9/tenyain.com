@@ -11,26 +11,6 @@ import Slider from 'react-slick';
 
 const ArticleSection = () => {
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        responsive: [
-            {
-              breakpoint: 560,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              }
-            },
-           
-          ]
-    };
-
     const { demoArticles, isLoading, fetchArticles } = useGeneralContext();
 
     useEffect(() => {
@@ -42,7 +22,7 @@ const ArticleSection = () => {
     return (
         <SectionWrapper>
             <div className="flex justify-between items-center mb-14">
-                <Heading title="Latest Articles" align={'left'} className="!mb-0" />
+                <Heading title="Articles" align={'left'} className="!mb-0" />
 
                 <Link href={'/writing'}>
                     <Button className='secondary-btn' size="sm" color="gray">
@@ -51,7 +31,7 @@ const ArticleSection = () => {
                 </Link>
             </div>
 
-            <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="flex flex-col gap-5">
                 {isLoading ?
                     <>
                         <LoadingArticleCard />
@@ -71,27 +51,6 @@ const ArticleSection = () => {
                         />
                     ))
                 }
-            </div>
-            <div className="lg:hidden slider-container">
-                {
-                    isLoading ? <LoadingArticleCard /> :
-                        <Slider className="space-x-4" {...settings}>
-                            {
-                                demoArticles.map(({ frontmatter, slug }) => (
-                                    <ArticleCard
-                                        key={slug}
-                                        title={frontmatter.title}
-                                        createdAt={frontmatter.createdAt}
-                                        description={frontmatter.description}
-                                        image={frontmatter.image}
-                                        tags={frontmatter.tags}
-                                        href={slug}
-                                    />
-                                ))
-                            }
-                        </Slider>
-                }
-
             </div>
         </SectionWrapper>
     )

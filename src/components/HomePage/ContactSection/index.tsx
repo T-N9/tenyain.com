@@ -3,6 +3,8 @@ import Heading from '@/components/common/headings/Heading';
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper';
 import { Button } from 'flowbite-react';
 import useContactForm from './useContactForm';
+import { TNButton } from '@/components/common/buttons/TNButton';
+import CharacterHead from '../HeroSection/Character/CharacterHead';
 
 const ContactSection = () => {
     const { handleSubmit, errors, isLoading, register, onSubmit } = useContactForm();
@@ -10,8 +12,8 @@ const ContactSection = () => {
     return (
         <SectionWrapper>
             <Heading title='Keep In Touch' />
-            <div className='mx-auto max-w-screen-md '>
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <div className='mx-auto flex flex-row-reverse  gap-5'>
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 flex-1">
                     <div className="mb-4">
                         <label htmlFor={'name'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
                             Name
@@ -19,9 +21,9 @@ const ContactSection = () => {
                         <input
                             type={'text'}
                             id={'name'}
-                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={
-                                'Enter your name'
+                                'John Doe'
                             }
                             {...register("name")}
                         />
@@ -35,9 +37,9 @@ const ContactSection = () => {
                         <input
                             type={'email'}
                             id={'email'}
-                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={
-                                'Enter your mail'
+                                'eg: johndoe@gmail.com'
                             }
                             {...register("email")}
                         />
@@ -51,21 +53,24 @@ const ContactSection = () => {
                         <textarea
                             id={'message'}
                             rows={6}
-                            className={`block p-2.5 w-full text-lg lg:text-2xl text-secondary bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
-                            placeholder={'Leave a message...'}
+                            className={`block p-2.5 w-full text-lg lg:text-lg text-secondary bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            placeholder={'Hello, I would like to...'}
                             {...register("message")}
                         ></textarea>
                         {errors.message && <span className="mt-1 text-sm text-red-600">{errors.message.message}</span>}
                     </div>
-                    <Button
+                    <TNButton
                         type="submit"
-                        className='primary-btn w-fit'
-                        size='lg'
                         disabled={isLoading}
-                    >
-                        {isLoading ? "Sending..." : "Submit"}
-                    </Button>
+                        label={isLoading ? "Sending..." : "Submit"}
+                    />
+
+
                 </form>
+
+                <div className='flex-1 hidden lg:flex justify-center items-center relative'>
+                    <CharacterHead />
+                </div>
             </div>
         </SectionWrapper>
     );

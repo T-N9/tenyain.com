@@ -6,21 +6,30 @@ const CharacterHead: React.FC = () => {
         const pupils = document.querySelectorAll<HTMLElement>(".eye");
         const eyebrows = document.querySelectorAll<HTMLElement>(".eyebrow");
 
-        // Center position for the eyes
         const eyeCenterY = 93.54;
 
         const handleMouseMove = (e: MouseEvent) => {
             pupils.forEach((pupil) => {
                 const rect = pupil.getBoundingClientRect();
-                const x = (e.pageX - rect.left) / 150 + "px";
-                const actual_y = (e.pageY - rect.top) / 150 + "px";
-                const y = (parseInt(actual_y) > 5) ? '5' : actual_y; 
-                pupil.style.transform = `translate3d(${x}, ${y}, 0px)`;
-                console.log()
+                // Calculate offset from center of the eye
+                const offsetX = e.clientX - (rect.left + rect.width / 2);
+                const offsetY = e.clientY - (rect.top + rect.height / 2);
+
+                // Max distance pupil can move (in px)
+                const maxMove = 3;
+
+                // Clamp values to prevent the pupil from escaping
+                const x = Math.max(Math.min(offsetX / 20, maxMove), -maxMove);
+                const y = Math.max(Math.min(offsetY / 20, maxMove), -maxMove);
+
+
+               pupil.style.transform = `translate3d(${x}px, ${y}px, 0)`;
             });
 
             eyebrows.forEach((eyebrow, index) => {
-                if (e.pageY < eyeCenterY) {
+                const rect = eyebrow.getBoundingClientRect();
+                const y = e.clientY - rect.top;
+                if (y < eyeCenterY) {
                     if (index === 0) {
                         eyebrow.style.transform =
                             "translateY(-2px) translateX(-5px) rotate(-6deg)";
@@ -29,22 +38,23 @@ const CharacterHead: React.FC = () => {
                             "translateY(-30px) translateX(15px) rotate(10deg)";
                     }
                 } else {
-                    eyebrow.style.transform = "translateY(0px) translateX(0px) rotate(0deg)";
+                    eyebrow.style.transform =
+                        "translateY(0px) translateX(0px) rotate(0deg)";
                 }
             });
         };
 
         window.addEventListener("mousemove", handleMouseMove);
-
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
 
+
     return (
         <div className="relative flex justify-center items-center">
             <div className="p-16 z-0 absolute bg-primary-200 dark:bg-accent-800 rounded-full">
-                <div className="w-[350px] h-[350px] lg:w-[450px] lg:h-[450px] rounded-full bg-primary-600 dark:bg-accent-600">
+                <div className="w-[350px] h-[350px] rounded-full bg-primary-600 dark:bg-accent-600">
 
                 </div>
             </div>
@@ -57,7 +67,7 @@ const CharacterHead: React.FC = () => {
                 }}
             >
                 <svg
-                    className="w-[200px] lg:w-[350px]"
+                    className="w-[100px] lg:w-[250px]"
                     width="250"
                     id="Layer_2"
                     xmlns="http://www.w3.org/2000/svg"

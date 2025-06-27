@@ -18,14 +18,12 @@ export default function Home() {
       <HeroSection />
       <ProjectsSection />
       <SkillSection />
-      <Divider />
+      <ArticleSection />
+      {/* <Divider />
       <TestimonialSection />
 
       <Divider />
-      <MottoSection />
-      <Divider />
-      <ArticleSection />
-      <Divider />
+      <MottoSection /> */}
       <ContactSection />
     </main>
   );
