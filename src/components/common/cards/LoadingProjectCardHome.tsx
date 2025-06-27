@@ -2,37 +2,35 @@ import React from 'react'
 
 const LoadingProjectCardHome = () => {
     return (
-        <div className="flex flex-col gap-2 mb-5 animate-pulse">
-            {/* Logo skeleton */}
-            {/*<div className="w-[200px] h-[100px] bg-gray-300 dark:bg-gray-600 rounded-lg mb-6" />*/}
+        <div className="flex flex-col lg:flex-row lg:gap-5 xl:px-0 mb-5 lg:mb-0 animate-pulse">
+            {/* Image skeleton */}
+            <div className="flex-[3]">
+                <div className="w-2/3 lg:w-full h-[130px] lg:h-[172px] bg-gray-200 dark:bg-gray-700 rounded-lg" />
+            </div>
 
-            <div>
-                {/* Title skeleton */}
-                <div className="h-8 bg-gray-300 dark:bg-gray-600 w-3/4 rounded mb-2" />
-
-                {/* Live preview link skeleton */}
-                <div className="flex gap-4 items-center">
-                    <div className="h-6 w-32 bg-gray-300 dark:bg-gray-600 rounded" />
-                    <div className="w-6 h-6 bg-gray-300 dark:bg-gray-600 rounded-full" />
+            {/* Text and content skeleton */}
+            <div className="flex flex-[7] flex-col gap-4 xl:px-0 mt-4 lg:mt-0">
+                {/* Title and Live preview link */}
+                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2">
+                    <div className="h-10 w-3/4 lg:w-1/2 bg-gray-200 dark:bg-gray-700 rounded-md" />
+                    <div className="h-5 w-28 bg-gray-200 dark:bg-gray-700 rounded" />
                 </div>
-            </div>
 
-            {/* Description skeleton */}
-            <div className='mt-4 flex flex-col gap-2'>
-                <div className="h-6 bg-gray-300 dark:bg-gray-600 w-full rounded" />
-                <div className="h-6 bg-gray-300 dark:bg-gray-600 w-5/6 rounded" />
-                <div className="h-6 bg-gray-300 dark:bg-gray-600 w-4/6 rounded" />
-            </div>
+                {/* Description */}
+                <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded" />
+                <div className="h-4 w-5/6 bg-gray-200 dark:bg-gray-700 rounded" />
+                <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded" />
 
-            {/* Technologies skeleton */}
-            <div className="flex gap-4 mt-4">
-                <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full" />
-                <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full" />
-                <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full" />
-            </div>
+                {/* Technology logos */}
+                <div className="flex gap-4">
+                    {[...Array(4)].map((_, i) => (
+                        <div key={i} className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full" />
+                    ))}
+                </div>
 
-            {/* Button skeleton */}
-            <div className="mt-2 w-36 h-10 bg-gray-300 dark:bg-gray-600 rounded-lg" />
+                {/* Button */}
+                <div className="h-10 w-32 bg-gray-200 dark:bg-gray-700 rounded-full mt-2" />
+            </div>
         </div>
 
     )

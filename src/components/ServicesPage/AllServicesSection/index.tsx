@@ -7,8 +7,8 @@ const AllServicesSection = () => {
             <section className="bg-white dark:bg-secondary">
                 <div className="pt-8 mx-auto max-w-screen-xl sm:pt-16 ">
                     <div className="max-w-screen-md mb-8 lg:mb-16">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-secondary dark:text-gray-200 "><b className='text-primary-600 dark:text-accent-600 font-bold'>Designed</b> for business like yours</h2>
-                        <p className="text-secondary sm:text-xl dark:text-secondary">At <b className='text-primary-600 dark:text-accent-600 font-bold'>tenyain.com</b>, I focus on creating visually engaging and seamless web experiences that connect brands with your audience through innovative front-end development solutions.</p>
+                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-slate-500 dark:text-gray-200 "><b className='text-primary-600 dark:text-accent-600'>Designed</b> for business like yours</h2>
+                        <p className="text-slate-500 sm:text-xl dark:text-slate-500">At <b className='text-primary-600 dark:text-accent-600 font-bold'>tenyain.com</b>, I focus on creating visually engaging and seamless web experiences that connect brands with your audience through innovative front-end development solutions.</p>
                     </div>
                     <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                         <div>
@@ -18,16 +18,16 @@ const AllServicesSection = () => {
                                 </svg>
 
                             </div>
-                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-secondary ">Responsive Design
+                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-slate-500 ">Responsive Design
                             </h3>
-                            <p className="text-secondary dark:text-secondary">Responsiveness of a website plays an important role at user experience. I ensure my design is looking good on any kind of devices.</p>
+                            <p className="text-slate-500 dark:text-slate-500">Responsiveness of a website plays an important role at user experience. I ensure my design is looking good on any kind of devices.</p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-accent-900">
                                 <svg className="w-6 h-6 text-primary-600 dark:text-accent-600 " width="24" height="24" fill="none" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><title>Figma</title><path stroke="currentColor" d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z" /></svg>
                             </div>
-                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-secondary ">Prototyping</h3>
-                            <p className="text-secondary dark:text-secondary">Reaching project goals by identifying customer requirements and prototyping before diving into an actual project are my first stages of development.</p>
+                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-slate-500 ">Prototyping</h3>
+                            <p className="text-slate-500 dark:text-slate-500">Reaching project goals by identifying customer requirements and prototyping before diving into an actual project are my first stages of development.</p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-accent-900">
@@ -36,8 +36,8 @@ const AllServicesSection = () => {
                                 </svg>
 
                             </div>
-                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-secondary ">Accessibility</h3>
-                            <p className="text-secondary dark:text-secondary">Web is for EVERYONE. I manage my user interface and codes to meet W3C standards and make the best performance.</p>
+                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-slate-500 ">Accessibility</h3>
+                            <p className="text-slate-500 dark:text-slate-500">Web is for EVERYONE. I manage my user interface and codes to meet W3C standards and make the best performance.</p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-accent-900">
@@ -46,8 +46,8 @@ const AllServicesSection = () => {
                                 </svg>
 
                             </div>
-                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-secondary ">Search Engine Optimization</h3>
-                            <p className="text-secondary dark:text-secondary">To be a reachable and engaging website, the implementation must proceed prioritizing SEO support concepts.</p>
+                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-slate-500 ">Search Engine Optimization</h3>
+                            <p className="text-slate-500 dark:text-slate-500">To be a reachable and engaging website, the implementation must proceed prioritizing SEO support concepts.</p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-accent-900">
@@ -56,8 +56,8 @@ const AllServicesSection = () => {
                                 </svg>
 
                             </div>
-                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-secondary ">Design to Code</h3>
-                            <p className="text-secondary dark:text-secondary">If web design is already crafted, I am here to convert Figma, PSD, and Xd templates into well-performed websites.</p>
+                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-slate-500 ">Design to Code</h3>
+                            <p className="text-slate-500 dark:text-slate-500">If web design is already crafted, I am here to convert Figma, PSD, and Xd templates into well-performed websites.</p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-accent-900">
@@ -67,8 +67,8 @@ const AllServicesSection = () => {
                                 </svg>
 
                             </div>
-                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-secondary ">Front-end Development</h3>
-                            <p className="text-secondary dark:text-secondary">I use React.JS, Next.JS and Tailwind CSS to build scalable, reusable, maintainable, and to provide fast Single Page Applications.</p>
+                            <h3 className="mb-2 text-xl pl-4 border-l-4 border-primary-500 dark:border-accent-500 dark:text-white font-bold text-slate-500 ">Front-end Development</h3>
+                            <p className="text-slate-500 dark:text-slate-500">I use React.JS, Next.JS and Tailwind CSS to build scalable, reusable, maintainable, and to provide fast Single Page Applications.</p>
                         </div>
                     </div>
                 </div>

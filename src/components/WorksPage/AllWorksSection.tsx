@@ -18,9 +18,9 @@ const AllWorksSection = () => {
 
     return (
         <SectionWrapper>
-            <Heading title='Recent Works'/>
+            <Heading title='All Works'/>
 
-            <div className="lg:grid grid-cols-1 lg:grid-cols-3 gap-x-5 gap-y-10">
+            <div className="flex flex-col gap-10">
                 {isLoading ?
                     <>
                         <LoadingProjectCardHome />
@@ -32,7 +32,7 @@ const AllWorksSection = () => {
                         <div key={slug}>
                             <ProjectCard
                                 key={slug}
-                                logoSrc={frontmatter.logo}
+                                logoSrc={frontmatter.image}
                                 logoAlt="Project Logo"
                                 title={frontmatter.title}
                                 livePreviewLink={frontmatter.url}
@@ -40,7 +40,6 @@ const AllWorksSection = () => {
                                 technologies={frontmatter.technologies}
                                 slug={slug}
                             />
-                            <hr className='my-10 lg:hidden'/>
                         </div>
                     ))
                 }

@@ -1,3 +1,4 @@
+import { Divider } from "@/components";
 import {
   HeroSection,
   ArticleSection,
@@ -11,13 +12,10 @@ export default function Home() {
     <main>
       <HeroSection />
       <ProjectsSection />
+      <Divider />
       <SkillSection />
       <ArticleSection />
-      {/* <Divider />
-      <TestimonialSection />
-
       <Divider />
-      <MottoSection /> */}
       <ContactSection />
     </main>
   );

@@ -1,9 +1,9 @@
-import {Metadata} from 'next';
+import { Metadata } from 'next';
 
 /* Components */
-import {Divider} from "@/components";
-import {ContactSection} from "@/components/HomePage";
-import {CTASection} from "@/components/ContactPage";
+import { ContactSection } from "@/components/HomePage";
+import { CTASection } from "@/components/ContactPage";
+import { Divider } from '@/components';
 
 export const metadata: Metadata = {
   title: 'TAILOR THE WEB with TN.dev',
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <>
-        <CTASection/>
-        <Divider/>
-        <ContactSection/>
+      <CTASection />
+      <Divider />
+      <ContactSection />
     </>
   )
 }
