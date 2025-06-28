@@ -1,51 +1,60 @@
-import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
-import Image from 'next/image'
-import React from 'react'
-import { heading_font } from "@/fonts/fonts";
+'use client';
+
+import SectionWrapper from '@/components/common/wrappers/SectionWrapper';
+import Image from 'next/image';
+import { heading_font } from '@/fonts/fonts';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
 const HeroSection = () => {
+    const t = useTranslations('AboutHeroSection');
+
     return (
         <SectionWrapper>
-            <div className=" items-center mx-auto max-w-screen-xl md:grid md:grid-cols-2 py-8">
-                <div className='h-full relative'>
-                    <div className='sticky top-20'>
-                        <div className='relative'>
-                            <Image className='rounded-lg  border-4 border-gray-200 dark:border-gray-200 lg:rounded-sm relative z-10 w-[150px] lg:w-[360px]' src={'/assets/profile.webp'} width={360} height={437} alt='My Picture' />
-
-                            {/* <div className='absolute hidden lg:flex justify-center items-center left-[15%] top-0 z-0 w-[437px] h-[437px] rounded-full bg-primary-100 dark:bg-accent-800'>
-                                <div className=' w-[200px] h-[200px] rounded-full bg-primary-600 dark:bg-accent-600'>
-
-                                </div>
-                            </div> */}
+            <div className="items-center mx-auto max-w-screen-xl md:grid md:grid-cols-2 py-8">
+                <div className="h-full relative">
+                    <div className="sticky top-20">
+                        <div className="relative">
+                            <Image
+                                className="rounded-lg border-4 border-gray-200 dark:border-gray-200 lg:rounded-sm relative z-10 w-[150px] lg:w-[360px]"
+                                src={'/assets/profile.webp'}
+                                width={360}
+                                height={437}
+                                alt="My Picture"
+                            />
                         </div>
                     </div>
                 </div>
                 <div className="mt-4 md:mt-0">
-                    <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight text-slate-500 dark:text-gray-100 font-normal">I am <span className='font-extrabold text-primary-600 dark:text-accent-600'>Te Nyain Moe Lwin</span>, a creative front-end web developer. I am here to help</h2>
+                    <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight text-slate-500 dark:text-gray-100 font-normal">
+                        {t('introPart1')}
+                        <span className="font-extrabold text-primary-600 dark:text-accent-600"> {t('introName')}</span>{t('introPart2')}
+                    </h2>
                     <h1 className={`${heading_font.className} uppercase mb-4 text-4xl lg:text-6xl tracking-tight font-extrabold text-secondary dark:text-white`}>
-                        Turn your <span className=' text-primary-600 dark:text-accent-600'>idea</span> into life.
+                        {t('titlePart1')} <span className='text-primary-600 dark:text-accent-600'>{t('titlePart2')}</span> {t('titlePart3')}
                     </h1>
-                    <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-slate-500">Since 2020, I have enjoyed learning digital design, web development, and content creation to deliver implicit and reachable information.</p>
 
-                    <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-slate-500">I am a <a className="font-bold" href="https://en.wikipedia.org/wiki/Karen_people">Karen</a>, a computer science student from Myanmar. I am currently specializing in front-end web development and creating web applications from my own idea.</p>
+                    <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-slate-500">{t('about1')}</p>
 
-                    <p className='mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-slate-500'>
-                        Currently, pursuing Final year of a Bachelor of Computing at the <a className="font-bold text-primary-600 dark:text-accent-600" href="https://www.gre.ac.uk/">University of Greenwich, UK</a>.
+                    <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-slate-500">
+                        {t('about2Part1')} <a href="https://en.wikipedia.org/wiki/Karen_people" className="font-bold">{t('about2Link')}</a>{t('about2Part2')}
                     </p>
 
-                    <p className='mb-4 text-2xl tracking-tight font-normal text-secondary dark:text-white'>
-                        “My goal is to deliver a front-end stack from scratch to well-performed websites.”
+                    <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-slate-500">
+                        {t('about3Part1')} <a href="https://www.gre.ac.uk/" className="font-bold text-primary-600 dark:text-accent-600">{t('about3Link')}</a>.
                     </p>
 
-                    <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-secondary">I love to create UI designs and prototypes before implementations. Collaborations make me improve in both my technical skills and communication. I play and compose music during my spare time.</p>
+                    <p className="mb-4 text-2xl tracking-tight font-normal text-secondary dark:text-white">{t('quote1')}</p>
 
-                    <p className='mb-4 text-2xl tracking-tight font-bold text-primary-600 dark:!text-accent-600'>
-                        “I care about your business values and targeted customers to meet your golden goals for tomorrow.”
+                    <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-secondary">{t('about4')}</p>
+
+                    <p className="mb-4 text-2xl tracking-tight font-bold text-primary-600 dark:!text-accent-600">
+                        {t('quote2')}
                     </p>
                 </div>
             </div>
         </SectionWrapper>
-    )
-}
+    );
+};
 
-export default HeroSection
+export default HeroSection;

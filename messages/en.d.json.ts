@@ -9,7 +9,26 @@ declare const messages: {
     "focus": "I am currently focusing on Next.JS, Node.JS, Japanese Kanji Characters and stepping into AI and Machine Learning.",
     "hobbies": "Love to sing, compose, and play guitar, exploring both art and technology."
   },
-   "Navigation": {
+
+  "AboutHeroSection": {
+    "introPart1": "I am",
+    "introName": "Te Nyain Moe Lwin",
+    "introPart2": ", a creative front-end web developer. I am here to help",
+    "titlePart1": "Turn your",
+    "titlePart2": "idea",
+    "titlePart3": "into life.",
+    "about1": "Since 2020, I have enjoyed learning digital design, web development, and content creation to deliver implicit and reachable information.",
+    "about2Part1": "I am a",
+    "about2Link": "Karen",
+    "about2Part2": ", a computer science student from Myanmar. I am currently specializing in front-end web development and creating web applications from my own idea.",
+    "about3Part1": "Currently, pursuing Final year of a Bachelor of Computing at the",
+    "about3Link": "University of Greenwich, UK",
+    "quote1": "“My goal is to deliver a front-end stack from scratch to well-performed websites.”",
+    "about4": "I love to create UI designs and prototypes before implementations. Collaborations make me improve in both my technical skills and communication. I play and compose music during my spare time.",
+    "quote2": "“I care about your business values and targeted customers to meet your golden goals for tomorrow.”"
+  },
+
+  "Navigation": {
     "home": "Home",
     "about": "About",
     "works": "Works",
