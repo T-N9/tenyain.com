@@ -3,10 +3,9 @@
 import React, { useState } from 'react';
 import TNLogo from '../common/logos/TNLogo';
 import Link from 'next/link';
-import { Button } from 'flowbite-react';
 import { usePathname } from 'next/navigation';
 import ThemeToggler from '../ThemeToggler';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import LocaleSwitcher from '../common/locale/LocaleSwitcher';
 
 const NavBar = () => {
@@ -18,15 +17,16 @@ const NavBar = () => {
   };
 
   const locale = useLocale();
+  const t = useTranslations('Navigation');
 
   // Navigation links with label and href
   const navItems = [
-    { label: 'Home', href: `/${locale}` },
-    { label: 'About', href: `/${locale}/about` },
-    { label: 'Works', href: `/${locale}/works` },
-    { label: 'Writing', href: `/${locale}/writing` },
-    { label: 'Services', href: `/${locale}/services` },
-    { label: 'Contact', href: `/${locale}/contact` },
+    { label: t('home'), href: `/${locale}` },
+    { label: t('about'), href: `/${locale}/about` },
+    { label: t('works'), href: `/${locale}/works` },
+    { label: t('writing'), href: `/${locale}/writing` },
+    { label: t('services'), href: `/${locale}/services` },
+    { label: t('contact'), href: `/${locale}/contact` },
   ];
 
   // Function to determine if the current route is active (including sub-routes)
@@ -40,7 +40,7 @@ const NavBar = () => {
   return (
     <nav className=" fixed w-full z-50 top-0 start-0 ">
       <div className="max-w-screen-lg rounded-b-xl flex flex-wrap items-center justify-between mx-auto py-2 px-4 xl:px-8 lg:mt-5 bg-white/30 dark:bg-secondary/30 backdrop-blur-[10px] transition-colors border dark:border-gray-700 lg:rounded-xl">
-        <Link aria-label="Back to Home page" href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link aria-label="Back to Home page" href={`/${locale}`} className="flex items-center space-x-3 rtl:space-x-reverse">
           <TNLogo />
         </Link>
         <div className="flex items-center gap-2 md:gap-4 lg:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

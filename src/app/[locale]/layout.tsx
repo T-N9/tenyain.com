@@ -20,7 +20,6 @@ import { notoSansJP, primary_font } from "@/fonts/fonts";
 import Providers from "@/app/Providers";
 import React, { ReactNode } from "react";
 import GradientFollower from "@/components/common/wrappers/GradientFollower";
-import { routing } from "@/i18n/routing";
 
 type Props = {
   children: ReactNode;

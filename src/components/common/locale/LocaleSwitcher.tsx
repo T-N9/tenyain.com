@@ -31,7 +31,7 @@ export default function LanguageSwitcher() {
 
     return (
         <Dropdown label={`${current?.flag}`} inline>
-            {locales.map(({ code, label, flag }) => (
+            {locales.map(({ code, flag }) => (
                 <Dropdown.Item
                     key={code}
                     onClick={() => switchLocale(code)}

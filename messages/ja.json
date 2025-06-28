@@ -6,6 +6,14 @@
     "focus": "現在、Next.JS、Node.JS、日本語の漢字学習に集中しており、AIと機械学習の分野にも足を踏み入れています。",
     "hobbies": "歌うこと、作曲、ギター演奏が好きで、芸術と技術の両方を探求しています。"
   },
+  "Navigation": {
+    "home": "ホーム",
+    "about": "私について",
+    "works": "作品",
+    "writing": "文章",
+    "services": "サービス",
+    "contact": "連絡先"
+  },
     "Button": {
     "hireMe": "雇ってください"
   },

@@ -9,6 +9,14 @@ declare const messages: {
     "focus": "I am currently focusing on Next.JS, Node.JS, Japanese Kanji Characters and stepping into AI and Machine Learning.",
     "hobbies": "Love to sing, compose, and play guitar, exploring both art and technology."
   },
+   "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "writing": "Writing",
+    "services": "Services",
+    "contact": "Contact"
+  },
   "Button": {
     "hireMe": "Hire Me"
   },
