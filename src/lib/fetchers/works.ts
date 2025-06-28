@@ -5,7 +5,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
-const contentDir = path.join(process.cwd(), "src/app/[locale]/works/_contents");
+const contentDir = path.join(process.cwd(), "src/app/data/works/_contents");
 
 export async function getWorkBySlug(slug: string) {
   const fileName = slug + ".mdx";
