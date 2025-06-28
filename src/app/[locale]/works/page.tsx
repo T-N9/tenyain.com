@@ -1,4 +1,6 @@
+import { Divider } from '@/components';
 import AllWorksSection from '@/components/WorksPage/AllWorksSection'
+import NewsletterSection from '@/components/WritingPage/NewsletterSection/NewsletterForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -34,6 +36,8 @@ const WorksPage = () => {
   return (
     <>
         <AllWorksSection/>
+        <Divider/>
+        <NewsletterSection/>
     </>
   )
 }

@@ -44,7 +44,7 @@ const ExperienceSection: React.FC = () => {
             <div className="space-y-10">
                 {experienceData.map((item, index) => (
                     <div key={index} className="space-y-2">
-                        <div className='flex justify-between items-center'>
+                        <div className='flex justify-between flex-col lg:flex-row lg:items-center'>
                             <h3 className="text-xl font-bold text-primary-600 dark:text-accent-600">
                                 {item.role}
                                 {item.company && (

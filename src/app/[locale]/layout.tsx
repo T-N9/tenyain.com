@@ -70,12 +70,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!hasLocale(['en', 'ja'], locale)) {
     notFound();
   }
-  const messages = await getMessages({ locale });
-
-  let webFont = primary_font.className;
-  if (locale === 'ja') {
-    webFont = notoSansJP.className;
-  }
+  const messages = await getMessages({locale});
 
   // Enable static rendering
   setRequestLocale(locale);
@@ -113,7 +108,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body
-        className={`${webFont} tracking-tight antialiasing bg-white dark:bg-secondary relative`}
+        className={`${locale === 'en' ? primary_font.className : notoSansJP.className} tracking-tight antialiasing bg-white dark:bg-secondary relative`}
       >
         {/* <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
           height="100%">
