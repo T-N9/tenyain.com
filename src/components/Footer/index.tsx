@@ -3,8 +3,11 @@ import TNLogo from '../common/logos/TNLogo'
 import Link from 'next/link'
 import Greetings from '../Greetings'
 import BuyMeACoffee from "@/components/BuyMeACoffee";
+import { useLocale } from 'next-intl';
 
 const Footer = () => {
+
+    const locale = useLocale();
   return (
     <footer className="lg:sticky z-0 bottom-0 left-0 p-4 pt-20 bg-slate-100 dark:bg-gray-700">
     <div className="mx-auto max-w-screen-lg">
@@ -53,7 +56,7 @@ const Footer = () => {
                     <h2 className="mb-6 text-primary-600 dark:text-accent-600 text-sm font-semibold  uppercase">Legal</h2>
                     <ul className="text-secondary dark:text-white">
                         <li className="mb-4">
-                            <Link href="/privacy-and-policy" className="hover:underline">Privacy Policy</Link>
+                            <Link href={`/${locale}/privacy-and-policy`} className="hover:underline">Privacy Policy</Link>
                         </li>
                     </ul>
                 </div>

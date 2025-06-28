@@ -3,6 +3,7 @@ import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLocale } from 'next-intl';
 
 interface ArticleCardProps {
   title: string;
@@ -14,9 +15,12 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt, tags, image, href }) => {
+
+  const locale = useLocale();
+
   return (
     <div className=''>
-      <Link href={`/writing/${href}`}>
+      <Link href={`/${locale}/writing/${href}`}>
         <div className="p-5 flex-col lg:flex-row hover:bg-primary-50 transition-all duration-300 border-gray-200 rounded-lg dark:hover:bg-gray-800 dark:border-secondary flex gap-3">
           <div className='flex-[3]'>
 

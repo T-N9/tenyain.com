@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Button } from 'flowbite-react';
 import { usePathname } from 'next/navigation';
 import ThemeToggler from '../ThemeToggler';
+import { useLocale } from 'next-intl';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,20 +16,22 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+    const locale = useLocale();
+
   // Navigation links with label and href
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Works', href: '/works' },
-    { label: 'Writing', href: '/writing' },
-    { label: 'Services', href: '/services' },
-    { label: 'Contact', href: '/contact' },
+const navItems = [
+    { label: 'Home', href: `/${locale}` },
+    { label: 'About', href: `/${locale}/about` },
+    { label: 'Works', href: `/${locale}/works` },
+    { label: 'Writing', href: `/${locale}/writing` },
+    { label: 'Services', href: `/${locale}/services` },
+    { label: 'Contact', href: `/${locale}/contact` },
   ];
 
   // Function to determine if the current route is active (including sub-routes)
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathname === '/';
+    if (href === `/${locale}`) {
+      return pathname === `/${locale}`;
     }
     return pathname.startsWith(href);
   };

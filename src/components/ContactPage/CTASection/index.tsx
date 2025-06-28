@@ -3,8 +3,11 @@ import Link from 'next/link'
 import React from 'react'
 import { heading_font } from "@/fonts/fonts";
 import { TNButton } from '@/components/common/buttons/TNButton';
+import { useLocale } from 'next-intl';
 
 const CTASection = () => {
+
+    const locale = useLocale();
     return (
         <SectionWrapper className="bg-white dark:bg-secondary pt-16">
             <div className="flex flex-col justify-center">
@@ -16,7 +19,7 @@ const CTASection = () => {
                 </p>
 
                 <div className="flex flex-col justify-center space-y-4 sm:flex-row sm:space-y-0">
-                    <Link href={'/services'}>
+                    <Link href={`/${locale}/services`}>
                         <TNButton label="View Services"/>
                    </Link>
                 </div>

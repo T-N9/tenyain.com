@@ -7,6 +7,7 @@ import { heading_font } from "@/fonts/fonts";
 import ScrambleHover from '@/components/animation/ScrableHover';
 import VerticalCutReveal, { VerticalCutRevealRef } from '@/components/animation/VerticalCutReveal';
 import { useInView } from 'framer-motion';
+import { useLocale } from 'next-intl';
 
 interface ProjectCardProps {
   logoSrc: string;
@@ -41,6 +42,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       textRef.current?.reset()
     }
   }, [isInView])
+
+  const locale = useLocale();
   return (
     <div className="flex flex-col lg:flex-row lg:gap-5 xl:px-0 mb-5 lg:mb-0">
 
@@ -101,7 +104,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           })}
         </div>
 
-        <Link href={`/works/${slug}`}>
+        <Link href={`/${locale}/works/${slug}`}>
           <Button aria-hidden="false" className="secondary-btn rounded-full" color="gray" size="lg" onClick={onViewCaseStudy}>
             View Detail
           </Button>

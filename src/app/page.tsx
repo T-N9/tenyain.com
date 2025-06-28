@@ -1,22 +1,5 @@
-import { Divider } from "@/components";
-import {
-  HeroSection,
-  ArticleSection,
-  ContactSection,
-  ProjectsSection,
-  SkillSection,
-} from "@/components/HomePage";
+import {redirect} from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main>
-      <HeroSection />
-      <ProjectsSection />
-      <Divider />
-      <SkillSection />
-      <ArticleSection />
-      <Divider />
-      <ContactSection />
-    </main>
-  );
+export default function RootPage() {
+  redirect('/en');
 }

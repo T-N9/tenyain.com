@@ -7,6 +7,7 @@ import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
 import { useGeneralContext } from "@/context/GeneralContext";
 import { Button } from "flowbite-react";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 
 export type Frontmatter = {
@@ -40,14 +41,14 @@ const ProjectsSection = () => {
         }
     }, [fetchWorks, demoWorks.length]);
 
-
+    const locale = useLocale();
     return (
 
         <SectionWrapper className="lg:mt-0">
             <div className="flex justify-between items-center mb-14">
                 <Heading title="Projects" className="!mb-0" />
 
-                <Link href={'/works'}>
+                <Link href={`/${locale}/works`} >
                     <Button className="secondary-btn" size="sm" color="gray">
                         View All
                     </Button>

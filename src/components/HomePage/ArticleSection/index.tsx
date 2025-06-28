@@ -7,6 +7,7 @@ import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { useGeneralContext } from '@/context/GeneralContext';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
+import { useLocale } from 'next-intl';
 
 
 
@@ -20,12 +21,14 @@ const ArticleSection = () => {
         }
     }, [fetchArticles, demoArticles.length]);
 
+    const locale = useLocale();
+
     return (
         <SectionWrapper>
             <div className="flex justify-between items-center mb-14">
                 <Heading title="Articles" align={'left'} className="!mb-0" />
 
-                <Link href={'/writing'}>
+                <Link href={`/${locale}/writing`}>
                     <Button className='secondary-btn' size="sm" color="gray">
                         View All
                     </Button>

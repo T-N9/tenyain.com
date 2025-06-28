@@ -1,5 +1,6 @@
 import { technologyLogoMap } from "@/components/common/logos";
 import { Breadcrumb } from "flowbite-react";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -27,6 +28,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   url,
   image,
 }) => {
+  const locale = useLocale();
   return (
     <header className="relative bg-gradient-to-r ">
       <div className="flex flex-col gap-4 ">
@@ -106,9 +108,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
         <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-100 rounded-md px-5 py-3 dark:bg-gray-800">
           <Breadcrumb.Item>
-            <Link href={'/'}>Home</Link>
+            <Link href={`/${locale}`}>Home</Link>
           </Breadcrumb.Item>
-          <Breadcrumb.Item><Link href={'/works'}>Works</Link></Breadcrumb.Item>
+          <Breadcrumb.Item><Link href={`/${locale}/works`}>Works</Link></Breadcrumb.Item>
           <Breadcrumb.Item className="opacity-50">{title}</Breadcrumb.Item>
         </Breadcrumb>
         {/*<Divider />*/}

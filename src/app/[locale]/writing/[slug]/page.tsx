@@ -55,9 +55,10 @@ export async function generateMetadata({
 const ArticlePage = async ({
     params,
 }: {
-    params: { slug: string }
+    params: { slug: string, locale: string };
 }) => {
     const article = await getArticleBySlug(params.slug)
+    const locale = params.locale;
     return (
         <>
             <SectionWrapper>
@@ -74,9 +75,9 @@ const ArticlePage = async ({
                     </div>
                     <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-100 rounded-md px-5 py-3 dark:bg-gray-800">
                         <Breadcrumb.Item>
-                            <Link href={'/'}>Home</Link>
+                            <Link href={`/${locale}`}>Home</Link>
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item><Link href={'/writing'}>Writing</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item><Link href={`/${locale}/writing`}>Writing</Link></Breadcrumb.Item>
                         <Breadcrumb.Item className="opacity-70"><span className={'line-clamp-1'}>{article.frontmatter.title}</span></Breadcrumb.Item>
                     </Breadcrumb>
                 </div>

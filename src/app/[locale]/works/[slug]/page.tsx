@@ -44,8 +44,10 @@ export async function generateMetadata({
   };
 }
 
-const WorkPage = async ({ params }: { params: { slug: string } }) => {
+const WorkPage = async ({ params }: { params: { slug: string, locale: string },  }) => {
   const work = await getWorkBySlug(params.slug);
+   const locale = params.locale;
+
   // console.log({work})
   return (
     <SectionWrapper>
@@ -64,9 +66,9 @@ const WorkPage = async ({ params }: { params: { slug: string } }) => {
         <div className="mdx-wrapper">{work.content}</div>
         <Breadcrumb aria-label="Solid background breadcrumb example" className="bg-gray-100 rounded-md px-5 py-3 dark:bg-gray-800">
           <Breadcrumb.Item>
-            <Link href={'/'}>Home</Link>
+            <Link href={`/${locale}`}>Home</Link>
           </Breadcrumb.Item>
-          <Breadcrumb.Item><Link href={'/works'}>Works</Link></Breadcrumb.Item>
+          <Breadcrumb.Item><Link href={`/${locale}/works`}>Works</Link></Breadcrumb.Item>
           <Breadcrumb.Item className="opacity-50">{work.frontmatter.title}</Breadcrumb.Item>
         </Breadcrumb>
       </div>

@@ -2,6 +2,7 @@ import Heading from '@/components/common/headings/Heading'
 import { technologyLogoColorlessMap } from '@/components/common/logos'
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { Button } from 'flowbite-react'
+import { useLocale } from 'next-intl';
 import Link from "next/link";
 
 type EducationItem = {
@@ -29,6 +30,7 @@ const educationData: EducationItem[] = [
 ];
 
 const SkillSection = () => {
+  const locale = useLocale();
   return (
     <SectionWrapper>
       <div className='flex gap-14 lg:gap-5 flex-col lg:flex-row'>
@@ -58,7 +60,7 @@ const SkillSection = () => {
           </div>
 
           <Link href={
-            '/services'
+            `/${locale}/services`
           }><Button className='table mx-auto secondary-btn mt-10 rounded-full' size='lg' color='gray'>View Services</Button></Link>
         </div>
       </div>
