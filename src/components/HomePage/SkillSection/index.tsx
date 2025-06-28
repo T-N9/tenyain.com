@@ -1,3 +1,4 @@
+'use client'
 import Heading from '@/components/common/headings/Heading'
 import { technologyLogoColorlessMap } from '@/components/common/logos'
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
@@ -11,23 +12,42 @@ type EducationItem = {
   date: string;
 };
 
-const educationData: EducationItem[] = [
-  {
-    institution: 'University of Greenwich, NCC Education, UK',
-    degree: 'Bachelor’s in Computing',
-    date: 'Expected: Dec 2024 – Nov 2025',
-  },
-  {
-    institution: 'Information Technology Professionals Examination Council, Japan',
-    degree: 'Passed Fundamental Information Technology Engineer Examination',
-    date: 'April 2023',
-  },
-  {
-    institution: 'University of Computer Studies, Hinthada, Myanmar',
-    degree: 'Fourth Year of Bachelor’s in Computer Science',
-    date: '201x – 20xx',
-  },
-];
+const educationDataMap: Record<string, EducationItem[]> = {
+  en: [
+    {
+      institution: 'University of Greenwich, NCC Education, UK',
+      degree: 'Bachelor’s in Computing',
+      date: 'Expected: Dec 2024 – Nov 2025',
+    },
+    {
+      institution: 'Information Technology Professionals Examination Council, Japan',
+      degree: 'Passed Fundamental Information Technology Engineer Examination',
+      date: 'April 2023',
+    },
+    {
+      institution: 'University of Computer Studies, Hinthada, Myanmar',
+      degree: 'Fourth Year of Bachelor’s in Computer Science',
+      date: '201x – 20xx',
+    },
+  ],
+  ja: [
+    {
+      institution: 'グリニッジ大学、NCC教育、イギリス',
+      degree: 'コンピューティング学士号',
+      date: '予定: 2024年12月 ～ 2025年11月',
+    },
+    {
+      institution: '情報処理技術者試験センター、日本',
+      degree: '基本情報技術者試験 合格',
+      date: '2023年4月',
+    },
+    {
+      institution: 'ヒンタダ・コンピュータ大学、ミャンマー',
+      degree: 'コンピュータサイエンス学士課程4年次',
+      date: '201x年 ～ 20xx年',
+    },
+  ]
+};
 
 const SkillSection = () => {
   const locale = useLocale();
@@ -39,13 +59,22 @@ const SkillSection = () => {
 
           <div>
             <ul className="space-y-6">
-              {educationData.map((edu, index) => (
-                <li key={index} className="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
-                  <h3 className="text-xl font-semibold text-primary-600 dark:text-accent-600">{edu.institution}</h3>
-                  <p className="text-gray-700">{edu.degree}</p>
-                  <p className="text-sm text-gray-500">{edu.date}</p>
-                </li>
-              ))}
+              {locale === 'ja' ?
+                educationDataMap.ja.map((edu, index) => (
+                  <li key={index} className="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+                    <h3 className="text-xl font-semibold text-primary-600 dark:text-accent-600">{edu.institution}</h3>
+                    <p className="text-gray-700">{edu.degree}</p>
+                    <p className="text-sm text-gray-500">{edu.date}</p>
+                  </li>
+                )) :
+
+                educationDataMap.en.map((edu, index) => (
+                  <li key={index} className="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+                    <h3 className="text-xl font-semibold text-primary-600 dark:text-accent-600">{edu.institution}</h3>
+                    <p className="text-gray-700">{edu.degree}</p>
+                    <p className="text-sm text-gray-500">{edu.date}</p>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>
