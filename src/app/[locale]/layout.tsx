@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import {notFound} from 'next/navigation';
-import {Locale, hasLocale, NextIntlClientProvider} from 'next-intl';
-import {getTranslations, setRequestLocale} from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Locale, hasLocale, NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 
 /* CSS */
 import "../globals.css";
@@ -14,7 +14,7 @@ import { Toaster } from "sonner";
 
 /* Google Fonts */
 
-import { primary_font } from "@/fonts/fonts";
+import { notoSansJP, primary_font } from "@/fonts/fonts";
 
 /* Various Providers */
 import Providers from "@/app/Providers";
@@ -24,7 +24,7 @@ import { routing } from "@/i18n/routing";
 
 type Props = {
   children: ReactNode;
-  params: Promise<{locale: Locale}>;
+  params: { locale: Locale };
 };
 
 export const metadata: Metadata = {
@@ -65,17 +65,20 @@ export const viewport: Viewport = {
 }
 
 
-export default async function LocaleLayout({children, params}: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
 
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
+  const { locale } = params;
+  if (!hasLocale(['en', 'ja'], locale)) {
     notFound();
   }
+  const messages = await getMessages({locale});
+
+  console.log({messages, locale});
 
   // Enable static rendering
   setRequestLocale(locale);
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <title>Te Nyain Moe Lwin | Creative Front-end developer</title>
         {/* Google tag (gtag.js) */}
@@ -108,7 +111,7 @@ export default async function LocaleLayout({children, params}: Props) {
         />
       </head>
       <body
-        className={`${primary_font.className}  tracking-tight antialiasing bg-white dark:bg-secondary relative`}
+        className={`${locale === 'en' ? primary_font.className : notoSansJP.className} tracking-tight antialiasing bg-white dark:bg-secondary relative`}
       >
         {/* <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
           height="100%">
@@ -118,7 +121,7 @@ export default async function LocaleLayout({children, params}: Props) {
           <rect width="100%" height="100%" filter="url(#noise)"></rect>
         </svg> */}
         <GradientFollower />
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <NavBar />
             <div className="mb-20"></div>

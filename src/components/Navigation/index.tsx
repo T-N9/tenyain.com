@@ -7,6 +7,7 @@ import { Button } from 'flowbite-react';
 import { usePathname } from 'next/navigation';
 import ThemeToggler from '../ThemeToggler';
 import { useLocale } from 'next-intl';
+import LocaleSwitcher from '../common/locale/LocaleSwitcher';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +17,10 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
-    const locale = useLocale();
+  const locale = useLocale();
 
   // Navigation links with label and href
-const navItems = [
+  const navItems = [
     { label: 'Home', href: `/${locale}` },
     { label: 'About', href: `/${locale}/about` },
     { label: 'Works', href: `/${locale}/works` },
@@ -44,9 +45,7 @@ const navItems = [
         </Link>
         <div className="flex items-center gap-2 md:gap-4 lg:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 
-          <Button className='bg-primary-600 hidden hover:!bg-primary-500 dark:text-secondary dark:bg-accent-600 dark:hover:!bg-accent-500' size='sm'>
-            EN
-          </Button>
+          <LocaleSwitcher />
           <ThemeToggler />
           <button
             onClick={toggleMenu}

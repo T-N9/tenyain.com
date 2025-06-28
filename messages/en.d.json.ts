@@ -2,7 +2,18 @@
 // See: https://next-intl.dev/docs/workflows/typescript#messages-arguments
 
 declare const messages: {
-  "home.title": "Welcome",
-  "home.description": "This is the English version."
+  "HeroSection": {
+    "name": "Te Nyain Moe Lwin",
+    "title": "Creative Front-end Developer",
+    "subtitle": "Transforming unique ideas into reality, one pixel at a time, creating accessible and visually stunning user experiences.",
+    "focus": "I am currently focusing on Next.JS, Node.JS, Japanese Kanji Characters and stepping into AI and Machine Learning.",
+    "hobbies": "Love to sing, compose, and play guitar, exploring both art and technology."
+  },
+  "Button": {
+    "hireMe": "Hire Me"
+  },
+  "LocaleSelect": {
+    "lang": "🇺🇸"
+  }
 };
 export default messages;
