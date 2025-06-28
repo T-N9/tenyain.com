@@ -39,7 +39,7 @@ const NavBar = () => {
 
   return (
     <nav className=" fixed w-full z-50 top-0 start-0 ">
-      <div className="max-w-screen-lg rounded-b-xl flex flex-wrap items-center justify-between mx-auto py-2 px-4 xl:px-8 lg:mt-5 bg-white/30 dark:bg-secondary/30 backdrop-blur-[10px] transition-colors border dark:border-gray-700 lg:rounded-xl">
+      <div className="max-w-screen-lg rounded-b-xl flex flex-wrap items-center justify-between mx-auto py-2 px-4 xl:px-8 lg:mt-5 bg-white/50 dark:bg-black/30 backdrop-blur-[10px] transition-colors border dark:border-gray-700 lg:rounded-xl">
         <Link aria-label="Back to Home page" href={`/${locale}`} className="flex items-center space-x-3 rtl:space-x-reverse">
           <TNLogo />
         </Link>
@@ -78,8 +78,8 @@ const NavBar = () => {
                 {
                   isActive(item.href) &&
                   <>
-                    <div className="bg-nav-link-indicator absolute -bottom-2 left-1/2 h-px w-12 -translate-x-1/2"></div>
-                    <div className="absolute -bottom-2 left-1/2 size-2.5 -translate-x-1/2 rounded-[4px] bg-primary-600 blur-[8px] dark:bg-accent-600"></div>
+                    <div className="bg-nav-link-indicator hidden lg:block absolute -bottom-2 left-1/2 h-px w-12 -translate-x-1/2"></div>
+                    <div className="absolute -bottom-2 hidden lg:block left-1/2 size-2.5 -translate-x-1/2 rounded-[4px] bg-primary-600 blur-[8px] dark:bg-accent-600"></div>
                   </>
                 }
               </li>

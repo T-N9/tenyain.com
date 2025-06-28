@@ -21,7 +21,7 @@ export default function GradientFollower() {
   return (
     <div
       ref={gradientRef}
-      className="pointer-events-none hidden dark:block fixed h-screen inset-0 z-30 transition duration-300 lg:fixed top-0 left-0"
+      className="pointer-events-none hidden dark:lg:block fixed h-screen inset-0 z-30 transition duration-300 lg:fixed top-0 left-0"
     />
   );
 }
