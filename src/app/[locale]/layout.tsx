@@ -122,7 +122,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Providers>
             <NavBar />
             <div className="mb-20"></div>
-            <div className="bg-white dark:bg-secondary relative z-20 border-b-2 border-primary-600 dark:border-accent-600 pb-14 shadow-md">{children}</div>
+            <div className="bg-white dark:bg-secondary relative z-20 border-b-8 border-primary-300/35 dark:border-accent-300/35 pb-14 shadow-md">{children}</div>
             <Footer />
             <Toaster richColors closeButton position="bottom-center" />
           </Providers>

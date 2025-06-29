@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="relative z-10 space-y-4 w-full lg:w-2/3">
 
           <div className='space-y-2'>
-            <h1 className={` text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-600 dark:text-slate-200`}>
+            <h1 className={` text-4xl lg:text-5xl font-black tracking-tight text-slate-600 dark:text-slate-200`}>
               {t('name')}
             </h1>
 

@@ -12,8 +12,8 @@ const ContactSection = () => {
         <SectionWrapper>
             <Heading title='Keep In Touch' />
             <div className='mx-auto flex flex-row-reverse  gap-5'>
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 flex-1">
-                    <div className="mb-4">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-2 flex-1">
+                    <div className="">
                         <label htmlFor={'name'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
                             Name
                         </label>
@@ -29,7 +29,7 @@ const ContactSection = () => {
                         {/* Only render the error message if it exists and is a string */}
                         {errors.name && <span className="mt-1 text-sm text-red-600">{errors.name.message}</span>}
                     </div>
-                    <div className="mb-4">
+                    <div className="">
                         <label htmlFor={'email'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
                             Email
                         </label>
@@ -45,7 +45,7 @@ const ContactSection = () => {
                         {/* Only render the error message if it exists and is a string */}
                         {errors.email && <span className="mt-1 text-sm text-red-600">{errors.email.message}</span>}
                     </div>
-                    <div className="mb-4 sm:col-span-2">
+                    <div className=" sm:col-span-2">
                         <label htmlFor={'message'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
                             Message
                         </label>
@@ -59,12 +59,12 @@ const ContactSection = () => {
                         {errors.message && <span className="mt-1 text-sm text-red-600">{errors.message.message}</span>}
                     </div>
                     <TNButton
+                        className="w-full !mt-4"
                         type="submit"
                         disabled={isLoading}
                         label={isLoading ? "Sending..." : "Submit"}
+                        hoverDirection='up'
                     />
-
-
                 </form>
 
                 <div className='flex-1 hidden lg:flex justify-center items-center relative'>

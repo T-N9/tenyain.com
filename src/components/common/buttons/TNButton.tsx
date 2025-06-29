@@ -29,6 +29,7 @@ type TNButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonStyles> & {
     label: string;
     withArrow?: boolean;
+    hoverDirection?:  'right' | 'up';
   };
 
 export const TNButton: React.FC<TNButtonProps> = ({
@@ -37,12 +38,13 @@ export const TNButton: React.FC<TNButtonProps> = ({
   color,
   size,
   className,
+    hoverDirection = 'right',
   ...props
 }) => {
   return (
     <button className={clsx(buttonStyles({ color, size }), className)} {...props}>
       {/* Background fill animation */}
-      <span className="absolute inset-0 bg-primary-600 dark:bg-accent-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out z-0" />
+      <span className={`absolute inset-0 bg-primary-600 dark:bg-accent-600 ${hoverDirection === 'right' ? ' origin-left scale-x-0 group-hover:scale-x-100' : ' origin-bottom-right scale-y-0 group-hover:scale-y-100'} transition-transform duration-500 ease-out z-0`} />
 
       {/* Foreground content */}
       <span className="relative z-10 flex items-center group-hover:text-white transition-colors duration-300">
