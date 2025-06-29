@@ -85,7 +85,7 @@ export default function Guestbook() {
                             <div className="flex justify-center items-center gap-2 mt-2 flex-col lg:flex-row">
                                 <Button
                                     onClick={loginWithGoogle}
-                                    className="bg-primary-600 hover:!bg-primary-500 "
+                                    className="bg-primary-600 hover:!bg-primary-500 dark:bg-accent-600 hover:dark:!bg-accent-500"
                                 >
                                     <span className="flex items-center">
                                         <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
