@@ -6,7 +6,7 @@ import { CTASection } from "@/components/ContactPage";
 import { Divider } from '@/components';
 
 export const metadata: Metadata = {
-  title: 'TAILOR THE WEB with TN.dev',
+  title: 'Tailor the web with me',
   description:
     'Hire a highly skilled front-end developer for your next project. With expertise in branding and front-end technologies such as React and Next JS, this freelancer offers responsive and visually stunning website and web application development. Available for remote and freelance work opportunities.',
   keywords: [
