@@ -1,15 +1,11 @@
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
-import Link from 'next/link'
 import React from 'react'
 import { heading_font } from "@/fonts/fonts";
-import { TNButton } from '@/components/common/buttons/TNButton';
-import { useLocale } from 'next-intl';
 import LocationCard from '@/components/LocationCard';
-import { SiGithub, SiGithubHex, SiInstagram, SiLinkedin, SiLinkedinHex, SiX } from '@icons-pack/react-simple-icons';
+import { SiGithub, SiInstagram, SiLinkedin, SiX } from '@icons-pack/react-simple-icons';
 
 const CTASection = () => {
 
-    const locale = useLocale();
     return (
         <SectionWrapper className="bg-white dark:bg-secondary pt-16">
             <div className="flex flex-col justify-center">

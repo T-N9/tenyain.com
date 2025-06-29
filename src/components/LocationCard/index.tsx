@@ -2,7 +2,6 @@
 
 
 import createGlobe from 'cobe'
-import { useTranslations } from 'next-intl'
 import { useEffect, useRef } from 'react'
 import { useSpring } from 'react-spring'
 
@@ -11,7 +10,6 @@ const LocationCard = () => {
     const pointerInteracting = useRef<number | null>(null)
     const pointerInteractionMovement = useRef(0)
     const fadeMask = 'radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 60%, rgb(0, 0, 0, 0) 70%)'
-    const t = useTranslations()
 
     const [{ r }, api] = useSpring(() => ({
         r: 0,

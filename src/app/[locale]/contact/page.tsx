@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import { ContactSection } from "@/components/HomePage";
 import { CTASection } from "@/components/ContactPage";
 import { Divider } from '@/components';
+import Guestbook from '@/components/Guestbook';
 
 export const metadata: Metadata = {
   title: 'Tailor the web with me',
@@ -63,6 +64,8 @@ const ContactPage = () => {
   return (
     <>
       <CTASection />
+      <Divider />
+      <Guestbook />
       <Divider />
       <ContactSection />
     </>
