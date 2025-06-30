@@ -20,6 +20,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
 
   return (
     <div className=''>
+      
       <Link href={`/${locale}/writing/${href}`}>
         <div className="p-5 flex-col lg:flex-row hover:bg-primary-50 transition-all duration-300 border-gray-200 rounded-lg dark:hover:bg-gray-800 dark:border-secondary flex gap-3">
           <div className='flex-[3]'>

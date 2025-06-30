@@ -99,13 +99,13 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body
         className={`${locale === 'en' ? primary_font.className : notoSansJP.className} tracking-tight antialiasing bg-white dark:bg-secondary relative`}
       >
-        <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
+        {/* <svg className="pointer-events-none fixed isolate z-[60] opacity-70 top-0 mix-blend-soft-light" width="100%"
           height="100%">
           <filter id="noise">
             <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence>
           </filter>
           <rect width="100%" height="100%" filter="url(#noise)"></rect>
-        </svg>
+        </svg> */}
         <GradientFollower />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>

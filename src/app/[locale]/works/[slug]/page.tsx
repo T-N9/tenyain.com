@@ -51,7 +51,7 @@ const WorkPage = async ({ params }: { params: { slug: string, locale: string }, 
   // console.log({work})
   return (
     <SectionWrapper>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-screen-md mx-auto">
         <HeroSection
           title={work.frontmatter.title}
           image={work.frontmatter.image}

@@ -42,7 +42,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Status
             </span>
-            <p className="status_t text-xl font-bold text-secondary">
+            <p className="status_t text-base font-bold text-secondary">
               {status}
             </p>
           </div>
@@ -50,19 +50,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Type
             </span>
-            <p className="status_t text-xl font-bold text-secondary">{type}</p>
+            <p className="status_t text-base font-bold text-secondary">{type}</p>
           </div>
           <div className="status--card bg-gray-100 dark:bg-slate-600 rounded-lg p-4 flex-1">
             <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Role
             </span>
-            <p className="status_t text-xl font-bold text-secondary">{role}</p>
+            <p className="status_t text-base font-bold text-secondary">{role}</p>
           </div>
           <div className="status--card bg-gray-100 dark:bg-slate-600 rounded-lg p-4 flex-1">
             <span className="name text-sm font-semibold text-primary-600 dark:text-accent-600 uppercase">
               Period
             </span>
-            <p className="status_t text-xl font-bold text-secondary">
+            <p className="status_t text-base font-bold text-secondary">
               {period}
             </p>
           </div>

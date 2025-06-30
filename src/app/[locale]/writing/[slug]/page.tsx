@@ -63,7 +63,7 @@ const ArticlePage = async ({
         <>
             <SectionWrapper>
 
-                <div className='max-w-3xl mx-auto flex flex-col gap-5'>
+                <div className='max-w-screen-md mx-auto flex flex-col gap-5'>
                     <ArticleHero
                         title={article.frontmatter.title}
                         createdAt={article.frontmatter.createdAt}
