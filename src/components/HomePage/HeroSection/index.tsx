@@ -3,7 +3,6 @@ import React from 'react'
 import Image from 'next/image';
 import { TNButton } from '@/components/common/buttons/TNButton';
 import { useTranslations } from 'next-intl';
-import { Button } from 'flowbite-react';
 
 const HeroSection = () => {
   const t = useTranslations('HeroSection');

@@ -30,7 +30,6 @@ type TNButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonStyles> & {
     label: string;
     withArrow?: boolean;
-    hoverDirection?:  'right' | 'up';
   };
 
 export const TNButton: React.FC<TNButtonProps> = ({
@@ -39,7 +38,6 @@ export const TNButton: React.FC<TNButtonProps> = ({
   color,
   size,
   className,
-    hoverDirection = 'right',
   ...props
 }) => {
   return (
