@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { Button } from 'flowbite-react';
 
 const buttonStyles = cva(
-  'relative overflow-hidden secondary-btn group border-2 transition-colors duration-300 inline-flex items-center justify-center rounded-xl bg-primary-400 dark:!bg-accent-700 text-primary-950 dark:!text-accent-950 font-extrabold hover:!bg-primary-500 hover:dark:!bg-accent-500',
+  'relative overflow-hidden secondary-btn group border-2 transition-colors duration-300 inline-flex items-center justify-center rounded-xl bg-primary-400 dark:!bg-accent-600 text-primary-950 dark:!text-accent-950 font-extrabold hover:!bg-primary-500 hover:dark:!bg-accent-500',
   {
     variants: {
       color: {
