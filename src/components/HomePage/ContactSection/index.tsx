@@ -63,7 +63,6 @@ const ContactSection = () => {
                         type="submit"
                         disabled={isLoading}
                         label={isLoading ? "Sending..." : "Submit"}
-                        hoverDirection='up'
                     />
                 </form>
 
