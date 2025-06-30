@@ -62,7 +62,7 @@ const SkillSection = () => {
               {locale === 'ja' ?
                 educationDataMap.ja.map((edu, index) => (
                   <li key={index} className="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
-                    <h3 className="text-xl font-semibold text-primary-600 dark:text-accent-600">{edu.institution}</h3>
+                    <h3 className="text-xl font-extrabold text-primary-600 dark:text-accent-600">{edu.institution}</h3>
                     <p className="text-gray-700">{edu.degree}</p>
                     <p className="text-sm text-gray-500">{edu.date}</p>
                   </li>
@@ -70,7 +70,7 @@ const SkillSection = () => {
 
                 educationDataMap.en.map((edu, index) => (
                   <li key={index} className="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
-                    <h3 className="text-xl font-semibold text-primary-600 dark:text-accent-600">{edu.institution}</h3>
+                    <h3 className="text-xl font-extrabold text-primary-600 dark:text-accent-600">{edu.institution}</h3>
                     <p className="text-gray-700">{edu.degree}</p>
                     <p className="text-sm text-gray-500">{edu.date}</p>
                   </li>

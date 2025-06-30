@@ -2,36 +2,16 @@
 import TestimonialCard from "@/components/common/cards/TestimonialCard";
 import Heading from "@/components/common/headings/Heading";
 import SectionWrapper from "@/components/common/wrappers/SectionWrapper";
-import Slider from "react-slick";
 
 const TestimonialSection = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        responsive: [
-            {
-              breakpoint: 780,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              }
-            },
-           
-          ]
-    };
     return (
 
         <SectionWrapper className="text-center">
             <div className="mx-auto max-w-screen-sm">
                 <Heading title="Testimonials"/>
             </div>
-            <div className="slider-container">
-                <Slider {...settings}>
+            <div className="slider-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5 ">
+
 
                     <TestimonialCard
                         testimonial="I am thrilled with the website created by the talented website developer TeNyain. The design is visually stunning, the functionality is seamless, and it perfectly represents my business. Working with TeNyain was a pleasure, and I highly recommend his services to anyone in need of a remarkable website."
@@ -50,9 +30,6 @@ const TestimonialSection = () => {
                         name="Tr. Thant"
                         role="at BS Camp , Myanmar"
                     />
-
-
-                </Slider>
             </div>
 
         </SectionWrapper>

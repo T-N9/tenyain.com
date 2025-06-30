@@ -3,19 +3,20 @@
 import React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
+import { Button } from 'flowbite-react';
 
 const buttonStyles = cva(
-  'relative overflow-hidden group border-2 transition-colors duration-300 inline-flex items-center justify-center rounded-md',
+  'relative overflow-hidden secondary-btn group border-2 transition-colors duration-300 inline-flex items-center justify-center rounded-xl bg-primary-400 dark:!bg-accent-700 text-primary-950 dark:!text-accent-950 font-extrabold hover:!bg-primary-500 hover:dark:!bg-accent-500',
   {
     variants: {
       color: {
-        primary: 'border-primary-600 text-primary-600 bg-white dark:bg-secondary dark:border-accent-600 dark:text-accent-600',
-        secondary: 'border-gray-700 text-gray-700 bg-white dark:bg-secondary dark:border-accent-600 dark:text-accent-600',
+        primary: '',
+        secondary: '',
       },
       size: {
-        sm: 'text-base px-4 py-2',
-        md: 'text-base px-5 py-2.5',
-        xl: 'text-xl px-6 py-3',
+        sm: 'text-base ',
+        md: 'text-base ',
+        xl: 'text-xl ',
       },
     },
     defaultVariants: {
@@ -42,9 +43,9 @@ export const TNButton: React.FC<TNButtonProps> = ({
   ...props
 }) => {
   return (
-    <button className={clsx(buttonStyles({ color, size }), className)} {...props}>
+    <Button size='lg' color='gray' className={clsx(buttonStyles({ color, size }), className)} {...props}>
       {/* Background fill animation */}
-      <span className={`absolute inset-0 bg-primary-600 dark:bg-accent-600 ${hoverDirection === 'right' ? ' origin-left scale-x-0 group-hover:scale-x-100' : ' origin-bottom-right scale-y-0 group-hover:scale-y-100'} transition-transform duration-500 ease-out z-0`} />
+      {/* <span className={`absolute inset-0 bg-primary-600 dark:bg-accent-600 ${hoverDirection === 'right' ? ' origin-left scale-x-0 group-hover:scale-x-100' : ' origin-bottom-right scale-y-0 group-hover:scale-y-100'} transition-transform duration-500 ease-out z-0`} /> */}
 
       {/* Foreground content */}
       <span className="relative z-10 flex items-center group-hover:text-white transition-colors duration-300">
@@ -63,6 +64,6 @@ export const TNButton: React.FC<TNButtonProps> = ({
           </svg>
         )}
       </span>
-    </button>
+    </Button>
   );
 };

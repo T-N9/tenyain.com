@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image';
 import { TNButton } from '@/components/common/buttons/TNButton';
 import { useTranslations } from 'next-intl';
+import { Button } from 'flowbite-react';
 
 const HeroSection = () => {
   const t = useTranslations('HeroSection');
@@ -30,7 +31,8 @@ const HeroSection = () => {
 
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-4">
             <a href="mailto:tenyainmoelwin@gmail.com?subject=Hiring%20Inquiry%20for%20Front-end%20Development%20Project">
-              <TNButton label={tButton('hireMe')} />
+
+              <TNButton label={tButton('hireMe')}/>
             </a>
 
           </div>

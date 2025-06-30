@@ -9,12 +9,12 @@ const Footer = () => {
 
     const locale = useLocale();
   return (
-    <footer className="lg:sticky z-0 bottom-0 left-0 p-4 pt-20 bg-slate-100 dark:bg-gray-700">
+    <footer className="lg:sticky z-0 bottom-0 left-0 p-4 pt-20 bg-slate-800 dark:bg-gray-700">
     <div className="mx-auto max-w-screen-lg">
         <div className="md:flex md:justify-between">
-            <div className="mb-20 text-primary-600 dark:text-accent-600 md:mb-0">
+            <div className="mb-20 text-primary-200 dark:text-accent-600 md:mb-0">
                 <Link aria-label="Back to Home" href="/" className="flex items-center">
-                    <TNLogo/>
+                    <TNLogo primaryFill='fill-primary-200 dark:fill-accent-600' secondaryFill='fill-gray-200 dark:fill-gray-200'/>
                 </Link>
 
                 <Greetings/>
@@ -22,8 +22,8 @@ const Footer = () => {
             <BuyMeACoffee classname="mb-20 md:mb-0" />
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                    <h2 className="mb-6 text-primary-600 dark:text-accent-600 text-sm font-semibold  uppercase ">Resources</h2>
-                    <ul className="text-secondary dark:text-white">
+                    <h2 className="mb-6 text-primary-200 dark:text-accent-600 text-sm font-semibold  uppercase ">Resources</h2>
+                    <ul className="text-gray-200 dark:text-white">
                     <li className="mb-4">
                             <a href="https://nextjs.org/" className="hover:underline">Next.JS</a>
                         </li>
@@ -36,8 +36,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-primary-600 dark:text-accent-600 text-sm font-semibold  uppercase">Follow Me</h2>
-                    <ul className="text-secondary dark:text-white space-y-4">
+                    <h2 className="mb-6 text-primary-200 dark:text-accent-600 text-sm font-semibold  uppercase">Follow Me</h2>
+                    <ul className="text-gray-200 dark:text-white space-y-4">
                         <li className="">
                             <a href="https://github.com/T-N9" target={"_blank"} rel={"noreferrer"}
                                className="hover:underline ">Github</a>
@@ -53,8 +53,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-primary-600 dark:text-accent-600 text-sm font-semibold  uppercase">Legal</h2>
-                    <ul className="text-secondary dark:text-white">
+                    <h2 className="mb-6 text-primary-200 dark:text-accent-600 text-sm font-semibold  uppercase">Legal</h2>
+                    <ul className="text-gray-200 dark:text-white">
                         <li className="mb-4">
                             <Link href={`/${locale}/privacy-and-policy`} className="hover:underline">Privacy Policy</Link>
                         </li>
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-8" />
         <div className="text-center">
-            <span className="text-sm text-secondary text-center dark:text-white">© 2022 - 2025 <a href="https://tenyain.com" className="hover:underline">tenyain.com</a>. All Rights Reserved.
+            <span className="text-sm text-gray-200 text-center dark:text-white">© 2022 - 2025 <a href="https://tenyain.com" className="hover:underline">tenyain.com</a>. All Rights Reserved.
             </span>
 
         </div>

@@ -14,7 +14,7 @@ const ContactSection = () => {
             <div className='mx-auto flex flex-row-reverse  gap-5'>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-2 flex-1">
                     <div className="">
-                        <label htmlFor={'name'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
+                        <label htmlFor={'name'} className="block mb-1 text-lg font-bold text-primary-950 dark:text-accent-200">
                             Name
                         </label>
                         <input
@@ -30,7 +30,7 @@ const ContactSection = () => {
                         {errors.name && <span className="mt-1 text-sm text-red-600">{errors.name.message}</span>}
                     </div>
                     <div className="">
-                        <label htmlFor={'email'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
+                        <label htmlFor={'email'} className="block mb-1 text-lg font-bold text-primary-950 dark:text-accent-200">
                             Email
                         </label>
                         <input
@@ -46,7 +46,7 @@ const ContactSection = () => {
                         {errors.email && <span className="mt-1 text-sm text-red-600">{errors.email.message}</span>}
                     </div>
                     <div className=" sm:col-span-2">
-                        <label htmlFor={'message'} className="block mb-2 text-lg font-medium text-primary-600 dark:text-accent-600">
+                        <label htmlFor={'message'} className="block mb-1 text-lg font-bold text-primary-950 dark:text-accent-200">
                             Message
                         </label>
                         <textarea

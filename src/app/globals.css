@@ -72,6 +72,12 @@ p {
     background-image: var(--background-image-nav-link-indicator);
 }
 
+.name-gradient {
+  background: linear-gradient(90deg, #1192d3, #25b48a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /*.slick-track {*/
 /*  display: flex !important;*/
 /*  gap: 1rem;*/
