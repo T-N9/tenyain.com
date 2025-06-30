@@ -21,7 +21,7 @@ function MottoSection() {
     }, [isInView])
     return (
         <SectionWrapper className='my-7 lg:my-14'>
-            <Blockquote className='text-center text-secondary/40 dark:text-slate-200 text-3xl lg:text-6xl'>
+            <Blockquote className='text-center text-slate-600/40 dark:text-slate-200 text-3xl lg:text-6xl'>
                 <svg
                     className="mb-4 mx-auto h-8 w-8 fill-primary-600 dark:fill-accent-600  dark:text-secondary"
                     aria-hidden="true"

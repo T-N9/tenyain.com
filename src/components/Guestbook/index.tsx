@@ -68,7 +68,7 @@ export default function Guestbook() {
                                 </Button>
                             </div>
                             <Textarea
-                                className={`bg-gray-50 border text-secondary text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                                className={`bg-gray-50 border text-slate-600 text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                                 placeholder="Leave a message..."
                                 rows={3}
                                 value={message}

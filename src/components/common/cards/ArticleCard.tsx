@@ -41,7 +41,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ title, description, createdAt
                   </span>
                 ))}
               </div>
-              <p className="text-sm text-secondary dark:text-secondary">{moment(createdAt).format('MMMM Do, YYYY')}</p>
+              <p className="text-sm text-slate-600 dark:text-secondary">{moment(createdAt).format('MMMM Do, YYYY')}</p>
             </div>
           </div>
         </div>

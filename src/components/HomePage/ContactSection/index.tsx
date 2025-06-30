@@ -20,7 +20,7 @@ const ContactSection = () => {
                         <input
                             type={'text'}
                             id={'name'}
-                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`bg-gray-50 border border-gray-300 text-slate-600 text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={
                                 'John Doe'
                             }
@@ -36,7 +36,7 @@ const ContactSection = () => {
                         <input
                             type={'email'}
                             id={'email'}
-                            className={`bg-gray-50 border border-gray-300 text-secondary text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`bg-gray-50 border border-gray-300 text-slate-600 text-lg lg:text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={
                                 'eg: johndoe@gmail.com'
                             }
@@ -52,7 +52,7 @@ const ContactSection = () => {
                         <textarea
                             id={'message'}
                             rows={6}
-                            className={`block p-2.5 w-full text-lg lg:text-lg text-secondary bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+                            className={`block p-2.5 w-full text-lg lg:text-lg text-slate-600 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-500 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
                             placeholder={'Hello, I would like to...'}
                             {...register("message")}
                         ></textarea>

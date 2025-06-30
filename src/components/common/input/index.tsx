@@ -22,7 +22,7 @@ const InputField: React.FC<InputFieldProps> = ({ name, label, type, placeholder 
       <input
         type={type}
         id={name}
-        className={`bg-gray-50 border ${errors.name ? '!border-red-500' : 'border-gray-300'} text-secondary text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-300 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+        className={`bg-gray-50 border ${errors.name ? '!border-red-500' : 'border-gray-300'} text-slate-600 text-2xl rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-secondary placeholder-gray-300 dark:placeholder-gray-300 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
         placeholder={placeholder}
         {...register("name")}
       />

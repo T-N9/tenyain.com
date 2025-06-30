@@ -30,7 +30,7 @@ const HeroSection = () => {
                         {t('introPart1')}
                         <span className="font-extrabold text-primary-600 dark:text-accent-600"> {t('introName')}</span>{t('introPart2')}
                     </h2>
-                    <h1 className={`${heading_font.className} uppercase mb-4 text-4xl lg:text-6xl tracking-tight font-extrabold text-secondary dark:text-white`}>
+                    <h1 className={`${heading_font.className} uppercase mb-4 text-4xl lg:text-6xl tracking-tight font-extrabold text-slate-600 dark:text-white`}>
                         {t('titlePart1')} <span className='text-primary-600 dark:text-accent-600'>{t('titlePart2')}</span> {t('titlePart3')}
                     </h1>
 
@@ -44,7 +44,7 @@ const HeroSection = () => {
                         {t('about3Part1')} <a href="https://www.gre.ac.uk/" className="font-bold text-primary-600 dark:text-accent-600">{t('about3Link')}</a>.
                     </p>
 
-                    <p className="mb-4 text-2xl tracking-tight font-normal text-secondary dark:text-white">{t('quote1')}</p>
+                    <p className="mb-4 text-2xl tracking-tight font-normal text-slate-600 dark:text-white">{t('quote1')}</p>
 
                     <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl dark:text-secondary">{t('about4')}</p>
 

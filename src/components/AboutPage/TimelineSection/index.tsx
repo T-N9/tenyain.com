@@ -19,14 +19,14 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2015-2016</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2015-2016</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Passed Matriculation Examination</TimelineTitle>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2016-2017</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2016-2017</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Joined University of Computer Studies, Hinthada</TimelineTitle>
                             <TimelineBody>
                                 UCSH Web Design Competition (HTML & CSS) - 1st Prize
@@ -36,7 +36,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2017-2018</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2017-2018</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">UCSH - CS 2nd year</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
@@ -54,7 +54,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2018-2019</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2018-2019</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">UCSH - CS 3rd year</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
@@ -72,7 +72,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2020</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2020</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Stay @ Home</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
@@ -95,7 +95,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2021</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2021</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">Dark Times in Myanmar</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
@@ -114,7 +114,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2022</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2022</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">On Job Training</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
@@ -132,7 +132,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2023</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2023</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">In Progress</TimelineTitle>
                             <TimelineBody>
                                 <ul className="list-disc">
@@ -148,7 +148,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2024</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2024</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">A New Chapter
 
                             </TimelineTitle>
@@ -165,7 +165,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelinePoint />
                         <TimelineContent>
-                            <TimelineTime className="text-xl text-secondary dark:text-gray-200">2025</TimelineTime>
+                            <TimelineTime className="text-xl text-slate-600 dark:text-gray-200">2025</TimelineTime>
                             <TimelineTitle className="text-primary-600 dark:text-accent-600 text-2xl">
                                 B.Sc Journey
                             </TimelineTitle>

@@ -51,7 +51,7 @@ const NavBar = () => {
             onClick={toggleMenu}
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-secondary rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-secondary dark:hover:bg-gray-700 dark:focus:ring-secondary"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-600 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-secondary dark:hover:bg-gray-700 dark:focus:ring-secondary"
             aria-controls="navbar-sticky"
             aria-expanded={isOpen}
           >

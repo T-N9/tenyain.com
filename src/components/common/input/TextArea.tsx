@@ -21,7 +21,7 @@ const TextAreaField: React.FC<TextAreaFieldProps> = ({ name, label, placeholder,
       <textarea
         id={name}
         rows={rows}
-        className={`block p-2.5 w-full text-2xl text-secondary bg-gray-50 rounded-lg shadow-sm border ${errors.name ? '!border-red-500' : 'border-gray-300'} focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-300 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
+        className={`block p-2.5 w-full text-2xl text-slate-600 bg-gray-50 rounded-lg shadow-sm border ${errors.name ? '!border-red-500' : 'border-gray-300'} focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 placeholder-gray-300 dark:border-secondary dark:placeholder-gray-300 dark:text-white dark:focus:ring-accent-500 dark:focus:border-accent-500`}
         placeholder={placeholder}
         {...register("message")}
       ></textarea>
