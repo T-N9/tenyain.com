@@ -1,4 +1,5 @@
 import { Divider } from '@/components';
+import MusicSection from '@/components/MusicSection';
 import AllWorksSection from '@/components/WorksPage/AllWorksSection'
 import NewsletterSection from '@/components/WritingPage/NewsletterSection/NewsletterForm';
 import { Metadata } from 'next';
@@ -36,6 +37,8 @@ const WorksPage = () => {
   return (
     <>
         <AllWorksSection/>
+        <Divider/>
+        <MusicSection/>
         <Divider/>
         <NewsletterSection/>
     </>
