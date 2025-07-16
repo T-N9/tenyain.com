@@ -40,6 +40,14 @@ import {
   SiReactrouterHex,
   SiPhp,
   SiPhpHex,
+  SiRss,
+  SiRssHex,
+  SiGoogleanalytics,
+  SiGoogleanalyticsHex,
+  SiGoogleads,
+  SiGoogleadsHex,
+  SiContentful,
+  SiContentfulHex,
 } from "@icons-pack/react-simple-icons";
 import { Tooltip } from "flowbite-react";
 
@@ -144,6 +152,26 @@ export const technologyLogoMap: { [key: string]: JSX.Element } = {
       <SiPhp size={50} color={SiPhpHex} />
     </Tooltip>
   ),
+  Rss: (
+    <Tooltip content="Rss">
+      <SiRss size={50} color={SiRssHex} />
+    </Tooltip>
+  ),
+  GoogleAnalytics: (
+    <Tooltip content="Google Analytics">
+      <SiGoogleanalytics size={50} color={SiGoogleanalyticsHex} />
+    </Tooltip>
+  ),
+  GoogleAds: (
+    <Tooltip content="Google Ads">
+      <SiGoogleads size={50} color={SiGoogleadsHex} />
+    </Tooltip>
+  ),
+  Contentful: (
+    <Tooltip content="Contentful">
+      <SiContentful size={50} color={SiContentfulHex} />
+    </Tooltip>
+  ),
 };
 
 export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
@@ -154,7 +182,7 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   CSS3: (
     <Tooltip content="CSS3">
-      <SiCss3 size={50} className="fill-primary-500 dark:fill-accent-200"/>
+      <SiCss3 size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   JavaScript: (
@@ -164,12 +192,12 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   TypeScript: (
     <Tooltip content="TypeScript">
-      <SiTypescript size={50} className="fill-primary-500 dark:fill-accent-200"  />
+      <SiTypescript size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   ReactJS: (
     <Tooltip content="React.js">
-      <SiReact size={50} className="fill-primary-500 dark:fill-accent-200"/>
+      <SiReact size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   Bootstrap: (
@@ -184,7 +212,7 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   Redux: (
     <Tooltip content="Redux">
-      <SiRedux size={50} className="fill-primary-500 dark:fill-accent-200"  />
+      <SiRedux size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   NextJS: (
@@ -194,7 +222,7 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   SCSS: (
     <Tooltip content="SCSS">
-      <SiSass size={50} className="fill-primary-500 dark:fill-accent-200"/>
+      <SiSass size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   Firebase: (
@@ -214,7 +242,7 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   GitHub: (
     <Tooltip content="GitHub">
-      <SiGithub size={50} className="fill-primary-500 dark:fill-accent-200"  />
+      <SiGithub size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   Figma: (
@@ -224,7 +252,7 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   Netlify: (
     <Tooltip content="Netlify">
-      <SiNetlify size={50} className="fill-primary-500 dark:fill-accent-200"  />
+      <SiNetlify size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   Vercel: (
@@ -234,7 +262,7 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   Lighthouse: (
     <Tooltip content="Lighthouse">
-      <SiLighthouse size={50} className="fill-primary-500 dark:fill-accent-200"  />
+      <SiLighthouse size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
   ReactRouter: (
@@ -244,7 +272,7 @@ export const technologyLogoColorlessMap: { [key: string]: JSX.Element } = {
   ),
   Php: (
     <Tooltip content="PHP">
-      <SiPhp size={50} className="fill-primary-500 dark:fill-accent-200"  />
+      <SiPhp size={50} className="fill-primary-500 dark:fill-accent-200" />
     </Tooltip>
   ),
 };

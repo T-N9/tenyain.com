@@ -96,7 +96,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         <p className="text-slate-500 text-base lg:text-xl">{description}</p>
 
-        <div className='flex gap-4'>
+        <div className='flex gap-4 flex-wrap'>
           {technologies.map((tech, index) => {
             return (
               <React.Fragment key={index}> {technologyLogoMap[tech]}</React.Fragment>
