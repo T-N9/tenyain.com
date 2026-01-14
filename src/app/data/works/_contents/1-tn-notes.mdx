@@ -8,10 +8,53 @@ period: "Jun 2024"
 url: "https://notes.tenyain.com/"
 logo: "/assets/works/tn-notes.png"
 colors : ["#BF895A,Twine", "#524439,Taupe", "#F2BF80,Tacao", "#2B2A2A,Mine Shaft"]
-technologies : ["NextJS", "TypeScript", "TailwindCSS", "Firebase", "Rss" ]
+technologies : ["NextJS", "TypeScript", "TailwindCSS", "Firebase", "Lexical", "NextUI", "Resend", "RSS" ]
 image : "/assets/works/tn-notes.png"
 tagline: "Capturing ideas and thoughts"
 ---
-# Project Detail Coming Soon.
+# Introduction
+
+TN Notes is my personal writing studio and public archive. I built it to keep writing frictionless while still supporting rich content and a clean reading experience. The project combines a custom editor on top of Meta's Lexical, a Next.js App Router front-end, and a lightweight CMS workflow backed by Firebase.
+
+[View live](https://notes.tenyain.com/)
+
+| Challenge                        | Result                                                        |
+| ------------------------------- | ------------------------------------------------------------- |
+| Move beyond markdown-only writing | Rich editor with tables, embeds, collapsibles, and layouts     |
+| Keep publishing simple          | Draft, unpublished, and published flows in a protected dashboard |
+| Handle media cleanly            | Image library with upload, captions, and reuse from Firebase Storage |
+| Share content outside the site  | RSS feed and newsletter signup via Resend                     |
+
+# Development
+
+### Editor and content blocks
+
+The core of TN Notes is a custom Lexical editor. I wired in headings, lists, checklists, code blocks with syntax highlighting, tables, and horizontal rules, then extended it with custom nodes for images, YouTube, Twitter, and Figma embeds. The editor also supports collapsible sections, multi-column layouts, draggable blocks, and a floating formatting toolbar so writing stays fast and flexible.
+
+### Publishing workflow
+
+On the management side, I built a full publish cycle. Posts can be drafted, unpublished, updated, or pushed live, and the interface auto-generates slugs and summaries from the editor content. Feature images can be uploaded or selected from an existing library, with captions stored for accessibility. Firebase Firestore stores the post data, and Firebase Storage manages all media.
+
+### Reader experience
+
+The public side focuses on readability and discovery. Pinned notes surface in a bento-style hero, the catalogue uses a card grid, and individual notes include a dynamic table of contents, read-time calculation, and view transitions. Theme switching is built in with light, dark, and custom palettes.
+
+# Preparation
+
+### What are the techs?
+
+- Framework: [Next.js](https://nextjs.org/) (App Router) with TypeScript
+- Editor: [Lexical](https://lexical.dev/)
+- Styling and UI: [Tailwind CSS](https://tailwindcss.com/) and [NextUI](https://nextui.org/)
+- Data and auth: [Firebase](https://firebase.google.com/) (Firestore, Storage, Auth)
+- Distribution: RSS feed and [Resend](https://resend.com/) newsletter API
+
+# Designing
+
+I designed TN Notes around a content-first reading flow. The hero section highlights pinned posts and the newsletter entry point, while the catalogue keeps notes scannable with short summaries and tags. For individual posts, the layout emphasizes typography, spacing, and an optional table of contents to keep long-form writing easy to navigate across devices.
+
+# Conclusion
+
+TN Notes is now a complete writing and publishing space that blends a custom editor, structured content workflow, and a clean reader experience. It gives me a reliable place to capture ideas, publish them quickly, and share them through RSS or email without extra tooling.
 
 **GitHub Repo -** [`https://github.com/T-N9/editor4Thylogos`](https://github.com/T-N9/editor4Thylogos)
