@@ -1,0 +1,163 @@
+---
+title: "Flash Kanji"
+description: "An interactive kanji learning platform with flashcards, quizzes, spaced repetition, and language tools."
+type: "Personal"
+status: "Production"
+role: "Full-stack Developer"
+period: "2024 - Present"
+url: "https://flashkanji.tenyain.com/"
+logo: "/assets/works/flashkanji.png"
+colors : ["#F57C00,Zest", "#2F4858,Fiord", "#FFF1E0,Seashell", "#FCE2C9,Apricot"]
+technologies : ["NextJS", "TypeScript", "TailwindCSS", "Supabase", "Express", "React Query", "Zustand", "Gemini AI", "PWA"]
+image : "/assets/works/flashkanji.png"
+tagline: "Kanji learning SRS companion"
+---
+# Introduction
+
+**Flash Kanji** is an online interactive Kanji learning web application designed to help learners master Japanese **Kanji** and **Jukugo (compound words)** through *flashcards, quizzes, and spaced repetition*. The product is built as a three-repo system: the learner-facing client web app, the API server, and an  admin console. Together they deliver guided JLPT-level learning (N5 to N1), a PWA experience, multi-locale content (en, ja, my), and a full content management workflow.
+It was also developed as my **B.Sc (Hons) Computing Final Year Project** of University of Greenwich, focusing on learning effectiveness, user experience, and scalable system design.
+
+[View live](https://flashkanji.tenyain.com/)
+
+| Challenge                                | Result                                                                 |
+| ---------------------------------------- | ---------------------------------------------------------------------- |
+| Keep study progression structured        | A Flash Map roadmap with phased steps and sequential unlocking         |
+| Build an SRS system that respects time zones | Custom SRS scheduling with review calendar and local day boundaries |
+| Provide rich tools without leaving the app | Dictionary, reader, converter, stroke viewer, and writing board built in |
+| Run content and user ops at scale         | Admin dashboard with deck/category CRUD and user progress management    |
+
+## Why I built this
+
+Japanese Kanji learning is difficult because learners must remember thousands of characters, multiple readings, stroke orders, and real usage. Many tools either:
+- lack a **clear learning roadmap**,
+- teach Kanji **without Jukugo context**,
+- or do not provide enough **progress tracking and motivation**.
+
+Flash Kanji addresses these gaps by combining a JLPT-aligned roadmap with a customized SRS review engine and engaging study features.
+
+---
+
+## What makes Flash Kanji different
+
+### Structured JLPT Roadmap (Flash Map)
+A chapter-based learning path aligned with JLPT **N5–N1**, guiding learners step-by-step instead of random decks.
+
+### Kanji + Jukugo Learning Flow
+Every Kanji is connected to real compound words, helping learners move beyond memorization into practical understanding.
+
+### Spaced Repetition (SM-2 Variant)
+A modified **SM-2** spaced repetition algorithm schedules reviews based on user performance to improve long-term retention.
+
+### Rich learning support
+- Stroke order animations
+- Pronunciation audio
+- Detail modals for deeper learning
+- AI helper (“Samurai Sensei”) for contextual explanations and hints  
+
+### Motivation & Study Habit Features
+- Streaks, XP, lives/hearts
+- Calendar-based review planning (Flash Board)
+- Pomodoro timer for focus sessions
+
+---
+
+## Tech Stack (Full-stack)
+
+### Frontend
+- **Next.js + TypeScript** for UI and routing
+- **Tailwind CSS** for styling
+- **TanStack Query** for server-state data fetching
+- **Zustand** for lightweight client state
+- **Framer Motion** for UI animations
+- Deployed on **Vercel**
+
+### Backend
+- **Node.js + Express** REST APIs
+- **Supabase (PostgreSQL + Auth)** for data and authentication
+- **Scalar/OpenAPI** for API documentation
+- Deployed on **Render**
+
+---
+
+# Development
+
+### Three-repo architecture
+
+The platform is split into a Next.js App Router web app, an Express API server, and a Next.js admin console. The web app handles the learning experience and UI, the API handles data access and game logic, and the admin console manages decks, categories, and user insights. Supabase provides authentication and Postgres storage across all three.
+
+### Learning flow and Flash Map
+
+Flash Map is the guided roadmap for Kanji study. Users choose a JLPT level and chapter, then progress through phases like cards, repetition, quiz, and match. Each step is validated sequentially so learners cannot skip ahead, and progress is stored in a structured chapter_progress model with resume points.
+
+### Spaced repetition engine
+
+The SRS system uses quality scoring (again, hard, good, easy) to drive interval changes, ease factor updates, and next review dates with a hard cap on long intervals. Reviews are scheduled by user-local days, and the dashboard shows a review calendar with upcoming and expired sessions. Deck reviews use SRS sessions so users can study in blocks without losing context.
+
+### Gamification and retention
+
+The app includes XP, ranks, streaks, and a lives system. Expired reviews trigger penalties, and completed sessions reward XP and restore hearts. Daily Kanji cards, Pomodoro timers, and victory or loss modals keep the study loop motivating and clear.
+
+### Study tools and AI
+
+Flash Kanji includes a dictionary that merges Kanji, Jukugo, and deck card results, a Furigana reader powered by Kuromoji tokenization, a Hiragana/Katakana converter, and a stroke-order viewer. Gemini AI generates mnemonics and example usage inside detail modals, and text-to-speech supports pronunciation practice. A writing board built with perfect-freehand lets users practice stroke shapes directly in the browser.
+
+### Auth and access control
+
+Supabase handles Google and email sign-in, and a Next.js middleware proxy protects learning routes until profiles are created. The API validates Supabase tokens, and admin-only endpoints are restricted with an allowlist. WaniKani keys are stored encrypted and used to enrich Kanji detail views.
+
+### PWA and localization
+
+The web app ships as a PWA with offline fallback and aggressive cache behavior for smoother study sessions. Next-Intl powers the multi-locale routing and metadata, so SEO and copy stay aligned across English, Japanese, and Myanmar.
+
+### Testing and reliability
+
+The SRS engine and kana conversion utilities are covered with Jest tests to prevent regressions in scheduling logic and reading helpers.
+
+# Preparation
+
+### Data modeling and pipelines
+
+Supabase schema covers Kanji, Jukugo, decks, SRS tables, progress tracking, and user profiles. Import scripts ingest the Joyo Kanji CSV and WaniKani subject IDs, ensuring consistent seed data and future enrichment paths.
+
+### API design
+
+The Express server exposes REST endpoints for Kanji, Jukugo, quizzes, decks, progress, and admin operations. OpenAPI documentation is served via Scalar, making it easy to test and extend the API surface.
+
+# Designing
+
+The UI is built around a warm orange theme with card-first layouts that keep study content scannable. Flash Map and dashboard views focus on clarity, while detail modals provide depth without breaking the learning flow. Onboarding tours guide new users through the roadmap, dashboard stats, and deck selection.
+
+## Methodology (Academic + Engineering)
+
+I followed **DSDM Atern (Agile)** with:
+- iterative development (timeboxing),
+- MoSCoW prioritization to focus on Must-Have learning features first,
+- regular prototype testing and usability feedback loops.
+
+---
+
+## Accessibility, privacy, and professionalism
+
+Flash Kanji was designed with:
+- **responsive UI** for mobile + desktop usage
+- accessibility awareness aligned with **WCAG** principles
+- secure handling of user data with privacy considerations (GDPR mindset)
+- proper crediting of learning resources and avoiding copyrighted misuse
+
+---
+
+## Key takeaways
+
+This project demonstrates my ability to:
+- design and build a full-stack learning platform end-to-end,
+- implement algorithmic systems (SM-2 style scheduling),
+- model real production databases for learning analytics,
+- deliver a user-friendly UI with strong UX focus,
+- and develop with academic rigor (methodology, ethics, evaluation).
+
+---
+
+# Conclusion
+
+Flash Kanji delivers a complete learning system: structured progression, a custom SRS engine, AI-assisted study aids, and a scalable backend with an admin console. It is designed to help learners stay consistent, review intelligently, and explore Kanji at their own pace.
+

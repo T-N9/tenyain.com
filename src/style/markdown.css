@@ -79,6 +79,7 @@
   }
   
   .mdx-wrapper li {
+    list-style-type: disc;
     margin-bottom: 0.5rem;
   }
   
