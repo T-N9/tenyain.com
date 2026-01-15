@@ -48,6 +48,16 @@ import {
   SiGoogleadsHex,
   SiContentful,
   SiContentfulHex,
+  SiExpress,
+  SiExpressHex,
+  SiNodedotjs,
+  SiNodedotjsHex,
+  SiSupabase,
+  SiSupabaseHex,
+  SiReactquery,
+  SiReactqueryHex,
+  SiGooglegemini,
+  SiGooglegeminiHex,
 } from "@icons-pack/react-simple-icons";
 import { Tooltip } from "flowbite-react";
 
@@ -170,6 +180,31 @@ export const technologyLogoMap: { [key: string]: JSX.Element } = {
   Contentful: (
     <Tooltip content="Contentful">
       <SiContentful size={50} color={SiContentfulHex} />
+    </Tooltip>
+  ),
+  Express: (
+    <Tooltip content="Contentful">
+      <SiExpress size={50} color={SiExpressHex} />
+    </Tooltip>
+  ),
+  NodeJS: (
+    <Tooltip content="Contentful">
+      <SiNodedotjs size={50} color={SiNodedotjsHex} />
+    </Tooltip>
+  ),
+  Supabase: (
+    <Tooltip content="Contentful">
+      <SiSupabase size={50} color={SiSupabaseHex} />
+    </Tooltip>
+  ),
+  ReactQuery :  (
+    <Tooltip content="Contentful">
+      <SiReactquery size={50} color={SiReactqueryHex} />
+    </Tooltip>
+  ),
+  GeminiAI : (
+    <Tooltip content="Contentful">
+      <SiGooglegemini size={50} color={SiGooglegeminiHex} />
     </Tooltip>
   ),
 };
