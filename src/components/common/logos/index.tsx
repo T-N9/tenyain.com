@@ -64,147 +64,147 @@ import { Tooltip } from "flowbite-react";
 export const technologyLogoMap: { [key: string]: JSX.Element } = {
   HTML5: (
     <Tooltip content="HTML5">
-      <SiHtml5 size={50} color={SiHtml5Hex} />
+      <SiHtml5 size={25} color={SiHtml5Hex} />
     </Tooltip>
   ),
   CSS3: (
     <Tooltip content="CSS3">
-      <SiCss3 size={50} color={SiCss3Hex} />
+      <SiCss3 size={25} color={SiCss3Hex} />
     </Tooltip>
   ),
   JavaScript: (
     <Tooltip content="JavaScript">
-      <SiJavascript size={50} color={SiJavascriptHex} />
+      <SiJavascript size={25} color={SiJavascriptHex} />
     </Tooltip>
   ),
   TypeScript: (
     <Tooltip content="TypeScript">
-      <SiTypescript size={50} color={SiTypescriptHex} />
+      <SiTypescript size={25} color={SiTypescriptHex} />
     </Tooltip>
   ),
   ReactJS: (
     <Tooltip content="React.js">
-      <SiReact size={50} color={SiReactHex} />
+      <SiReact size={25} color={SiReactHex} />
     </Tooltip>
   ),
   Bootstrap: (
     <Tooltip content="Bootstrap">
-      <SiBootstrap size={50} color={SiBootstrapHex} />
+      <SiBootstrap size={25} color={SiBootstrapHex} />
     </Tooltip>
   ),
   TailwindCSS: (
     <Tooltip content="Tailwind CSS">
-      <SiTailwindcss size={50} color={SiTailwindcssHex} />
+      <SiTailwindcss size={25} color={SiTailwindcssHex} />
     </Tooltip>
   ),
   Redux: (
     <Tooltip content="Redux">
-      <SiRedux size={50} color={SiReduxHex} />
+      <SiRedux size={25} color={SiReduxHex} />
     </Tooltip>
   ),
   NextJS: (
     <Tooltip content="Next.js">
-      <SiNextdotjs size={50} color={SiNextdotjsHex} />
+      <SiNextdotjs size={25} color={SiNextdotjsHex} />
     </Tooltip>
   ),
   SCSS: (
     <Tooltip content="SCSS">
-      <SiSass size={50} color={SiSassHex} />
+      <SiSass size={25} color={SiSassHex} />
     </Tooltip>
   ),
   Firebase: (
     <Tooltip content="Firebase">
-      <SiFirebase size={50} color={SiFirebaseHex} />
+      <SiFirebase size={25} color={SiFirebaseHex} />
     </Tooltip>
   ),
   MySQL: (
     <Tooltip content="MySQL">
-      <SiMysql size={50} color={SiMysqlHex} />
+      <SiMysql size={25} color={SiMysqlHex} />
     </Tooltip>
   ),
   Framer: (
     <Tooltip content="Framer">
-      <SiFramer size={50} color={SiFramerHex} />
+      <SiFramer size={25} color={SiFramerHex} />
     </Tooltip>
   ),
   GitHub: (
     <Tooltip content="GitHub">
-      <SiGithub size={50} color={SiGithubHex} />
+      <SiGithub size={25} color={SiGithubHex} />
     </Tooltip>
   ),
   Figma: (
     <Tooltip content="Figma">
-      <SiFigma size={50} color={SiFigmaHex} />
+      <SiFigma size={25} color={SiFigmaHex} />
     </Tooltip>
   ),
   Netlify: (
     <Tooltip content="Netlify">
-      <SiNetlify size={50} color={SiNetlifyHex} />
+      <SiNetlify size={25} color={SiNetlifyHex} />
     </Tooltip>
   ),
   Vercel: (
     <Tooltip content="Vercel">
-      <SiVercel size={50} color={SiVercelHex} />
+      <SiVercel size={25} color={SiVercelHex} />
     </Tooltip>
   ),
   Lighthouse: (
     <Tooltip content="Lighthouse">
-      <SiLighthouse size={50} color={SiLighthouseHex} />
+      <SiLighthouse size={25} color={SiLighthouseHex} />
     </Tooltip>
   ),
   ReactRouter: (
     <Tooltip content="React Router">
-      <SiReactrouter size={50} color={SiReactrouterHex} />
+      <SiReactrouter size={25} color={SiReactrouterHex} />
     </Tooltip>
   ),
   Php: (
     <Tooltip content="PHP">
-      <SiPhp size={50} color={SiPhpHex} />
+      <SiPhp size={25} color={SiPhpHex} />
     </Tooltip>
   ),
   Rss: (
     <Tooltip content="Rss">
-      <SiRss size={50} color={SiRssHex} />
+      <SiRss size={25} color={SiRssHex} />
     </Tooltip>
   ),
   GoogleAnalytics: (
     <Tooltip content="Google Analytics">
-      <SiGoogleanalytics size={50} color={SiGoogleanalyticsHex} />
+      <SiGoogleanalytics size={25} color={SiGoogleanalyticsHex} />
     </Tooltip>
   ),
   GoogleAds: (
     <Tooltip content="Google Ads">
-      <SiGoogleads size={50} color={SiGoogleadsHex} />
+      <SiGoogleads size={25} color={SiGoogleadsHex} />
     </Tooltip>
   ),
   Contentful: (
     <Tooltip content="Contentful">
-      <SiContentful size={50} color={SiContentfulHex} />
+      <SiContentful size={25} color={SiContentfulHex} />
     </Tooltip>
   ),
   Express: (
     <Tooltip content="Contentful">
-      <SiExpress size={50} color={SiExpressHex} />
+      <SiExpress size={25} color={SiExpressHex} />
     </Tooltip>
   ),
   NodeJS: (
     <Tooltip content="Contentful">
-      <SiNodedotjs size={50} color={SiNodedotjsHex} />
+      <SiNodedotjs size={25} color={SiNodedotjsHex} />
     </Tooltip>
   ),
   Supabase: (
     <Tooltip content="Contentful">
-      <SiSupabase size={50} color={SiSupabaseHex} />
+      <SiSupabase size={25} color={SiSupabaseHex} />
     </Tooltip>
   ),
   ReactQuery :  (
     <Tooltip content="Contentful">
-      <SiReactquery size={50} color={SiReactqueryHex} />
+      <SiReactquery size={25} color={SiReactqueryHex} />
     </Tooltip>
   ),
   GeminiAI : (
     <Tooltip content="Contentful">
-      <SiGooglegemini size={50} color={SiGooglegeminiHex} />
+      <SiGooglegemini size={25} color={SiGooglegeminiHex} />
     </Tooltip>
   ),
 };
