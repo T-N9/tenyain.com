@@ -183,27 +183,27 @@ export const technologyLogoMap: { [key: string]: JSX.Element } = {
     </Tooltip>
   ),
   Express: (
-    <Tooltip content="Contentful">
+    <Tooltip content="Express">
       <SiExpress size={25} color={SiExpressHex} />
     </Tooltip>
   ),
   NodeJS: (
-    <Tooltip content="Contentful">
+    <Tooltip content="NodeJS">
       <SiNodedotjs size={25} color={SiNodedotjsHex} />
     </Tooltip>
   ),
   Supabase: (
-    <Tooltip content="Contentful">
+    <Tooltip content="Supabase">
       <SiSupabase size={25} color={SiSupabaseHex} />
     </Tooltip>
   ),
   ReactQuery :  (
-    <Tooltip content="Contentful">
+    <Tooltip content="React Query">
       <SiReactquery size={25} color={SiReactqueryHex} />
     </Tooltip>
   ),
   GeminiAI : (
-    <Tooltip content="Contentful">
+    <Tooltip content="GeminiAI">
       <SiGooglegemini size={25} color={SiGooglegeminiHex} />
     </Tooltip>
   ),
