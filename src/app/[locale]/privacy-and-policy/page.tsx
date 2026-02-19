@@ -1,41 +1,55 @@
 import SectionWrapper from '@/components/common/wrappers/SectionWrapper'
 import { Metadata } from 'next';
+import {
+  buildLocaleAlternates,
+  buildLocalePath,
+  getOpenGraphLocale,
+  toSiteLocale,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-    title: 'Privacy & Policy',
-    description: 'Privacy and policy for tenyain.com',
-    keywords: 'Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative',
-    themeColor: '#1192d3',
-    robots: 'index, follow',
-    viewport: 'width=device-width, initial-scale=1',
-    icons: {
-      icon: '/favicon.ico',
-    },
-    openGraph: {
-      type: 'website',
-      url: 'https://www.tenyain.com/privacy-policy/',
-      title: 'Privacy & Policy',
-      description: 'Privacy and policy for tenyain.com',
-      images: [
-        {
-          url: '/meta-tn.png',
-          width: 800,
-          height: 600,
-          alt: 'Privacy & Policy for tenyain.com',
+export async function generateMetadata({
+    params,
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const locale = toSiteLocale(params.locale);
+    const path = "/privacy-and-policy";
+
+    return {
+        title: "Privacy & Policy",
+        description: "Privacy and policy for tenyain.com",
+        keywords:
+            "Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative",
+        themeColor: "#1192d3",
+        robots: "index, follow",
+        viewport: "width=device-width, initial-scale=1",
+        alternates: buildLocaleAlternates(path, locale),
+        icons: {
+            icon: "/favicon.ico",
         },
-      ],
-      locale: 'en-US',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'Privacy & Policy',
-      description: 'Privacy and policy for tenyain.com',
-      images: '/meta-tn.png',
-    },
-    other: {
-      'google-site-verification': 'nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI',
-    },
-  };
+        openGraph: {
+            type: "website",
+            locale: getOpenGraphLocale(locale),
+            url: buildLocalePath(locale, path),
+            title: "Privacy & Policy",
+            description: "Privacy and policy for tenyain.com",
+            images: [
+                {
+                    url: "/meta-tn.png",
+                    width: 800,
+                    height: 600,
+                    alt: "Privacy & Policy for tenyain.com",
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Privacy & Policy",
+            description: "Privacy and policy for tenyain.com",
+            images: ["/meta-tn.png"],
+        },
+    };
+}
 
 const PrivacyAndPolicyPage = () => {
     return (

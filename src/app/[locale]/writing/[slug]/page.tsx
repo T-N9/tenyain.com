@@ -5,6 +5,12 @@ import { Metadata } from 'next';
 import {Breadcrumb} from "flowbite-react";
 import Link from "next/link";
 import React from "react";
+import {
+  buildLocaleAlternates,
+  buildLocalePath,
+  getOpenGraphLocale,
+  toSiteLocale,
+} from "@/lib/seo";
 
 export async function generateStaticParams() {
     return getAllArticlesSlug()
@@ -15,23 +21,26 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }): Promise<Metadata> {
   const article = await getArticleBySlug(params.slug);
+  const locale = toSiteLocale(params.locale);
+  const path = `/writing/${params.slug}`;
 
   return {
     title: `${article.frontmatter.title} | Te Nyain Moe Lwin`,
     description: article.frontmatter.description,
     keywords: article.frontmatter.tags || [],
+    alternates: buildLocaleAlternates(path, locale),
     openGraph: {
       type: 'article',
-      locale: 'en-US',
-      url: `https://www.tenyain.com/writing/${params.slug}`,
+      locale: getOpenGraphLocale(locale),
+      url: buildLocalePath(locale, path),
       title: article.frontmatter.title,
       description: article.frontmatter.description,
       images: [
         {
-          url: article.frontmatter.image || 'default-image.png',
+          url: article.frontmatter.image || '/meta-tn.png',
           alt: article.frontmatter.title,
         },
       ],
@@ -40,7 +49,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: article.frontmatter.title,
       description: article.frontmatter.description,
-      images: [article.frontmatter.image || 'default-image.png'],
+      images: [article.frontmatter.image || '/meta-tn.png'],
     },
     robots: 'index, follow',
     viewport: 'width=device-width, initial-scale=1',

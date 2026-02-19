@@ -20,6 +20,7 @@ import { notoSansJP, primary_font } from "@/fonts/fonts";
 import Providers from "@/app/Providers";
 import React, { ReactNode } from "react";
 import GradientFollower from "@/components/common/wrappers/GradientFollower";
+import { SITE_URL, SUPPORTED_LOCALES } from "@/lib/site";
 
 type Props = {
   children: ReactNode;
@@ -27,14 +28,13 @@ type Props = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Te Nyain Moe Lwin | Creative Front-end developer",
   description: "Hello there, I am Te Nyain Moe Lwin, a front-end developer who delivers fast and reliable websites. I care about your business values and targeted customers to meet your golden goals for tomorrow.",
   keywords: "Te Nyain Moe Lwin, Te Nyain, Moe Lwin, Moe, web, web developer, web development, front-end, UI, Myanmar, junior web developer, job, freelance, promoting, branding, product branding, creative",
   robots: "index, follow",
   openGraph: {
     type: "website",
-    locale: "en-US",
-    url: "https://www.tenyain.com/",
     title: "Te Nyain Moe Lwin | Creative Front-end developer",
     description: "Hello there, I am Te Nyain Moe Lwin, a front-end developer who delivers fast and reliable websites. I care about your business values and targeted customers to meet your golden goals for tomorrow.",
     images: [{ url: "/meta-tn.png" }]
@@ -67,7 +67,7 @@ export const viewport: Viewport = {
 export default async function LocaleLayout({ children, params }: Props) {
 
   const { locale } = params;
-  if (!hasLocale(['en', 'ja'], locale)) {
+  if (!hasLocale(SUPPORTED_LOCALES, locale)) {
     notFound();
   }
   const messages = await getMessages({locale});
@@ -77,7 +77,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <title>Te Nyain Moe Lwin | Creative Front-end developer</title>
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-E4PF2Z2LTT"
@@ -120,4 +119,8 @@ export default async function LocaleLayout({ children, params }: Props) {
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }

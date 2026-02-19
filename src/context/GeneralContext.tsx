@@ -1,6 +1,6 @@
 'use client'
-import { Work } from '@/components/HomePage/ProjectsSection';
-import { Article } from '@/components/WritingPage/AllArticlesSection';
+import type { Work } from '@/components/HomePage/ProjectsSection';
+import type { Article } from '@/components/WritingPage/AllArticlesSection';
 import React, {createContext, useContext, useState, ReactNode, Dispatch, SetStateAction} from 'react';
 
 interface GeneralContextProps {

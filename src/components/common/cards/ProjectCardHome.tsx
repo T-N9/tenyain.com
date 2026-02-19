@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from 'flowbite-react';
 import React, { useEffect, useRef } from 'react';
 import { technologyLogoMap } from '../logos';

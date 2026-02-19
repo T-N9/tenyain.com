@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="mx-auto max-w-screen-lg">
         <div className="md:flex md:justify-between">
             <div className="mb-20 text-primary-200 dark:text-accent-600 md:mb-0">
-                <Link aria-label="Back to Home" href="/" className="flex items-center">
+                <Link aria-label="Back to Home" href={`/${locale}`} className="flex items-center">
                     <TNLogo primaryFill='fill-primary-200 dark:fill-accent-600' secondaryFill='fill-gray-200 dark:fill-gray-200'/>
                 </Link>
 
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-8" />
         <div className="text-center">
-            <span className="text-sm text-gray-200 text-center dark:text-white">© 2022 - 2025 <a href="https://tenyain.com" className="hover:underline">tenyain.com</a>. All Rights Reserved.
+            <span className="text-sm text-gray-200 text-center dark:text-white">© 2022 - 2025 <a href="https://www.tenyain.com" className="hover:underline">tenyain.com</a>. All Rights Reserved.
             </span>
 
         </div>

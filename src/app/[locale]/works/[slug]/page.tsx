@@ -5,6 +5,12 @@ import { Metadata } from "next";
 import React from "react";
 import {Breadcrumb} from "flowbite-react";
 import Link from "next/link";
+import {
+  buildLocaleAlternates,
+  buildLocalePath,
+  getOpenGraphLocale,
+  toSiteLocale,
+} from "@/lib/seo";
 
 export async function generateStaticParams() {
   return getAllWorksSlug();
@@ -13,9 +19,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }): Promise<Metadata> {
   const work = await getWorkBySlug(params.slug);
+  const locale = toSiteLocale(params.locale);
+  const path = `/works/${params.slug}`;
 
   return {
     title: work.frontmatter.title,
@@ -23,11 +31,12 @@ export async function generateMetadata({
     keywords:
       "Te Nyain Moe Lwin, Te Nyain, Moe Lwin, web development, front-end, portfolio, project",
     robots: "index, follow",
+    alternates: buildLocaleAlternates(path, locale),
     themeColor: "#1192d3",
     openGraph: {
       type: "website",
-      locale: "en-US",
-      url: `https://www.tenyain.com/works/${params.slug}`,
+      locale: getOpenGraphLocale(locale),
+      url: buildLocalePath(locale, path),
       title: work.frontmatter.title,
       description: work.frontmatter.description,
       images: [{ url: "/meta-tn.png" }],

@@ -1,71 +1,82 @@
-import AllArticlesSection from '@/components/WritingPage/AllArticlesSection'
-import React, {Suspense} from 'react'
+import AllArticlesSection from "@/components/WritingPage/AllArticlesSection";
+import { Metadata } from "next";
+import {
+  buildLocaleAlternates,
+  buildLocalePath,
+  getOpenGraphLocale,
+  toSiteLocale,
+} from "@/lib/seo";
 
-import { Metadata } from 'next';
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const locale = toSiteLocale(params.locale);
+  const path = "/writing";
 
-export const metadata: Metadata = {
-  title: "Writing | Te Nyain's thoughts",
-  description: "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
-  keywords: [
-    "Te Nyain Moe Lwin",
-    "Te Nyain",
-    "Moe Lwin",
-    "Moe",
-    "web",
-    "web developer",
-    "web development",
-    "front-end",
-    "UI",
-    "Myanmar",
-    "junior web developer",
-    "job",
-    "freelance",
-    "promoting",
-    "branding",
-    "product branding",
-    "creative",
-  ],
-  robots: "index, follow",
-  openGraph: {
-    type: 'website',
-    locale: 'en-US',
-    url: 'https://www.tenyain.com/writing',
+  return {
     title: "Writing | Te Nyain's thoughts",
     description:
       "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
-    images: [
-      {
-        url: 'meta-tn.png',
-        alt: "Te Nyain Moe Lwin's Writing page",
-      },
+    keywords: [
+      "Te Nyain Moe Lwin",
+      "Te Nyain",
+      "Moe Lwin",
+      "Moe",
+      "web",
+      "web developer",
+      "web development",
+      "front-end",
+      "UI",
+      "Myanmar",
+      "junior web developer",
+      "job",
+      "freelance",
+      "promoting",
+      "branding",
+      "product branding",
+      "creative",
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Writing | Te Nyain's thoughts",
-    description:
-      "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
-    images: ['meta-tn.png'],
-  },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#1192d3',
-  icons: {
-    icon: '/favicon.ico',
-  },
-  other: {
-    'google-adsense-account': 'ca-pub-2340030299315656',
-    'google-site-verification': 'nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI',
-  },
-};
-
-const WritingPage = () => {
-    return (
-        <>
-          <Suspense fallback={<div>Loading...</div>}>
-            <AllArticlesSection />
-          </Suspense>
-        </>
-    )
+    robots: "index, follow",
+    alternates: buildLocaleAlternates(path, locale),
+    openGraph: {
+      type: "website",
+      locale: getOpenGraphLocale(locale),
+      url: buildLocalePath(locale, path),
+      title: "Writing | Te Nyain's thoughts",
+      description:
+        "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
+      images: [
+        {
+          url: "/meta-tn.png",
+          alt: "Te Nyain Moe Lwin's Writing page",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Writing | Te Nyain's thoughts",
+      description:
+        "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
+      images: ["/meta-tn.png"],
+    },
+    icons: {
+      icon: "/favicon.ico",
+    },
+  };
 }
 
-export default WritingPage
+type Props = {
+  params: { locale: string };
+  searchParams?: { page?: string };
+};
+
+const WritingPage = ({ params, searchParams }: Props) => {
+  const page = Number(searchParams?.page ?? "1");
+
+  return <AllArticlesSection locale={params.locale} page={page} />;
+};
+
+export default WritingPage;
+

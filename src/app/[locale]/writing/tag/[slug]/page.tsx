@@ -1,77 +1,66 @@
-import AllArticlesSection from '@/components/WritingPage/AllArticlesSection'
-import React, {Suspense} from 'react'
+import AllArticlesSection from "@/components/WritingPage/AllArticlesSection";
+import { Metadata } from "next";
+import {
+  buildLocaleAlternates,
+  buildLocalePath,
+  getOpenGraphLocale,
+  toSiteLocale,
+} from "@/lib/seo";
 
-import { Metadata } from 'next';
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string; slug: string };
+}): Promise<Metadata> {
+  const locale = toSiteLocale(params.locale);
+  const path = `/writing/tag/${params.slug}`;
+  const readableTag = params.slug.replace(/-/g, " ");
 
-export const metadata: Metadata = {
-    title: "Writing | Te Nyain's thoughts",
-    description: "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
-    keywords: [
-        "Te Nyain Moe Lwin",
-        "Te Nyain",
-        "Moe Lwin",
-        "Moe",
-        "web",
-        "web developer",
-        "web development",
-        "front-end",
-        "UI",
-        "Myanmar",
-        "junior web developer",
-        "job",
-        "freelance",
-        "promoting",
-        "branding",
-        "product branding",
-        "creative",
-    ],
+  return {
+    title: `Writing tagged "${readableTag}" | Te Nyain's thoughts`,
+    description:
+      "Read articles about software engineering, management, front-end development, and tips.",
     robots: "index, follow",
+    alternates: buildLocaleAlternates(path, locale),
     openGraph: {
-        type: 'website',
-        locale: 'en-US',
-        url: 'https://www.tenyain.com/writing',
-        title: "Writing | Te Nyain's thoughts",
-        description:
-            "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
-        images: [
-            {
-                url: 'meta-tn.png',
-                alt: "Te Nyain Moe Lwin's Writing page",
-            },
-        ],
+      type: "website",
+      locale: getOpenGraphLocale(locale),
+      url: buildLocalePath(locale, path),
+      title: `Writing tagged "${readableTag}" | Te Nyain's thoughts`,
+      description:
+        "Read articles about software engineering, management, front-end development, and tips.",
+      images: [
+        {
+          url: "/meta-tn.png",
+          alt: "Te Nyain Moe Lwin's Writing page",
+        },
+      ],
     },
     twitter: {
-        card: 'summary_large_image',
-        title: "Writing | Te Nyain's thoughts",
-        description:
-            "Read articles about software engineering, management, front-end development, and tips. I would like to write and do some knowledge sharing besides development.",
-        images: ['meta-tn.png'],
+      card: "summary_large_image",
+      title: `Writing tagged "${readableTag}" | Te Nyain's thoughts`,
+      description:
+        "Read articles about software engineering, management, front-end development, and tips.",
+      images: ["/meta-tn.png"],
     },
-    viewport: 'width=device-width, initial-scale=1',
-    themeColor: '#1192d3',
     icons: {
-        icon: '/favicon.ico',
+      icon: "/favicon.ico",
     },
-    other: {
-        'google-adsense-account': 'ca-pub-2340030299315656',
-        'google-site-verification': 'nstIYPUM8pyaUUrW69SvgmJkxRRe_hS9tN_VAfzoLeI',
-    },
-};
-
-const WritingPageByTag = ({
-                              params,
-                          }: {
-    params: { slug: string }
-}) => {
-
-    return (
-        <>
-            <Suspense fallback={<div>Loading...</div>}>
-                <AllArticlesSection tag={params.slug}/>
-            </Suspense>
-
-        </>
-    )
+  };
 }
 
-export default WritingPageByTag
+type Props = {
+  params: { locale: string; slug: string };
+  searchParams?: { page?: string };
+};
+
+const WritingPageByTag = ({ params, searchParams }: Props) => {
+  const page = Number(searchParams?.page ?? "1");
+
+  return (
+    <AllArticlesSection locale={params.locale} page={page} tag={params.slug} />
+  );
+};
+
+export default WritingPageByTag;
+

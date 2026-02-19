@@ -1,109 +1,86 @@
-'use client'
-import React, { useEffect, useRef } from 'react'
-import SectionWrapper from '../common/wrappers/SectionWrapper'
-import ArticleCard from '../common/cards/ArticleCard';
-import LoadingArticleCard from '../common/cards/LoadingArticleCard';
-import Heading from '../common/headings/Heading';
-import { useGeneralContext } from '@/context/GeneralContext';
-import { useSearchParams } from "next/navigation";
+import React from "react";
+import SectionWrapper from "../common/wrappers/SectionWrapper";
+import ArticleCard from "../common/cards/ArticleCard";
+import Heading from "../common/headings/Heading";
 import Pagination from "@/components/common/pagination/Pagination";
 import NewsletterSection from "@/components/WritingPage/NewsletterSection/NewsletterForm";
-import Divider from '../common/divider/Divider';
+import Divider from "../common/divider/Divider";
+import { getArticlesByTagPage, getArticlesPage } from "@/lib/fetchers/writing";
 
 export type Frontmatter = {
-    title: string;
-    description: string;
-    image: string;
-    tags: string[];
-    createdAt: string;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  createdAt: string;
 };
 
 export type Article = {
-    frontmatter: Frontmatter;
-    slug: string;
+  frontmatter: Frontmatter;
+  slug: string;
 };
 
-const AllArticlesSection = ({ tag = '' }: { tag?: string }) => {
-    const { articles, isLoading, fetchArticles, fetchArticlesByTag, totalPages } = useGeneralContext();
-    const fetchedTag = useRef<string | null>(null);
-    const fetchedPage = useRef<number | null>(null);
-    const searchParams = useSearchParams();
-    const param_page = searchParams.get('page');
-    const page = param_page ? parseInt(param_page) : 1;
+type Props = {
+  locale: string;
+  page: number;
+  tag?: string;
+};
 
+const AllArticlesSection = async ({ locale, page, tag = "" }: Props) => {
+  const resolvedPage = Number.isNaN(page) || page < 1 ? 1 : page;
+  const result = tag
+    ? await getArticlesByTagPage(resolvedPage, 6, tag)
+    : await getArticlesPage(resolvedPage, 6);
 
-    useEffect(() => {
-        // Trigger data fetching whenever `tag` or `page` changes
-        if (tag !== fetchedTag.current || page !== fetchedPage.current) {
-            if (tag) {
-                fetchArticlesByTag(page, 6, tag);
-                console.log('Fetching articles by tag:', tag);
-            } else {
-                fetchArticles(page, 6, false);
-                console.log('Fetching articles without tag');
-            }
+  return (
+    <SectionWrapper>
+      <Heading title="My Thoughts" />
 
-            // Update refs to avoid redundant fetching
-            fetchedTag.current = tag;
-            fetchedPage.current = page;
-        }
-    }, [fetchArticlesByTag, fetchArticles, tag, page]); // Dependencies: re-run on `tag` or `page` change
+      {tag !== "" && (
+        <p className="text-center">
+          Articles by{" "}
+          <b className="text-primary-600 dark:text-accent-600">#{tag}</b>
+        </p>
+      )}
 
+      <Pagination
+        totalPages={result.totalPages}
+        currentPage={resolvedPage}
+        tag={tag}
+        locale={locale}
+      />
 
-    return (
-        <SectionWrapper>
-            <Heading title='My Thoughts' />
+      <div className="flex flex-col gap-5">
+        {result.articles.length === 0 ? (
+          <p className="text-center text-2xl">No data for this request.</p>
+        ) : (
+          result.articles.map(({ frontmatter, slug }) => (
+            <ArticleCard
+              key={slug}
+              title={frontmatter.title}
+              createdAt={frontmatter.createdAt}
+              description={frontmatter.description}
+              image={frontmatter.image}
+              tags={frontmatter.tags}
+              href={slug}
+            />
+          ))
+        )}
+      </div>
 
-            {
-                tag !== '' && <p className="text-center">Articles by <b className='text-primary-600 dark:text-accent-600'>#{tag}</b></p>
-            }
-            {
-                page &&
-                <Pagination totalPages={totalPages} currentPage={page} tag={tag} />
-            }
+      <Pagination
+        totalPages={result.totalPages}
+        currentPage={resolvedPage}
+        tag={tag}
+        locale={locale}
+      />
 
-            <div className='flex flex-col gap-5'>
-                {
-                    isLoading ?
-                        <>
-                            <LoadingArticleCard />
-                            <LoadingArticleCard />
-                            <LoadingArticleCard />
-                        </>
-                        :
+      <Divider />
 
-                        articles.length === 0 ? <p className='text-center text-2xl'>No data for this request.</p>
-                            :
-                            articles.map(({ frontmatter, slug }) => (
-                                <ArticleCard
-                                    key={slug}
+      <NewsletterSection />
+    </SectionWrapper>
+  );
+};
 
-                                    title={frontmatter.title}
-                                    createdAt={frontmatter.createdAt}
-                                    description={frontmatter.description}
-                                    image={frontmatter.image}
-                                    tags={frontmatter.tags}
-                                    href={slug}
-                                />
-                            ))
+export default AllArticlesSection;
 
-
-                }
-
-            </div>
-
-
-            {
-                page &&
-                <Pagination totalPages={totalPages} currentPage={page} tag={tag} />
-            }
-
-            <Divider />
-
-            <NewsletterSection />
-
-        </SectionWrapper>
-    )
-}
-
-export default AllArticlesSection
