@@ -34,7 +34,7 @@ const educationDataMap: Record<string, EducationItem[]> = {
     {
       institution: 'グリニッジ大学、NCC教育、イギリス',
       degree: 'コンピューティング学士号',
-      date: '予定: 2024年12月 ～ 2025年11月',
+      date: '予定: 2024年12月 ～ 2025年12月',
     },
     {
       institution: '情報処理技術者試験センター、日本',
@@ -43,7 +43,7 @@ const educationDataMap: Record<string, EducationItem[]> = {
     },
     {
       institution: 'ヒンタダ・コンピュータ大学、ミャンマー',
-      degree: 'コンピュータサイエンス学士課程4年次',
+      degree: 'コンピュータサイエンス学士課程3年次',
       date: '201x年 ～ 20xx年',
     },
   ]
