@@ -16,7 +16,7 @@ const educationDataMap: Record<string, EducationItem[]> = {
   en: [
     {
       institution: 'University of Greenwich, NCC Education, UK',
-      degree: 'Bachelor’s in Computing (Hons)',
+      degree: 'Bachelor’s in Computing (First Class Honours)',
       date: 'Dec 2024 – Dec 2025',
     },
     {
@@ -33,7 +33,7 @@ const educationDataMap: Record<string, EducationItem[]> = {
   ja: [
     {
       institution: 'グリニッジ大学、NCC教育、イギリス',
-      degree: 'コンピューティング学士号',
+      degree: 'コンピューティング学士（第一級優等）',
       date: '予定: 2024年12月 ～ 2025年12月',
     },
     {
